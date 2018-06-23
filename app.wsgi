@@ -53,7 +53,7 @@ def pchome(keyword):
     return feed.atom_str()
 
 if __name__ == '__main__':
-    if os.environ.get('ON_HEROKU'):
+    if os.environ.get('PORT'):
         port = int(os.environ.get('PORT'))
     else:
         port = 8080
