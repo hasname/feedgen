@@ -58,4 +58,4 @@ if __name__ == '__main__':
     else:
         port = 8080
 
-    run(host='localhost', port=port)
+    run(host='0.0.0.0', port=port)
