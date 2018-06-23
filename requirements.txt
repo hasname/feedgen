@@ -1,1 +1,4 @@
 bottle>=0
+feedgen>=0
+lxml>=0
+requests>=0
