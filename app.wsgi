@@ -10,6 +10,7 @@ import urllib
 
 @route('/robots.txt')
 def robotstxt():
+    response.set_header('Content-Type', 'text/plain')
     return '#\nUser-agent: *\nDisallow: /\n'
 
 @route('/pchome/<keyword>')
