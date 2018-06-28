@@ -49,6 +49,7 @@ def pchome(keyword):
         entry.link(href=prod_url)
         entry.title(prod_name)
 
+    response.set_header('Cache-Control', 'max-age=600,public')
     response.set_header('Content-Type', 'application/atom+xml')
 
     return feed.atom_str()
