@@ -3,3 +3,8 @@ os: linux
 files:
   - source: /
     destination: /srv/feedgen.hasname.com
+hooks:
+  AfterInstall:
+    - location: scripts/after-install.sh
+      timeout: 30
+      runas: www-data
