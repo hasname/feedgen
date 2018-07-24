@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-from bottle import response
 import bottle
 import feedgen.feed
 import html
@@ -13,7 +12,7 @@ app = application = bottle.Bottle()
 
 @app.route('/robots.txt')
 def robotstxt():
-    response.set_header('Content-Type', 'text/plain')
+    bottle.response.set_header('Content-Type', 'text/plain')
     return '#\nUser-agent: *\nDisallow: /\n'
 
 @app.route('/pchome/<keyword>')
@@ -52,8 +51,8 @@ def pchome(keyword):
         entry.link(href=prod_url)
         entry.title(prod_name)
 
-    response.set_header('Cache-Control', 'max-age=600,public')
-    response.set_header('Content-Type', 'application/atom+xml')
+    bottle.response.set_header('Cache-Control', 'max-age=600,public')
+    bottle.response.set_header('Content-Type', 'application/atom+xml')
 
     return feed.atom_str()
 
