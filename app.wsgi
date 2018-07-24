@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-from bottle import response, route, run
+from bottle import response
+import bottle
 import feedgen.feed
 import html
 import json
@@ -8,12 +9,14 @@ import os
 import requests
 import urllib
 
-@route('/robots.txt')
+app = application = bottle.Bottle()
+
+@app.route('/robots.txt')
 def robotstxt():
     response.set_header('Content-Type', 'text/plain')
     return '#\nUser-agent: *\nDisallow: /\n'
 
-@route('/pchome/<keyword>')
+@app.route('/pchome/<keyword>')
 def pchome(keyword):
     url = 'https://ecshweb.pchome.com.tw/search/v3.3/all/results?q=%s&page=1&sort=new/dc' % (urllib.parse.quote_plus(keyword))
 
@@ -60,4 +63,4 @@ if __name__ == '__main__':
     else:
         port = 8080
 
-    run(host='0.0.0.0', port=port)
+    bottle.run(app=app, host='0.0.0.0', port=port)
