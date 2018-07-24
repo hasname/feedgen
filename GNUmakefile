@@ -1,4 +1,7 @@
 #
+-include GNUmakefile.local
+
+#
 APPLICATION_NAME?=	feedgen
 AWS_PROFILE?=		default
 AWS_REGION?=		us-east-1
