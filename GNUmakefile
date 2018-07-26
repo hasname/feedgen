@@ -5,7 +5,7 @@
 APPLICATION_NAME?=	feedgen
 AWS_PROFILE?=		default
 AWS_REGION?=		us-east-1
-S3_BUCKET?=		gslin-codedeploy-us-east-1-feedgen
+S3_BUCKET?=		"gslin-codedeploy-us-east-1-${APPLICATION_NAME}"
 
 #
 GIT_BRANCH!=		git rev-parse --abbrev-ref HEAD
