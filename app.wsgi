@@ -35,6 +35,7 @@ def pchome(keyword):
         # Product name & description
         prod_name = prod['name']
         prod_desc = prod['describe']
+        prod_author = prod['author']
 
         # URL
         if prod['cateId'][0] == 'D':
@@ -46,6 +47,7 @@ def pchome(keyword):
         body = '%s<br/><img alt="" src="%s"/>' % (html.escape(prod_desc), html.escape(img_url))
 
         entry = feed.add_entry()
+        entry.author(author)
         entry.content(body, type='xhtml')
         entry.id(prod_url)
         entry.link(href=prod_url)
