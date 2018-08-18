@@ -48,7 +48,7 @@ def pchome(keyword):
         body = '%s<br/><img alt="" src="%s"/>' % (html.escape(prod_desc), html.escape(img_url))
 
         entry = feed.add_entry()
-        entry.author(prod_author)
+        entry.author({'name': prod_author})
         entry.content(body, type='xhtml')
         entry.id(prod_url)
         entry.link(href=prod_url)
