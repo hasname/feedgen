@@ -11,6 +11,9 @@ import urllib
 
 app = application = bottle.Bottle()
 
+@app.route('/')
+    bottle.redirect('https://github.com/gslin/feedgen')
+
 @app.route('/robots.txt')
 def robotstxt():
     bottle.response.set_header('Content-Type', 'text/plain')
