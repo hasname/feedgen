@@ -44,7 +44,7 @@ push:
 	git push -v origin master
 
 test:
-	@true
+	nosetests
 
 _git_dirty:
 ifneq (${GIT_DIRTY}, 0)
