@@ -83,6 +83,7 @@ def plurktop(lang):
         entry.content(stat['content'], type='CDATA')
         entry.id(url)
         entry.link(href=url)
+        entry.published(stat['posted'])
         entry.title(stat['content_raw'])
 
     bottle.response.set_header('Cache-Control', 'max-age=600,public')
