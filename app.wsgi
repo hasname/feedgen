@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import base36
 import bottle
 import feedgen.feed
 import html
@@ -52,6 +53,37 @@ def pchome(keyword):
         entry.id(prod_url)
         entry.link(href=prod_url)
         entry.title(prod_name)
+
+    bottle.response.set_header('Cache-Control', 'max-age=600,public')
+    bottle.response.set_header('Content-Type', 'application/atom+xml')
+
+    return feed.atom_str()
+
+@app.route('/plurk/top/<lang>')
+def plurktop(lang):
+    url = 'https://www.plurk.com/Stats/topReplurks?period=day&lang=%s&limit=90' % (urllib.parse.quote_plus(lang))
+
+    r = requests.get(url)
+
+    title = 'Plurk Top (%s)' % (lang)
+
+    feed = feedgen.feed.FeedGenerator()
+    feed.author({'name': 'Feed Generator'})
+    feed.id(url)
+    feed.link(href=url, rel='alternate')
+    feed.title(title)
+
+    body = json.loads(r.text)
+
+    for (x, stat) in body['stats']:
+        url = 'https://www.plurk.com/p/' + base36.dumps(stat['id'])
+
+        entry = feed.add_entry()
+        entry.author({'name': stat['owner']['full_name']})
+        entry.content(stat['content'], type='CDATA')
+        entry.id(url)
+        entry.link(href=url)
+        entry.title(stat['content_raw'])
 
     bottle.response.set_header('Cache-Control', 'max-age=600,public')
     bottle.response.set_header('Content-Type', 'application/atom+xml')
