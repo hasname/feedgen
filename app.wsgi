@@ -24,7 +24,7 @@ def pchome(keyword):
     title = 'PChome 搜尋 - %s' % (keyword)
 
     feed = feedgen.feed.FeedGenerator()
-    feed.author({'name': 'PChome Search Feed Generator'})
+    feed.author({'name': 'Feed Generator'})
     feed.id(url)
     feed.link(href=url, rel='alternate')
     feed.title(title)
