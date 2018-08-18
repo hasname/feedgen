@@ -2,4 +2,5 @@ base36>=0
 bottle>=0
 feedgen>=0
 lxml>=0
+nosetests>=0
 requests>=0
