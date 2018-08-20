@@ -65,7 +65,7 @@ def pchome(keyword):
 
 @app.route('/plurk/top/<lang>')
 def plurktop(lang):
-    url = 'https://www.plurk.com/Stats/topReplurks?period=day&lang=%s&limit=90' % (urllib.parse.quote_plus(lang))
+    url = 'https://www.plurk.com/Stats/topReplurks?period=day&lang=%s&limit=20' % (urllib.parse.quote_plus(lang))
 
     r = requests.get(url)
 
