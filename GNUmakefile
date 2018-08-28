@@ -44,7 +44,7 @@ push:
 	git push -v origin master
 
 test:
-	nosetests --no-byte-compile
+	nosetests --no-byte-compile --with-coverage
 
 _git_dirty:
 ifneq (${GIT_DIRTY}, 0)
