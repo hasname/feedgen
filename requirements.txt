@@ -3,5 +3,5 @@ bottle>=0
 coverage>=0
 feedgen>=0
 lxml>=0
-nosetests>=0
+nose>=0
 requests>=0
