@@ -93,6 +93,42 @@ def plurktop(lang):
 
     return feed.atom_str()
 
+@app.route('/shopee/<keyword>')
+def shopee(keyword):
+    url = 'https://shopee.tw/api/v2/search_items/?by=ctime&keyword=%s&limit=50&newest=0&order=desc&page_type=search' % (urllib.parse.quote_plus(keyword))
+
+    title = '蝦皮搜尋 - %s' % (keyword)
+
+    feed = feedgen.feed.FeedGenerator()
+    feed.author({'name': 'Feed Generator'})
+    feed.id(url)
+    feed.link(href=url, rel='alternate')
+    feed.title(title)
+
+    r = requests.get(url, headers={'User-agent': 'Mozilla/5.0'})
+    body = json.loads(r.text)
+
+    for item in body['items']:
+        itemid = item['itemid']
+        name = item['name']
+        shopid = item['shopid']
+
+        img_url = 'https://cf.shopee.tw/file/%s' % (html.escape(item['image']))
+        prod_url = 'https://shopee.tw/%s-i.%d.%d' % (html.escape(name), shopid, itemid)
+
+        body = '%s<br/><img alt="" src="%s"/>' % (html.escape(name), html.escape(img_url))
+
+        entry = feed.add_entry()
+        entry.content(body, type='xhtml')
+        entry.id(prod_url)
+        entry.link(href=prod_url)
+        entry.title(name)
+
+    bottle.response.set_header('Cache-Control', 'max-age=600,public')
+    bottle.response.set_header('Content-Type', 'application/atom+xml')
+
+    return feed.atom_str()
+
 if __name__ == '__main__':
     if os.environ.get('PORT'):
         port = int(os.environ.get('PORT'))
