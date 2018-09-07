@@ -24,8 +24,6 @@ def robotstxt():
 def pchome(keyword):
     url = 'https://ecshweb.pchome.com.tw/search/v3.3/all/results?q=%s&page=1&sort=new/dc' % (urllib.parse.quote_plus(keyword))
 
-    r = requests.get(url);
-
     title = 'PChome 搜尋 - %s' % (keyword)
 
     feed = feedgen.feed.FeedGenerator()
@@ -34,6 +32,7 @@ def pchome(keyword):
     feed.link(href=url, rel='alternate')
     feed.title(title)
 
+    r = requests.get(url);
     body = json.loads(r.text)
 
     for prod in body['prods']:
@@ -67,8 +66,6 @@ def pchome(keyword):
 def plurktop(lang):
     url = 'https://www.plurk.com/Stats/topReplurks?period=day&lang=%s&limit=20' % (urllib.parse.quote_plus(lang))
 
-    r = requests.get(url)
-
     title = 'Plurk Top (%s)' % (lang)
 
     feed = feedgen.feed.FeedGenerator()
@@ -77,6 +74,7 @@ def plurktop(lang):
     feed.link(href=url, rel='alternate')
     feed.title(title)
 
+    r = requests.get(url)
     body = json.loads(r.text)
 
     for (x, stat) in body['stats']:
