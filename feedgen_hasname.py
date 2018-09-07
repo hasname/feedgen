@@ -116,7 +116,7 @@ def shopee(keyword):
         img_url = 'https://cf.shopee.tw/file/%s' % (html.escape(item['image']))
         prod_url = 'https://shopee.tw/%s-i.%d.%d' % (html.escape(name), shopid, itemid)
 
-        body = '%s<br/><img alt="" src="%s"/>' % (html.escape(name), html.escape(img_url))
+        body = '%s' % (html.escape(name))
 
         entry = feed.add_entry()
         entry.content(body, type='xhtml')
