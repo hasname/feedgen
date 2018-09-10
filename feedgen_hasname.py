@@ -48,7 +48,7 @@ def pchome(keyword):
             prod_url = 'https://mall.pchome.com.tw/prod/' + prod['Id']
         img_url = 'https://a.ecimg.tw%s' % (prod['picB'])
 
-        body = '%s<br/><img alt="" src="%s"/>' % (html.escape(prod_desc), html.escape(img_url))
+        body = '%s<br/><img alt="" crossorigin="anonymous" src="%s"/>' % (html.escape(prod_desc), html.escape(img_url))
 
         entry = feed.add_entry()
         entry.author({'name': prod_author})
