@@ -32,7 +32,7 @@ def pchome(keyword):
     feed.link(href=url, rel='alternate')
     feed.title(title)
 
-    r = requests.get(url, timeout=30);
+    r = requests.get(url, timeout=5);
     body = json.loads(r.text)
 
     for prod in body['prods']:
@@ -74,7 +74,7 @@ def plurktop(lang):
     feed.link(href=url, rel='alternate')
     feed.title(title)
 
-    r = requests.get(url, timeout=30)
+    r = requests.get(url, timeout=5)
     body = json.loads(r.text)
 
     for (x, stat) in body['stats']:
@@ -105,7 +105,7 @@ def shopee(keyword):
     feed.link(href=url, rel='alternate')
     feed.title(title)
 
-    r = requests.get(url, headers={'User-agent': 'Mozilla/5.0'}, timeout=30)
+    r = requests.get(url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5)
     body = json.loads(r.text)
 
     for item in body['items']:
