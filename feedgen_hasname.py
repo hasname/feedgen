@@ -115,7 +115,13 @@ def shopee(keyword):
 
         prod_url = 'https://shopee.tw/%s-i.%d.%d' % (html.escape(name), shopid, itemid)
 
-        body = '%s' % (html.escape(name))
+        itemapi_url = 'https://shopee.tw/api/v2/item/get?itemid=%d&shopid=%d' % (itemid, shopid)
+        r = requests.get(itemapi_url)
+        item = json.loads(r.text)
+
+        img_url = 'https://cf.shopee.tw/file/%s' % (item['item']['image'])
+
+        body = '%s<br/><img alt="" src="%s" />' % (html.escape(name), html.escape(img_url))
 
         entry = feed.add_entry()
         entry.content(body, type='xhtml')
