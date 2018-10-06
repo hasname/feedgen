@@ -2,6 +2,7 @@
 
 import base36
 import bottle
+import concurrent.futures
 import feedgen.feed
 import html
 import json
@@ -116,7 +117,7 @@ def shopee(keyword):
         prod_url = 'https://shopee.tw/%s-i.%d.%d' % (html.escape(name), shopid, itemid)
 
         itemapi_url = 'https://shopee.tw/api/v2/item/get?itemid=%d&shopid=%d' % (itemid, shopid)
-        r = requests.get(itemapi_url)
+        r = requests.get(itemapi_url, timeout=5)
         item = json.loads(r.text)
 
         img_url = 'https://cf.shopee.tw/file/%s' % (item['item']['image'])
