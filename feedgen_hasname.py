@@ -95,7 +95,7 @@ def plurktop(lang):
 
 @app.route('/shopee/<keyword>')
 def shopee(keyword):
-    url = 'https://shopee.tw/api/v2/search_items/?by=ctime&keyword=%s&limit=50&newest=0&order=desc&page_type=search' % (urllib.parse.quote_plus(keyword))
+    url = 'https://shopee.tw/api/v2/search_items/?by=ctime&keyword=%s&limit=20&newest=0&order=desc&page_type=search' % (urllib.parse.quote_plus(keyword))
 
     title = '蝦皮搜尋 - %s' % (keyword)
 
