@@ -117,7 +117,7 @@ def shopee(keyword):
         prod_url = 'https://shopee.tw/%s-i.%d.%d' % (html.escape(name), shopid, itemid)
 
         itemapi_url = 'https://shopee.tw/api/v2/item/get?itemid=%d&shopid=%d' % (itemid, shopid)
-        r = requests.get(itemapi_url, timeout=5)
+        r = requests.get(itemapi_url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5)
         item = json.loads(r.text)
 
         img_url = 'https://cf.shopee.tw/file/%s' % (item['item']['image'])
