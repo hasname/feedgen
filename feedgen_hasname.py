@@ -114,7 +114,7 @@ def shopee(keyword):
         name = item['name']
         shopid = item['shopid']
 
-        prod_url = 'https://shopee.tw/%s-i.%d.%d' % (html.escape(name), shopid, itemid)
+        prod_url = 'https://shopee.tw/%s-i.%d.%d' % (urllib.parse.quote_plus(name), shopid, itemid)
 
         itemapi_url = 'https://shopee.tw/api/v2/item/get?itemid=%d&shopid=%d' % (itemid, shopid)
         r = requests.get(itemapi_url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5)
