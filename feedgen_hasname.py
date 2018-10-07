@@ -133,7 +133,7 @@ def shopee(keyword):
         prod_url = 'https://shopee.tw/%s-i.%d.%d' % (urllib.parse.quote_plus(name), shopid, itemid)
         img_url = 'https://cf.shopee.tw/file/%s' % (item['image'])
 
-        body = '%s<br/><img alt="" src="%s" />' % (html.escape(name), html.escape(img_url))
+        body = '%s<br/><img alt="" src="%s"/>' % (html.escape(name), html.escape(img_url))
 
         entry = feed.add_entry()
         entry.content(body, type='xhtml')
