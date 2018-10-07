@@ -61,7 +61,7 @@ def pchome(keyword):
         entry.link(href=prod_url)
         entry.title(prod_name)
 
-    bottle.response.set_header('Cache-Control', 'max-age=600,public')
+    bottle.response.set_header('Cache-Control', 'max-age=300,public')
     bottle.response.set_header('Content-Type', 'application/atom+xml')
 
     return feed.atom_str()
@@ -92,7 +92,7 @@ def plurktop(lang):
         entry.published(stat['posted'])
         entry.title(stat['content_raw'])
 
-    bottle.response.set_header('Cache-Control', 'max-age=600,public')
+    bottle.response.set_header('Cache-Control', 'max-age=300,public')
     bottle.response.set_header('Content-Type', 'application/atom+xml')
 
     return feed.atom_str()
@@ -142,7 +142,7 @@ def shopee(keyword):
         entry.link(href=prod_url)
         entry.title(name)
 
-    bottle.response.set_header('Cache-Control', 'max-age=600,public')
+    bottle.response.set_header('Cache-Control', 'max-age=300,public')
     bottle.response.set_header('Content-Type', 'application/atom+xml')
 
     return feed.atom_str()
@@ -192,7 +192,7 @@ def youtube(keyword):
         except IndexError:
             pass
 
-    bottle.response.set_header('Cache-Control', 'max-age=600,public')
+    bottle.response.set_header('Cache-Control', 'max-age=300,public')
     bottle.response.set_header('Content-Type', 'application/atom+xml')
 
     return feed.atom_str()
