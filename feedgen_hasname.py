@@ -151,8 +151,6 @@ def shopee(keyword):
 def youtube(keyword):
     url = 'https://www.youtube.com/results?sp=CAI%%253D&search_query=%s' % (urllib.parse.quote_plus(keyword))
 
-    r = requests.get(url);
-
     title = 'YouTube Search - %s' % (keyword)
 
     feed = feedgen.feed.FeedGenerator()
@@ -161,6 +159,7 @@ def youtube(keyword):
     feed.link(href=url, rel='alternate')
     feed.title(title)
 
+    r = requests.get(url);
     body = lxml.html.fromstring(r.text)
 
     for item in body.cssselect('ol.item-section div.yt-lockup-video'):
