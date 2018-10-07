@@ -10,6 +10,7 @@ import html
 import lxml.html
 import json
 import os
+import re
 import requests
 import urllib
 
@@ -60,6 +61,38 @@ def pchome(keyword):
         entry.id(prod_url)
         entry.link(href=prod_url)
         entry.title(prod_name)
+
+    bottle.response.set_header('Cache-Control', 'max-age=300,public')
+    bottle.response.set_header('Content-Type', 'application/atom+xml')
+
+    return feed.atom_str()
+
+@app.route('/pchome-lightnovel')
+def pchome_lightnovel():
+    url = 'https://ecapi.pchome.com.tw/cdn/ecshop/prodapi/v2/newarrival/DJAZ/prod&offset=1&limit=20&fields=Id,Nick,Pic,Price,Discount,isSpec,Name,isCarrier,isSnapUp,isBigCart&_callback=jsonp_prodlist?_callback=jsonp_prodlist'
+
+    title = 'PChome 輕小說'
+
+    feed = feedgen.feed.FeedGenerator()
+    feed.author({'name': 'Feed Generator'})
+    feed.id(url)
+    feed.link(href=url, rel='alternate')
+    feed.title(title)
+
+    r = requests.get(url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5)
+    body = re.match(r'^[^\[]*(\[.*\])[^\[]*$', r.text).group(1)
+    items = json.loads(body)
+
+    for item in items:
+        book_body = '{}<br/><img alt="" src="https://a.ecimg.tw{}"/>'.format(html.escape(item['Nick']), html.escape(item['Pic']['B']))
+        book_title = item['Nick']
+        book_url = 'https://24h.pchome.com.tw/books/prod/{}'.format(urllib.parse.quote_plus(item['Id']))
+
+        entry = feed.add_entry()
+        entry.content(book_body, type='xhtml')
+        entry.id(book_url)
+        entry.title(book_title)
+        entry.link(href=book_url)
 
     bottle.response.set_header('Cache-Control', 'max-age=300,public')
     bottle.response.set_header('Content-Type', 'application/atom+xml')
