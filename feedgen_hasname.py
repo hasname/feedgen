@@ -192,7 +192,10 @@ def youtube(keyword):
         except IndexError:
             pass
 
-    print(str(feed.atom_str(), 'utf-8'))
+    bottle.response.set_header('Cache-Control', 'max-age=600,public')
+    bottle.response.set_header('Content-Type', 'application/atom+xml')
+
+    return feed.atom_str()
 
 if __name__ == '__main__':
     if os.environ.get('PORT'):
