@@ -2,7 +2,6 @@
 
 import base36
 import bottle
-import concurrent.futures
 import feedgen.feed
 import html
 import json
