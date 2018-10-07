@@ -5,3 +5,4 @@ feedgen>=0
 lxml>=0
 nose>=0
 requests>=0
+requests-futures>=0

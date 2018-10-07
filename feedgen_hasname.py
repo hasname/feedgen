@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+from concurrent.futures import ThreadPoolExecutor
+from requests_futures.sessions import FuturesSession
+
 import base36
 import bottle
 import feedgen.feed
@@ -95,7 +98,7 @@ def plurktop(lang):
 
 @app.route('/shopee/<keyword>')
 def shopee(keyword):
-    url = 'https://shopee.tw/api/v2/search_items/?by=ctime&keyword=%s&limit=20&newest=0&order=desc&page_type=search' % (urllib.parse.quote_plus(keyword))
+    url = 'https://shopee.tw/api/v2/search_items/?by=ctime&keyword=%s&limit=50&newest=0&order=desc&page_type=search' % (urllib.parse.quote_plus(keyword))
 
     title = '蝦皮搜尋 - %s' % (keyword)
 
@@ -108,18 +111,27 @@ def shopee(keyword):
     r = requests.get(url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5)
     body = json.loads(r.text)
 
+    session = FuturesSession(executor=ThreadPoolExecutor(max_workers=10))
+    futures = []
+
     for item in body['items']:
         itemid = item['itemid']
         name = item['name']
         shopid = item['shopid']
 
-        prod_url = 'https://shopee.tw/%s-i.%d.%d' % (urllib.parse.quote_plus(name), shopid, itemid)
-
         itemapi_url = 'https://shopee.tw/api/v2/item/get?itemid=%d&shopid=%d' % (itemid, shopid)
-        r = requests.get(itemapi_url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5)
-        item = json.loads(r.text)
+        futures.append(session.get(itemapi_url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5))
 
-        img_url = 'https://cf.shopee.tw/file/%s' % (item['item']['image'])
+    for f in futures:
+        r = f.result()
+        item = json.loads(r.text)['item']
+
+        itemid = item['itemid']
+        name = item['name']
+        shopid = item['shopid']
+
+        prod_url = 'https://shopee.tw/%s-i.%d.%d' % (urllib.parse.quote_plus(name), shopid, itemid)
+        img_url = 'https://cf.shopee.tw/file/%s' % (item['image'])
 
         body = '%s<br/><img alt="" src="%s" />' % (html.escape(name), html.escape(img_url))
 
