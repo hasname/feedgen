@@ -25,6 +25,46 @@ def robotstxt():
     bottle.response.set_header('Content-Type', 'text/plain')
     return '#\nUser-agent: *\nDisallow: /\n'
 
+@app.route('/104/<keyword>')
+def job104(keyword):
+    url = 'https://www.104.com.tw/jobs/search/?ro=0&kwop=7&keyword={}&order=2&asc=0&page=1&mode=s'.format(urllib.parse.quote_plus(keyword))
+
+    title = '104 搜尋 - {}'.format(keyword)
+
+    feed = feedgen.feed.FeedGenerator()
+    feed.author({'name': 'Feed Generator'})
+    feed.id(url)
+    feed.link(href=url, rel='alternate')
+    feed.title(title)
+
+    r = requests.get(url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5)
+    body = lxml.html.fromstring(r.text)
+
+    for item in body.cssselect('article.job-list-item'):
+        a = item.cssselect('a.js-job-link')[0]
+
+        job_title = a.text_content()
+
+        href = a.get('href')
+        href = re.sub(r'&jobsource=\w+', '', href)
+        if href.startswith('//'):
+            href = 'https:' + href
+        job_url = href
+
+        job_desc = item.cssselect('p.job-list-item__info')[0].text_content()
+        body = '<p>%s</p>'.format(html.escape(job_desc))
+
+        entry = feed.add_entry()
+        entry.content(body, type='xhtml')
+        entry.id(job_url)
+        entry.link(href=job_url)
+        entry.title(job_title)
+
+    bottle.response.set_header('Cache-Control', 'max-age=300,public')
+    bottle.response.set_header('Content-Type', 'application/atom+xml')
+
+    return feed.atom_str()
+
 @app.route('/pchome/<keyword>')
 def pchome(keyword):
     url = 'https://ecshweb.pchome.com.tw/search/v3.3/all/results?q=%s&page=1&sort=new/dc' % (urllib.parse.quote_plus(keyword))
