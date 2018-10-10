@@ -51,8 +51,10 @@ def job104(keyword):
             href = 'https:' + href
         job_url = href
 
-        job_desc = item.text_content()
-        content = '<p><pre>{}</pre></p>'.format(html.escape(job_desc))
+        job_company = item.cssselect('ul.b-list-inline')[0].text_content()
+        job_desc = item.cssselect('p.job-list-item__info')[0].text_content()
+
+        content = '<p>{}</p><pre>{}</pre>'.format(html.escape(job_company), html.escape(job_desc))
 
         entry = feed.add_entry()
         entry.content(content, type='xhtml')
