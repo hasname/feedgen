@@ -52,7 +52,7 @@ def job104(keyword):
         job_url = href
 
         job_desc = item.cssselect('p.job-list-item__info')[0].text_content()
-        content = '<p>%s</p>'.format(html.escape(job_desc))
+        content = '<p>{}</p>'.format(html.escape(job_desc))
 
         entry = feed.add_entry()
         entry.content(content, type='xhtml')
