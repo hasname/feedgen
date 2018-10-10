@@ -29,7 +29,7 @@ def robotstxt():
 def pchome(keyword):
     url = 'https://ecshweb.pchome.com.tw/search/v3.3/all/results?q=%s&page=1&sort=new/dc' % (urllib.parse.quote_plus(keyword))
 
-    title = 'PChome 搜尋 - %s' % (keyword)
+    title = 'PChome 搜尋 - {}'.format(keyword)
 
     feed = feedgen.feed.FeedGenerator()
     feed.author({'name': 'Feed Generator'})
@@ -103,7 +103,7 @@ def pchome_lightnovel():
 def plurktop(lang):
     url = 'https://www.plurk.com/Stats/topReplurks?period=day&lang=%s&limit=20' % (urllib.parse.quote_plus(lang))
 
-    title = 'Plurk Top (%s)' % (lang)
+    title = 'Plurk Top ({})'.format(lang)
 
     feed = feedgen.feed.FeedGenerator()
     feed.author({'name': 'Feed Generator'})
@@ -134,7 +134,7 @@ def plurktop(lang):
 def shopee(keyword):
     url = 'https://shopee.tw/api/v2/search_items/?by=ctime&keyword=%s&limit=50&newest=0&order=desc&page_type=search' % (urllib.parse.quote_plus(keyword))
 
-    title = '蝦皮搜尋 - %s' % (keyword)
+    title = '蝦皮搜尋 - {}'.format(keyword)
 
     feed = feedgen.feed.FeedGenerator()
     feed.author({'name': 'Feed Generator'})
@@ -184,7 +184,7 @@ def shopee(keyword):
 def youtube(keyword):
     url = 'https://www.youtube.com/results?sp=CAI%%253D&search_query=%s' % (urllib.parse.quote_plus(keyword))
 
-    title = 'YouTube Search - %s' % (keyword)
+    title = 'YouTube Search - {}'.format(keyword)
 
     feed = feedgen.feed.FeedGenerator()
     feed.author({'name': 'Feed Generator'})
