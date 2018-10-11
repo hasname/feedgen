@@ -65,7 +65,7 @@ def job104(keyword):
         job_company = lxml.etree.tostring(body.cssselect('.company')[0]).decode('utf-8')
         job_desc = lxml.etree.tostring(body.cssselect('.grid-left .main')[0]).decode('utf-8')
 
-        content = '<p>{}</p><p>{}</p>'.format(html.escape(job_company), html.escape(job_desc))
+        content = '<p>{}</p><p>{}</p>'.format(job_company, job_desc)
 
         entry = feed.add_entry()
         entry.content(content, type='xhtml')
