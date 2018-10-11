@@ -3,6 +3,7 @@ bottle>=0
 coverage>=0
 cssselect>=0
 feedgen>=0
+html-sanitizer>=0
 lxml>=0
 nose>=0
 requests>=0

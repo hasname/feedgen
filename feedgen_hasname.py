@@ -7,6 +7,7 @@ import base36
 import bottle
 import feedgen.feed
 import html
+import html_sanitizer
 import lxml.etree
 import lxml.html
 import json
@@ -62,8 +63,13 @@ def job104(keyword):
         job_title = body.cssselect('#job h1')[0].text_content()
         job_url = r.url
 
-        job_company = lxml.etree.tostring(body.cssselect('.company')[0]).decode('utf-8')
-        job_desc = lxml.etree.tostring(body.cssselect('.grid-left .main')[0]).decode('utf-8')
+        s = html_sanitizer.Sanitizer()
+
+        job_company = s.sanitize(lxml.etree.tostring(body.cssselect('.company')[0]).decode('utf-8'))
+        job_company = job_company.replace(r'<br *>', '<br/>').replace(r'<hr *>', '<hr/>')
+
+        job_desc = s.sanitize(lxml.etree.tostring(body.cssselect('.grid-left .main')[0]).decode('utf-8'))
+        job_desc = job_desc.replace(r'<br *>', '<br/>').replace(r'<hr *>', '<hr/>')
 
         content = '<p>{}</p><p>{}</p>'.format(job_company, job_desc)
 
