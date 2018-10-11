@@ -7,6 +7,7 @@ import base36
 import bottle
 import feedgen.feed
 import html
+import lxml.etree
 import lxml.html
 import json
 import os
@@ -40,10 +41,11 @@ def job104(keyword):
     r = requests.get(url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5)
     body = lxml.html.fromstring(r.text)
 
+    session = FuturesSession(executor=ThreadPoolExecutor(max_workers=4))
+    futures = []
+
     for item in body.cssselect('article.job-list-item'):
         a = item.cssselect('a.js-job-link')[0]
-
-        job_title = a.text_content()
 
         href = a.get('href')
         href = re.sub(r'&jobsource=\w+', '', href)
@@ -51,10 +53,19 @@ def job104(keyword):
             href = 'https:' + href
         job_url = href
 
-        job_company = item.cssselect('ul.b-list-inline')[0].text_content()
-        job_desc = item.cssselect('p.job-list-item__info')[0].text_content()
+        futures.append(session.get(job_url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5))
 
-        content = '<p>{}</p><pre>{}</pre>'.format(html.escape(job_company), html.escape(job_desc))
+    for f in futures:
+        r = f.result()
+        body = lxml.html.fromstring(r.text)
+
+        job_title = body.cssselect('#job h1')[0].text_content()
+        job_url = r.url
+
+        job_company = lxml.etree.tostring(body.cssselect('.company')[0]).decode('utf-8')
+        job_desc = lxml.etree.tostring(body.cssselect('.grid-left .main')[0]).decode('utf-8')
+
+        content = '<p>{}</p><p>{}</p>'.format(html.escape(job_company), html.escape(job_desc))
 
         entry = feed.add_entry()
         entry.content(content, type='xhtml')
