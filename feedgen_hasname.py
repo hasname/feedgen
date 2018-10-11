@@ -41,7 +41,7 @@ def job104(keyword):
     r = requests.get(url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5)
     body = lxml.html.fromstring(r.text)
 
-    session = FuturesSession(executor=ThreadPoolExecutor(max_workers=4))
+    session = FuturesSession(executor=ThreadPoolExecutor(max_workers=10))
     futures = []
 
     for item in body.cssselect('article.job-list-item'):
