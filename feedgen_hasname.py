@@ -45,15 +45,15 @@ def job1111(keyword):
 
     for item in body.cssselect('li.digest'):
         a = item.cssselect('a.mobiFullLInk')[0]
-
         job_title = a.get('title')
-
         job_url = a.get('href')
         if job_url.startswith('//'):
             job_url = 'https:' + job_url
 
+        job_company = item.cssselect('.jbInfoin h4 a')[0].get('title')
+
         job_desc = item.cssselect('.jbInfoTxt')[0].text_content()
-        content = '{}'.format(html.escape(job_desc))
+        content = '<h3>{}</h3><p>{}</p>'.format(html.escape(job_company), html.escape(job_desc))
 
         entry = feed.add_entry()
         entry.content(content, type='xhtml')
