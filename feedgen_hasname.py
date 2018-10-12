@@ -7,8 +7,6 @@ import base36
 import bottle
 import feedgen.feed
 import html
-import html_sanitizer
-import lxml.etree
 import lxml.html
 import json
 import os
@@ -17,7 +15,6 @@ import requests
 import urllib
 
 app = application = bottle.Bottle()
-proxies = dict(https='socks5://127.0.0.1:9050')
 
 @app.route('/')
 def index():
@@ -27,63 +24,6 @@ def index():
 def robotstxt():
     bottle.response.set_header('Content-Type', 'text/plain')
     return '#\nUser-agent: *\nDisallow: /\n'
-
-@app.route('/104/<keyword>')
-def job104(keyword):
-    url = 'https://www.104.com.tw/jobs/search/?ro=0&kwop=7&keyword={}&order=2&asc=0&page=1&mode=s'.format(urllib.parse.quote_plus(keyword))
-
-    title = '104 搜尋 - {}'.format(keyword)
-
-    feed = feedgen.feed.FeedGenerator()
-    feed.author({'name': 'Feed Generator'})
-    feed.id(url)
-    feed.link(href=url, rel='alternate')
-    feed.title(title)
-
-    r = requests.get(url, headers={'User-agent': 'Mozilla/5.0'}, proxies=proxies, timeout=10)
-    body = lxml.html.fromstring(r.text)
-
-    session = FuturesSession(executor=ThreadPoolExecutor(max_workers=10))
-    futures = []
-
-    for item in body.cssselect('article.job-list-item'):
-        a = item.cssselect('a.js-job-link')[0]
-
-        href = a.get('href')
-        href = re.sub(r'&jobsource=\w+', '', href)
-        if href.startswith('//'):
-            href = 'https:' + href
-        job_url = href
-
-        futures.append(session.get(job_url, headers={'User-agent': 'Mozilla/5.0'}, proxies=proxies, timeout=10))
-
-    for f in futures:
-        r = f.result()
-        body = lxml.html.fromstring(r.text)
-
-        job_title = body.cssselect('#job h1')[0].text_content()
-        job_url = r.url
-
-        s = html_sanitizer.Sanitizer()
-
-        job_company = s.sanitize(lxml.etree.tostring(body.cssselect('.company')[0]).decode('utf-8'))
-        job_company = job_company.replace(r'<br *>', '<br/>').replace(r'<hr *>', '<hr/>')
-
-        job_desc = s.sanitize(lxml.etree.tostring(body.cssselect('.grid-left .main')[0]).decode('utf-8'))
-        job_desc = job_desc.replace(r'<br *>', '<br/>').replace(r'<hr *>', '<hr/>')
-
-        content = '<p>{}</p><p>{}</p>'.format(job_company, job_desc)
-
-        entry = feed.add_entry()
-        entry.content(content, type='xhtml')
-        entry.id(job_url)
-        entry.link(href=job_url)
-        entry.title(job_title)
-
-    bottle.response.set_header('Cache-Control', 'max-age=300,public')
-    bottle.response.set_header('Content-Type', 'application/atom+xml')
-
-    return feed.atom_str()
 
 @app.route('/pchome/<keyword>')
 def pchome(keyword):
