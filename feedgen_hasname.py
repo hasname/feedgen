@@ -94,7 +94,7 @@ def pchome(keyword):
             prod_url = 'https://mall.pchome.com.tw/prod/' + prod['Id']
         img_url = 'https://a.ecimg.tw%s' % (prod['picB'])
 
-        content = '{}<br/><img alt="" src="{}"/>'.format(html.escape(prod_desc), html.escape(img_url))
+        content = '{}<br/><img alt="{}" src="{}"/>'.format(html.escape(prod_desc), html.escape(prod_name), html.escape(img_url))
 
         entry = feed.add_entry()
         entry.author({'name': prod_author})
@@ -125,7 +125,7 @@ def pchome_lightnovel():
     items = json.loads(body)
 
     for item in items:
-        content = '{}<br/><img alt="" src="https://a.ecimg.tw{}"/>'.format(html.escape(item['Nick']), html.escape(item['Pic']['B']))
+        content = '{}<br/><img alt="{}" src="https://a.ecimg.tw{}"/>'.format(html.escape(item['Nick']), html.escape(item['Nick']), html.escape(item['Pic']['B']))
         book_title = item['Nick']
         book_url = 'https://24h.pchome.com.tw/books/prod/{}'.format(urllib.parse.quote_plus(item['Id']))
 
@@ -208,7 +208,7 @@ def shopee(keyword):
         prod_url = 'https://shopee.tw/%s-i.%d.%d' % (urllib.parse.quote_plus(name), shopid, itemid)
         img_url = 'https://cf.shopee.tw/file/%s' % (item['image'])
 
-        content = '{}<br/><img alt="" src="{}"/>'.format(html.escape(name), html.escape(img_url))
+        content = '{}<br/><img alt="{}" src="{}"/>'.format(html.escape(name), html.escape(name), html.escape(img_url))
 
         entry = feed.add_entry()
         entry.content(content, type='xhtml')
