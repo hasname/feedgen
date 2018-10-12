@@ -27,7 +27,7 @@ def robotstxt():
 
 @app.route('/pchome/<keyword>')
 def pchome(keyword):
-    url = 'https://ecshweb.pchome.com.tw/search/v3.3/all/results?q=%s&page=1&sort=new/dc' % (urllib.parse.quote_plus(keyword))
+    url = 'https://ecshweb.pchome.com.tw/search/v3.3/all/results?q={}&page=1&sort=new/dc'.format(urllib.parse.quote_plus(keyword))
 
     title = 'PChome 搜尋 - {}'.format(keyword)
 
@@ -101,7 +101,7 @@ def pchome_lightnovel():
 
 @app.route('/plurk/top/<lang>')
 def plurktop(lang):
-    url = 'https://www.plurk.com/Stats/topReplurks?period=day&lang=%s&limit=20' % (urllib.parse.quote_plus(lang))
+    url = 'https://www.plurk.com/Stats/topReplurks?period=day&lang={}&limit=20'.format(urllib.parse.quote_plus(lang))
 
     title = 'Plurk Top ({})'.format(lang)
 
@@ -132,7 +132,7 @@ def plurktop(lang):
 
 @app.route('/shopee/<keyword>')
 def shopee(keyword):
-    url = 'https://shopee.tw/api/v2/search_items/?by=ctime&keyword=%s&limit=50&newest=0&order=desc&page_type=search' % (urllib.parse.quote_plus(keyword))
+    url = 'https://shopee.tw/api/v2/search_items/?by=ctime&keyword={}&limit=50&newest=0&order=desc&page_type=search'.format(urllib.parse.quote_plus(keyword))
 
     title = '蝦皮搜尋 - {}'.format(keyword)
 
@@ -182,7 +182,7 @@ def shopee(keyword):
 
 @app.route('/youtube/<keyword>')
 def youtube(keyword):
-    url = 'https://www.youtube.com/results?sp=CAI%%253D&search_query=%s' % (urllib.parse.quote_plus(keyword))
+    url = 'https://www.youtube.com/results?sp=CAI%%253D&search_query={}'.format(urllib.parse.quote_plus(keyword))
 
     title = 'YouTube Search - {}'.format(keyword)
 
