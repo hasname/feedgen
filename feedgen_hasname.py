@@ -17,6 +17,7 @@ import requests
 import urllib
 
 app = application = bottle.Bottle()
+proxies = dict(https='socks://127.0.0.1:9050')
 
 @app.route('/')
 def index():
@@ -39,7 +40,7 @@ def job104(keyword):
     feed.link(href=url, rel='alternate')
     feed.title(title)
 
-    r = requests.get(url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5)
+    r = requests.get(url, headers={'User-agent': 'Mozilla/5.0'}, proxies=proxies, timeout=5)
     body = lxml.html.fromstring(r.text)
 
     session = FuturesSession(executor=ThreadPoolExecutor(max_workers=10))
@@ -54,7 +55,7 @@ def job104(keyword):
             href = 'https:' + href
         job_url = href
 
-        futures.append(session.get(job_url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5))
+        futures.append(session.get(job_url, headers={'User-agent': 'Mozilla/5.0'}, proxies=proxies, timeout=5))
 
     for f in futures:
         r = f.result()
