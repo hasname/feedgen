@@ -94,7 +94,7 @@ def pchome(keyword):
             prod_url = 'https://mall.pchome.com.tw/prod/' + prod['Id']
         img_url = 'https://a.ecimg.tw%s' % (prod['picB'])
 
-        content = '%s<br/><img alt="" src="%s"/>' % (html.escape(prod_desc), html.escape(img_url))
+        content = '{}<br/><img alt="" src="{}"/>'.format(html.escape(prod_desc), html.escape(img_url))
 
         entry = feed.add_entry()
         entry.author({'name': prod_author})
@@ -208,7 +208,7 @@ def shopee(keyword):
         prod_url = 'https://shopee.tw/%s-i.%d.%d' % (urllib.parse.quote_plus(name), shopid, itemid)
         img_url = 'https://cf.shopee.tw/file/%s' % (item['image'])
 
-        content = '%s<br/><img alt="" src="%s"/>' % (html.escape(name), html.escape(img_url))
+        content = '{}<br/><img alt="" src="{}"/>'.format(html.escape(name), html.escape(img_url))
 
         entry = feed.add_entry()
         entry.content(content, type='xhtml')
@@ -254,7 +254,7 @@ def youtube(keyword):
             title = a.get('title')
 
             # content
-            content = '%s<br/><img alt="%s" src="%s"/>' % (html.escape(title), html.escape(title), html.escape(img))
+            content = '{}<br/><img alt="{}" src="{}"/>'.format(html.escape(title), html.escape(title), html.escape(img))
 
             entry = feed.add_entry()
             entry.content(content, type='xhtml')
