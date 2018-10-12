@@ -40,6 +40,7 @@ def job1111(keyword):
     feed.title(title)
 
     r = requests.get(url, headers={'User-agent': user_agent}, timeout=5)
+    r.encoding = 'utf-8'
     body = lxml.html.fromstring(r.text)
 
     for item in body.cssselect('li.digest'):
