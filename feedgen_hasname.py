@@ -27,6 +27,41 @@ def robotstxt():
     bottle.response.set_header('Content-Type', 'text/plain')
     return '#\nUser-agent: *\nDisallow: /\n'
 
+@app.route('/104/<keyword>')
+def job104(keyword):
+    url = 'https://www.104.com.tw/jobs/search/?ro=0&kwop=7&keyword={}&order=11&asc=0&page=1&mode=s&jobsource=joblist_b_relevance'.format(keyword)
+
+    title = '104 搜尋 - {}'.format(keyword)
+
+    feed = feedgen.feed.FeedGenerator()
+    feed.author({'name': 'Feed Generator'})
+    feed.id(url)
+    feed.link(href=url, rel='alternate')
+    feed.title(title)
+
+    r = requests.get(url, headers={'User-agent': user_agent}, timeout=5)
+    body = lxml.html.fromstring(r.text)
+
+    for item in body.cssselect('article.job-list-item'):
+        job_company = item.get('data-cust-name')
+        job_desc = item.cssselect('p.job-list-item__info')[0].text_content()
+        job_title = item.get('data-job-name')
+        job_url = item.cssselect('a.js-job-link')[0].get('href')
+        job_url = job_url.replace(r'^//', 'https://').replace(r'&jobsource=\w*$', '')
+
+        content = '<h3>{}</h3><pre>{}</pre>'.format(html.escape(job_company), html.escape(job_desc))
+
+        entry = feed.add_entry()
+        entry.content(content, type='xhtml')
+        entry.id(job_url)
+        entry.link(href=job_url)
+        entry.title(job_title)
+
+    bottle.response.set_header('Cache-Control', 'max-age=300,public')
+    bottle.response.set_header('Content-Type', 'application/atom+xml')
+
+    return feed.atom_str()
+
 @app.route('/1111/<keyword>')
 def job1111(keyword):
     url = 'https://www.1111.com.tw/job-bank/job-index.asp?flag=13&ks={}&fs=1&si=1&ts=4&col=da&sort=desc'.format(urllib.parse.quote_plus(keyword))
