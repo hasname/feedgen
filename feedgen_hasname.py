@@ -14,6 +14,8 @@ import re
 import requests
 import urllib
 
+user_agent = 'Mozilla/5.0'
+
 app = application = bottle.Bottle()
 
 @app.route('/')
@@ -37,7 +39,7 @@ def pchome(keyword):
     feed.link(href=url, rel='alternate')
     feed.title(title)
 
-    r = requests.get(url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5)
+    r = requests.get(url, headers={'User-agent': user_agent}, timeout=5)
     body = json.loads(r.text)
 
     for prod in body['prods']:
@@ -79,7 +81,7 @@ def pchome_lightnovel():
     feed.link(href=url, rel='alternate')
     feed.title(title)
 
-    r = requests.get(url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5)
+    r = requests.get(url, headers={'User-agent': user_agent}, timeout=5)
     body = re.match(r'^[^\[]*(\[.*\])[^\[]*$', r.text).group(1)
     items = json.loads(body)
 
@@ -111,7 +113,7 @@ def plurktop(lang):
     feed.link(href=url, rel='alternate')
     feed.title(title)
 
-    r = requests.get(url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5)
+    r = requests.get(url, headers={'User-agent': user_agent}, timeout=5)
     body = json.loads(r.text)
 
     for (x, stat) in body['stats']:
@@ -142,7 +144,7 @@ def shopee(keyword):
     feed.link(href=url, rel='alternate')
     feed.title(title)
 
-    r = requests.get(url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5)
+    r = requests.get(url, headers={'User-agent': user_agent}, timeout=5)
     body = json.loads(r.text)
 
     session = FuturesSession(executor=ThreadPoolExecutor(max_workers=10))
@@ -154,7 +156,7 @@ def shopee(keyword):
         shopid = item['shopid']
 
         itemapi_url = 'https://shopee.tw/api/v2/item/get?itemid=%d&shopid=%d' % (itemid, shopid)
-        futures.append(session.get(itemapi_url, headers={'User-agent': 'Mozilla/5.0'}, timeout=5))
+        futures.append(session.get(itemapi_url, headers={'User-agent': user_agent}, timeout=5))
 
     for f in futures:
         r = f.result()
