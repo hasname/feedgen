@@ -17,7 +17,7 @@ import requests
 import urllib
 
 app = application = bottle.Bottle()
-proxies = dict(https='socks://127.0.0.1:9050')
+proxies = dict(https='socks5://127.0.0.1:9050')
 
 @app.route('/')
 def index():
