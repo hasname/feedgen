@@ -289,7 +289,7 @@ def youtube(keyword):
             title = a.get('title')
 
             # content
-            content = '{}<br/><img alt="{}" src="{}"/>'.format(html.escape(title), html.escape(title), html.escape(img))
+            content = '<img alt="{}" src="{}"/>'.format(html.escape(title), html.escape(img))
 
             entry = feed.add_entry()
             entry.content(content, type='xhtml')
