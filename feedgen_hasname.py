@@ -5,6 +5,7 @@ from requests_futures.sessions import FuturesSession
 
 import base36
 import bottle
+import configparser
 import feedgen.feed
 import html
 import lxml.html
@@ -19,7 +20,7 @@ import urllib
 user_agent = 'Mozilla/5.0'
 
 # Initialize
-sentry_sdk.init("https://df289a5e7faf42ad9aee9ec8af7c2ec3@sentry.io/1300768")
+init_sentry()
 app = application = bottle.Bottle()
 
 @app.route('/')
@@ -30,6 +31,12 @@ def index():
 def robotstxt():
     bottle.response.set_header('Content-Type', 'text/plain')
     return '#\nUser-agent: *\nDisallow: /\n'
+
+def init_sentry():
+    config = configparser.ConfigParser()
+    config.read('{}/.config/feedgen/sentry.ini'.format(os.environ['HOME']))
+
+    sentry_sdk.init(config['default']['sentry_url'])
 
 @app.route('/104/<keyword>')
 def job104(keyword):
