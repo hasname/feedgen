@@ -7,3 +7,4 @@ lxml>=0
 nose>=0
 requests>=0
 requests-futures>=0
+sentry-sdk>=0

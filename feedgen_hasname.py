@@ -12,10 +12,14 @@ import json
 import os
 import re
 import requests
+import sentry_sdk
 import urllib
 
+# Variables
 user_agent = 'Mozilla/5.0'
 
+# Initialize
+sentry_sdk.init("https://df289a5e7faf42ad9aee9ec8af7c2ec3@sentry.io/1300768")
 app = application = bottle.Bottle()
 
 @app.route('/')
