@@ -127,20 +127,26 @@ def job518(keyword):
     body = lxml.html.fromstring(r.text)
 
     for item in body.cssselect('#listContent > ul'):
-        a = item.cssselect('li.title a')[0]
-        job_title = a.text_content()
-        job_url = a.get('href')
+        try:
+            a = item.cssselect('li.title a')[0]
+            job_title = a.getchildren()[0].text_content()
 
-        job_company = item.cssselect('li.company')[0].text_content()
+            job_url = a.get('href')
+            job_url = re.sub('\?.*', '', job_url)
 
-        job_desc = item.cssselect('li.sumbox')[0].text_content()
-        content = '<h3>{}</h3><p>{}</p>'.format(html.escape(job_company), html.escape(job_desc))
+            job_company = item.cssselect('li.company')[0].text_content()
 
-        entry = feed.add_entry()
-        entry.content(content, type='xhtml')
-        entry.id(job_url)
-        entry.link(href=job_url)
-        entry.title(job_title)
+            job_desc = item.cssselect('li.sumbox')[0].text_content()
+            content = '<h3>{}</h3><p>{}</p>'.format(html.escape(job_company), html.escape(job_desc))
+
+            entry = feed.add_entry()
+            entry.content(content, type='xhtml')
+            entry.id(job_url)
+            entry.link(href=job_url)
+            entry.title(job_title)
+
+        except IndexError:
+            pass
 
     bottle.response.set_header('Cache-Control', 'max-age=300,public')
     bottle.response.set_header('Content-Type', 'application/atom+xml')
