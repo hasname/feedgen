@@ -19,8 +19,6 @@ import urllib
 # Variables
 user_agent = 'Mozilla/5.0'
 
-# Initialize
-init_sentry()
 app = application = bottle.Bottle()
 
 @app.route('/')
@@ -316,6 +314,7 @@ def youtube(keyword):
 
     return feed.atom_str()
 
+init_sentry()
 if __name__ == '__main__':
     if os.environ.get('PORT'):
         port = int(os.environ.get('PORT'))
