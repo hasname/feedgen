@@ -56,7 +56,8 @@ def job104(keyword):
         job_desc = item.cssselect('p.job-list-item__info')[0].text_content()
         job_title = item.get('data-job-name')
         job_url = item.cssselect('a.js-job-link')[0].get('href')
-        job_url = job_url.replace(r'^//', 'https://').replace(r'&jobsource=\w*$', '')
+        job_url = re.sub(r'^//', 'https://', job_url)
+        job_url = re.sub(r'&jobsource=\w*$', '', job_url)
 
         content = '<h3>{}</h3><pre>{}</pre>'.format(html.escape(job_company), html.escape(job_desc))
 
