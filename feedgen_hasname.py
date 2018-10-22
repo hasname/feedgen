@@ -38,7 +38,7 @@ def init_sentry():
 
 @app.route('/104/<keyword>')
 def job104(keyword):
-    url = 'https://www.104.com.tw/jobs/search/?ro=0&kwop=7&keyword={}&order=11&asc=0&page=1&mode=s&jobsource=joblist_b_relevance'.format(keyword)
+    url = 'https://www.104.com.tw/jobs/search/?ro=0&kwop=7&keyword={}&order=11&asc=0&page=1&mode=s'.format(keyword)
 
     title = '104 搜尋 - {}'.format(keyword)
 
