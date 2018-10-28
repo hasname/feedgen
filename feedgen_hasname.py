@@ -327,6 +327,9 @@ def youtube(keyword):
         try:
             a = item.cssselect('a[title].spf-link')[0]
 
+            # author
+            author = item.cssselect('.yt-lockup-byline a.spf-link.yt-uix-sessionlink')[0].text_content()
+
             # link
             link = a.get('href')
             if '/' == link[0]:
@@ -344,6 +347,7 @@ def youtube(keyword):
             content = '<img alt="{}" src="{}"/>'.format(html.escape(title), html.escape(img))
 
             entry = feed.add_entry()
+            entry.author({'name': author})
             entry.content(content, type='xhtml')
             entry.id(link)
             entry.title(title)
