@@ -368,5 +368,5 @@ if __name__ == '__main__':
         port = 8080
 
     bottle.run(app=app, host='0.0.0.0', port=port)
-else:
+elif not 'CI' in os.environ:
     init_sentry()
