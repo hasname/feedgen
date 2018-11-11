@@ -245,9 +245,11 @@ def plurktop(lang):
     for (x, stat) in body['stats']:
         url = 'https://www.plurk.com/p/' + base36.dumps(stat['id'])
 
+        content = re.sub(r'https?://images.plurk.com/mx_', 'https://images.plurk.com/', stat['content'])
+
         entry = feed.add_entry()
         entry.author({'name': stat['owner']['full_name']})
-        entry.content(stat['content'], type='CDATA')
+        entry.content(content, type='CDATA')
         entry.id(url)
         entry.link(href=url)
         entry.published(stat['posted'])
