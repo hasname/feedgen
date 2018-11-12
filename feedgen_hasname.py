@@ -246,7 +246,7 @@ def plurktop(lang):
         url = 'https://www.plurk.com/p/' + base36.dumps(stat['id'])
 
         content = re.sub(r'https?://images.plurk.com/mx_', 'https://images.plurk.com/', stat['content'])
-        content = re.sub(r' height="48"', ' ', content)
+        content = re.sub(r' height="\d+(px)?"', ' ', content)
 
         entry = feed.add_entry()
         entry.author({'name': stat['owner']['full_name']})
