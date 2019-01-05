@@ -169,7 +169,6 @@ def mobile01():
     body = lxml.html.fromstring(r.text)
 
     for item in body.cssselect('#hot-posts > ul > li > a'):
-        post_category = item.get('title')
         post_title = item.text_content()
         post_url = item.get('href')
 
@@ -177,10 +176,9 @@ def mobile01():
             post_url = 'https://www.mobile01.com/' + post_url
 
         entry = feed.add_entry()
-        entry.category(post_category)
         entry.id(post_url)
         entry.link(href=post_url)
-        entry.title(post_Title)
+        entry.title(post_title)
 
     bottle.response.set_header('Cache-Control', 'max-age=300,public')
     bottle.response.set_header('Content-Type', 'application/atom+xml')
