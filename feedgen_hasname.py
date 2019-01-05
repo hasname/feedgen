@@ -153,6 +153,40 @@ def job518(keyword):
 
     return feed.atom_str()
 
+@app.route('/mobile01/hot')
+def mobile01():
+    url = 'https://www.mobile01.com/'
+
+    title = 'Mobile01 熱門討論'
+
+    feed = feedgen.feed.FeedGenerator()
+    feed.author({'name': 'Feed Generator'})
+    feed.id(url)
+    feed.link(href=url, rel='alternate')
+    feed.title(title)
+
+    r = requests.get(url, headers={'User-agent': user_agent}, timeout=5)
+    body = lxml.html.fromstring(r.text)
+
+    for item in body.cssselect('#hot-posts > ul > li > a'):
+        post_category = item.get('title')
+        post_title = item.text_content()
+        post_url = item.get('href')
+
+        if post_url.startswith('topicdetail.php'):
+            post_url = 'https://www.mobile01.com/' + post_url
+
+        entry = feed.add_entry()
+        entry.category(post_category)
+        entry.id(post_url)
+        entry.link(href=post_url)
+        entry.title(post_Title)
+
+    bottle.response.set_header('Cache-Control', 'max-age=300,public')
+    bottle.response.set_header('Content-Type', 'application/atom+xml')
+
+    return feed.atom_str()
+
 @app.route('/pchome/<keyword>')
 def pchome(keyword):
     url = 'https://ecshweb.pchome.com.tw/search/v3.3/all/results?q={}&page=1&sort=new/dc'.format(urllib.parse.quote_plus(keyword))
