@@ -9,3 +9,10 @@
     loop:
       - git
       - rsync
+  - name: Upload code
+    synchronize:
+      delete: yes
+      dest: /srv/feedgen.hasname.com/
+      group: no
+      owner: no
+      src: ./
