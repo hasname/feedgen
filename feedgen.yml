@@ -16,3 +16,7 @@
       group: no
       owner: no
       src: ./
+  - name: Restart service
+    service:
+      name: feedgen-fastcgi
+      state: restarted
