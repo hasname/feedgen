@@ -1,3 +1,0 @@
-[submodule "codedeploy-makefile"]
-	path = codedeploy-makefile
-	url = https://github.com/gslin/codedeploy-makefile.git
