@@ -6,11 +6,9 @@ After=syslog.target
 ExecStart=/bin/bash -l -c "uwsgi --ini /srv/feedgen.hasname.com/uwsgi.ini"
 Group=www-data
 KillSignal=SIGINT
-NotifyAccess=all
 Restart=always
 RuntimeDirectory=uwsgi
-StandardError=syslog
-Type=notify
+Type=simple
 User=www-data
 
 [Install]
