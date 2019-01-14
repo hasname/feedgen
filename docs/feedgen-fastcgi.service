@@ -1,0 +1,17 @@
+[Unit]
+Description=Feedgen FastCGI
+After=syslog.target
+
+[Service]
+ExecStart=/bin/bash -l -c "uwsgi --ini /srv/feedgen.hasname.com/uwsgi.ini"
+Group=www-data
+KillSignal=SIGINT
+NotifyAccess=all
+Restart=always
+RuntimeDirectory=uwsgi
+StandardError=syslog
+Type=notify
+User=www-data
+
+[Install]
+WantedBy=multi-user.target
