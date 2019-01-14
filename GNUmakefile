@@ -1,6 +1,9 @@
 #
 .DEFAULT_GOAL:=		test
 
+deploy:
+	ansible-playbook feedgen.yml
+
 push:
 	git push -v origin master
 
