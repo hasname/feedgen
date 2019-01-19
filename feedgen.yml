@@ -2,13 +2,6 @@
   become: yes
   become_user: root
   tasks:
-  - name: Update apt
-    apt: cache_valid_time=86400 update_cache=yes
-  - name: Install packages
-    apt: name={{item}} state=latest
-    loop:
-      - git
-      - rsync
   - name: Upload code
     synchronize:
       delete: yes
