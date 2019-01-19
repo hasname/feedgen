@@ -15,6 +15,10 @@
       owner: www-data
       path: /srv/feedgen.hasname.com
       recurse: yes
+  - name: Install requirements.txt
+    shell: /bin/su - www-data -l -c "pip install -r /srv/feedgen.hasname.com/requirements.txt"
+    args:
+      warn: false
   - name: Restart service
     service:
       name: feedgen-fastcgi
