@@ -9,6 +9,12 @@
       group: no
       owner: no
       src: ./
+  - name: Chown source codes to www-data
+    file:
+      group: www-data
+      owner: www-data
+      path: /srv/feedgen.hasname.com
+      recurse: yes
   - name: Restart service
     service:
       name: feedgen-fastcgi
