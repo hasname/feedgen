@@ -277,6 +277,7 @@ def plurktop(lang):
     for (x, stat) in body['stats']:
         url = 'https://www.plurk.com/p/' + base36.dumps(stat['id'])
 
+        content = stat['content']
         content = re.sub(r' height="\d+(px)?"', ' ', content)
         content = re.sub(r' width="\d+(px)?"', ' ', content)
 
