@@ -1,5 +1,7 @@
 # feedgen
 
+Generate Atom feeds from sites which do not support feeds.
+
 ## Endpoint
 * https://feedgen.hasname.com/
 
