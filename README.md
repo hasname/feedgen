@@ -15,3 +15,7 @@ Generate Atom feeds from sites which do not support feeds.
 * https://feedgen.hasname.com/plurk/top/zh
 * https://feedgen.hasname.com/shopee/測試
 * https://feedgen.hasname.com/youtube/測試
+
+## License
+
+See [LICENSE](LICENSE).
