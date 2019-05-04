@@ -1,6 +1,20 @@
 # feedgen
 
-Generate Atom feeds from sites which do not support feeds.
+Generate Atom feeds from sites which do not support feeds.  Currently support these services:
+
+Recruting platform search systems:
+* https://www.104.com.tw/
+* https://www.1111.com.tw/
+* https://www.518.com.tw/
+
+EC search systems:
+* https://24h.pchome.com.tw/ (including other PChome's EC systems)
+* https://shopee.tw/ (including other PChome's EC systems)
+
+Social networks:
+* https://www.mobile01.com/ (popular section)
+* https://www.plurk.com/ (popular section)
+* https://www.youtube.com/ (search system)
 
 ## Endpoint
 * https://feedgen.hasname.com/
