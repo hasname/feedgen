@@ -16,6 +16,10 @@ Social networks:
 * https://www.plurk.com/ (popular section)
 * https://www.youtube.com/ (search system)
 
+Others:
+* https://24h.pchome.com.tw/books/store/?fq=/R/DJAZ/new
+* https://www.bookwalker.com.tw/more/fiction/1/3
+
 ## Endpoint
 * https://feedgen.hasname.com/
 
