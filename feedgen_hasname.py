@@ -52,7 +52,7 @@ def bookwalker_lightnovel():
     body = lxml.html.fromstring(r.text)
 
     for item in body.cssselect('.bwbookitem a'):
-        content = lxml.etree.tostring(item.cssselect('.bwbookcover')[0], encoding='unicode')
+        content = lxml.etree.tostring(item, encoding='unicode')
         book_title = item.get('title')
         book_url = item.get('href')
 
