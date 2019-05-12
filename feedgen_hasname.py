@@ -36,6 +36,37 @@ def init_sentry():
 
     sentry_sdk.init(config['default']['sentry_url'])
 
+@app.route('/bookwalker-lightnovel')
+def bookwalker_lightnovel():
+    url = 'https://www.bookwalker.com.tw/more/fiction/1/3'
+
+    title = 'BOOKWALKER 輕小說'
+
+    feed = feedgen.feed.FeedGenerator()
+    feed.author({'name': 'Feed Generator'})
+    feed.id(url)
+    feed.link(href=url, rel='alternate')
+    feed.title(title)
+
+    r = requests.get(url, headers={'User-agent': user_agent}, timeout=5)
+    body = lxml.html.fromstring(r.text)
+
+    for item in body.cssselect('.bwbookitem a'):
+        content = lxml.etree.tostring(item.cssselect('.bwbookcover')[0], encoding='unicode')
+        book_title = item.get('title')
+        book_url = item.get('href')
+
+        entry = feed.add_entry()
+        entry.content(content, type='xhtml')
+        entry.id(book_url)
+        entry.title(book_title)
+        entry.link(href=book_url)
+
+    bottle.response.set_header('Cache-Control', 'max-age=300,public')
+    bottle.response.set_header('Content-Type', 'application/atom+xml')
+
+    return feed.atom_str()
+
 @app.route('/104/<keyword>')
 def job104(keyword):
     url = 'https://www.104.com.tw/jobs/search/?ro=0&kwop=7&keyword={}&order=11&asc=0&page=1&mode=s'.format(keyword)
