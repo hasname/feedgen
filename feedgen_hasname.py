@@ -359,7 +359,7 @@ def shopee(keyword):
         name = item['name']
         shopid = item['shopid']
 
-        prod_url = 'https://shopee.tw/%s-i.%d.%d' % (urllib.parse.quote_plus(name), shopid, itemid)
+        prod_url = 'https://shopee.tw/product/%d/%d' % (shopid, itemid)
         img_url = 'https://cf.shopee.tw/file/%s' % (item['image'])
 
         content = '{}<br/><img alt="{}" src="{}"/>'.format(html.escape(name), html.escape(name), html.escape(img_url))
