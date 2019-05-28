@@ -21,20 +21,24 @@ user_agent = 'Mozilla/5.0'
 
 app = application = bottle.Bottle()
 
+
 @app.route('/')
 def index():
     bottle.redirect('https://github.com/gslin/feedgen')
+
 
 @app.route('/robots.txt')
 def robotstxt():
     bottle.response.set_header('Content-Type', 'text/plain')
     return '#\nUser-agent: *\nDisallow: /\n'
 
+
 def init_sentry():
     config = configparser.ConfigParser()
     config.read('{}/.config/feedgen/sentry.ini'.format(os.environ['HOME']))
 
     sentry_sdk.init(config['default']['sentry_url'])
+
 
 @app.route('/bookwalker-lightnovel')
 def bookwalker_lightnovel():
@@ -67,9 +71,12 @@ def bookwalker_lightnovel():
 
     return feed.atom_str()
 
+
 @app.route('/104/<keyword>')
 def job104(keyword):
-    url = 'https://www.104.com.tw/jobs/search/?ro=0&kwop=7&keyword={}&order=11&asc=0&page=1&mode=s'.format(keyword)
+    url = 'https://www.104.com.tw/jobs/search/?ro=0&kwop=7&keyword={}&order=11&asc=0&page=1&mode=s'.format(
+        keyword
+    )
 
     title = '104 搜尋 - {}'.format(keyword)
 
@@ -90,7 +97,9 @@ def job104(keyword):
         job_url = re.sub(r'^//', 'https://', job_url)
         job_url = re.sub(r'&jobsource=\w*$', '', job_url)
 
-        content = '<h3>{}</h3><pre>{}</pre>'.format(html.escape(job_company), html.escape(job_desc))
+        content = '<h3>{}</h3><pre>{}</pre>'.format(
+            html.escape(job_company), html.escape(job_desc)
+        )
 
         entry = feed.add_entry()
         entry.content(content, type='xhtml')
@@ -103,9 +112,12 @@ def job104(keyword):
 
     return feed.atom_str()
 
+
 @app.route('/1111/<keyword>')
 def job1111(keyword):
-    url = 'https://www.1111.com.tw/job-bank/job-index.asp?flag=13&ks={}&fs=1&si=1&ts=4&col=da&sort=desc'.format(urllib.parse.quote_plus(keyword))
+    url = 'https://www.1111.com.tw/job-bank/job-index.asp?flag=13&ks={}&fs=1&si=1&ts=4&col=da&sort=desc'.format(
+        urllib.parse.quote_plus(keyword)
+    )
 
     title = '1111 搜尋 - {}'.format(keyword)
 
@@ -129,7 +141,9 @@ def job1111(keyword):
         job_company = item.cssselect('.jbInfoin h4 a')[0].get('title')
 
         job_desc = item.cssselect('.jbInfoTxt')[0].text_content()
-        content = '<h3>{}</h3><p>{}</p>'.format(html.escape(job_company), html.escape(job_desc))
+        content = '<h3>{}</h3><p>{}</p>'.format(
+            html.escape(job_company), html.escape(job_desc)
+        )
 
         entry = feed.add_entry()
         entry.content(content, type='xhtml')
@@ -142,9 +156,12 @@ def job1111(keyword):
 
     return feed.atom_str()
 
+
 @app.route('/518/<keyword>')
 def job518(keyword):
-    url = 'https://www.518.com.tw/job-index-P-1.html?i=1&am=1&ad={}&orderType=1&orderField=8'.format(urllib.parse.quote_plus(keyword))
+    url = 'https://www.518.com.tw/job-index-P-1.html?i=1&am=1&ad={}&orderType=1&orderField=8'.format(
+        urllib.parse.quote_plus(keyword)
+    )
 
     title = '518 搜尋 - {}'.format(keyword)
 
@@ -168,7 +185,9 @@ def job518(keyword):
             job_company = item.cssselect('li.company')[0].text_content()
 
             job_desc = item.cssselect('li.sumbox')[0].text_content()
-            content = '<h3>{}</h3><p>{}</p>'.format(html.escape(job_company), html.escape(job_desc))
+            content = '<h3>{}</h3><p>{}</p>'.format(
+                html.escape(job_company), html.escape(job_desc)
+            )
 
             entry = feed.add_entry()
             entry.content(content, type='xhtml')
@@ -183,6 +202,7 @@ def job518(keyword):
     bottle.response.set_header('Content-Type', 'application/atom+xml')
 
     return feed.atom_str()
+
 
 @app.route('/mobile01/hot')
 def mobile01():
@@ -216,9 +236,12 @@ def mobile01():
 
     return feed.atom_str()
 
+
 @app.route('/pchome/<keyword>')
 def pchome(keyword):
-    url = 'https://ecshweb.pchome.com.tw/search/v3.3/all/results?q={}&page=1&sort=new/dc'.format(urllib.parse.quote_plus(keyword))
+    url = 'https://ecshweb.pchome.com.tw/search/v3.3/all/results?q={}&page=1&sort=new/dc'.format(
+        urllib.parse.quote_plus(keyword)
+    )
 
     title = 'PChome 搜尋 - {}'.format(keyword)
 
@@ -244,7 +267,9 @@ def pchome(keyword):
             prod_url = 'https://mall.pchome.com.tw/prod/' + prod['Id']
         img_url = 'https://a.ecimg.tw%s' % (prod['picB'])
 
-        content = '{}<br/><img alt="{}" src="{}"/>'.format(html.escape(prod_desc), html.escape(prod_name), html.escape(img_url))
+        content = '{}<br/><img alt="{}" src="{}"/>'.format(
+            html.escape(prod_desc), html.escape(prod_name), html.escape(img_url)
+        )
 
         entry = feed.add_entry()
         entry.author({'name': prod_author})
@@ -257,6 +282,7 @@ def pchome(keyword):
     bottle.response.set_header('Content-Type', 'application/atom+xml')
 
     return feed.atom_str()
+
 
 @app.route('/pchome-lightnovel')
 def pchome_lightnovel():
@@ -275,9 +301,15 @@ def pchome_lightnovel():
     items = json.loads(body)
 
     for item in items:
-        content = '{}<br/><img alt="{}" src="https://a.ecimg.tw{}"/>'.format(html.escape(item['Nick']), html.escape(item['Nick']), html.escape(item['Pic']['B']))
+        content = '{}<br/><img alt="{}" src="https://a.ecimg.tw{}"/>'.format(
+            html.escape(item['Nick']),
+            html.escape(item['Nick']),
+            html.escape(item['Pic']['B']),
+        )
         book_title = item['Nick']
-        book_url = 'https://24h.pchome.com.tw/books/prod/{}'.format(urllib.parse.quote_plus(item['Id']))
+        book_url = 'https://24h.pchome.com.tw/books/prod/{}'.format(
+            urllib.parse.quote_plus(item['Id'])
+        )
 
         entry = feed.add_entry()
         entry.content(content, type='xhtml')
@@ -290,9 +322,12 @@ def pchome_lightnovel():
 
     return feed.atom_str()
 
+
 @app.route('/plurk/top/<lang>')
 def plurktop(lang):
-    url = 'https://www.plurk.com/Stats/topReplurks?period=day&lang={}&limit=20'.format(urllib.parse.quote_plus(lang))
+    url = 'https://www.plurk.com/Stats/topReplurks?period=day&lang={}&limit=20'.format(
+        urllib.parse.quote_plus(lang)
+    )
 
     title = 'Plurk Top ({})'.format(lang)
 
@@ -325,9 +360,12 @@ def plurktop(lang):
 
     return feed.atom_str()
 
+
 @app.route('/shopee/<keyword>')
 def shopee(keyword):
-    url = 'https://shopee.tw/api/v2/search_items/?by=ctime&keyword={}&limit=50&newest=0&order=desc&page_type=search'.format(urllib.parse.quote_plus(keyword))
+    url = 'https://shopee.tw/api/v2/search_items/?by=ctime&keyword={}&limit=50&newest=0&order=desc&page_type=search'.format(
+        urllib.parse.quote_plus(keyword)
+    )
 
     title = '蝦皮搜尋 - {}'.format(keyword)
 
@@ -348,8 +386,13 @@ def shopee(keyword):
         name = item['name']
         shopid = item['shopid']
 
-        itemapi_url = 'https://shopee.tw/api/v2/item/get?itemid=%d&shopid=%d' % (itemid, shopid)
-        futures.append(session.get(itemapi_url, headers={'User-agent': user_agent}, timeout=5))
+        itemapi_url = 'https://shopee.tw/api/v2/item/get?itemid=%d&shopid=%d' % (
+            itemid,
+            shopid,
+        )
+        futures.append(
+            session.get(itemapi_url, headers={'User-agent': user_agent}, timeout=5)
+        )
 
     for f in futures:
         r = f.result()
@@ -362,7 +405,9 @@ def shopee(keyword):
         prod_url = 'https://shopee.tw/product/%d/%d' % (shopid, itemid)
         img_url = 'https://cf.shopee.tw/file/%s' % (item['image'])
 
-        content = '{}<br/><img alt="{}" src="{}"/>'.format(html.escape(name), html.escape(name), html.escape(img_url))
+        content = '{}<br/><img alt="{}" src="{}"/>'.format(
+            html.escape(name), html.escape(name), html.escape(img_url)
+        )
 
         entry = feed.add_entry()
         entry.content(content, type='xhtml')
@@ -375,9 +420,12 @@ def shopee(keyword):
 
     return feed.atom_str()
 
+
 @app.route('/youtube/<keyword>')
 def youtube(keyword):
-    url = 'https://www.youtube.com/results?sp=CAI%%253D&search_query={}'.format(urllib.parse.quote_plus(keyword))
+    url = 'https://www.youtube.com/results?sp=CAI%%253D&search_query={}'.format(
+        urllib.parse.quote_plus(keyword)
+    )
 
     title = 'YouTube Search - {}'.format(keyword)
 
@@ -387,7 +435,7 @@ def youtube(keyword):
     feed.link(href=url, rel='alternate')
     feed.title(title)
 
-    r = requests.get(url);
+    r = requests.get(url)
     body = lxml.html.fromstring(r.text)
 
     for item in body.cssselect('ol.item-section div.yt-lockup-video'):
@@ -395,7 +443,9 @@ def youtube(keyword):
             a = item.cssselect('a[title].spf-link')[0]
 
             # author
-            author = item.cssselect('.yt-lockup-byline a.spf-link.yt-uix-sessionlink')[0].text_content()
+            author = item.cssselect('.yt-lockup-byline a.spf-link.yt-uix-sessionlink')[
+                0
+            ].text_content()
 
             # link
             link = a.get('href')
@@ -411,7 +461,9 @@ def youtube(keyword):
             title = a.get('title')
 
             # content
-            content = '<img alt="{}" src="{}"/>'.format(html.escape(title), html.escape(img))
+            content = '<img alt="{}" src="{}"/>'.format(
+                html.escape(title), html.escape(img)
+            )
 
             entry = feed.add_entry()
             entry.author({'name': author})
@@ -427,6 +479,7 @@ def youtube(keyword):
     bottle.response.set_header('Content-Type', 'application/atom+xml')
 
     return feed.atom_str()
+
 
 if __name__ == '__main__':
     if os.environ.get('PORT'):
