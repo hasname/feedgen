@@ -94,6 +94,9 @@ def dcardtop():
             post_title = post.cssselect('h3[class^="PostEntry_title_"]')[0].text_content()
             post_url = post.cssselect('a[class^="PostEntry_root_"]')[0].get('href')
 
+            if post_url.startswith("/"):
+                post_url = "https://www.dcard.tw" + post_url
+
             content = html.escape(post_excerpt)
 
             entry = feed.add_entry()
