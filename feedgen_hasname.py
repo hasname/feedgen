@@ -72,6 +72,46 @@ def bookwalker_lightnovel():
     return feed.atom_str()
 
 
+@app.route("/dcard/top")
+def dcardtop():
+    url = "https://www.dcard.tw/f"
+
+    title = "Dcard Top"
+
+    feed = feedgen.feed.FeedGenerator()
+    feed.author({"name": "Feed Generator"})
+    feed.id(url)
+    feed.link(href=url, rel="alternate")
+    feed.title(title)
+
+    r = requests.get(url, headers={"User-agent": user_agent}, timeout=5)
+    body = lxml.html.fromstring(r.text)
+
+    for post in body.cssselect('div[class^="PostList_entry_"]'):
+        try:
+            post_author = post.cssselect('div[class^="PostAuthorHeader_meta_"]')[0].text_content()
+            post_excerpt = post.cssselect('div[class^="PostEntry_excerpt_"]')[0].text_content()
+            post_title = post.cssselect('h3[class^="PostEntry_title_"]')[0].text_content()
+            post_url = post.cssselect('a[class^="PostEntry_root_"]')[0].get('href')
+
+            content = html.escape(post_excerpt)
+
+            entry = feed.add_entry()
+            entry.author({"name": post_author})
+            entry.content(content, type="xhtml")
+            entry.id(post_url)
+            entry.link(href=post_url)
+            entry.title(post_title)
+
+        except IndexError:
+            pass
+
+    bottle.response.set_header("Cache-Control", "max-age=300,public")
+    bottle.response.set_header("Content-Type", "application/atom+xml")
+
+    return feed.atom_str()
+
+
 @app.route("/104/<keyword>")
 def job104(keyword):
     url = "https://www.104.com.tw/jobs/search/?ro=0&kwop=7&keyword={}&order=11&asc=0&page=1&mode=s".format(
