@@ -91,10 +91,16 @@ def dcardtop():
 
     for post in body.cssselect('div[class^="PostList_entry_"]'):
         try:
-            post_author = post.cssselect('div[class^="PostAuthorHeader_meta_"]')[0].text_content()
-            post_excerpt = post.cssselect('div[class^="PostEntry_excerpt_"]')[0].text_content()
-            post_title = post.cssselect('h3[class^="PostEntry_title_"]')[0].text_content()
-            post_url = post.cssselect('a[class^="PostEntry_root_"]')[0].get('href')
+            post_author = post.cssselect('div[class^="PostAuthorHeader_meta_"]')[
+                0
+            ].text_content()
+            post_excerpt = post.cssselect('div[class^="PostEntry_excerpt_"]')[
+                0
+            ].text_content()
+            post_title = post.cssselect('h3[class^="PostEntry_title_"]')[
+                0
+            ].text_content()
+            post_url = post.cssselect('a[class^="PostEntry_root_"]')[0].get("href")
 
             if post_url.startswith("/"):
                 post_url = "https://www.dcard.tw" + post_url
@@ -225,7 +231,7 @@ def job518(keyword):
             job_title = a.getchildren()[0].text_content()
 
             job_url = a.get("href")
-            job_url = re.sub("\?.*", "", job_url)
+            job_url = re.sub(r"\?.*", "", job_url)
 
             job_company = item.cssselect("li.company")[0].text_content()
 
@@ -500,5 +506,5 @@ if __name__ == "__main__":
         port = 8080
 
     bottle.run(app=app, host="0.0.0.0", port=port)
-elif not "CI" in os.environ:
+elif "CI" not in os.environ:
     init_sentry()
