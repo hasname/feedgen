@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
 
 from concurrent.futures import ThreadPoolExecutor
-from requests_futures.sessions import FuturesSession
-
-import base36
-import bottle
 import configparser
-import feedgen.feed
 import html
-import lxml.html
 import json
 import os
 import re
-import requests
-import sentry_sdk
 import urllib
+
+import base36
+import bottle
+import feedgen.feed
+import lxml.html
+import requests
+from requests_futures.sessions import FuturesSession
+import sentry_sdk
 
 # Variables
 user_agent = "Mozilla/5.0"
