@@ -10,6 +10,7 @@ Recruting platform search systems:
 EC search systems:
 * https://24h.pchome.com.tw/ (including other PChome's EC systems)
 * https://shopee.tw/ (including other PChome's EC systems)
+* https://www.byja.com/
 
 Social networks:
 * https://www.plurk.com/ (popular section)
@@ -32,6 +33,7 @@ Others:
 * https://feedgen.hasname.com/plurk/top/zh
 * https://feedgen.hasname.com/shopee/測試
 * https://feedgen.hasname.com/youtube/測試
+* https://feedgen.hasname.com/byja/測試
 
 ## License
 

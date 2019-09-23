@@ -493,6 +493,73 @@ def youtube(keyword):
     return feed.atom_str()
 
 
+@app.route("/byja/<keyword>")
+def byja(keyword):
+    url = "https://www.byja.com/search.asp?key_word={}&search_button=%E6%90%9C%E5%B0%8B".format(
+        urllib.parse.quote_plus(keyword)
+    )
+
+    title = "Byja Search - {}".format(keyword)
+
+    feed = feedgen.feed.FeedGenerator()
+    feed.author({"name": "Feed Generator"})
+    feed.id(url)
+    feed.link(href=url, rel="alternate")
+    feed.title(title)
+
+    r = requests.get(url)
+    r.encoding = "utf-8"
+
+    body = lxml.html.fromstring(r.text)
+
+    author = "Byja"
+
+    for item in body.cssselect("div#bigbox2 div.productbox"):
+        try:
+            link = ""
+            title = ""
+            author = ""
+            content = ""
+
+            links = item.cssselect("a")
+            if len(links) > 0:
+                link = links[0].get("href")
+                if "p" == link[0]:
+                    link = "https://www.byja.com/" + link
+            else:
+                break
+
+            imgs = item.cssselect("img")
+            if len(imgs) == 1:
+                img = item.cssselect("img")[0]
+                title = img.get("title")
+                content = '<img alt="{}" src="{}"/>'.format(
+                    html.escape(title), html.escape(img.get("src"))
+                )
+            else:
+                break
+
+            price = item.cssselect(".money font")
+            if len(price) == 1:
+                price = price[0].text_content()
+                title = title + " " + price
+
+            entry = feed.add_entry()
+            entry.author({"name": author})
+            entry.content(content, type="xhtml")
+            entry.id(link)
+            entry.title(title)
+            entry.link(href=link)
+
+        except IndexError:
+            pass
+
+    bottle.response.set_header("Cache-Control", "max-age=300,public")
+    bottle.response.set_header("Content-Type", "application/atom+xml")
+
+    return feed.atom_str()
+
+
 if __name__ == "__main__":
     if os.environ.get("PORT"):
         port = int(os.environ.get("PORT"))
