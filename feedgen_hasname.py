@@ -337,7 +337,7 @@ def pchome_lightnovel():
 
 @app.route("/plurk/top/<lang>")
 def plurktop(lang):
-    url = "https://www.plurk.com/Stats/topReplurks?period=day&lang={}&limit=30".format(
+    url = "https://www.plurk.com/Stats/topReplurks?period=day&lang={}&limit=20".format(
         urllib.parse.quote_plus(lang)
     )
 
