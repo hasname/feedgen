@@ -9,6 +9,8 @@
       group: no
       owner: no
       src: ./
+      rsync_opts:
+        - "--exclude=.git"
   - name: Chown source codes to www-data
     file:
       group: www-data
