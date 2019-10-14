@@ -17,10 +17,6 @@
       owner: www-data
       path: /srv/feedgen.hasname.com
       recurse: yes
-  - name: Update pip to avoid complaint
-    shell: /bin/su - www-data -l -c "pip install -U pip"
-    args:
-      warn: false
   - name: Install requirements.txt
     shell: /bin/su - www-data -l -c "pip install -r /srv/feedgen.hasname.com/requirements.txt"
     args:
