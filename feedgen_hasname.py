@@ -6,6 +6,7 @@ from requests_futures.sessions import FuturesSession
 import base36
 import bottle
 import configparser
+import datetime
 import feedgen.feed
 import html
 import lxml.html
@@ -248,6 +249,42 @@ def job518(keyword):
 
     return feed.atom_str()
 
+
+@app.route("/instagram/<username>")
+def instagram(username):
+    url = "https://www.instagram.com/{}".format(urllib.parse.quote_plus(username))
+
+    title = "Instagram - {}".format(username)
+
+    feed = feedgen.feed.FeedGenerator()
+    feed.author({"name": "Feed Generator"})
+    feed.id(url)
+    feed.link(href=url, rel="alternate")
+    feed.title(title)
+
+    r = requests.get(url, headers={"User-agent": user_agent}, timeout=5)
+    ig_data = re.search(r"^<script type=\"text/javascript\">window\._sharedData = (.*?);</script>", r.text, re.MULTILINE).group(1)
+    data = json.loads(ig_data)
+
+    for edge in data['entry_data']['ProfilePage'][0]['graphql']['user']['edge_owner_to_timeline_media']['edges']:
+        item_created_at = edge['node']['taken_at_timestamp']
+        item_image = edge['node']['display_url']
+        item_text = edge['node']['edge_media_to_caption']['edges'][0]['node']['text']
+        item_url = 'https://www.instagram.com/p/{}'.format(edge['node']['shortcode'])
+
+        content = '<p>{}</p><img alt="" src="{}"/>'.format(html.escape(item_text), html.escape(item_image))
+
+        entry = feed.add_entry()
+        entry.content(content, type="xhtml")
+        entry.id(item_url)
+        entry.link(href=item_url)
+        entry.published(datetime.datetime.fromtimestamp(item_created_at, datetime.timezone.utc))
+        entry.title(item_text)
+
+    bottle.response.set_header("Cache-Control", "max-age=300,public")
+    bottle.response.set_header("Content-Type", "application/atom+xml")
+
+    return feed.atom_str()
 
 @app.route("/pchome/<keyword>")
 def pchome(keyword):
