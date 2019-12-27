@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "feedgen_hasname"
+version = "0.2019.1227.0"
+description = "feedgen.hasname.com"
+
+license = "MIT"
+
+authors = [
+    "Gea-Suan Lin <gslin@gslin.com>"
+]
+
+readme = "README.md"
+
+repository = "https://github.com/hasname/feedgen.git"
+homepage = "https://github.com/hasname/feedgen"
+
+keywords = ["feed"]
+
+[tool.poetry.dependencies]
+base36 = "*"
+bottle = "^0.12.18"
+cssselect = "*"
+feedgen = "^0.8.0"
+lxml = "*"
+pip = "*"
+requests = "*"
+requests-futures = "*"
+sentry-sdk = "*"
+
+[tool.poetry.dev-dependencies]
+coverage = "*"
+nose = "*"

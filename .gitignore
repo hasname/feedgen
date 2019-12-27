@@ -1,3 +1,4 @@
+*.egg-info/
+*.retry
 .coverage
 GNUmakefile.local
-*.retry
