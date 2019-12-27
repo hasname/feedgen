@@ -8,22 +8,18 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "requirements.txt" }}
-          - v1-dependencies-
+          - v1-dependencies-{{ checksum "poetry.lock" }}
       - run:
           name: install dependencies
           command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install -r requirements.txt
+            poetry install
       - save_cache:
           paths:
-            - ./venv
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
+            - /home/circleci/.cache/pypoetry/virtualenvs
+          key: v1-dependencies-{{ checksum "poetry.lock" }}
       - run:
           command: |
-            . venv/bin/activate
-            make test
+            poetry run make test
 workflows:
   version: 2
   all:
