@@ -22,9 +22,8 @@
     args:
       warn: false
   - name: Install dependencies
-    shell: /bin/su - www-data -l -c "poetry install"
+    shell: /bin/su - www-data -l -c "cd /srv/feedgen.hasname.com/; poetry install"
     args:
-      chdir: /srv/feedgen.hasname.com/
       warn: false
   - name: Restart service
     service:
