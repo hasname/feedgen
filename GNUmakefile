@@ -1,5 +1,6 @@
 #
 .DEFAULT_GOAL:=		test
+.PHONY:			deploy push test
 
 deploy:
 	ansible-playbook feedgen.yml
