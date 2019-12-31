@@ -226,7 +226,7 @@ def job518(keyword):
             job_title = a.getchildren()[0].text_content()
 
             job_url = a.get('href')
-            job_url = re.sub('\?.*', '', job_url)
+            job_url = re.sub('\\?.*', '', job_url)
 
             job_company = item.cssselect('li.company')[0].text_content()
 
