@@ -31,7 +31,7 @@ def init_sentry():
 
 
 def str_clean(s):
-    return s.encode('utf-8', 'replace').decode('utf-8', 'replace')
+    return re.sub(r'[\x00-\x09]', ' ', s)
 
 
 @app.route('/')
@@ -310,9 +310,9 @@ def pchome(keyword):
 
     for prod in body['prods']:
         # Product name & description
-        prod_name = prod['name']
+        prod_name = str_clean(prod['name'])
         prod_desc = str_clean(prod['describe'])
-        prod_author = prod['author']
+        prod_author = str_clean(prod['author'])
 
         # URL
         if prod['cateId'][0] == 'D':
