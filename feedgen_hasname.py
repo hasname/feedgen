@@ -23,6 +23,13 @@ user_agent = 'Mozilla/5.0'
 app = application = bottle.Bottle()
 
 
+def init_sentry():
+    config = configparser.ConfigParser()
+    config.read('{}/.config/feedgen/sentry.ini'.format(os.environ['HOME']))
+
+    sentry_sdk.init(config['default']['sentry_url'])
+
+
 @app.route('/')
 def index():
     bottle.redirect('https://github.com/hasname/feedgen')
@@ -32,13 +39,6 @@ def index():
 def robotstxt():
     bottle.response.set_header('Content-Type', 'text/plain')
     return '#\nUser-agent: *\nDisallow: /\n'
-
-
-def init_sentry():
-    config = configparser.ConfigParser()
-    config.read('{}/.config/feedgen/sentry.ini'.format(os.environ['HOME']))
-
-    sentry_sdk.init(config['default']['sentry_url'])
 
 
 @app.route('/bookwalker-lightnovel')
