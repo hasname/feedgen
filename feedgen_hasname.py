@@ -30,6 +30,10 @@ def init_sentry():
     sentry_sdk.init(config['default']['sentry_url'])
 
 
+def str_clean(s):
+    return s.encode('utf-8', 'replace').decode('utf-8', 'replace')
+
+
 @app.route('/')
 def index():
     bottle.redirect('https://github.com/hasname/feedgen')
@@ -307,7 +311,7 @@ def pchome(keyword):
     for prod in body['prods']:
         # Product name & description
         prod_name = prod['name']
-        prod_desc = prod['describe']
+        prod_desc = str_clean(prod['describe'])
         prod_author = prod['author']
 
         # URL
