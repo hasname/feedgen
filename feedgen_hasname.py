@@ -397,17 +397,17 @@ def plurktop(lang):
     for (x, stat) in body['stats']:
         url = 'https://www.plurk.com/p/' + base36.dumps(stat['id'])
 
-        content = stat['content']
+        content = str_clean(stat['content'])
         content = re.sub(r' height="\d+(px)?"', ' ', content)
         content = re.sub(r' width="\d+(px)?"', ' ', content)
 
         entry = feed.add_entry()
-        entry.author({'name': stat['owner']['full_name']})
+        entry.author({'name': str_clean(stat['owner']['full_name'])})
         entry.content(content, type='CDATA')
         entry.id(url)
         entry.link(href=url)
         entry.published(stat['posted'])
-        entry.title(stat['content_raw'])
+        entry.title(str_clean(stat['content_raw']))
 
     bottle.response.set_header('Cache-Control', 'max-age=300,public')
     bottle.response.set_header('Content-Type', 'application/atom+xml')
