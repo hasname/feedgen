@@ -272,7 +272,7 @@ def instagram(username):
         item_text = edge['node']['edge_media_to_caption']['edges'][0]['node']['text']
         item_url = 'https://www.instagram.com/p/{}'.format(edge['node']['shortcode'])
 
-        content = '<p>{}</p><img alt='' src='{}'/>'.format(html.escape(item_text), html.escape(item_image))
+        content = '<p>{}</p><img alt="" src="{}"/>'.format(html.escape(item_text), html.escape(item_image))
 
         entry = feed.add_entry()
         entry.content(content, type='xhtml')
