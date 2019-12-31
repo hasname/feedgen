@@ -3,6 +3,7 @@
 import bottle
 import feedgen_hasname
 
+
 def test_index():
     try:
         feedgen_hasname.index()
@@ -11,6 +12,7 @@ def test_index():
         return
 
     assert False
+
 
 def test_robotstxt():
     feedgen_hasname.robotstxt()

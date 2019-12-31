@@ -286,6 +286,7 @@ def instagram(username):
 
     return feed.atom_str()
 
+
 @app.route("/pchome/<keyword>")
 def pchome(keyword):
     url = "https://ecshweb.pchome.com.tw/search/v3.3/all/results?q={}&page=1&sort=new/dc".format(
@@ -537,5 +538,5 @@ if __name__ == "__main__":
         port = 8080
 
     bottle.run(app=app, host="0.0.0.0", port=port)
-elif not "CI" in os.environ:
+elif "CI" not in os.environ:
     init_sentry()
