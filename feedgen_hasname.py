@@ -29,21 +29,17 @@ def init_sentry():
 
     sentry_sdk.init(config['default']['sentry_url'])
 
-
 def str_clean(s):
     return re.sub(r'[\x00-\x09]', ' ', s)
-
 
 @app.route('/')
 def index():
     bottle.redirect('https://github.com/hasname/feedgen')
 
-
 @app.route('/robots.txt')
 def robotstxt():
     bottle.response.set_header('Content-Type', 'text/plain')
     return '#\nUser-agent: *\nDisallow: /\n'
-
 
 @app.route('/bookwalker-lightnovel')
 def bookwalker_lightnovel():
@@ -77,7 +73,6 @@ def bookwalker_lightnovel():
     bottle.response.set_header('Content-Type', 'application/atom+xml')
 
     return feed.atom_str()
-
 
 @app.route('/dcard/top')
 def dcardtop():
@@ -121,7 +116,6 @@ def dcardtop():
 
     return feed.atom_str()
 
-
 @app.route('/104/<keyword>')
 def job104(keyword):
     url = 'https://www.104.com.tw/jobs/search/?ro=0&kwop=7&keyword={}&order=11&asc=0&page=1&mode=s'.format(
@@ -161,7 +155,6 @@ def job104(keyword):
     bottle.response.set_header('Content-Type', 'application/atom+xml')
 
     return feed.atom_str()
-
 
 @app.route('/1111/<keyword>')
 def job1111(keyword):
@@ -205,7 +198,6 @@ def job1111(keyword):
     bottle.response.set_header('Content-Type', 'application/atom+xml')
 
     return feed.atom_str()
-
 
 @app.route('/518/<keyword>')
 def job518(keyword):
@@ -253,7 +245,6 @@ def job518(keyword):
 
     return feed.atom_str()
 
-
 @app.route('/instagram/<username>')
 def instagram(username):
     url = 'https://www.instagram.com/{}'.format(urllib.parse.quote_plus(username))
@@ -289,7 +280,6 @@ def instagram(username):
     bottle.response.set_header('Content-Type', 'application/atom+xml')
 
     return feed.atom_str()
-
 
 @app.route('/pchome/<keyword>')
 def pchome(keyword):
@@ -337,7 +327,6 @@ def pchome(keyword):
 
     return feed.atom_str()
 
-
 @app.route('/pchome-lightnovel')
 def pchome_lightnovel():
     url = 'https://ecapi.pchome.com.tw/cdn/ecshop/prodapi/v2/newarrival/DJAZ/prod&offset=1&limit=20&fields=Id,Nick,Pic,Price,Discount,isSpec,Name,isCarrier,isSnapUp,isBigCart&_callback=jsonp_prodlist?_callback=jsonp_prodlist'
@@ -376,7 +365,6 @@ def pchome_lightnovel():
 
     return feed.atom_str()
 
-
 @app.route('/plurk/top/<lang>')
 def plurktop(lang):
     url = 'https://www.plurk.com/Stats/topReplurks?period=day&lang={}&limit=20'.format(
@@ -413,7 +401,6 @@ def plurktop(lang):
     bottle.response.set_header('Content-Type', 'application/atom+xml')
 
     return feed.atom_str()
-
 
 @app.route('/shopee/<keyword>')
 def shopee(keyword):
@@ -473,7 +460,6 @@ def shopee(keyword):
     bottle.response.set_header('Content-Type', 'application/atom+xml')
 
     return feed.atom_str()
-
 
 @app.route('/youtube/<keyword>')
 def youtube(keyword):
