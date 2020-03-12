@@ -538,4 +538,4 @@ app = FeedgenHasname()
 application = app.app
 
 if __name__ == '__main__':
-    application.main()
+    app.main()
