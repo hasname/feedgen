@@ -3,16 +3,18 @@
 import bottle
 import feedgen_hasname
 
+class SmokeTest(object):
+    def setup():
+        self.app = feedgen_hasname.FeedgenHasname()
 
-def test_index():
-    try:
-        feedgen_hasname.index()
-    except bottle.HTTPResponse:
-        assert True
-        return
+    def test_index():
+        try:
+            self.app.index()
+        except bottle.HTTPResponse:
+            assert True
+            return
 
-    assert False
+        assert False
 
-
-def test_robotstxt():
-    feedgen_hasname.robotstxt()
+    def test_robotstxt():
+        self.app.robotstxt()
