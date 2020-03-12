@@ -22,8 +22,10 @@ class FeedgenHasname(object):
     user_agent = 'Mozilla/5.0'
 
     def __init__(self):
-        self.app = bottle.Bottle()
+        self.add_routes()
 
+    def add_routes(self):
+        self.app = bottle.Bottle()
         self.app.route('/', callback=self.index)
         self.app.route('/robots.txt', callback=self.robotstxt)
         self.app.route('/bookwalker-lightnovel', callback=self.bookwalker_lightnovel)
