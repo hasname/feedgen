@@ -53,7 +53,7 @@ class FeedgenHasname(object):
     def str_clean(self, s):
         return re.sub(r'[\x00-\x09]', ' ', s)
 
-    # All routings
+    # Essential routings
 
     def index(self):
         bottle.redirect('https://github.com/hasname/feedgen')
@@ -61,6 +61,8 @@ class FeedgenHasname(object):
     def robotstxt(self):
         bottle.response.set_header('Content-Type', 'text/plain')
         return '#\nUser-agent: *\nDisallow: /\n'
+
+    # Functional routings
 
     def bookwalker_lightnovel(self):
         url = 'https://www.bookwalker.com.tw/more/fiction/1/3'
