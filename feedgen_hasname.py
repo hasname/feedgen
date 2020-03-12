@@ -22,6 +22,9 @@ class FeedgenHasname(object):
     user_agent = 'Mozilla/5.0'
 
     def __init__(self):
+        if 'CI' not in os.environ:
+            self.init_sentry()
+
         self.add_routes()
 
     def add_routes(self):
@@ -532,9 +535,4 @@ class FeedgenHasname(object):
 
 
 if __name__ == '__main__':
-    app = FeedgenHasname()
-
-    if 'CI' not in os.environ:
-        app.init_sentry()
-
-    app.main()
+    FeedgenHasname().main()
