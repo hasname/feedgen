@@ -24,7 +24,7 @@ feedgen = "^0.8.0"
 lxml = "*"
 pip = "*"
 requests = "*"
-requests-futures = "*"
+requests_futures = "*"
 sentry-sdk = "*"
 
 [tool.poetry.dev-dependencies]
