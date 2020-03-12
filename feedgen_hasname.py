@@ -19,9 +19,10 @@ import urllib
 
 
 class FeedgenHasname(object):
+    user_agent = 'Mozilla/5.0'
+
     def __init__(self):
         self.app = bottle.Bottle()
-        self.user_agent = 'Mozilla/5.0'
 
         self.app.route('/', callback=self.index)
         self.app.route('/robots.txt', callback=self.robotstxt)
