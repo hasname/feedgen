@@ -534,5 +534,8 @@ class FeedgenHasname(object):
         return feed.atom_str()
 
 
+app = FeedgenHasname()
+application = app.app
+
 if __name__ == '__main__':
-    FeedgenHasname().main()
+    application.main()
