@@ -1,6 +1,9 @@
 #
 .DEFAULT_GOAL:=		test
-.PHONY:			deploy push test
+.PHONY:			clean deploy push test
+
+clean:
+	rm -fr feedgen_hasname.egg-info/
 
 deploy:
 	ansible-playbook feedgen.yml
