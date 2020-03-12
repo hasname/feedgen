@@ -20,7 +20,7 @@ import urllib
 # Variables
 user_agent = 'Mozilla/5.0'
 
-app = application = bottle.Bottle()
+app = bottle.Bottle()
 
 
 def init_sentry():
