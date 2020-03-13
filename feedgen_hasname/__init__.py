@@ -22,6 +22,8 @@ class FeedgenHasname(object):
     user_agent = 'Mozilla/5.0'
 
     def __init__(self):
+        self.req = requests.Session()
+
         self.add_routes()
 
     def add_routes(self):
@@ -75,7 +77,7 @@ class FeedgenHasname(object):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        r = requests.get(url, headers={'User-agent': self.user_agent}, timeout=5)
+        r = self.req.get(url, headers={'User-agent': self.user_agent}, timeout=5)
         body = lxml.html.fromstring(r.text)
 
         for item in body.cssselect('.bwbookitem a'):
@@ -107,7 +109,7 @@ class FeedgenHasname(object):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        r = requests.get(url, headers={'User-agent': self.user_agent}, timeout=5)
+        r = self.req.get(url, headers={'User-agent': self.user_agent}, timeout=5)
         body = lxml.html.fromstring(r.text)
 
         for post in body.cssselect('div[class^="PostList_entry_"]'):
@@ -150,7 +152,7 @@ class FeedgenHasname(object):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        r = requests.get(url, headers={'User-agent': self.user_agent}, timeout=5)
+        r = self.req.get(url, headers={'User-agent': self.user_agent}, timeout=5)
         body = lxml.html.fromstring(r.text)
 
         for item in body.cssselect('article.job-list-item'):
@@ -189,7 +191,7 @@ class FeedgenHasname(object):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        r = requests.get(url, headers={'User-agent': self.user_agent}, timeout=5)
+        r = self.req.get(url, headers={'User-agent': self.user_agent}, timeout=5)
         r.encoding = 'utf-8'
         body = lxml.html.fromstring(r.text)
 
@@ -231,7 +233,7 @@ class FeedgenHasname(object):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        r = requests.get(url, headers={'User-agent': self.user_agent}, timeout=5)
+        r = self.req.get(url, headers={'User-agent': self.user_agent}, timeout=5)
         body = lxml.html.fromstring(r.text)
 
         for item in body.cssselect('#listContent > ul'):
@@ -274,7 +276,7 @@ class FeedgenHasname(object):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        r = requests.get(url, headers={'User-agent': self.user_agent}, timeout=5)
+        r = self.req.get(url, headers={'User-agent': self.user_agent}, timeout=5)
         ig_data = re.search(r"^<script type=\"text/javascript\">window\._sharedData = (.*?);</script>", r.text, re.MULTILINE).group(1)
         data = json.loads(ig_data)
 
@@ -311,7 +313,7 @@ class FeedgenHasname(object):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        r = requests.get(url, headers={'User-agent': self.user_agent}, timeout=5)
+        r = self.req.get(url, headers={'User-agent': self.user_agent}, timeout=5)
         body = json.loads(r.text)
 
         for prod in body['prods']:
@@ -354,7 +356,7 @@ class FeedgenHasname(object):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        r = requests.get(url, headers={'User-agent': self.user_agent}, timeout=5)
+        r = self.req.get(url, headers={'User-agent': self.user_agent}, timeout=5)
         body = re.match(r'^[^\[]*(\[.*\])[^\[]*$', r.text).group(1)
         items = json.loads(body)
 
@@ -393,7 +395,7 @@ class FeedgenHasname(object):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        r = requests.get(url, headers={'User-agent': self.user_agent}, timeout=5)
+        r = self.req.get(url, headers={'User-agent': self.user_agent}, timeout=5)
         body = json.loads(r.text)
 
         for (x, stat) in body['stats']:
@@ -429,7 +431,7 @@ class FeedgenHasname(object):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        r = requests.get(url, headers={'User-agent': self.user_agent}, timeout=5)
+        r = self.req.get(url, headers={'User-agent': self.user_agent}, timeout=5)
         body = json.loads(r.text)
 
         session = FuturesSession(executor=ThreadPoolExecutor(max_workers=10))
@@ -487,7 +489,7 @@ class FeedgenHasname(object):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        r = requests.get(url)
+        r = self.req.get(url)
         body = lxml.html.fromstring(r.text)
 
         for item in body.cssselect('ol.item-section div.yt-lockup-video'):
