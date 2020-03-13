@@ -3,6 +3,7 @@
 import bottle
 import feedgen_hasname
 
+
 class SmokeTest(object):
     def setup():
         self.app = feedgen_hasname.FeedgenHasname()
