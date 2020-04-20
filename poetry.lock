@@ -52,7 +52,7 @@ description = "Feed Generator (ATOM, RSS, Podcasts)"
 name = "feedgen"
 optional = false
 python-versions = "*"
-version = "0.8.0"
+version = "0.9.0"
 
 [package.dependencies]
 lxml = "*"
@@ -196,7 +196,7 @@ python-versions = "*"
 version = "2.0.18"
 
 [metadata]
-content-hash = "af2436b4189825bc90aec840999fdf7ad4030215f0e4d27faeaa7ed34c9494d5"
+content-hash = "d6de975e582b46ce1c89f2fcb6b50c3083e46263997fe892237f0b821abcda38"
 python-versions = "*"
 
 [metadata.files]
@@ -263,7 +263,7 @@ cssselect = [
     {file = "cssselect-1.1.0.tar.gz", hash = "sha256:f95f8dedd925fd8f54edb3d2dfb44c190d9d18512377d3c1e2388d16126879bc"},
 ]
 feedgen = [
-    {file = "feedgen-0.8.0.tar.gz", hash = "sha256:26557304284007a3c2d772c376a48c0a8ec8e24371c4471455ea89cf568fa114"},
+    {file = "feedgen-0.9.0.tar.gz", hash = "sha256:8e811bdbbed6570034950db23a4388453628a70e689a6e8303ccec430f5a804a"},
 ]
 futures = [
     {file = "futures-3.1.1-py2-none-any.whl", hash = "sha256:c4884a65654a7c45435063e14ae85280eb1f111d94e542396717ba9828c4337f"},

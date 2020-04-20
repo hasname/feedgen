@@ -18,9 +18,9 @@ keywords = ["feed"]
 
 [tool.poetry.dependencies]
 base36 = "*"
-bottle = "^0.12.18"
+bottle = "*"
 cssselect = "*"
-feedgen = "^0.8.0"
+feedgen = "*"
 lxml = "*"
 pip = "*"
 requests = "*"
