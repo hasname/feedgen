@@ -26,6 +26,7 @@ pip = "*"
 requests = "*"
 requests_futures = "*"
 sentry-sdk = "*"
+uwsgi = "*"
 
 [tool.poetry.dev-dependencies]
 coverage = "*"
