@@ -8,7 +8,7 @@
       dest: /srv/feedgen.hasname.com/
       group: no
       owner: no
-      src: ./
+      src: ../../
       rsync_opts:
         - "--exclude=.git"
   - name: Chown source codes to www-data

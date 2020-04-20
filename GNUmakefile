@@ -6,7 +6,7 @@ clean:
 	rm -fr feedgen_hasname.egg-info/
 
 deploy:
-	ansible-playbook feedgen.yml
+	ansible-playbook -i ansible/hosts ansible/feedgen.yml
 
 push:
 	git push -v origin master
