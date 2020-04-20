@@ -25,6 +25,17 @@
     shell: /bin/su - www-data -l -c "cd /srv/feedgen.hasname.com/; poetry install"
     args:
       warn: false
+  - name: Install systemd service
+    synchronize:
+      delete: yes
+      dest: /lib/systemd/system/feedgen-fastcgi.service
+      group: no
+      owner: no
+      src: feedgen-fastcgi.service
+  - name: Enable systemd service
+    systemd:
+      name: feedgen-fastcgi
+      enabled: yes
   - name: Restart service
     service:
       name: feedgen-fastcgi
