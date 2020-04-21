@@ -3,12 +3,16 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.6.1
+      - image: circleci/python:3.8.1
     steps:
       - checkout
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "poetry.lock" }}
+      - run:
+          name: install poetry
+          command: |
+            pip -U install poetry
       - run:
           name: install dependencies
           command: |
