@@ -28,15 +28,15 @@
   - name: Install systemd service
     synchronize:
       delete: yes
-      dest: /lib/systemd/system/feedgen-fastcgi.service
+      dest: /lib/systemd/system/feedgen-uwsgi.service
       group: no
       owner: no
-      src: feedgen-fastcgi.service
+      src: feedgen-uwsgi.service
   - name: Enable systemd service
     systemd:
-      name: feedgen-fastcgi
+      name: feedgen-uwsgi
       enabled: yes
   - name: Restart service
     service:
-      name: feedgen-fastcgi
+      name: feedgen-uwsgi
       state: restarted
