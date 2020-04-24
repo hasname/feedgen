@@ -10,13 +10,8 @@
       owner: no
       src: ../../
       rsync_opts:
+        - "--chown=www-data:www-data"
         - "--exclude=.git"
-  - name: Chown source codes to www-data
-    file:
-      group: www-data
-      owner: www-data
-      path: /srv/feedgen.hasname.com
-      recurse: yes
   - name: Install poetry
     shell: /bin/su - www-data -l -c "pip install poetry"
     args:
