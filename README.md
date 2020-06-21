@@ -12,7 +12,6 @@ EC search systems:
 * https://shopee.tw/ (including other PChome's EC systems)
 
 Social networks:
-* https://www.instagram.com/ (user)
 * https://www.plurk.com/ (popular section)
 * https://www.youtube.com/ (search system)
 
@@ -28,7 +27,6 @@ Others:
 * https://feedgen.hasname.com/1111/devops
 * https://feedgen.hasname.com/518/devops
 * https://feedgen.hasname.com/bookwalker-lightnovel
-* https://feedgen.hasname.com/instagram/helical_hikaru
 * https://feedgen.hasname.com/pchome-lightnovel
 * https://feedgen.hasname.com/pchome/測試
 * https://feedgen.hasname.com/plurk/top/zh
