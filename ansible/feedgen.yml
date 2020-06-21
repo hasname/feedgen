@@ -10,7 +10,6 @@
       owner: no
       src: ../../
       rsync_opts:
-        - "--chown=www-data:www-data"
         - "--exclude=.git"
   - name: Chown to www-data:www-data
     file:
