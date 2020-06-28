@@ -15,3 +15,8 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/518/test')
         self.assertEqual(res.status_code, 200)
+
+    def test_pchome(self):
+        c = Client()
+        res = c.get('/pchome/test')
+        self.assertEqual(res.status_code, 200)
