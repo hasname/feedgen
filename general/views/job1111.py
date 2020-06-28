@@ -26,14 +26,14 @@ class Job1111View(View):
         r.encoding = 'utf-8'
         body = lxml.html.fromstring(r.text)
 
-        for item in body.cssselect('li.digest'):
-            a = item.cssselect('a.mobiFullLInk')[0]
+        for item in body.cssselect('li.jbInfo'):
+            a = item.cssselect('a.mobileItemClick')[0]
             job_title = a.get('title')
             job_url = a.get('href')
-            if job_url.startswith('//'):
-                job_url = 'https:' + job_url
+            if job_url.startswith('/job/'):
+                job_url = 'https://www.1111.com.tw' + job_url
 
-            job_company = item.cssselect('.jbInfoin h4 a')[0].get('title')
+            job_company = item.cssselect('a.d-block.organ')[0].get('title')
 
             job_desc = item.cssselect('.jbInfoTxt')[0].text_content()
             content = '<h3>{}</h3><p>{}</p>'.format(
