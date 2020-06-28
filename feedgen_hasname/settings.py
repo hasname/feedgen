@@ -25,7 +25,9 @@ SECRET_KEY = '^oj$^+__e7^i#)6#(cr3g7lzgkg%k-(nivdxw(!8p5!eu+0yny'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'feedgen.hasname.com',
+]
 
 
 # Application definition
