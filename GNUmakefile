@@ -1,15 +1,21 @@
 #
-.DEFAULT_GOAL:=		test
-.PHONY:			clean deploy push test
+.DEFAULT_GOAL:=		rundev
+.PHONY:			clean dependency deploy.production deploy.staging rundev test
 
 clean:
-	rm -fr .coverage feedgen_hasname.egg-info/
+	rm -f .coverage .dev.sqlite3 general/migrations/0001_initial.py
 
-deploy:
-	ansible-playbook -i ansible/hosts ansible/feedgen.yml
+dependency:
+	poetry install
 
-push:
-	git push -v origin master
+deploy.production: dependency
+	cd ansible; ansible-playbook feedgen-hasname.yml --limit production
 
-test:
-	nosetests --cover-package feedgen_hasname --no-byte-compile --with-coverage
+deploy.staging: dependency
+	cd ansible; ansible-playbook feedgen-hasname.yml --limit staging
+
+rundev: dependency
+	poetry run ./manage.py runserver --settings=feedgen_hasname.settings_dev
+
+test: dependency
+	poetry run coverage run --source=. ./manage.py test --settings=feedgen_hasname.settings_test

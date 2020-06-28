@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "feedgen_hasname"
-version = "0.2019.1227.0"
+version = "0.2020.0628.0"
 description = "feedgen.hasname.com"
 
 license = "MIT"
@@ -18,11 +18,12 @@ keywords = ["feed"]
 
 [tool.poetry.dependencies]
 base36 = "*"
-bottle = "*"
 cssselect = "*"
+django = "*"
 feedgen = "*"
 lxml = "*"
 pip = "*"
+python = "^3.8"
 requests = "*"
 requests_futures = "*"
 sentry-sdk = "*"
@@ -30,4 +31,3 @@ uwsgi = "*"
 
 [tool.poetry.dev-dependencies]
 coverage = "*"
-nose = "*"
