@@ -30,3 +30,8 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/shopee/test')
         self.assertEqual(res.status_code, 200)
+
+    def test_shopee(self):
+        c = Client()
+        res = c.get('/youtube/test')
+        self.assertEqual(res.status_code, 200)
