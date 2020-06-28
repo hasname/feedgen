@@ -5,3 +5,8 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/104/test')
         self.assertEqual(res.status_code, 200)
+
+    def test_job1111(self):
+        c = Client()
+        res = c.get('/1111/test')
+        self.assertEqual(res.status_code, 200)
