@@ -1,6 +1,6 @@
 #
 .DEFAULT_GOAL:=		rundev
-.PHONY:			clean dependency deploy.production deploy.staging rundev test
+.PHONY:			clean dependency deploy rundev test
 
 clean:
 	rm -f .coverage .dev.sqlite3 general/migrations/0001_initial.py
@@ -8,11 +8,8 @@ clean:
 dependency:
 	poetry install
 
-deploy.production: dependency
-	cd ansible; ansible-playbook feedgen-hasname.yml --limit production
-
-deploy.staging: dependency
-	cd ansible; ansible-playbook feedgen-hasname.yml --limit staging
+deploy: dependency
+	cd ansible; ansible-playbook feedgen-hasname.yml
 
 rundev: dependency
 	poetry run ./manage.py runserver --settings=feedgen_hasname.settings_dev
