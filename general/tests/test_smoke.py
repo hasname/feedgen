@@ -20,3 +20,8 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/pchome/test')
         self.assertEqual(res.status_code, 200)
+
+    def test_shopee(self):
+        c = Client()
+        res = c.get('/shopee/test')
+        self.assertEqual(res.status_code, 200)
