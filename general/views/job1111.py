@@ -11,7 +11,7 @@ class Job1111View(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://www.1111.com.tw/job-bank/job-index.asp?flag=13&ks={}&fs=1&si=1&ts=4&col=da&sort=desc'.format(urllib.parse.quote_plus(keyword))
+        url = 'https://www.1111.com.tw/search/job?flag=13&ks={}&fs=1&si=1&ts=4&col=da&sort=desc'.format(urllib.parse.quote_plus(keyword))
 
         title = '1111 搜尋 - {}'.format(keyword)
 
