@@ -32,4 +32,4 @@ uwsgi = "*"
 
 [tool.poetry.dev-dependencies]
 coverage = "*"
-responses = "*"
+requests-mock = "*"

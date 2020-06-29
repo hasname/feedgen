@@ -1,0 +1,1860 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>test、全部職缺|518人力銀行工作機會</title>
+<meta name="author" content="數字科技股份有限公司" />
+<meta name="copyright" content="數字科技股份有限公司" />
+<meta name="keywords" content="test、全部職缺找工作、找職缺、求職網" />
+<meta name="description" content="每日最新的test、全部職缺就業機會，518人力銀行提供你最精準的就業情報，test、全部職缺今日共有上千筆資訊，快上最快速找到工作的求職網-518人力銀行。" />
+<meta name="robots" content="index,follow" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-language" content="zh-tw" />
+<meta http-equiv="expires" content="-1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="last-modified" content="Mon, 29 Jun 2020 00:00:00 GMT" />
+<meta property="og:image" content="https://statics.518.com.tw/img/index/public/518_155x155_logo2.png?v201901">
+<link href="https://statics.518.com.tw/min/?g=518-tippy-css&amp;v=20200629102411" rel="stylesheet" type="text/css" />
+<link href="https://statics.518.com.tw/min/?g=518-job-css&amp;v=20200629102411" rel="stylesheet" type="text/css" />
+<link href="https://statics.518.com.tw/min/?g=518-job-news-css&amp;v=20200629102411" rel="stylesheet" type="text/css" />
+<link href="https://statics.518.com.tw/min/?g=518-custom-modal-css&amp;v=20200629102411" rel="stylesheet" type="text/css" />
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.518.com.tw/job-index.html" />  <script>
+dataLayer = [{'device':'device_1'}];
+</script><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T3SGTFQ');</script>
+<!-- End Google Tag Manager --><style>
+/* 暫時拔除1/150頁籤 */
+#linkpageTop{
+display:none;
+}
+#tableItem .switchmode{
+left: auto;
+right: 0;
+}
+#tableOption{
+overflow:visible;
+}
+#listTableArea .pagestat li.map{
+right:100px;
+top: 65px;
+}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3SGTFQ" height="0" width="0" style="display:none;visibility:hidden">
+	
+</iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) --><div id="wrapper">
+<div class="webnav-top-all">
+<div id="webnav-top">
+<ul class="right-nav">
+<li id="link-addcn">
+<a href="/" target="_blank" class="link-rnav link-addcn">數字APP</a>
+<div class="submenu link-addcn-inner" id="link-addcn-inner">
+<ul>
+<li>
+<a href="//www.8591.com.tw/news-app.html?aid=849" target="_blank" title="8591寶物交易" google-data-stat="頭部導航_addcn_8591寶物交易">
+<img src="https://statics.518.com.tw/img/index/public/icon-8591.png" alt="8591寶物交易">
+<p class="sub-text">8591寶物交易</p>
+</a>
+</li>
+<li>
+<a href="//www.591.com.tw#anchor_app" target="_blank" title="591房屋交易" google-data-stat="頭部導航_addcn_591房屋交易">
+<img src="https://statics.518.com.tw/img/index/public/icon-591.png" alt="591房屋交易">
+<p class="sub-text">591房屋交易</p>
+</a>
+</li>
+<li>
+<a href="//www.591.com.hk/home/app/android.html" target="_blank" title="591房屋交易" google-data-stat="頭部導航_addcn_591房屋交易">
+<img src="https://statics.518.com.tw/img/index/public/icon-hk591.png" alt="591房屋交易">
+<p class="sub-text">591房屋交易</p>
+</a>
+</li>
+<li>
+<a href="//uc.100.com.tw/apps-download.html" target="_blank" title="100室內設計" google-data-stat="頭部導航_addcn_100室內設計">
+<img src="https://statics.518.com.tw/img/index/public/icon-100.png" alt="100室內設計">
+<p class="sub-text">100室內設計</p>
+</a>
+</li>
+<li>
+<a href="//www.8891.com.tw/index-appDown.html" target="_blank" title="8891中古車" google-data-stat="頭部導航_addcn_8891中古車">
+<img src="https://statics.518.com.tw/img/index/public/icon-8891.svg" alt="8891中古車" width="60px">
+<p class="sub-text">8891中古車</p>
+</a>
+</li>
+<li>
+<a href="//c.8891.com.tw/photoIndex-appDown.html" target="_blank" title="8891汽車" google-data-stat="頭部導航_addcn_8891汽車">
+<img src="https://statics.518.com.tw/img/index/public/icon-8891-newCar.svg" alt="8891汽車" width="60px">
+<p class="sub-text">8891汽車</p>
+</a>
+</li>
+<li>
+<a href="//www.518.com.tw/active-app_android.html" target="_blank" title="518人力銀行" google-data-stat="頭部導航_addcn_518人力銀行">
+<img src="https://statics.518.com.tw/img/index/public/icon-518-work.png?v201901" alt="518人力銀行">
+<p class="sub-text">518人力銀行</p>
+</a>
+</li>
+<li>
+<a href="//play.google.com/store/apps/details?id=tw.com.bankcomp518&hl=zh_TW" target="_blank" title="找人才APP" google-data-stat="頭部導航_addcn_找人才APP">
+<img src="https://statics.518.com.tw/img/index/public/icon-518-hire.png" alt="找人才APP">
+<p class="sub-text">找人才APP</p>
+</a>
+</li>
+<li>
+<a href="//518.com.tw/15043" target="_blank" title="小雞上工" google-data-stat="頭部導航_addcn_小雞上工">
+<img src="https://statics.518.com.tw/img/index/public/icon-chick.png" alt="小雞上工">
+<p class="sub-text">小雞上工</p>
+</a>
+</li>
+<li>
+<a href="https://www.tasker.com.tw" target="_blank" title="Tasker 出任務" google-data-stat="頭部導航_addcn_Tasker 出任務">
+<img src="https://statics.518.com.tw/img/index/public/icon-518-Tasker.png" alt="Tasker 出任務">
+<p class="sub-text">Tasker 出任務</p>
+</a>
+</li>
+<li>
+<a href="https://www.marry.com.tw/1407" target="_blank" title="結婚吧" google-data-stat="頭部導航_addcn_結婚吧">
+<img src="https://statics.518.com.tw/img/index/public/MarryApp_Icon.png" alt="結婚吧">
+<p class="sub-text">結婚吧</p>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li id="link-map">
+<a href="help-sitemap.html" class="link-rnav link-map">網站地圖</a>
+<div class="submenu link-map-inner" id="link-map-inner">
+<dl>
+<dt>頻道</dt>
+<dd><a href="job-index.html">找工作</a></dd>
+<dd><a href="talent-index.html">找人才</a></dd>
+<dd><a href="https://www.518.com.tw/articles">職場人蔘</a></dd>
+<dd><a href="guestBook-witness.html">媒合見證</a></dd>
+<dd><a href="help-helpser.html">幫助中心</a></dd>
+<dd><a href="index-center.html">我的帳戶</a></dd>
+<dd class="clear">　</dd>
+</dl>
+<dl>
+<dt>註冊與登入</dt>
+<dd><a class="strong" href="https://www.518.com.tw/action/go.php?type=regbtn&amp;id=2">會員註冊</a></dd>
+<dd><a href="https://www.518.com.tw/member-login.html">會員登入</a></dd>
+<dd><a href="help-foundPwd_ID.html">忘記密碼</a></dd>
+<dd class="clear">　</dd>
+</dl>
+<dl class="noline">
+<dt>網站相關</dt>
+<dd><a href="help-us.html">關於我們</a></dd>
+<dd><a href="help-news.html">新聞剪輯</a></dd>
+<dd><a href="help-laimer.html">免責聲明</a></dd>
+<dd><a href="help-sev.html">服務條款</a></dd>
+<dd><a href="help-pris.html">隱私權聲明</a></dd>
+<dd class="clear">　</dd>
+</dl>
+</div>
+</li>
+<li><a href="help-helpser.html" class="link-help"><span>幫助中心</span></a></li>
+<li id="link-casebox"><a href="https://www.tasker.com.tw/action/go.php?type=agent&id=1649" target="_blank">外包接案</a></li>
+<li id="link-ypbox" style=""><a href="active-vip_pay.html" target="_blank" >徵才方案</a></li>
+</ul>
+<div id="webnav_rbox">
+<span class="welcome_msg">您好，歡迎來到518！ [<a class="rbox_login" href="member-login.html?backUrl=%2Fjob-index-P-1.html%3Fi%3D1%26am%3D1%26ad%3Dtest%26orderType%3D1%26orderField%3D8">登入</a>] &nbsp;[<a class="rbox_reg" href="https://www.518.com.tw/action/go.php?type=regbtn&amp;id=2">註冊</a>]</span></div>
+</div>
+</div>
+
+<div class="sky-ad"></div><div id="header">
+<div><!-- 100% -->
+<div id="topInfo">
+<a class="logo" href="https://www.518.com.tw" title="518人力銀行，找工作、求職徵才就是快！">518人力銀行，找工作、求職徵才就是快！</a>
+
+<!-- 活動版位_首頁/找工作頁/共用_logo feat. -->
+<a href="https://www.518.com.tw/18347" title="新鮮人解鎖" style="display: inline-block; bottom: 13px; left: 6px; position: relative; ">
+<img width="147px" src="https://statics.518.com.tw/img/active/2020_fresh_graduate/feat.png" alt="新鮮人解鎖">
+</a>
+
+<!-- 我的帳戶上方的廣告位置 -->
+<a href="https://www.518.com.tw/18249" title="月繳只要$1299" style="bottom: 0px; right: 0px; position: absolute; ">
+<img width="110px" src="https://photo.518.com.tw/photo/public/202006/pwef3444.gif" alt="月繳只要$1299">
+</a>
+
+</div>
+<div id="mainNav"><!-- 1000px -->
+<ul class="isMain">
+<li  id="mainNavStart"><a href="https://www.518.com.tw" class="w2" title="首頁"><span>首 頁</span></a></li>
+<li class="mainNavOn" ><a href="https://www.518.com.tw/job-index.html" class="w3" title="找工作"><span>找工作</span></a></li>
+<li ><a href="https://www.518.com.tw/talent-index.html" class="w3 myacc-tag" title="找人才"><span>找人才</span></a><p class="spcnew">&nbsp;</p></li>
+<li ><a href="https://www.518.com.tw/guestBook-witness.html" class="w4" title="媒合見證"><span>媒合見證</span></a></li>
+<li><a href="https://www.518.com.tw/articles" class="w4" title="職場人蔘"><span>職場人蔘</a></li>
+<li><a href="https://ask.518.com.tw" class="w4" target="_blank" title="好公司"><span>好公司</span></a></li>
+<li   id="mainNavEnd" class="account"><a href="https://www.518.com.tw/index-center.html" class="w4 " title="我的帳戶"><span>我的帳戶</span></a></li><!-- res-login-ing：求職者登入中；comp-login-ing：企業登入中 -->
+</ul>
+</div><!-- end mainNav -->
+</div><!-- end topInfo -->
+<div id="new_header_search"><!-- 100% -->
+<div class="n_calendar"><!-- 1000px -->
+<form method="get" action="job-index.html" id="frm" name="frm" autocomplete="off">
+<ul class="search">
+<li id="j_from" class="ts-job" ><a href="javascript:;" id="j_open" onclick="_JOB_POP.open();"><span  >選擇 / 應徵職務</span></a></li>
+<li id="l_from" class="ts-area" ><a href="javascript:;" id="l_open" onclick="_LOCATION_POP.open();"><span  >選擇 / 工作地區</span></a></li>
+<li class="ts-kwds"><span><input type="text" id="kwds" name="ad" maxlength="20" value="test" class="focus" onkeydown="$(this).addClass('focus');_AUTOCOMPLETE.indexsearch(event,'kwds_rs','kwds');var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;if (keyCode < 13 || (keyCode > 41 && keyCode < 112) || keyCode > 123){ $(this).removeClass('nohover_comp').removeClass('nohover');}" onkeyup="var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;if (keyCode!=13 && keyCode!=37 && keyCode!=38 && keyCode!=39 && keyCode!=40) { _AUTOCOMPLETE.lookup('kwds_rs','job',this,'1');}" oncontextmenu="$(this).addClass('focus');" /></span></li>
+<li class="ts-btn"><a id="gtm_search_job_web" href="javascript:;" onclick="setTimeout(function(){_JOB_POP.q()},0);"><span>搜尋</span></a></li>
+<li class="remove-all">
+<a href="javascript:;" onclick="delcookie('__aa');delcookie('__ab');delcookie('__ac');_JOB_POP.choose_job_clear();_LOCATION_POP.choose_location_clear();document.getElementById('kwds').value='';" title="清除搜尋條件">
+<span class="icon">&nbsp;</span>
+<span class="txt">清除搜尋</span>
+</a>
+</li>
+</ul><!-- End of search -->
+<input type="hidden" id="l" name="aa" value="" />
+<input type="hidden" id="l_back" value="" />
+<input type="hidden" id="j" name="ab" value="" />
+<input type="hidden" id="j_back" value="" />
+<input type="hidden" id="i" name="ac" value="" />
+<input type="hidden" id="i_back" value="" />
+<input type="hidden" id="a" name="am" value="1" />
+<input type="hidden" id="b" name="i" value="1" />
+
+<input type='hidden' name='ae' value='' />
+<input type='hidden' name='af' value='' />
+<input type='hidden' name='ag' value='' />
+<input type='hidden' name='ah' value='' />
+<input type='hidden' name='ai' value='' />
+<input type='hidden' name='aj' value='' />
+<input type='hidden' id='ak' name='ak' value='' />
+<input type='hidden' id='ak_min' name='ak_min' value='' />
+<input type='hidden' id='ak_max' name='ak_max' value='' />
+<input type='hidden' name='al' value='' />
+<input type='hidden' name='an' value='' />
+<input type='hidden' name='ao' value='' />
+<input type='hidden' name='ap' value='' />
+<input type='hidden' id='aq' name='aq' value='' />
+<input type='hidden' id='aq_level' name='ar' value='' />
+<input type='hidden' id='as' name='as' value='' />
+<input type='hidden' id='at' name='at' value='' />
+<input type='hidden' name='au' value='' />
+<input type='hidden' id='av' name='av' value='' /></form>
+<div class="hotSub">
+<p>
+<em>熱門：</em>
+<a href="https://www.518.com.tw/action/go.php?type=ad&amp;id=699" target="_blank" title="找家附近的工作">找家附近的工作</a><a href="https://www.518.com.tw/action/go.php?type=ad&amp;id=977" target="_blank" title="新鮮人求職秘笈">新鮮人求職秘笈</a></p>
+</div>
+<div class="recommand-box">
+</div>
+<div class="searchRecord-box" id="history_record_last">
+<a href="javascript:;" class="link" title="test" style="padding-bottom: 20px" >
+<span class="icon_record">&nbsp;</span>
+<span class="lastRecord">近期搜尋</span>
+<span class="more">&nbsp;</span>
+</a>
+</div>
+<div id="history_record" class="searchRecord-list" style="display:none;">
+<div class="s-R-l-r">
+<span class="s-arrow"></span>
+<h5>近期搜尋紀錄：</h5>
+<ul><li><a href="job-index.html?ad=test&amp;am=1" title="test">test</a></li></ul><p class="del-line"><a href="javascript:;" onclick="delcookie('__utmj');window.location='job-index.html?ad=&amp;ai=&amp;';" title="清除搜尋條件">清除搜尋條件</a></p></div>
+</div>
+</div>
+</div>
+<div id="header_search_pop" class="menu4"></div>
+</div><!-- end header --><!-- 未讀訊息側欄 -->
+<ul class="msg_sidebar"   data-tippy="msg_sidebar-btn">
+<li id="hintUnreadMessageCounter">
+</li>
+</ul>
+<script type="text/javascript" src="https://statics.518.com.tw/min/?g=518-common-jquery-js&amp;v=20200629102411"></script>
+<script>
+
+// 載入未讀訊息
+if(jQuery !== undefined && (typeof jQuery == 'function')){
+if($('ul.msg_sidebar li#hintUnreadMessageCounter').length > 0){
+$.post('/ajax/', {module: 'data', action: 'getUnreadMessage'}, null, 'json').done(function(response){
+if(response.status && response.sum > 0){
+var hint = $('<span>').html(response.sum).hide();
+$('ul.msg_sidebar li#hintUnreadMessageCounter').append(hint);
+hint.fadeIn();
+}
+});
+}
+}
+</script><div id="container">
+<div id="stickyLINE" style=""></div>
+<ul id="stickyFeatures" class="searchCondition">
+<li>
+<div class="search_left_box">
+<div class="searchstat_width">[<h1 style="display: unset;">工作職缺</h1>] 你正在搜尋：</div>
+<div class="searchstat_job" data-target="js-search_list"><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;ad=">test<img src="https://statics.518.com.tw/img/shape.svg" alt="刪除"></a></div>
+<div class="searchstat_width dis_none_all" id="searchTip">
+<a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;ad=">test</a></div>
+</div>
+<div class="btn_right tooltip-example">
+<span class="tooltip">
+<a id="reSrh"  href="job-index.html?ad=&amp;ai=&amp;" class="research">清除條件</a> <a class="btn_notice" href="javascript:;" id="gtm_visitor_pc_search_newjobnotice" data-target="js-subscription" onclick="job_index_open_save_dialog();"><img src="https://statics.518.com.tw/img/bell.svg" alt="新職缺通知我">新職缺通知我</a></span>
+</div>
+</li>
+</ul>
+<div class="stick-box"></div>
+<input type="hidden" id="p" value="21" /> <div id="content">
+<div id="job_banner_box" class="job-banner-box">
+<ul id="job_banner_box_content"><li><a href="https://www.518.com.tw/action/go.php?type=fees&amp;id=9885" title="Gogoro幸運兒是你?" target="_blank"><img src="https://photo.518.com.tw/photo/public/202006/apnl5101.jpg" width="798" height="50" title="Gogoro幸運兒是你?" alt="Gogoro幸運兒是你?" /></a></li></ul></div>
+<div id="listTableArea">
+<ul class="pagestat">
+<li class="all on"><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;am=1&amp;ac=0&amp;ai=0" title="全部職缺"><span>全部職缺</span></a></li>
+<li class=""><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;i=1&amp;am=1&amp;ai=1&amp;scr=0&amp;ac=" title="全職"><span>全職</span></a></li>
+<li class=""><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;i=1&amp;am=4&amp;ai=2&amp;scr=0&amp;ac=" title="兼職"><span>兼職</span></a></li>
+<li class=""><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;i=1&amp;am=1&amp;ai=3&amp;scr=0&amp;ac=" title="打工"><span>打工</span></a></li>
+<li class=""><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;i=1&amp;am=1&amp;ac=1013001008,1013001002&amp;scr=0&amp;ai=" title="派遣"><span>派遣</span></a></li>
+<li class=""><a href="job-cases.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ncase=1&amp;i=1&amp;am=3&amp;ac=" title="接案"><span>接案</span></a></li>
+<li class="map"><a href="map-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8" target="_blank"><span>地圖找工作</span></a></li>
+</ul>
+<div id="tableOption" class="">
+<div class="tableOption-inner">
+<ul class="optionLine">
+<li style="display:block;" class="chk">
+<input type="checkbox" id="c1" onclick="AllSelect('listContent',this);" />
+<label for="c1"><span></span></label>
+</li>
+<li style="display:block;"><a href="javascript:;" onclick="doShowSelect();return false;">顯示勾選職務</a>｜</li>
+<li style="display:block;"><a href="other-pop_login.html?height=336&amp;width=340&amp;modal=true&amp;move=true" class="thickbox">收藏職缺</a>｜</li>
+<li style="display:block;"><a href="other-pop_login.html?height=336&amp;width=340&amp;modal=true&amp;move=true" class="thickbox">多筆應徵</a></li>
+<li class="case-txt" style="display:none;">依據您所選的類別，為您推薦的接案類型</li>
+</ul>
+<ul id="tableItem">
+							
+							<li class="switchmode"><a href="javascript:;" onclick="displaymode('displaymode_job_index','2','www.518.com.tw','job','index','-P','1','?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8','');return false;" class="goListMode" title="切換到列表"><span>切換到列表</span></a></li>
+							<li class="areat"><a class="" href="job-index-P-1.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;orderType=2&amp;orderField=3"  title="按工作地區排序遠到近"><span>工作地區</span></a></li>
+							<li class="expt"><a class="" href="job-index-P-1.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;orderType=2&amp;orderField=4" title="按經歷排序有到無"><span>經歷</span></a></li>
+							<li class="edut"><a class="" href="job-index-P-1.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;orderType=2&amp;orderField=5" title="按學歷排序高到低"><span>學歷</span></a></li>
+							<li class="datet"><a class=" order-desc " href="job-index-P-1.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;orderType=2&amp;orderField=8" title="按刊登時間排序新到舊"><span>刊登時間</span></a></li>
+						</ul></div>
+</div>
+<form name="showSelectForm" action="?" method="post" target="_blank" onsubmit="return false;">
+<div id="listContent"><ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131543">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-yM1JXv.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">資深自動化測試工程師_早班全職</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131543">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131532">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-GK2aDj.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">自動化測試工程師 可兼職</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131532">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131534">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-NP8JxY.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">資深自動化測試工程師-晚班</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131534">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131535">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-yeKYbb.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">自動化測試工程師_Senior Test Automation Engineer</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131535">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131536">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-ydK3dd.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">自動化測試工程師_晚班Senior Test Automation Engineer</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131536">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131538">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-yBR9Jr.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">自動化測試工程師_可兼職Senior Test Automation Engineer</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131538">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131540">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-LmK7MJ.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">資深自動化測試工程師_Senior Test Automation Engineer</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131540">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131539">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-yYl5qV.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">自動化測試工程師_兼職Senior Test Automation Engineer</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131539">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131541">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-GZK9Jk.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">資深自動化測試工程師_全職</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131541">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131542">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-GQo1K2.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">資深自動化測試工程師_晚班全職</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131542">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131531">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-GxjAVJ.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">自動化測試工程師 可兼職</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131531">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131530">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-ybKYlQ.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">自動化 測試工程師</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131530">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131491">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-y53V1W.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">資深自動化測試工程師_Senior Test Automation Engineer</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">國民美少女有限公司徵求：
+資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產</p>
+	<span class="functionlink popactive_2131491">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131518">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-LkPJQj.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">資深自動化測試工程師</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元以上</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131518">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131523">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-Lrm73P.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">資深自動化測試工程師</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131523">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131524">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-ylKJRk.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">資深自動化測試工程師-日班</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">國民美少女有限公司徵求：
+資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產</p>
+	<span class="functionlink popactive_2131524">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131525">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-GVDl6v.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">資深自動化測試工程師-男女皆可</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131525">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131526">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-yvm8DA.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">資深自動化測試工程師-日班</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131526">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131527">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-GpKVAZ.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">資深自動化測試工程師-晚班</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131527">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131528">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-NJAB0M.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">自動化測試工程師</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131528">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2131529">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-LXrd9M.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">自動化測試工程師</h2>
+		</a>
+	</li>
+		<li class="area">新北市-三重區</li>
+<li class="exp">不拘</li>
+<li class="edu"> / 不拘</li>
+<li class="date">
+	
+	
+			06/29
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-Z93zm3.html" target="_blank">國民美少女有限公司</a>
+</li>
+<li id="quickReply-box">
+		<a class="company-approve" href="https://www.518.com.tw/help-helpser.html?p=que_comp_certificate_2" target="_blank" title="此企業通過518審核認證">認證</a>
+</li>
+<li class="sumbox">
+	<p class="jobdesc">月薪 35,000 元</p>
+	<p class="jobdesc">資深自動化測試工程師_Senior Test Automation Engineer
+工作內容
+1.以 Selenium 進行自動化測試。
+2.撰寫測試案例、執行測試工作、產出測試報告。
+3.開發自動</p>
+	<span class="functionlink popactive_2131529">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+<ul class="all_job_hover" 
+	onmouseover = "$(this).addClass('ie6-hover');"
+	onmouseout = "$(this).removeClass('ie6-hover');"
+>
+	
+	<li class="chk">
+		<input type="checkbox" name="selectid[]" value="2065873">
+	</li>
+	<li class="title">
+		<a target="_blank" href="https://www.518.com.tw/job-LXVZ4W.html?kw=test&amp;pi=1">
+			<h2 style="font-weight: bold;">設計驗證工程師 (DVT engineer)</h2>
+		</a>
+	</li>
+		<li class="area">台北市-內湖區</li>
+<li class="exp">3年</li>
+<li class="edu"> / 大學</li>
+<li class="date">
+	
+	
+			06/24
+
+</li>
+<li class="company">
+	<a href="https://www.518.com.tw/company-xWqJOZ.html" target="_blank">盟訊國際研發股份有限公司</a>
+</li>
+<li id="quickReply-box">
+</li>
+<li class="sumbox">
+	<p class="jobdesc">面議(薪資達四萬以上)</p>
+	<p class="jobdesc">Working tasks:
+1. System reliability integration test... ex. functional / Reliability / Thermal / Po</p>
+	<span class="functionlink popactive_2065873">
+				 
+			<a href="./other-pop_login.html?height=336&width=340&modal=true&move=true" class="nowsend thickbox">
+				<span>立即應徵</span>
+			</a>
+	</span>
+</li> 
+</ul>
+</div><input id="module" type="hidden" value="job" name="module" />
+<input id="action" type="hidden" value="showSelect" name="action" />
+</form>
+<div id="tableOption" class="pd-0 ">
+<div class="tableOption-inner">
+<ul class="optionLine">
+<li style="display:block;" class="chk">
+<input type="checkbox" id="c2" onclick="AllSelect('listContent',this);" />
+<label for="c2"><span></span></label>
+</li>
+<li style="display:block;"><a href="javascript:;" onclick="doShowSelect();return false;">顯示勾選職務</a>｜</li>
+<li style="display:block;"><a href="other-pop_login.html?height=336&amp;width=340&amp;modal=true&amp;move=true" class="thickbox">收藏職缺</a>｜</li>
+<li style="display:block;"><a href="other-pop_login.html?height=336&amp;width=340&amp;modal=true&amp;move=true" class="thickbox">多筆應徵</a></li>
+<li class="case-txt" style="display:none;">依據您所選的類別，為您推薦的接案類型</li>
+</ul>
+</div>
+</div>
+<div id="bottomOption" class="">
+<div id="linkpage"> <em class="ps p1">1</em> <input type="text" maxlength="5" class="textShort" onkeydown="var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;if (keyCode == 13 ){ var page=$(this).val().replace(/[^0-9]*/g,'');if(page.length == 0){page=1;};location.replace('http://www.518.com.tw/job-index-P-'+page+'.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8');return false;}" /><a href="javascript:;" class="goGo imga" onclick="var page=$(this).prev().val().replace(/[^0-9]*/g,'');if(page.length == 0){page=1;};location.replace('http://www.518.com.tw/job-index-P-'+page+'.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8');return false;" ></a>
+							<span class="pagecountnum">第<span>1 / 1</span>頁</span>
+							<span class="sum">共<em>22</em>筆</span></div></div>
+</div>
+<div id="relative_job" class="relative_job_step">
+<a href="https://www.518.com.tw/resume-center.html" class="step1" title="1.建立履歷" target="_blank">1.建立履歷</a>
+<a class="step2" title="2履歷表完成">2.履歷表完成</a>
+<a href="https://www.518.com.tw/job-index.html" class="step3" title="3.查看工作機會" target="_blank">3.查看工作機會</a>
+<a href="https://www.518.com.tw/help-help_search_list.html?help=主動應徵&help_type=all" class="step4" title="4.主動應徵" target="_blank">4.主動應徵</a>
+<a href="https://www.518.com.tw/help-help_search_list.html?help=面試&help_type=all" class="step5" title="5.面試" target="_blank">5.面試</a>
+<a class="step6" title="6.錄取報到">6.錄取報到</a>
+</div>
+</div>
+<div id="sidebar">
+<div class="menu clearfix">
+<h5>更多篩選條件</h5>
+<div class="submenu clearfix" onmouseout="$(this).removeClass('ie6-hover');" onmouseover="$(this).addClass('ie6-hover');">
+<!-- <ul class="twocol clearfix">
+<li class="newyear-change odds">
+<input type="checkbox" value="" onclick="_POP.go_next(this);"  />
+<a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;au=1"></a>
+<a  href="javascript:;" onclick="_POP.p_check(this);" title="企業回覆率100%">企業回覆率100%</a>
+</li>
+</ul> -->
+<ul class="twocol clearfix">
+<li class="newyear-change odds">
+<input type="checkbox" value="" onclick="_POP.go_next(this);"  />
+<a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ab=2025001,2025002,2040001,2040002&amp;ak=80&amp;ak_min=40000&a_id=15038"></a>
+<a  href="javascript:;" onclick="_POP.p_check(this);" title="服務業高薪4萬↑">服務業高薪4萬↑</a>
+<sup class="hot">熱門</sup>
+</li>
+</ul>
+<!-- <ul class="twocol clearfix">
+<li class="newyear-change odds">
+<input type="checkbox" value="" onclick="_POP.go_next(this);"  />
+<a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ah=2&a_id=14676"></a>
+<a  href="javascript:;" onclick="_POP.p_check(this);" title="歡迎新鮮人">歡迎新鮮人</a>
+<sup class="hot">熱門</sup>
+</li>
+</ul> -->
+</div>
+<div class="submenu clearfix" onmouseout="$(this).removeClass('ie6-hover');" onmouseover="$(this).addClass('ie6-hover');">
+<h4 class="" id="ul08_style" onclick="_POP.block_switch('ul08','ul08_style');">更新日期<span></span></h4>
+<div class="clearall"><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;al=">清除</a></div>
+<ul id="ul08" class="twocol clearfix">
+<li class="odd"><input type="radio" name="ul08" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;al=2"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="今日內">今日內</a></li>
+<li><input type="radio" name="ul08" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;al=3"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="三日內">三日內</a></li>
+<li class="odd"><input type="radio" name="ul08" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;al=4"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="一週內">一週內</a></li>
+<li><input type="radio" name="ul08" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;al=5"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="二週內">二週內</a></li>
+<li class="odd"><input type="radio" name="ul08" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;al=6"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="一個月內">一個月內</a></li>
+</ul>
+</div>
+<div class="submenu clearfix" onmouseout="$(this).removeClass('ie6-hover');" onmouseover="$(this).addClass('ie6-hover');">
+<h4 class="" id="ul1920_style" onclick="_POP.block_switch('ul1920','ul1920_style');">福利特色<span></span><sup class="new-tips">HOT</sup></h4>
+<div class="clearall"><a href="#TB_inline?height=400&amp;width=400&amp;inlineId=tb_feature&amp;modal=true&amp;move=true" class="thickbox" onclick="_FEATURE_1_POP.FEATURE_1('dlg_feature');">選單</a> <a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;as=&amp;at=">清除</a></div>
+<ul id="ul1920"   class="twocol clearfix">
+<li class="odds">
+<a class="thickbox IndustrySectors" id="asat_show" href="#TB_inline?height=400&amp;width=400&amp;inlineId=tb_feature&amp;modal=true&amp;move=true" onclick="_FEATURE_1_POP.FEATURE_1('dlg_feature');">請選擇福利特色</a>
+</li>
+</ul>
+</div>
+<div class="submenu clearfix" onmouseout="$(this).removeClass('ie6-hover');" onmouseover="$(this).addClass('ie6-hover');">
+<h4 class="" id="ul02_style" onclick="_POP.block_switch('ul02','ul02_style');">工作經驗<span></span></h4>
+<div class="clearall"><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;af=">清除</a></div>
+<ul id="ul02" class="twocol clearfix">
+<li class="odd"><input type="radio" name="ul02" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;af=2"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="半年以下">半年以下</a></li>
+<li><input type="radio" name="ul02" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;af=3"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="1年以下">1年以下</a></li>
+<li class="odd"><input type="radio" name="ul02" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;af=4"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="2年以下">2年以下</a></li>
+<li><input type="radio" name="ul02" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;af=5"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="3年以下">3年以下</a></li>
+<li class="odd"><input type="radio" name="ul02" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;af=6"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="4年以下">4年以下</a></li>
+<li><input type="radio" name="ul02" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;af=7"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="5年以下">5年以下</a></li>
+<li class="odd"><input type="radio" name="ul02" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;af=8"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="6年以下">6年以下</a></li>
+<li><input type="radio" name="ul02" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;af=9"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="7年以下">7年以下</a></li>
+</ul>
+</div>
+<div class="submenu clearfix" onmouseout="$(this).removeClass('ie6-hover');" onmouseover="$(this).addClass('ie6-hover');">
+<h4 class="" id="ul11_style" onclick="_POP.block_switch('ul11','ul11_style');">休假制度<span></span></h4>
+<div class="clearall"><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ap=">清除</a></div>
+<ul id="ul11" class="twocol clearfix" >
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ap=2"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="週休二日">週休二日</a></li>
+<li><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ap=3"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="隔週休">隔週休</a></li>
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ap=4"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="排班制">排班制</a></li>
+<li><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ap=5"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="三班制">三班制</a></li>
+</ul>
+</div>
+<!--
+<div class="submenu clearfix" onmouseout="$(this).removeClass('ie6-hover');" onmouseover="$(this).addClass('ie6-hover');">
+<h4 class="" id="ul01_style" onclick="_POP.block_switch('ul01','ul01_style');">可上班日<span></span></h4>
+<div class="clearall"><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ae=">清除</a></div>
+<ul id="ul01" class="twocol clearfix">
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ae=7"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="即時">即時</a></li>
+<li><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ae=1"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="一週內">一週內</a></li>
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ae=2"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="二週內">二週內</a></li>
+<li><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ae=3"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="一個月內">一個月內</a></li>
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ae=6"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="年後可">年後可</a></li>
+</ul>
+</div>
+-->
+<div class="submenu clearfix" onmouseout="$(this).removeClass('ie6-hover');" onmouseover="$(this).addClass('ie6-hover');">
+<h4 class="" id="industry_menu_style"  onclick="_POP.block_switch('Dlg_industry_list','industry_menu_style');">產業類別<span></span></h4>
+<div class="clearall"><a href="#TB_inline?height=400&amp;width=400&amp;inlineId=tb_industry&amp;modal=true&amp;move=true" class="thickbox" onclick="_INDUSTRY_4_POP.INDUSTRY_4('i','dlg_industry');">選單</a> <a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ac=">清除</a></div>
+<ul id="Dlg_industry_list"  class="twocol clearfix">
+<li class="odds">
+<a class="thickbox IndustrySectors" id="ac_show" href="#TB_inline?height=400&amp;width=400&amp;inlineId=tb_industry&amp;modal=true&amp;move=true" onclick="_INDUSTRY_4_POP.INDUSTRY_4('i','dlg_industry');">請選擇產業類別</a>
+</li>
+</ul>
+</div>
+<div class="submenu clearfix" onmouseout="$(this).removeClass('ie6-hover');" onmouseover="$(this).addClass('ie6-hover');">
+<h4 class="close" id="ul04_style" onclick="_POP.block_switch('ul04','ul04_style');">求職身分<span></span></h4>
+<div class="clearall"><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ah=">清除</a></div>
+<ul id="ul04" class="twocol clearfix" style="display: none;">
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ah=5"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="原住民">原住民</a></li>
+<li><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ah=1"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="一般求職者">一般求職者</a></li>
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ah=6"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="身障人士">身障人士</a></li>
+<li><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ah=2"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="應屆畢業生">應屆畢業生</a></li>
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ah=7"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="中高年齡者">中高齡者</a></li>
+<li><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ah=3"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="日間就讀中">日間就讀中</a></li>
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ah=9"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="二度就業">二度就業</a></li>
+<li><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ah=4"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="夜間就讀中">夜間就讀中</a></li>
+<li class="odds"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ah=10"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="研發替代役">研發替代役</a></li>
+</ul>
+</div>
+<div class="submenu clearfix" onmouseout="$(this).removeClass('ie6-hover');" onmouseover="$(this).addClass('ie6-hover');">
+<h4 class="close" id="ul06_style" onclick="_POP.block_switch('ul06','ul06_style');">管理責任<span></span></h4>
+<div class="clearall"><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;aj=">清除</a></div>
+<ul id="ul06" class="twocol clearfix" style="display: none;">
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;aj=1"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="無">無</a></li>
+<li><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;aj=4"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="4人以下">4人以下</a></li>
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;aj=5"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="5-8人">5-8人</a></li>
+<li><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;aj=6"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="9-12人">9-12人</a></li>
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;aj=7"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="13人以上">13人以上</a></li>
+<li><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;aj=3"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="人數未定">人數未定</a></li>
+</ul>
+</div>
+<div class="submenu clearfix" onmouseout="$(this).removeClass('ie6-hover');" onmouseover="$(this).addClass('ie6-hover');">
+<h4 class="close" id="ul07_style" onclick="_POP.block_switch('ul07','ul07_style');">薪資待遇<span></span></h4>
+<div class="clearall"><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ak=">清除</a></div>
+<ul id="ul07" class="twocol clearfix" style="display: none;">
+<li class="odd" style="width: 100%;"><input type="checkbox" name="u07" value="99" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ak=99"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="面議(薪資達四萬以上)">面議(薪資達四萬以上)</a></li>
+<li class="wage">
+<label for="u07"><input type="checkbox" value="80" id="u07" name="u07"  />薪資設定：</label>
+<select name="u07_type" id="u07_type" onclick="$('#u07').attr('checked',true); return false;" onchange="$('#u07').val($(this).val());">
+<option value="80" >月薪</option>
+<option value="81" >時薪</option>
+<option value="82" >日薪</option>
+<option value="83" >週薪</option>
+<option value="84" >年薪</option>
+</select>
+<p>
+<input class="tw-wage1" type="text" name="u07_min" id="u07_min" value="" maxlength="8" onclick="$('#u07').attr('checked',true);return false;" />至
+<input class="tw-wage1" type="text" name="u07_max" id="u07_max" value="" maxlength="8" onclick="$('#u07').attr('checked',true);return false;"/>
+<input type="image" class="age_btn" src="https://statics.518.com.tw/img/index/input/btn_talent_submit.gif" onclick="salaryCheck('u07','ak'); return false;" value="確定">
+</p>
+</li>
+</ul>
+</div>
+<div class="submenu clearfix" onmouseout="$(this).removeClass('ie6-hover');" onmouseover="$(this).addClass('ie6-hover');">
+<h4 class="close" id="ul09_style" onclick="_POP.block_switch('ul09','ul09_style');">上班時段<span></span></h4>
+<div class="clearall"><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;an=">清除</a></div>
+<ul id="ul09" class="twocol clearfix" style="display: none;">
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;an=1"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="日班">日班</a></li>
+<li><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;an=2"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="夜班">夜班</a></li>
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;an=3"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="大夜班">大夜班</a></li>
+<li><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;an=4"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="假日班">假日班</a></li>
+</ul>
+</div>
+<div class="submenu clearfix" onmouseout="$(this).removeClass('ie6-hover');" onmouseover="$(this).addClass('ie6-hover');">
+<h4 class="close" id="ul10_style" onclick="_POP.block_switch('ul10','ul10_style');">輪　　班<span></span></h4>
+<div class="clearall"><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ao=">清除</a></div>
+<ul id="ul10" class="twocol clearfix" style="display: none;">
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ao=1"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="需輪班">需輪班</a></li>
+</ul>
+</div>
+<div class="submenu clearfix" onmouseout="$(this).removeClass('ie6-hover');" onmouseover="$(this).addClass('ie6-hover');">
+<h4 class="close" id="ul03_style" onclick="_POP.block_switch('ul03','ul03_style');">學歷限制<span></span></h4>
+<div class="clearall"><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ag=">清除</a></div>
+<ul id="ul03" class="twocol clearfix" style="display: none;">
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ag=4"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="大學">大學</a></li>
+<li><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ag=3"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="專科">專科</a></li>
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ag=5"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="碩士">碩士</a></li>
+<li><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ag=6"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="博士">博士</a></li>
+<li class="odd"><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ag=2"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="高中職">高中職</a></li>
+<li><input type="checkbox" value="" onclick="_POP.go_next(this);"  /><a href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;ag=1"></a><a  href="javascript:;" onclick="_POP.p_check(this);" title="國中">國中</a></li>
+</ul>
+</div>
+
+</div>
+<h5 class="advsetup no-border" onclick="_POP.block_switch('advsetup');">進階條件</h5>
+<div id="advsetup" class="menu clearfix advsetup no-border">
+<div class="submenu clearfix" onmouseout="$(this).removeClass('ie6-hover');" onmouseover="$(this).addClass('ie6-hover');">
+<h4 class="close" id="disabled_menu_style" onclick="_POP.block_switch('disabled_menu','disabled_menu_style');">具身心障礙身份<span></span></h4>
+<div class="poplist"><a href="#TB_inline?height=400&amp;width=400&amp;inlineId=tb_disabled&amp;modal=true&amp;move=true" class="thickbox" onclick="_DISABLED_POP.DISABLED('aq','dlg_disabled');">選單</a> <a class="adv_clear" href="job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;aq=">清除</a></div>
+<ul id="disabled_menu" style="display: none;">
+<li class="odds">
+<a class="advsrhpop thickbox" id="aq_show" href="#TB_inline?height=400&amp;width=400&amp;inlineId=tb_disabled&amp;modal=true&amp;move=true" onclick="_DISABLED_POP.DISABLED('aq','dlg_disabled');">請選擇身心障礙類別</a>
+</li>
+</ul>
+</div>
+<div class="submenu clearfix" onmouseout="$(this).removeClass('ie6-hover');" onmouseover="$(this).addClass('ie6-hover');">
+<h4 class="">排除公司關鍵字</h4>
+<input class="input-width90" type="text" name="av" placeholder="以,區隔，例如:保險,派遣" value="" size="6" onblur="if(this.value.length > 0){document.getElementById('av').value=this.value;}" onkeydown="var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;if (keyCode == 13 ){ var av=$(this).val();if(av.length > 0){location.replace('/job-index.html?i=1&amp;am=1&amp;ad=test&amp;ai=0&amp;orderType=1&amp;orderField=8&amp;av='+av);return false;} }" />
+</div>
+</div>
+<div class="banner-box">
+<!-- for數字廣告合作 -->
+<!-- <div class="plugin-iframe-ad">
+<iframe src="https://event.yungching.com.tw/518job/web/" width="184" height="120" frameborder="0" scrolling="no" class="iframe-box"></iframe>
+</div> -->
+</div>
+</div><!--end sidebar-->
+<div id="tb_disabled" style="display:none;">
+<div class="popup-main main-job work-window" style="top:0;left:0;position:absolute" id="dlg_disabled"></div>
+<div class="popup-main-sub main-job-sub work-window-sub" id="dlg_disabled_menu" onmouseover="_POP.menuOverShow(this)" onmouseout="_POP.hide_pop_menu('dlg_disabled');" style="display:none;"></div>
+</div>
+<div id="tb_industry" style="display:none;">
+<div class="popup-main main-job trade-window" style="top:0;left:0;position:absolute" id="dlg_industry"></div>
+<div class="popup-main-sub main-job-sub trade-window-sub" id="dlg_industry_menu" onmouseover="_POP.menuOverShow(this)" onmouseout="_POP.hide_pop_menu('dlg_industry');" style="display:none;"></div>
+</div>
+<div id="tb_feature" style="display:none;">
+<div class="popup-main main-job feature-window" style="top:0;left:0;position:absolute" id="dlg_feature"></div>
+<div class="popup-main-sub main-job-sub trade-window-sub" id="dlg_feature_menu" onmouseover="_POP.menuOverShow(this)" onmouseout="_POP.hide_pop_menu('dlg_feature');" style="display:none;"></div>
+</div></div>
+<div class="alert-bg dis_none_all" ></div>
+<div class="alert-box" id="tb_save" style="display:none;">
+<div class="alert_do top1 " id="top1">
+<span class="close" title="關閉"><a href="javascript:;" onclick="tb_remove();" ><img src="https://statics.518.com.tw/img/cross-15.svg" alt="關閉"></a></span>
+<img src="https://statics.518.com.tw/img/setting.svg" alt="設定通知">
+<h3>新職缺搶先看</h3>
+<p class="color">我們將不定期通知你最新職缺! 而且可隨時取消～</p>
+<input class="not_member " type="email" id="user_email" placeholder="請輸入您的 email" value="" required="required">
+<p class="email_error dis_none_all" id="email_error" >格式不符喔～再確認一下吧！</p>
+
+<input type="hidden" id="savesearch_id" value="" />
+<div class="inline_scroll_box" id="nowcon">
+
+</div>
+<div class="submit-box">
+<a href="javascript:;" id="gtm_visitor_pc_search_newjobnotice_email_sent" data-target="js-agreen_pop" onclick="savesearch_new('1');">
+同意並接受通知
+</a>
+<span id="stop"></span>
+<a class="privacy" href="https://www.518.com.tw/help-helpser.html?p=pris"  target="_blank" >隱私權聲明條款</a>
+</div>
+</div>
+<div class="alert_do top2 dis_none_all" id="top2" >
+<span class="close" title="關閉"><a href="javascript:;" onclick="tb_remove();"><img src="https://statics.518.com.tw/img/cross-15.svg" alt="刪除"></a></span>
+<img class="subscription_icon" src="https://statics.518.com.tw/img/settingOK.svg" alt="訂閱成功">
+<h3>訂閱成功</h3>
+<p class="color">若有新職缺我們將即時發送信件至下列信箱。</p>
+<p class="email"></p>
+<div class="submit-box">
+<a href="javascript:;" onclick="tb_remove();" id="search_newjobnotice_email_sent" >我知道了</a>
+</div>
+</div>
+<div class="alert_do top3 dis_none_all" id="top3" >
+<span class="close" title="關閉"><a href="javascript:;" onclick="tb_remove();"><img src="https://statics.518.com.tw/img/cross-15.svg" alt="刪除"></a></span>
+<img width="149px" src="https://statics.518.com.tw/img/error.svg" alt="超過5筆">
+<h3>已達配對報訂閱上限</h3>
+<p class="margin">感謝你的訂閱，系統只能寄出五封配對報～</p>
+<p ></p>
+<div class="submit-box">
+<a href="https://www.518.com.tw/resume-6.html" target="_blank"　>馬上調整訂閱數量</a>
+</div>
+</div>
+</div>
+<div class="medalTip_box_new animated dis_none_all" data-target="js-medalTip_box_new">
+<span></span>
+<img class="animated  bounceIn delay-1s" src="https://statics.518.com.tw/img/marketing.svg" alt="新職缺通知我">
+<h3>這是你想找的工作類型嗎？</h3>
+<p>點擊接受，搶先收新職缺通知！</p>
+<a href="javascript:;" onclick="$('div[data-target=js-medalTip_box_new]').attr('class','medalTip_box_new dis_none_all');" class="no" data-target="js-no">暫時不要</a>
+<a class="yes " href="javascript:;" id="gtm_search_newjobnotice_popcorner" data-target="js-yes" onclick=" job_index_open_save_dialog();">接受通知</a></div>
+<div id="jobfooter">
+<ul class="seeker_txt">
+<li><a href="http://www.addcn.com.tw/investment-basic.html" target="_blank" title="投資者專區">投資者專區</a></li>│
+<li><a href="https://www.518.com.tw/help-us.html" title="關於我們">關於我們</a></li>│
+<!-- <li><a href="https://www.518.com.tw/help-news.html" title="新聞剪輯">新聞剪輯</a></li> -->
+<li><a href="https://www.518.com.tw/help-laimer.html" title="免責聲明">免責聲明</a></li>│
+<li><a href="https://www.518.com.tw/help-sev.html" title="服務條款">服務條款</a></li>│
+<li><a href="https://www.518.com.tw/help-pris.html" title="隱私權聲明">隱私權聲明</a></li>│
+<li><a href="https://www.518.com.tw/active-vip_pay.html" title="徵才方案">徵才方案</a></li>│
+<li><a href="https://www.518.com.tw/help-helpser.html?p=webservice_ad" title="合作與廣告">合作與廣告</a></li>│
+<!-- <li><a href="https://www.518.com.tw/help-sitemap.html" title="網站地圖">網站地圖</a></li> -->
+<li class="red-job"><a href="https://www.518.com.tw/數字科技_518人力銀行-company-1278345.html" target="_blank" title="518徵才">518徵才</a></li>│
+<li class="red-job"><a href="http://ask.518.com.tw/" target="_blank" title="518好公司">找好公司</a></li>│
+<li class="black-website">
+<a href="https://m.518.com.tw" target="_blank" title="518手機版網站">手機版網站</a>
+</li>
+</ul><div class="copyhight">
+<p>Copyright © 2020 by Addcn Technology Co., Ltd. All Rights reserved.</p>
+<p style="color:#666;margin:10px 0;text-align:center;">機構名稱:數字科技股份有限公司 | 許可證字號: 2571 | 機構地址: 新北市三重區重新路5段609巷12號10樓</p>
+</div>
+</div>
+</div>
+<ul class="ON-Air_service Og-Version" id="onair">
+	<li>
+		<a href="https://www.518.com.tw/action/go.php?type=agent&id=5189" class="app-btn  icon-link" target="_blank" title="手機找工作" id="onair_app">手機<br>找工作</a>
+		<div class="qr-img silder-app-img"  style="display: none;"  data-box="silder-app-img">
+			<div>
+				<p>超過100萬人下載的APP</p>
+				<img src="https://statics.518.com.tw/img/index/resume/resumeapp_qr.png" width="125" height="125" alt="超過100萬人下載的APP">
+			</div>
+		</div>
+	</li>
+	<li class="goto_top_sidebar">
+		<a href="javascript:;" class="top-btn icon-link" title="回頂端" onclick=' $("html, body").animate({ scrollTop: 0 }, "slow")'></a>
+	</li>
+</ul><!-- Google Code for Remarketing 2.0 -->
+<!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1043554768;
+var google_conversion_label = "OcltCJqyngMQ0MPN8QM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript">
+var conJsHost = (("https:" == document.location.protocol) ? "https://www." : "http://www.");
+document.write(unescape("%3Cscript src='" + conJsHost + "googleadservices.com/pagead/conversion.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var dimensionValue
+if(false){
+//_gaq.push(['_setCustomVar',1,'Log-In-Status','Logged-in',1]);
+dimensionValue = 'Logged-in';
+}else{
+//_gaq.push(['_setCustomVar',1,'Log-In-Status','Not-Logged-in',1]);
+dimensionValue = 'Not-Logged-in';
+}
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-10371710-1', 'auto');
+ga('send', 'pageview');
+
+ga('create', 'UA-10371710-24', 'auto', {'name':'ga24'});
+ga('ga24.set', 'dimension1', dimensionValue);
+ga('ga24.send', 'pageview');
+</script>
+<script type="text/javascript">
+var _SUGGEST = ({
+taCount:function (obj) {
+var str = obj.value;
+var num = str.length;
+var left = 200;
+if (num>200){ obj.value=(str.substring(0,199)); }
+document.getElementById('wrd_left').innerHTML=num;
+return;
+},
+goajax:function () {
+var checkItem = document.getElementsByName('suggest_level');//已勾選的數量
+var str = "";
+for (var j=0; checkItem[j]; j++){
+if (checkItem[j].checked) {
+if( str !=="" ){str = str + ',' + checkItem[j].value ;}else{str = checkItem[j].value;}
+}
+}
+if( str )
+{
+var xmlhttp=(window.XMLHttpRequest) ? new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP");
+xmlhttp.open("POST","/ajax/",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+var queryArr = new Array();
+queryArr['module'] = "other";
+queryArr['action'] = "suggest";
+queryArr['suggest_level'] = str;
+queryArr['suggest_content'] = document.getElementsByName('suggest_content')[0].value;
+var q='';
+for(x in queryArr)
+{
+q=q+x+'='+queryArr[x]+'&';
+}
+xmlhttp.send(q);
+xmlhttp.onreadystatechange=function()
+{
+if (xmlhttp.readyState==4 && xmlhttp.status==200 && xmlhttp.responseText)
+{
+alert('感謝您對我們網站的建議，我們用心處理每一項客戶需求，謝謝。');
+}
+}
+this.close();
+}else
+{
+alert("請為此頁版面的滿意度選個選項");
+}
+},
+close:function() {
+//內容還原
+var checkItem = document.getElementsByName('suggest_level');//已勾選的數量
+var str = "";
+for (var j=0; checkItem[j]; j++){
+checkItem[j].checked=false;
+}
+document.getElementsByName('suggest_content')[0].value='';
+document.getElementById('wrd_left').innerHTML='0';
+
+//隱藏
+if( document.getElementById('c-Submenu').style.display=='block' )
+{
+document.getElementById('foot_service').className='';
+document.getElementById('c-servicelist').style.display='none';
+document.getElementById('foot_suggest').className='';
+document.getElementById('c-Submenu').style.display='none';
+}else{
+document.getElementById('foot_service').className='';
+document.getElementById('c-servicelist').style.display='none';
+document.getElementById('foot_suggest').className='feedback-hover';
+document.getElementById('c-Submenu').style.display='block';
+}
+},
+close_contract:function() {
+//隱藏
+if( document.getElementById('c-servicelist').style.display=='block' )
+{
+document.getElementById('foot_service').className='';
+document.getElementById('c-servicelist').style.display='none';
+document.getElementById('foot_suggest').className='';
+document.getElementById('c-Submenu').style.display='none';
+}else{
+document.getElementById('foot_service').className='serviceback-hover';
+document.getElementById('c-servicelist').style.display='block';
+document.getElementById('foot_suggest').className='';
+document.getElementById('c-Submenu').style.display='none';
+}
+}
+});
+</script>
+<div id="pop_mapbox" style="position:absolute;top:0;left:0;z-index:-2;display:none">
+<div id="pop-map" >
+<div class="pop-map-inner">
+<h4>公司地圖</h4>
+<a href="javascript:;" class="cls-win" onclick="tb_remove();"><span>關閉視窗</span></a>
+<div class="mapbox">
+<div id="map" style="width:500px;height:500px;"></div>
+</div>
+</div>
+</div>
+</div><div id="folderboxlist" class="folderboxlist" style="display:none;" onmouseout="close_folder_list();" onmouseover="show_folder_list();">
+<div class="folderboxlist-inner"> </div>
+</div>
+<script type="text/javascript" src="https://statics.518.com.tw/min/?g=518-common-jquery-js&amp;v=20200629102411"></script>
+<script type="text/javascript" src="https://statics.518.com.tw/min/?g=518-tippy-js&amp;v=20200629102411"></script>
+<script type="text/javascript" src="https://statics.518.com.tw/min/?g=518-custom-modal-js&amp;v=20200629102411"></script>
+<script type="text/javascript">var scr;</script>
+ <script type="text/javascript" src="https://statics.518.com.tw/min/?g=518-job-js&amp;v=20200629102411"></script>
+<script type="text/javascript">
+setTimeout(function() {
+var a = document.createElement("script");
+var b = document.getElementsByTagName("script")[0];
+a.src = document.location.protocol + "//script.crazyegg.com/pages/scripts/0024/1082.js?" + Math.floor(new Date().getTime() / 3600000);
+a.async = true;
+a.type = "text/javascript";
+b.parentNode.insertBefore(a, b)
+}, 1);
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 862168657;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "hJbpCN3A6G0Q0cyOmwM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/862168657/?label=hJbpCN3A6G0Q0cyOmwM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '517241755098717'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=517241755098717&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+<script type="text/javascript">
+(function(i, s, o, g, r, a, m) {
+i['GoogleAnalyticsObject'] = r;
+i[r] = i[r] || function() {
+(i[r].q = i[r].q || []).push(arguments)
+}, i[r].l = 1 * new Date();
+a = s.createElement(o),
+m = s.getElementsByTagName(o)[0];
+a.async = 1;
+a.src = g;
+m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-10371710-1', 'auto');
+ga('send', 'pageview');
+
+ga('create', 'UA-10371710-24', 'auto', {
+'name': 'ga24'
+});
+ga('ga24.send', 'pageview');
+</script>
+<script type="text/javascript">
+(window._bwtm = window._bwtm || []).push({"mid":247,"uid":""});</script>
+<script type="text/javascript">
+$(function(){
+//右下pop顯示規則 新職缺訂閱
+function pop_rule() {
+if ($('div[data-target=js-search_list] a').length > 0) {
+if (localStorage.getItem("pop") == "no_show" || sessionStorage.getItem('pop_Timeliness') == "no_show" ) {
+return false;
+}
+$(window).scroll(function(event) {
+if ($(document).scrollTop() >= 800 && i == 0) { //當滾到800px時執行
+$('div[data-target=js-medalTip_box_new]').removeClass('dis_none_all').addClass('fadeIn  slideInUp')
+setTimeout(function() {
+$('div[data-target=js-medalTip_box_new]').removeClass('fadeIn slideInUp').delay(15000).slideUp(600);
+}, 1000);
+i++;
+}
+sessionStorage.setItem("pop_Timeliness", "no_show");
+});
+
+}
+}
+$('a[data-target=js-subscription],a[data-target=js-yes]').on('click', function() {
+$('div[data-target=js-medalTip_box_new]').stop(true).hide();
+});
+$('a[data-target=js-agreen_pop], a[data-target="js-no"]').on('click', function() {  //訂閱成功 & 按掉pop
+localStorage.pop ="no_show"; // 永不顯示pop
+});
+
+pop_rule();
+});
+
+var modalTool = new customModalObject();
+$('div#container').on('click', 'a[data-modal][data-modal-type="resumeApply"]', function(event) {
+event.preventDefault();
+if($(this).data('multiple')){
+var jobIdList = [];
+$.each($('input[name^=selectid]:checked'), function(index, element){
+jobIdList.push($(element).val());
+});
+
+if(jobIdList.length <= 0){
+alert("請先勾選欲應徵的職缺");
+return false;
+}
+modalTool.loadAjaxPopup({module: 'modal', action: 'resumeApply', jobIdList: jobIdList}, {modalClass: 'modal pop_wrap pop_width_l'});
+}else{
+modalTool.loadAjaxPopup({module: 'modal', action: 'resumeApply', jobId: $(this).data('job-id')}, {modalClass: 'modal pop_wrap pop_width_l'});
+}
+});
+</script>
+<script async src="//rec.scupio.com/recweb/js/rec.js"></script>
+<script type="application/ld+json">[ { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "首頁", "item": "https://www.518.com.tw" },{ "@type": "ListItem", "position": 2, "name": "最新工作職缺", "item": "https://www.518.com.tw/job-index.html" }] } ]</script></body>
+</html>

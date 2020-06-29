@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="all">
+    <meta name="author" content="BOOKWALKER中文電子書">
+    <meta name="publisher" content="https://www.bookwalker.com.tw">
+    <meta name="url" content="https://www.bookwalker.com.tw">
+
+    <meta name="title" content="BOOKWALKER中文電子書 - 更多熱門新書" />
+    <meta name="description" content="查無資料">
+    <meta name="keywords" content="BOOKWALKER中文電子書, 角川, EPUB3格式, 網路書店, 雜誌, 漫畫, 輕小說, 文學小說, 實用書, 原創, 預購, 線上試閱, 快速購書">
+
+    <meta property="og:site_name" content="BOOKWALKER中文電子書"/>
+    <meta property="og:title" content="BOOKWALKER中文電子書 - 更多熱門新書" />
+    <meta property="og:description" content="查無資料" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.bookwalker.com.tw" />
+    <meta property="og:image" content="https://www.bookwalker.com.tw/images/bookwalker.png" />
+    <meta property="fb:app_id" content="1669498303289537" />
+    <meta property="fb:admins" content="100010811346287" />
+    <meta property="og:image:width" content="200"/>
+    <meta property="og:image:height" content="295"/>
+
+	<!-- Facebook Pixel Code -->
+<script>
+	var FB_PIXEL_ID = '166342850942037';
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', FB_PIXEL_ID);
+    fbq('track', 'PageView');
+</script>
+<noscript>
+    <img height="1" width="1" src='https://www.facebook.com/tr?id=166342850942037&ev=PageView&noscript=1'/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-72422763-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-72422763-1');
+</script>
+
+	
+    <script type='text/javascript'>
+    var tagtoo_advertiser_id=1376;
+    var tagtoo_ga=document.createElement('script');
+    tagtoo_ga.type='text/javascript';
+    tagtoo_ga.async=true;
+    tagtoo_ga.src='//ad.tagtoo.co/media/ad/track.js';
+    var tagtoo_s=document.getElementsByTagName('script')[0];
+    tagtoo_s.parentNode.insertBefore(tagtoo_ga,tagtoo_s);
+    </script>
+	<script type="text/javascript" src="/js/phpjs.min.js?v2"></script>
+    <script type="text/javascript">
+    function useRemoveTag($text){
+    	var outText = "";
+        jQuery.post({
+            async: false,
+            data: {text:$text},
+            url: '/ajax/useRemoveTag',
+            success: function(res){
+            	outText = res;
+            }
+        });
+        return outText;
+    }
+    </script>
+    <!-- jQuery -->
+	<link rel="stylesheet" href="/libraries/css/jquery-ui.css">
+    <script type="text/javascript" src="/libraries/js/jquery.js?v2"></script>
+    <script type="text/javascript" src="/libraries/js/jquery-ui.min.js?v2"></script>
+    <link href="/favicon.ico" rel='shortcut icon' type='image/x-icon'>
+
+    <title>BOOKWALKER中文電子書 - 更多熱門新書</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/libraries/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/css/bw_style_pc.css" rel="stylesheet" type="text/css">
+    <link href="/css/bw_style_pc_s.css" rel="stylesheet" type="text/css" media="screen and (max-width: 1280px)">
+
+    <!-- Custom Fonts -->
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/slick-theme.css"/>
+
+    <!-- 載入完畢後自動隱藏網址列 -->
+    <script>window.addEventListener("load", function() { setTimeout('window.scrollTo(0,1);', 1); }, 10);</script>
+    <!-- 寫入畫面size-->
+    <script src="/libraries/js/screen.size.js?v2"></script>
+</head>
+
+<body>
+	<script type="text/javascript">
+<!--
+
+//-->
+
+
+</script>
+    <!-- Vue.js -->
+    <script src="/libraries/js/vue.min.js?v2"></script>
+
+    <div id="bw_topbar" class="navbar-fixed-top" >
+        <!--bw右上選單 -->
+        <div class="barcenter bw_wmid2">
+          <div class="info_w100" >
+            <ul class="text-right">
+              <li>
+                               <a href="https://www.bookwalker.com.tw/user/login"><i class="fa fa-user"></i> 登入</a>／<a href="https://www.bookwalker.com.tw/user/register">註冊</a>
+                              </li>
+              <li><a href="https://www.bookwalker.com.tw/explanation/use_view"><i class="fa fa-book"></i> 使用說明</a></li>
+              <li><a href="https://www.bookwalker.com.tw/explanation/problem"><i class="fa fa-question-circle"></i> 常見問題</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--./bw右上選單 -->
+        <!--bw logo +右邊的提示項目-->
+        <div class="barcenter bar_white2">
+          <div class="row bw_wmid2" >
+              <div class="col-sm-5 col-md-5 text-left" >
+                <a href="https://www.bookwalker.com.tw">
+                  <img src="/images/p_img/title_bwlogo.png" title="BOOK☆WALKER" ></a></div>
+              <div class="col-sm-7 col-md-7 " >
+
+                  <!-- 提示項目(購物車、訊息、專頁、喜好設定)-->
+                  <div class="row itemicon">
+                      <ul  class="mar0pad0">
+                          <li id="add_cart_notice" class="" role="alert"></li>
+                          <li >
+                            <a id="go_wishlist" href="https://www.bookwalker.com.tw/member/wishlist/8" data-toggle="tooltip" data-placement="bottom" title="願望清單">
+                              <i class="fa fa-heart fa-2x iconcolor_gray" ></i>
+                              <span class="fa-stack fa-lg number" style="" id="wish_cnt">
+                                                                                                  </span>
+                            </a>
+                          </li>
+                          <li >
+                            <a id="go_cart" href="https://www.bookwalker.com.tw/cart/1" data-toggle="tooltip" data-placement="bottom" title="購物車">
+                              <i class="fa fa-shopping-cart fa-2x iconcolor_gray" ></i>
+                              <span class="fa-stack fa-lg number" style="" id="cart_cnt">
+                                                                                                  </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://www.bookwalker.com.tw/member/notice" data-toggle="tooltip" data-placement="bottom" title="通知訊息">
+                              <i class="fa fa-envelope fa-2x iconcolor_gray" ></i>
+                              <span class="fa-stack fa-lg number" style="">
+                                                                                                  </span>
+                            </a>
+                          </li>
+                          <li class="itemend" >
+                            <a href="https://www.bookwalker.com.tw/member" data-toggle="tooltip" data-placement="bottom" title="個人專頁">
+                              <i class="fa fa-file fa-2x iconcolor_gray" ></i>
+                              <span class="fa-stack fa-lg number" ></span>
+                            </a>
+                          </li>
+                          <!-- <li class="itemend"><a href="#"><i class="fa fa-heart fa-2x iconcolor_gray" ></i><span class="fa-stack fa-lg number" style=""></span></a></li> -->
+                      </ul>
+
+
+                  </div>
+                  <!-- ./提示項目(購物車、訊息、專頁、喜好設定)-->
+
+              </div>
+          </div>
+
+        </div>
+        <!--./bw logo -->
+</div><!--./bw_topbar -->
+
+    
+
+<script type="text/javascript">
+    var credit_card_binding = 0    ;
+
+</script>
+  <div class="container-fluid catebar_padtop" style="padding-bottom:0;">
+
+
+      <style>
+    .search_list_nothing {margin: 0px;padding:5px; border:1px solid #ccc;width:300px;max-height:300px;  height:auto;  overflow-y: hidden;overflow-x: hidden; position: absolute;z-index:999; background-color: #fff;}
+    .search_list_nothing ul {padding:8px; font-weight: bold; font-size: 13pt;}
+    .search_list_nothing li {list-style: none; padding:5px;font-size:15px; text-align: left;}
+    .search_list_nothing li:hover {background-color: #e3d9cc; color:#000;}
+
+    .search_list {margin: 0px;padding:0px; border:1px solid #e3d9cc;width:500px;max-height:350px; height:auto;  overflow-y: hidden;overflow-x: hidden; position: absolute;z-index:999; background-color: #fff;}
+    .search_list ul {padding:8px; font-weight: bold; font-size: 13pt; left:10px;}
+    .search_list li {list-style: none; padding:8px 8px 8px 20px;font-size:15px; text-align: left;}
+    .search_list li:hover {background-color: #e3d9cc; color:#000;}
+    .search_list_active {background-color: #e3d9cc; color:#000; font-weight: bold;}
+
+    .recommand_area_title {
+        cursor: default;
+        font-weight: bold;
+        font-size: 18px;
+        position: relative;
+        padding: 10px 0px 8px 8px;
+        text-align: left;
+    }
+    .clear_input {
+        /*border:1px solid #000;*/
+        position: absolute;
+        right: 60px;
+        top: 18px;
+        background: #fff url('https://www.bookwalker.com.tw/images/clear_input.png') center center no-repeat;
+        /*opacity:0.3;*/
+        width:20px;
+        height:16px;
+        display:none;
+    }
+</style>
+<!--類別+search-->
+      <nav class="navbar navbar-default mar0pad0 " style="border-radius:0;"><!-- 版面變動：邊框不圓角-->
+        <div class="container-fluid bw_wmid2" ><!-- 版面變動：置中1680 +bw_wmid2 update:1012-->
+
+
+          <div class="collapse navbar-collapse text-left" id="bs-example-navbar-collapse-1" style="padding:0;margin:0;">
+
+            <div class="row mar0pad0" >
+                <div class="col-xs-7 col-md-7 col-lg-7 mar0pad0" >
+
+                     <!-- 類別選單-->
+                      <ul class="nav navbar-nav mar0pad0" id="top_bar" >
+                                                                                                                                                                                                <li><a href="https://www.bookwalker.com.tw/category/1" ><span class="navtxt">雜誌</span></a></li>
+                                                                                                                                                                              <li><a href="https://www.bookwalker.com.tw/category/2" ><span class="navtxt">漫畫</span></a></li>
+                                                                                                                                                                          <li class="active" ><a href="https://www.bookwalker.com.tw/category/3" >輕小說</a></li>
+                                                                                                                                                                            <li><a href="https://www.bookwalker.com.tw/category/4" ><span class="navtxt">文學．小說</span></a></li>
+                                                                                                                                                                              <li><a href="https://www.bookwalker.com.tw/category/5" ><span class="navtxt">一般．實用書</span></a></li>
+                                                                                                                                                                              <li><a href="https://www.bookwalker.com.tw/category/6" ><span class="navtxt">日文書</span></a></li>
+                                                                                                                                                                                <li class="up18color">
+                                    <span><a href="https://www.bookwalker.com.tw/category/7">限制級</a></span>
+                                  </li>
+                                                                                                          </ul>
+                      <!-- ./類別選單-->
+
+                </div>
+
+                <div class="col-xs-5 col-md-5 col-lg-5 mar0pad0" >
+
+                          <div class="input-group search_padtop" >
+                            <div class="search_bor mar0pad0" >
+                                <span class="input-group-addon  searchbar_dropdowns mar0pad0"  style="padding:6px 0 0 8px;width:150px;" >
+                                    <div class="btn-group " id="selectcate" >
+                                             <button type="button" class="btn  dropdown-toggle form-control form_dropdowns" data-toggle="dropdown" style="width:115px;" >
+                                                                                                      <span data-bind="label" ><span style="">全部</span></span>&nbsp;<span class="caret"></span>
+                                                  
+                                             </button>
+                                             <ul class="dropdown-menu" role="menu">
+                                                                                           <li id="cate0" ><a href="javascript:select_category(0)">全部</a></li>
+                                                                                           <li id="cate1" ><a href="javascript:select_category(1)">雜誌</a></li>
+                                                                                           <li id="cate2" ><a href="javascript:select_category(2)">漫畫</a></li>
+                                                                                           <li id="cate3" ><a href="javascript:select_category(3)">輕小說</a></li>
+                                                                                           <li id="cate4" ><a href="javascript:select_category(4)">文學．小說</a></li>
+                                                                                           <li id="cate5" ><a href="javascript:select_category(5)">一般．實用書</a></li>
+                                                                                           <li id="cate6" ><a href="javascript:select_category(6)">日文書</a></li>
+                                                                                          </ul>
+                                        </div>
+                                </span>
+                                <span class="input-group-addon mar0pad0" >
+									<input type="text" class="inputkeyword input_border0" id="search_word" name="search_word" value=""  maxlength="50" placeholder="可搜尋書名、副書名、作者、出版社、標籤" autocomplete="off">
+                                </span>
+                                	<input name="category_id" type="hidden" value="0">
+                            </div>
+                              <span class="input-group-addon mar0pad0 form_dropdowns_btn" >&nbsp;<button type="button" class="btn colorwhitebg searchicon" onclick="goSerach();"><i class="fa fa-search"></i></button>&nbsp;</span>
+                          </div>
+                </div>
+            </div>
+
+
+
+
+
+
+          </div><!-- /.navbar-collapse -->
+
+      </nav>
+      <!--./類別+search-->
+<script type="text/javascript">
+var host_url = 'https://www.bookwalker.com.tw';
+var full_url = 'https://www.bookwalker.com.tw/more/fiction/1/3';
+var getUrlParam = function(key){
+    var query = parse_url(htmlspecialchars_decode(urldecode(full_url))).query;
+	var param = [];
+	parse_str(query,param);
+	if(isset(param[key])){
+		return param[key];
+	}
+	return "";
+}
+</script>
+<script type="text/javascript" src="/js/search.js?v2"></script>
+
+
+      <!-- Breadcrumbs or Keyword -->
+      <div id="breadcrumb_list" class="bw_wmid2"><!-- 版面變動：置中1680 +bw_wmid2 update:1012-->
+        <ol class="breadcrumb txt12b" >
+          <li><a href="/" >BOOK<i class="fa fa-star-o"></i>WALKER首頁</a></li>
+          <li>
+                                                「輕小說」熱門新書
+                                      </li>
+        </ol>
+      </div>
+      <!-- ./Breadcrumbs or Keyword -->
+
+
+      <!-- 中間內容頁 -->
+
+      <div id="bw_search" >
+         <div  class="barcenter bw_wmid2"  >
+
+          <div class="bw_aside2" >
+
+          
+
+                <!-- 類別-->
+                <div class="asidebox hidden category-menu hidden" >
+                    <div class="boxtitle"><span class="topic"></span></div>
+                    <div class="aside_inner">
+
+                        <ul class="search_cate">
+
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                
+                <!-- ad5_aside-->
+                <!-- ad5_aside-->
+<div class="ad5_aside ">
+    <a href="https://www.bookwalker.com.tw/special/introduction" target="_new" alt="關於 BOOK&#9734;WALKER"><img src="/images/banner/banner_p5.jpg"
+            class="img-responsive"></a>
+</div>
+<!-- ./ad5_aside-->                <!-- ./ad5_aside-->
+
+                                <!-- 推薦主題&活動-->
+                  <div class="asidebox"  >
+
+                        <div class="boxtitle"><span class="topic">推薦主題&amp;活動</span></div>
+                        <div class="aside_innerad">
+                                                                                      <div class="aside_banner">
+                              <a href="https://www.bookwalker.com.tw/common_layout/layout_1/RIBrf8+xNNtAtqBl8vhd9ZYQJTs2EkGZ5pots2iDa7I_"><img src="https://image.bookwalker.com.tw/upload/banner/pc/220/banner220_12399.gif" alt="新月開館慶❤仲夏戀習曲" title="新月開館慶❤仲夏戀習曲" class="ad220_aside"></a>
+                              <h4>新月開館慶❤仲夏戀習曲<br /><a href="https://www.bookwalker.com.tw/common_layout/layout_1/RIBrf8+xNNtAtqBl8vhd9ZYQJTs2EkGZ5pots2iDa7I_">單本8折，3本72折</a></h4>
+                              </div>
+                                                                                          <div class="aside_banner">
+                              <a href="https://pse.is/RSN4D"><img src="https://image.bookwalker.com.tw/upload/banner/pc/220/banner220_12373.jpg" alt="《幽☆遊☆白書》特展" title="《幽☆遊☆白書》特展" class="ad220_aside"></a>
+                              <h4>《幽☆遊☆白書》特展<br /><a href="https://pse.is/RSN4D">鐵粉必看！</a></h4>
+                              </div>
+                                                                                          <div class="aside_banner">
+                              <a href="https://event.bookwalker.com.tw/20200625/"><img src="https://image.bookwalker.com.tw/upload/banner/pc/220/banner220_12369.jpg" alt="台灣角川初夏輕小說讀書祭" title="台灣角川初夏輕小說讀書祭" class="ad220_aside"></a>
+                              <h4>台灣角川初夏輕小說讀書祭<br /><a href="https://event.bookwalker.com.tw/20200625/">限時82折</a></h4>
+                              </div>
+                                                                                          <div class="aside_banner">
+                              <a href="https://event.bookwalker.com.tw/20200612_b/"><img src="https://image.bookwalker.com.tw/upload/banner/pc/220/banner220_12339.gif" alt="尖端出版38週年慶" title="尖端出版38週年慶" class="ad220_aside"></a>
+                              <h4>尖端出版38週年慶<br /><a href="https://event.bookwalker.com.tw/20200612_b/">超佛心5折起</a></h4>
+                              </div>
+                                                                                          <div class="aside_banner">
+                              <a href="https://event.bookwalker.com.tw/20200620_b/"><img src="https://image.bookwalker.com.tw/upload/banner/pc/220/banner220_12357.gif" alt="台灣角川輕小說改編漫畫特集" title="台灣角川輕小說改編漫畫特集" class="ad220_aside"></a>
+                              <h4>台灣角川輕小說改編漫畫特集<br /><a href="https://event.bookwalker.com.tw/20200620_b/">限定79折</a></h4>
+                              </div>
+                                                                                  <div class="aside_banner ">
+                           <p><a class="btn btn-default board_more" href="https://www.bookwalker.com.tw/more/activity" >看更多 <i class="fa fa-caret-down fa-rotate-270"></i></a></p>
+                          </div>
+                        </div>
+
+                  </div>
+                <!-- ./推薦主題&活動-->
+                
+                <!-- 社群連結-->
+                <div class="asidebox"  >
+        <div class="boxtitle"><span class="topic">社群連結</span></div>
+        <div class="aside_innerad">
+            <div class="social_list" >
+                <ul style="margin-left:10px;">
+                    <li ><a href="https://www.facebook.com/BOOKWALKER.tw" target="_blank"><img data-src="/images/p_img/social_fb.png" class="lazyload"></a></li>
+                    <li ><a href="https://www.plurk.com/BOOKWALKER" target="_blank"><img data-src="/images/p_img/social_plurk.png" class="lazyload"></a></li>
+                    <li ><a href="https://line.me/R/ti/p/@wes8952w" target="_blank"><img data-src="/images/p_img/social_line.png" class="lazyload"></a></li>
+                    <li ><a href="https://twitter.com/BOOKWALKER_TW?lang=zh-tw" target="_blank"><img data-src="/images/p_img/social_twitter.png" class="lazyload"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+                <!-- ./社群連結-->
+
+
+
+          
+
+
+
+          </div><!-- ./bw_aside  -->
+
+          <div class="bw_main2" >
+
+             <!-- 搜尋列-->
+
+             <div class="listbox">
+
+                <div class="listbox_title2" >
+                  <div class="bw_title">
+                                                                                          「輕小說」熱門新書檢索
+                                            
+                                    </div>
+
+                  <div class="bw_more">1~24 筆 / 共338筆</div>
+                </div>
+
+
+                <div class="inner" >
+
+                                    <div class="row mar0pad0" >
+                      <div class="col-md-2 col-lg-2 select12 mar0pad0" >
+                          <select class="form-control " onchange="location.href='/more/fiction/1/3?order='+this.value">
+                                                        <option value="sell_desc" >依發售日新至舊排序</option>
+                            <option value="sell_asc" >依發售日舊至新排序</option>
+                            <option value="price_asc" >依價格低至高排序</option>
+                            <option value="price_desc" >依價格高至低排序</option>                              
+                            <option value="rank" >依人氣度排序</option>
+                                                      </select>
+                        </div>
+                      <div class="col-md-6 col-lg-6 text-center  pagebar"  >
+
+                          <nav>
+                            <ul class="bw_pagination text-center  "  >
+                            <li><img src="/images/p_img/pagination_arrownext.png"></li><li><span class="active">1</span></li><li><a href="https://www.bookwalker.com.tw/more/fiction/1/3?page=2">2</a></li><li><a href="https://www.bookwalker.com.tw/more/fiction/1/3?page=3">3</a></li><li>...</li><li><a href="https://www.bookwalker.com.tw/more/fiction/1/3?page=15">15</a></li><li class="rotateimg"><a href="?page=2"><img src="/images/p_img/pagination_arrownext.png"></a></li>                            </ul>
+                          </nav>
+                      </div>
+                                        </div>
+
+                  
+                </div>
+
+            </div>
+            <!-- ./搜尋列-->
+
+            
+            <!-- 雜誌-->
+<div class="listbox">
+
+    <div class="listbox_title" >
+      <div class="bw_title">
+                                                                      「輕小說」熱門新書
+                                                   
+      </div>
+      <div class="bw_more"></div>
+    </div>
+    <div class="bookdesc2  clearfix "><!-- upadte:1014-->
+        <!-- list-->
+                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                    </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91197" target="_blank" alt="明治東亰戀伽（2）戀月夜的花嫁" title="明治東亰戀伽（2）戀月夜的花嫁" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91197/91197_4.jpg"
+
+                    alt="明治東亰戀伽（2）戀月夜的花嫁" title="明治東亰戀伽（2）戀月夜的花嫁" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                        	<div class="lablename"><img src="/images/p_img/lable4.png" title="EP同步"> </div>
+            
+            <h4 class="bookname" >明治東亰戀伽（2）戀月夜的花嫁</h4>
+            <h5 class="booknamesub" >
+                                    魚住有希子（魚住ユキコ） / Karu / 郭子菱
+                            </h5>
+            <h5 class="bprice" >175元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                    </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91196" target="_blank" alt="明治東亰戀伽（1）紅月夜的婚約者" title="明治東亰戀伽（1）紅月夜的婚約者" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91196/91196_4.jpg"
+
+                    alt="明治東亰戀伽（1）紅月夜的婚約者" title="明治東亰戀伽（1）紅月夜的婚約者" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                        	<div class="lablename"><img src="/images/p_img/lable4.png" title="EP同步"> </div>
+            
+            <h4 class="bookname" >明治東亰戀伽（1）紅月夜的婚約者</h4>
+            <h5 class="booknamesub" >
+                                    魚住有希子（魚住ユキコ） / Karu / 郭子菱
+                            </h5>
+            <h5 class="bprice" >175元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                    </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91045" target="_blank" alt="食鏽末世錄 (3)" title="食鏽末世錄 (3)" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91045/91045_4.jpg"
+
+                    alt="食鏽末世錄 (3)" title="食鏽末世錄 (3)" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                        	<div class="lablename"><img src="/images/p_img/lable4.png" title="EP同步"> </div>
+            
+            <h4 class="bookname" >食鏽末世錄 (3)</h4>
+            <h5 class="booknamesub" >
+                                    瘤久保慎司 / Mocha
+                            </h5>
+            <h5 class="bprice" >165元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                    </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91044" target="_blank" alt="熊熊勇闖異世界 (10)" title="熊熊勇闖異世界 (10)" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91044/91044_4.jpg"
+
+                    alt="熊熊勇闖異世界 (10)" title="熊熊勇闖異世界 (10)" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                        	<div class="lablename"><img src="/images/p_img/lable2.png" title="特別內容"> <img src="/images/p_img/lable4.png" title="EP同步"> </div>
+            
+            <h4 class="bookname" >熊熊勇闖異世界 (10)</h4>
+            <h5 class="booknamesub" >
+                                    くまなの / 029
+                            </h5>
+            <h5 class="bprice" >170元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                    </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91043" target="_blank" alt="Fate/Apocrypha (5)" title="Fate/Apocrypha (5)" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91043/91043_4.jpg"
+
+                    alt="Fate/Apocrypha (5)" title="Fate/Apocrypha (5)" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                        	<div class="lablename"><img src="/images/p_img/lable1.png" title="已完結"> <img src="/images/p_img/lable4.png" title="EP同步"> </div>
+            
+            <h4 class="bookname" >Fate/Apocrypha (5)</h4>
+            <h5 class="booknamesub" >
+                                    東出祐一郎
+                            </h5>
+            <h5 class="bprice" >220元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                    </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91042" target="_blank" alt="這是妳與我的最後戰場，或是開創世界的聖戰 (4)" title="這是妳與我的最後戰場，或是開創世界的聖戰 (4)" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91042/91042_4.jpg"
+
+                    alt="這是妳與我的最後戰場，或是開創世界的聖戰 (4)" title="這是妳與我的最後戰場，或是開創世界的聖戰 (4)" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                        	<div class="lablename"><img src="/images/p_img/lable4.png" title="EP同步"> </div>
+            
+            <h4 class="bookname" >這是妳與我的最後戰場，或是開創世界的聖戰 (4)</h4>
+            <h5 class="booknamesub" >
+                                    細音 啓 / 猫鍋蒼
+                            </h5>
+            <h5 class="bprice" >150元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                    </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91041" target="_blank" alt="戀愛至上都市的雙騎士 (3)" title="戀愛至上都市的雙騎士 (3)" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91041/91041_4.jpg"
+
+                    alt="戀愛至上都市的雙騎士 (3)" title="戀愛至上都市的雙騎士 (3)" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                        	<div class="lablename"><img src="/images/p_img/lable1.png" title="已完結"> <img src="/images/p_img/lable4.png" title="EP同步"> </div>
+            
+            <h4 class="bookname" >戀愛至上都市的雙騎士 (3)</h4>
+            <h5 class="booknamesub" >
+                                    篠宮 夕 / けこちゃ
+                            </h5>
+            <h5 class="bprice" >140元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                    </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91279" target="_blank" alt="從睡覺開始的關係" title="從睡覺開始的關係" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91279/91279_4.jpg"
+
+                    alt="從睡覺開始的關係" title="從睡覺開始的關係" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >從睡覺開始的關係</h4>
+            <h5 class="booknamesub" >
+                                    希小惟 / Leila
+                            </h5>
+            <h5 class="bprice" >189元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                            <img src="/images/p_img/side2.png" >
+            </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91077" target="_blank" alt="陰陽簿  參卷   狐女的血色嫁衣" title="陰陽簿  參卷   狐女的血色嫁衣" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91077/91077_4.jpg"
+
+                    alt="陰陽簿  參卷   狐女的血色嫁衣" title="陰陽簿  參卷   狐女的血色嫁衣" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >陰陽簿  參卷   狐女的血色嫁衣</h4>
+            <h5 class="booknamesub" >
+                                    千舞
+                            </h5>
+            <h5 class="bprice" >120元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                            <img src="/images/p_img/side2.png" >
+            </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91076" target="_blank" alt="玩世不攻" title="玩世不攻" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91076/91076_4.jpg"
+
+                    alt="玩世不攻" title="玩世不攻" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >玩世不攻</h4>
+            <h5 class="booknamesub" >
+                                    玿藥
+                            </h5>
+            <h5 class="bprice" >114元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                            <img src="/images/p_img/side2.png" >
+            </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91075" target="_blank" alt="弦外之音" title="弦外之音" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91075/91075_4.jpg"
+
+                    alt="弦外之音" title="弦外之音" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >弦外之音</h4>
+            <h5 class="booknamesub" >
+                                    暮廷
+                            </h5>
+            <h5 class="bprice" >114元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                            <img src="/images/p_img/side2.png" >
+            </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91074" target="_blank" alt="陰陽簿  貳卷  畫皮鬼的不老祕冊" title="陰陽簿  貳卷  畫皮鬼的不老祕冊" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91074/91074_4.jpg"
+
+                    alt="陰陽簿  貳卷  畫皮鬼的不老祕冊" title="陰陽簿  貳卷  畫皮鬼的不老祕冊" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >陰陽簿  貳卷  畫皮鬼的不老祕冊</h4>
+            <h5 class="booknamesub" >
+                                    千舞
+                            </h5>
+            <h5 class="bprice" >120元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                            <img src="/images/p_img/side2.png" >
+            </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91073" target="_blank" alt="魅蓮" title="魅蓮" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91073/91073_4.jpg"
+
+                    alt="魅蓮" title="魅蓮" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >魅蓮</h4>
+            <h5 class="booknamesub" >
+                                    辛嘉芬
+                            </h5>
+            <h5 class="bprice" >114元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                            <img src="/images/p_img/side2.png" >
+            </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91072" target="_blank" alt="陰陽簿  初卷   雲來客棧的帳房先生" title="陰陽簿  初卷   雲來客棧的帳房先生" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91072/91072_4.jpg"
+
+                    alt="陰陽簿  初卷   雲來客棧的帳房先生" title="陰陽簿  初卷   雲來客棧的帳房先生" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >陰陽簿  初卷   雲來客棧的帳房先生</h4>
+            <h5 class="booknamesub" >
+                                    千舞
+                            </h5>
+            <h5 class="bprice" >120元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                            <img src="/images/p_img/side2.png" >
+            </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91071" target="_blank" alt="艾利蘭卡物語" title="艾利蘭卡物語" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91071/91071_4.jpg"
+
+                    alt="艾利蘭卡物語" title="艾利蘭卡物語" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >艾利蘭卡物語</h4>
+            <h5 class="booknamesub" >
+                                    千舞
+                            </h5>
+            <h5 class="bprice" >114元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                            <img src="/images/p_img/side2.png" >
+            </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91070" target="_blank" alt="千年劫  參  釋魂" title="千年劫  參  釋魂" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91070/91070_4.jpg"
+
+                    alt="千年劫  參  釋魂" title="千年劫  參  釋魂" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >千年劫  參  釋魂</h4>
+            <h5 class="booknamesub" >
+                                    綠光
+                            </h5>
+            <h5 class="bprice" >114元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                            <img src="/images/p_img/side2.png" >
+            </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91069" target="_blank" alt="千年劫  貳  水禍" title="千年劫  貳  水禍" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91069/91069_4.jpg"
+
+                    alt="千年劫  貳  水禍" title="千年劫  貳  水禍" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >千年劫  貳  水禍</h4>
+            <h5 class="booknamesub" >
+                                    綠光
+                            </h5>
+            <h5 class="bprice" >114元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                            <img src="/images/p_img/side2.png" >
+            </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91058" target="_blank" alt="引狼入室" title="引狼入室" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91058/91058_4.jpg"
+
+                    alt="引狼入室" title="引狼入室" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >引狼入室</h4>
+            <h5 class="booknamesub" >
+                                    千舞
+                            </h5>
+            <h5 class="bprice" >114元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                            <img src="/images/p_img/side2.png" >
+            </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91057" target="_blank" alt="與狐謀皮" title="與狐謀皮" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91057/91057_4.jpg"
+
+                    alt="與狐謀皮" title="與狐謀皮" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >與狐謀皮</h4>
+            <h5 class="booknamesub" >
+                                    風夜昕
+                            </h5>
+            <h5 class="bprice" >114元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                            <img src="/images/p_img/side2.png" >
+            </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91056" target="_blank" alt="獅心可議" title="獅心可議" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91056/91056_4.jpg"
+
+                    alt="獅心可議" title="獅心可議" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >獅心可議</h4>
+            <h5 class="booknamesub" >
+                                    志藍
+                            </h5>
+            <h5 class="bprice" >114元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                            <img src="/images/p_img/side2.png" >
+            </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91055" target="_blank" alt="小奴不給壓" title="小奴不給壓" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91055/91055_4.jpg"
+
+                    alt="小奴不給壓" title="小奴不給壓" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >小奴不給壓</h4>
+            <h5 class="booknamesub" >
+                                    暮廷
+                            </h5>
+            <h5 class="bprice" >114元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                    </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91195" target="_blank" alt="失足" title="失足" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91195/91195_4.jpg"
+
+                    alt="失足" title="失足" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >失足</h4>
+            <h5 class="booknamesub" >
+                                    小狐狸的大寶貝 / sssski
+                            </h5>
+            <h5 class="bprice" >196元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                            <img src="/images/p_img/side2.png" >
+            </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91012" target="_blank" alt="小奴不給吃" title="小奴不給吃" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91012/91012_4.jpg"
+
+                    alt="小奴不給吃" title="小奴不給吃" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >小奴不給吃</h4>
+            <h5 class="booknamesub" >
+                                    若兮
+                            </h5>
+            <h5 class="bprice" >114元</h5>
+        </a>
+    </div>
+</div>                  <div class="bwbook_package">
+    
+    <div class="bwbookside" >
+                            <img src="/images/p_img/side2.png" >
+            </div>
+    
+    <div class="bwbookitem">
+        <a href="https://www.bookwalker.com.tw/product/91011" target="_blank" alt="小奴不給欺" title="小奴不給欺" >
+            <div class="bwbookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://image.bookwalker.com.tw/upload/product/91011/91011_4.jpg"
+
+                    alt="小奴不給欺" title="小奴不給欺" class="bookbor lazyload"
+                    width="106" height="149">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >小奴不給欺</h4>
+            <h5 class="booknamesub" >
+                                    萬語
+                            </h5>
+            <h5 class="bprice" >114元</h5>
+        </a>
+    </div>
+</div>                <!-- ./list -->
+    </div>
+
+</div>
+<!-- ./雜誌-->
+
+
+
+            <!-- ./搜尋結果-->
+
+            <!-- 搜尋頁碼-->
+
+             <div class="listbox">
+
+
+                <div class="inner" >
+                  <div class="row mar0pad0" >
+                      <div class="col-md-2 col-lg-2 select12 mar0pad0" >
+
+                        </div>
+                      <div class="col-md-6 col-lg-6 text-center  pagebar"  >
+                          <nav>
+                            <ul class="bw_pagination text-center  "  >
+                            <li><img src="/images/p_img/pagination_arrownext.png"></li><li><span class="active">1</span></li><li><a href="https://www.bookwalker.com.tw/more/fiction/1/3?page=2">2</a></li><li><a href="https://www.bookwalker.com.tw/more/fiction/1/3?page=3">3</a></li><li>...</li><li><a href="https://www.bookwalker.com.tw/more/fiction/1/3?page=15">15</a></li><li class="rotateimg"><a href="?page=2"><img src="/images/p_img/pagination_arrownext.png"></a></li>                            </ul>
+                          </nav>
+                      </div>
+                      <div class="col-md-4 col-lg-4 pageorder2 text-right txt_gray"    >
+                            1~24 筆 / 共338筆
+                      </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- ./搜尋頁碼-->
+
+            <!-- 搜尋結果-->
+
+            
+          </div><!-- ./bw_main2  -->
+        </div><!-- barcenter bw_wmid2-->
+      </div>
+      <!-- ./中間內容頁 -->
+</div>
+    <!-- ./container -->
+
+    <div class="footer3" >
+
+    <div class="footer_link" >
+        <ul>
+            <li class="pad0"><a href="https://www.bookwalker.com.tw/company/about">關於我們</a></li>
+            <li><a href="https://www.bookwalker.com.tw/company/media">媒體資料</a></li>
+            <li><a href="https://www.bookwalker.com.tw/company/contact">聯絡我們</a></li>
+            <li><a href="https://www.bookwalker.com.tw/company/terms">服務條款</a></li>
+            <li><a href="https://www.bookwalker.com.tw/company/privacy">隱私權政策</a></li>
+            <li><a href="https://www.104.com.tw/jobbank/custjob/index.php?r=cust&j=564048713a3c446d363840693e443c1f22f2f2f72483c5e2624j54" target="_blank">徵才資訊</a></li>
+        </ul>
+    </div>
+    <div class="bwlogo text-center"><div class="bwlogoimg"><img src="/images/p_img/title_bwlogo.png" alt="BOOK☆WALKER" ></div>
+
+      <h5>台灣漫讀股份有限公司版權所有，未經許可不可轉載<br />
+      Copyright © BOOKWALKER TAIWAN CO. Ltd. ALL rights reserved.</h5>
+    </div>
+
+</div>
+    <!-- 寫入畫面size-->
+    <script src="/libraries/js/screen.size.js"></script>
+<script type="text/javascript">
+function useRemoveTag(text){
+	var outText = "";
+    jQuery.post({
+        async: false,
+        data: {text:text},
+        url: '/ajax/useRemoveTag',
+        success: function(res){
+        	outText = res;
+        }
+    });
+    return outText;
+}
+</script>
+
+<!-- 導入Vue 相關文件-->
+    <div id="page-wrapper">
+<!-- 不推薦IE瀏覽器警示(只有IE瀏覽器會啟用)-->
+<!-- 不推薦IE瀏覽器警示(只有IE瀏覽器會啟用)-->
+    <!-- /不推薦IE瀏覽器警示(只有IE瀏覽器會啟用)--><!-- ./不推薦IE瀏覽器警示(只有IE瀏覽器會啟用)-->
+
+<!-- 限制級商品遮罩-->
+    <r18-mask></r18-mask>
+<!-- ./限制級商品遮罩-->
+
+<!-- 活動廣告-->
+    <event-advertising></event-advertising>
+<!-- ./活動廣告-->
+
+<!-- 編輯生日(登入狀態，但未填寫生日將自動啟動此組件)-->
+<!-- 編輯生日(登入狀態，但未填寫生日將自動啟動此組件)-->
+    <!-- /編輯生日(登入狀態，但未填寫生日將自動啟動此組件)--><!-- ./編輯生日(登入狀態，但未填寫生日將自動啟動此組件)-->
+
+</div>
+
+<script src="/js/VueJs/app.js?v2"></script><!-- ./導入Vue 相關文件-->
+
+    <script src="/js/scripts.js?v2"></script>
+    <!-- 共用 js-->
+    <script type="text/javascript" src="/libraries/js/tool.js?v2"></script>
+    <!-- // <script type="text/javascript" src="/libraries/js/index_opera.js?v2"></script> -->
+    <script type="text/javascript" src="/libraries/js/product_opera.js?v2"></script>
+    <!-- common -->
+    <script type="text/javascript" src="/libraries/js/common.js??v2"></script>
+    <!-- breadcrumbs -->
+	<script type="text/javascript" src="/js/breadcrumbs.js?v2"></script>
+    <!-- Bootstrap Core JavaScript-->
+    <script src="/libraries/js/bootstrap.min.js?v2"></script>
+
+    <!-- slider-->
+    <script type="text/javascript" src="/js/slick.js?v2"></script>
+
+    <!-- Retina @2X-->
+    <script type="text/javascript" src="/libraries/js/retina.min.js?v2"></script>
+
+    
+    <script src="/js/vue_script.js?v2"></script>
+
+
+    <!-- FB-->
+    <script>
+        // (function(d, s, id) {
+        //     var js, fjs = d.getElementsByTagName(s)[0];
+        //     if (d.getElementById(id)) return;
+        //     js = d.createElement(s); js.id = id;
+        //     js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.3";
+        //     fjs.parentNode.insertBefore(js, fjs);
+        //   }(document, 'script', 'facebook-jssdk'));
+
+    $( document ).ready(function() {
+        var leftbcr_object = new leftbcr();
+        var http_params = location.href.match(/\/(\d+)\/?(\d+)?\/?(\d+)?/);
+        if(isset(http_params)){
+            block_id = isset(http_params[1]) ? http_params[1] : 0,
+            category_id = isset(http_params[2]) ? http_params[2] : 0,
+            son_category_id = isset(http_params[3]) ? http_params[3] : 0;
+            leftbcr_object.get_menu_for_more(block_id, category_id, son_category_id);
+    	}
+    });
+        
+    var product = new Product();
+    </script>
+</body>
+
+</html>
