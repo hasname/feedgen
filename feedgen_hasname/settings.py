@@ -91,3 +91,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Sentry
+import dotenv
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+dotenv.load_dotenv()
+sentry_sdk.init(
+    dsn=os.getenv('SENTRY_DSN', ''),
+    integrations=[DjangoIntegration()],
+)

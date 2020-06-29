@@ -1,6 +1,10 @@
-from .settings import *
+import os
 import random
 import string
+
+os.environ['SENTRY_DSN'] = ''
+
+from .settings import *
 
 ALLOWED_HOSTS = [ '127.0.0.1', ]
 DATABASES = {

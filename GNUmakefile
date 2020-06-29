@@ -1,6 +1,9 @@
 #
 .DEFAULT_GOAL:=		rundev
-.PHONY:			clean dependency deploy rundev test
+.PHONY:			.env clean dependency deploy rundev test
+
+.env:
+	test $(shell wc -l .env | cut -d ' ' -f 1) -eq $(shell wc -l .env.sample | cut -d ' ' -f 1)
 
 clean:
 	rm -f .coverage .dev.sqlite3 general/migrations/0001_initial.py
@@ -8,7 +11,7 @@ clean:
 dependency:
 	poetry install
 
-deploy: dependency
+deploy: .env dependency
 	cd ansible; ansible-playbook feedgen-hasname.yml
 
 rundev: dependency
