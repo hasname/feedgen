@@ -1,5 +1,7 @@
 # feedgen
 
+[![Build Status](https://travis-ci.org/hasname/feedgen.svg?branch=master)](https://travis-ci.org/hasname/feedgen)
+
 Generate Atom feeds from sites which do not support feeds.  Currently support these services:
 
 Recruting platform search systems:
