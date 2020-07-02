@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/hasname/feedgen.svg?branch=master)](https://travis-ci.org/hasname/feedgen)
 
-Generate Atom feeds from sites which do not support feeds.  Currently support these services:
+Generate Atom feeds for sites which do not support feeds, mostly in Taiwan.  Currently we support these services:
 
 Recruting platform search systems:
 * https://www.104.com.tw/
