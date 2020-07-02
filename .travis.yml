@@ -4,5 +4,6 @@ python:
   - "nightly"
 install:
   - pip install -U poetry
+  - make dependency
 script:
   - make test
