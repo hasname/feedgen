@@ -13,6 +13,9 @@ EC search systems:
 * https://24h.pchome.com.tw/ (including other PChome's EC systems)
 * https://shopee.tw/ (including other PChome's EC systems)
 
+Housing platform:
+* https://rent.591.com.tw/
+
 Social networks:
 * https://www.plurk.com/ (popular section)
 * https://www.youtube.com/ (search system)
@@ -32,6 +35,7 @@ Others:
 * https://feedgen.hasname.com/pchome-lightnovel
 * https://feedgen.hasname.com/pchome/測試
 * https://feedgen.hasname.com/plurk/top/zh
+* https://feedgen.hasname.com/rent591/1/忠孝東路 (region = `1` means `台北市`, please check 591 site)
 * https://feedgen.hasname.com/shopee/測試
 * https://feedgen.hasname.com/youtube/測試
 
