@@ -14,7 +14,6 @@ DATABASES = {
     }
 }
 DEBUG = True
-KAFKA = None
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,

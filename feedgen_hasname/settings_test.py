@@ -13,7 +13,6 @@ DATABASES = {
         'NAME': ':memory:',
     }
 }
-KAFKA = None
 LOGGING = {}
 SECRET_KEY = ''.join(random.SystemRandom().choice(string.ascii_letters) for _ in range(50))
 
