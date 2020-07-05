@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import bookwalker, job104, job1111, job518, pchome, plurk, robotstxt, shopee, youtube
+from .views import bookwalker, job104, job1111, job518, pchome, plurk, rent591, robotstxt, shopee, youtube
 
 urlpatterns = [
     path('robots.txt', robotstxt.RobotsTxtView.as_view(), name='robotstxt'),
@@ -12,6 +12,7 @@ urlpatterns = [
     path('pchome/<str:keyword>', pchome.PChomeView.as_view(), name='pchome'),
     path('pchome-lightnovel', pchome.PChomeLightNovelView.as_view(), name='pchome_lightnovel'),
     path('plurk/top/<str:lang>', plurk.PlurkTopView.as_view(), name='plurk_top'),
+    path('rent591/<int:region>/<str:keyword>', rent591.Rent591View.as_view(), name='rent591'),
     path('shopee/<str:keyword>', shopee.ShopeeView.as_view(), name='shopee'),
     path('youtube/<str:keyword>', youtube.YouTubeView.as_view(), name='youtube'),
 ]

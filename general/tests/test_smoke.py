@@ -68,6 +68,15 @@ class SmokeTestCase(TestCase):
         self.assertEqual(res.status_code, 200)
 
     @requests_mock.mock()
+    def test_plurk(self, m):
+        text = open(os.path.dirname(__file__) + '/html_rent591.txt').read()
+        m.get('https://rent.591.com.tw/?kind=0&order=posttime&orderType=desc&region=1&keywords=abc', text=text)
+
+        c = Client()
+        res = c.get('/rent591/1/abc')
+        self.assertEqual(res.status_code, 200)
+
+    @requests_mock.mock()
     def test_shopee(self, m):
         text = open(os.path.dirname(__file__) + '/json_shopee.txt').read()
         m.get('https://shopee.tw/api/v2/search_items/?by=ctime&keyword=test&limit=50&newest=0&order=desc&page_type=search', text=text)
