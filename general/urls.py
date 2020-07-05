@@ -1,8 +1,9 @@
 from django.urls import path
 
-from .views import bookwalker, job104, job1111, job518, pchome, plurk, rent591, robotstxt, shopee, youtube
+from .views import bookwalker, index, job104, job1111, job518, pchome, plurk, rent591, robotstxt, shopee, youtube
 
 urlpatterns = [
+    path('', index.IndexView.as_view(), name='index'),
     path('robots.txt', robotstxt.RobotsTxtView.as_view(), name='robotstxt'),
 
     path('104/<str:keyword>', job104.Job104View.as_view(), name='job104'),
