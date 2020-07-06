@@ -30,6 +30,26 @@ class ShopeeView(View):
         futures = []
 
         for item in body['items']:
+            shopid = item['shopid']
+            shopapi_url = 'https://shopee.tw/api/v2/shop/get?is_brief=1&shopid=%d' % shopid
+            futures.append(
+                session.get(shopapi_url, headers={'User-agent': 'feedgen'}, timeout=5)
+            )
+
+        shops = {}
+        for f in futures:
+            r = f.result()
+            data = json.loads(r.text)['data']
+
+            shopid = data['shopid']
+            username = data['account']['username']
+
+            shops[shopid] = username
+
+        session = FuturesSession(executor=ThreadPoolExecutor(max_workers=10))
+        futures = []
+
+        for item in body['items']:
             itemid = item['itemid']
             name = item['name']
             shopid = item['shopid']
@@ -58,6 +78,7 @@ class ShopeeView(View):
             )
 
             entry = feed.add_entry()
+            entry.author({'name': shops.get(shopid, None)})
             entry.content(content, type='xhtml')
             entry.id(prod_url)
             entry.link(href=prod_url)
