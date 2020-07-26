@@ -11,7 +11,12 @@ class Rent591View(View):
         region = kwargs['region']
         keyword = kwargs['keyword']
 
-        url = 'https://rent.591.com.tw/?kind=0&order=posttime&orderType=desc&region={}&keywords={}'.format(region, keyword)
+        # Support query string to filter results.
+        qs = self.request.META.get('QUERY_STRING', '')
+        if qs != '':
+            qs = '&' + qs
+
+        url = 'https://rent.591.com.tw/?kind=0&order=posttime&orderType=desc&region={}&keywords={}{}'.format(region, keyword, qs)
 
         title = '591 出租搜尋 - {}'.format(keyword)
 
