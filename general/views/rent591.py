@@ -18,7 +18,10 @@ class Rent591View(View):
 
         url = 'https://rent.591.com.tw/?kind=0&order=posttime&orderType=desc&region={}&keywords={}{}'.format(region, keyword, qs)
 
-        title = '591 出租搜尋 - {}'.format(keyword)
+        if qs == '':
+            title = '591 出租搜尋 - {}'.format(keyword)
+        else:
+            title = '591 出租搜尋 - {} ({})'.format(keyword, qs)
 
         feed = feedgen.feed.FeedGenerator()
         feed.author({'name': 'Feed Generator'})
