@@ -33,26 +33,25 @@ class Rent591View(View):
         r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
         body = lxml.html.fromstring(r.text)
 
-        if 0 == len(body.cssselect('div.noInfoTips')):
-            for item in body.cssselect('#content > ul'):
-                item_desc = item.text_content()
-                item_img = item.cssselect('.imageBox img')[0].get('data-original')
-                item_title = item.cssselect('.infoContent')[0].text_content()
-                item_url = item.cssselect('a')[0].get('href')
-                item_url = re.sub(r'^//', 'https://', item_url)
+        for item in body.cssselect('#content > ul'):
+            item_desc = item.text_content()
+            item_img = item.cssselect('.imageBox img')[0].get('data-original')
+            item_title = item.cssselect('.infoContent')[0].text_content()
+            item_url = item.cssselect('a')[0].get('href')
+            item_url = re.sub(r'^//', 'https://', item_url)
 
-                content = '<img alt="{}" src="{}"/><br/>{}<br/>{}'.format(
-                    html.escape(item_title),
-                    html.escape(item_img),
-                    html.escape(item_title),
-                    html.escape(item_desc)
-                )
+            content = '<img alt="{}" src="{}"/><br/>{}<br/>{}'.format(
+                html.escape(item_title),
+                html.escape(item_img),
+                html.escape(item_title),
+                html.escape(item_desc)
+            )
 
-                entry = feed.add_entry()
-                entry.content(content, type='xhtml')
-                entry.id(item_url)
-                entry.link(href=item_url)
-                entry.title(item_title)
+            entry = feed.add_entry()
+            entry.content(content, type='xhtml')
+            entry.id(item_url)
+            entry.link(href=item_url)
+            entry.title(item_title)
 
         res = HttpResponse(feed.atom_str(), content_type='application/atom+xml')
         res['Cache-Control'] = 'max-age=300,public'
