@@ -2,7 +2,8 @@ from django.http import HttpResponse
 from django.views.generic import View
 import feedgen.feed
 import html
-import lxml.html
+import json
+import re
 import requests
 import urllib
 
@@ -22,29 +23,26 @@ class YouTubeView(View):
 
         s = requests.Session()
         r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
-        body = lxml.html.fromstring(r.text)
 
-        for item in body.cssselect('ol.item-section div.yt-lockup-video'):
+        m = re.search(r"window\[\"ytInitialData\"\] = (.*);$", r.text, re.MULTILINE)
+        ytInitialData = m.group(1)
+        j = json.loads(ytInitialData)
+
+        for item in j['contents']['twoColumnSearchResultsRenderer']['primaryContents']['sectionListRenderer']['contents'][0]['itemSectionRenderer']['contents']:
             try:
-                a = item.cssselect('a[title].spf-link')[0]
-
                 # author
-                author = item.cssselect('.yt-lockup-byline a.spf-link.yt-uix-sessionlink')[
-                    0
-                ].text_content()
+                author = item['videoRenderer']['longBylineText']['runs'][0]['text']
 
                 # link
-                link = a.get('href')
-                if '/' == link[0]:
-                    link = 'https://www.youtube.com' + link
+                link = 'https://www.youtube.com/v/' + item['videoRenderer']['videoId']
 
                 # img
                 link_tuple = urllib.parse.urlparse(link)
                 d = urllib.parse.parse_qs(link_tuple[4])
-                img = 'https://i.ytimg.com/vi/' + d['v'][0] + '/hqdefault.jpg'
+                img = 'https://i.ytimg.com/vi/' + item['videoRenderer']['videoId'] + '/hqdefault.jpg'
 
                 # title
-                title = a.get('title')
+                title = item['videoRenderer']['title']['runs'][0]['text']
 
                 # content
                 content = '<img alt="{}" src="{}"/>'.format(
