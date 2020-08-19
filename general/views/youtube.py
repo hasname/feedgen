@@ -34,11 +34,9 @@ class YouTubeView(View):
                 author = item['videoRenderer']['longBylineText']['runs'][0]['text']
 
                 # link
-                link = 'https://www.youtube.com/watch?v=' + item['videoRenderer']['videoId']
+                link = 'https://www.youtube.com/watch?v=' + urllib.parse.quote(item['videoRenderer']['videoId'])
 
                 # img
-                link_tuple = urllib.parse.urlparse(link)
-                d = urllib.parse.parse_qs(link_tuple[4])
                 img = 'https://i.ytimg.com/vi/' + item['videoRenderer']['videoId'] + '/hqdefault.jpg'
 
                 # title
