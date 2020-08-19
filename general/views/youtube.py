@@ -34,7 +34,7 @@ class YouTubeView(View):
                 author = item['videoRenderer']['longBylineText']['runs'][0]['text']
 
                 # link
-                link = 'https://www.youtube.com/watch/v=' + item['videoRenderer']['videoId']
+                link = 'https://www.youtube.com/watch?v=' + item['videoRenderer']['videoId']
 
                 # img
                 link_tuple = urllib.parse.urlparse(link)
