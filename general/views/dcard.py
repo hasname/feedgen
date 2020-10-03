@@ -22,24 +22,32 @@ class DcardMainView(View):
         r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
         body = lxml.html.fromstring(r.text)
 
-        items = body.cssselect('div[data-index] > article[role="article"]')
+        items = body.cssselect('div[data-index]')
         for item in items:
-            item_title = item.cssselect('h2')[0].text_content()
-            item_url = item.cssselect('h2 > a')[0].get('href')
-            item_desc = item.cssselect('h2 + div')[0].text_content()
-            item_img = item.cssselect('img')[0].get('src')
+            if not item.cssselect('article'):
+                continue
+
+            item_title = item.cssselect('article > h2')[0].text_content()
+            item_url = item.cssselect('article > h2 > a')[0].get('href')
+            item_desc = item.cssselect('article > h2 + div')[0].text_content()
+            try:
+                item_img = item.cssselect('article > img')[0]
+            except IndexError:
+                item_img_src = None
+            else:
+                item_img_src = item_img.get('src')
 
             if item_url.startswith('/f/'):
                 item_url = 'https://www.dcard.tw' + item_url
 
-            if item_img is None:
+            if item_img_src is None:
                 item_content = '{}'.format(
                     html.escape(item_desc)
                 )
             else:
                 item_content = '<img alt="{}" src="{}"/><br/>{}'.format(
                     html.escape(item_title),
-                    html.escape(item_img),
+                    html.escape(item_img_src),
                     html.escape(item_desc)
                 )
 
