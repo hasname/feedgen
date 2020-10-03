@@ -3,6 +3,7 @@ from django.views.generic import View
 import feedgen.feed
 import html
 import lxml.html
+import re
 import requests
 import urllib
 
@@ -36,6 +37,9 @@ class DcardMainView(View):
                 item_img_src = None
             else:
                 item_img_src = item_img.get('src')
+                g = re.match(r'^(https://imgur\.dcard\.tw/\w+)b(\.jpg)$', item_img_src)
+                if g:
+                    item_img_src = g.group(1) + g.group(2)
 
             if item_url.startswith('/f/'):
                 item_url = 'https://www.dcard.tw' + item_url
