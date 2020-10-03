@@ -77,7 +77,7 @@ class SmokeTestCase(TestCase):
         self.assertEqual(res.status_code, 200)
 
     @requests_mock.mock()
-    def test_plurk(self, m):
+    def test_rent591(self, m):
         text = open(os.path.dirname(__file__) + '/html_rent591.txt').read()
         m.get('https://rent.591.com.tw/?kind=0&order=posttime&orderType=desc&region=1&keywords=abc', text=text)
 
