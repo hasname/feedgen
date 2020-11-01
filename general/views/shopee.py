@@ -13,6 +13,7 @@ class ShopeeView(View):
         keyword = kwargs['keyword']
 
         url = 'https://shopee.tw/api/v2/search_items/?by=ctime&keyword={}&limit=50&newest=0&order=desc&page_type=search'.format(urllib.parse.quote_plus(keyword))
+        referer = 'https://shopee.tw/search?keyword={}'.format(urllib.parse.quote_plus(keyword))
 
         title = '蝦皮搜尋 - {}'.format(keyword)
 
@@ -23,7 +24,7 @@ class ShopeeView(View):
         feed.title(title)
 
         s = requests.Session()
-        r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
+        r = s.get(url, headers={'Referer': referer, 'User-agent': 'feedgen'}, timeout=5)
         body = json.loads(r.text)
 
         session = FuturesSession(executor=ThreadPoolExecutor(max_workers=10))
@@ -33,7 +34,7 @@ class ShopeeView(View):
             shopid = item['shopid']
             shopapi_url = 'https://shopee.tw/api/v2/shop/get?is_brief=1&shopid=%d' % shopid
             futures.append(
-                session.get(shopapi_url, headers={'User-agent': 'feedgen'}, timeout=5)
+                session.get(shopapi_url, headers={'Referer': referer, 'User-agent': 'feedgen'}, timeout=5)
             )
 
         shops = {}
