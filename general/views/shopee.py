@@ -27,7 +27,7 @@ class ShopeeView(View):
         r = s.get(url, headers={'Referer': referer, 'User-agent': 'feedgen'}, timeout=5)
         body = json.loads(r.text)
 
-        session = FuturesSession(executor=ThreadPoolExecutor(max_workers=10))
+        session = FuturesSession(executor=ThreadPoolExecutor(max_workers=8))
         futures = []
 
         for item in body['items']:
