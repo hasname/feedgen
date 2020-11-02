@@ -25,10 +25,14 @@ class YouTubeView(View):
         r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
 
         m = re.search(r"window\[\"ytInitialData\"\] = (.*);$", r.text, re.MULTILINE)
-        ytInitialData = m.group(1)
-        j = json.loads(ytInitialData)
+        if m is None:
+            items = []
+        else:
+            ytInitialData = m.group(1)
+            j = json.loads(ytInitialData)
+            items = j['contents']['twoColumnSearchResultsRenderer']['primaryContents']['sectionListRenderer']['contents'][0]['itemSectionRenderer']['contents']
 
-        for item in j['contents']['twoColumnSearchResultsRenderer']['primaryContents']['sectionListRenderer']['contents'][0]['itemSectionRenderer']['contents']:
+        for item in items:
             try:
                 # author
                 author = item['videoRenderer']['longBylineText']['runs'][0]['text']
