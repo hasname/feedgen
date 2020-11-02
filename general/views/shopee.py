@@ -47,7 +47,7 @@ class ShopeeView(View):
 
             shops[shopid] = username
 
-        session = FuturesSession(executor=ThreadPoolExecutor(max_workers=10))
+        session = FuturesSession(executor=ThreadPoolExecutor(max_workers=8))
         futures = []
 
         for item in body['items']:
