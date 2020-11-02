@@ -25,7 +25,11 @@ class ShopeeView(View):
 
         s = requests.Session()
         r = s.get(url, headers={'Referer': referer, 'User-agent': 'feedgen'}, timeout=5)
-        body = json.loads(r.text)
+
+        try:
+            body = json.loads(r.text)
+        except JSONDecodeError:
+            body = {'items': []}
 
         session = FuturesSession(executor=ThreadPoolExecutor(max_workers=8))
         futures = []
@@ -40,7 +44,10 @@ class ShopeeView(View):
         shops = {}
         for f in futures:
             r = f.result()
-            data = json.loads(r.text)['data']
+            try:
+                data = json.loads(r.text)['data']
+            except JSONDecodeError:
+                continue
 
             shopid = data['shopid']
             username = data['account']['username']
@@ -65,7 +72,10 @@ class ShopeeView(View):
 
         for f in futures:
             r = f.result()
-            item = json.loads(r.text)['item']
+            try:
+                item = json.loads(r.text)['item']
+            except JSONDecodeError:
+                continue
 
             itemid = item['itemid']
             name = item['name']
