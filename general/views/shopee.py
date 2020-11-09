@@ -28,7 +28,7 @@ class ShopeeView(View):
 
         try:
             body = json.loads(r.text)
-        except JSONDecodeError:
+        except json.decoder.JSONDecodeError:
             body = {'items': []}
 
         session = FuturesSession(executor=ThreadPoolExecutor(max_workers=8))
@@ -46,7 +46,7 @@ class ShopeeView(View):
             r = f.result()
             try:
                 data = json.loads(r.text)['data']
-            except JSONDecodeError:
+            except json.decoder.JSONDecodeError:
                 continue
 
             shopid = data['shopid']
@@ -74,7 +74,7 @@ class ShopeeView(View):
             r = f.result()
             try:
                 item = json.loads(r.text)['item']
-            except JSONDecodeError:
+            except json.decoder.JSONDecodeError:
                 continue
 
             itemid = item['itemid']
