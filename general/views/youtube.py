@@ -24,7 +24,7 @@ class YouTubeView(View):
         s = requests.Session()
         r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
 
-        m = re.search(r"window\[\"ytInitialData\"\] = (.*);$", r.text, re.MULTILINE)
+        m = re.search(r"var ytInitialData = (.*);\s*$", r.text, re.MULTILINE)
         if m is None:
             items = []
         else:
