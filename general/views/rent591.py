@@ -5,6 +5,7 @@ import html
 import lxml.html
 import re
 import requests
+import urllib3
 
 class Rent591View(View):
     def get(self, *args, **kwargs):
@@ -29,9 +30,14 @@ class Rent591View(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = requests.Session()
-        r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
-        body = lxml.html.fromstring(r.text)
+        try:
+            s = requests.Session()
+            r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
+            text = r.text
+        except urllib3.exceptions.ReadTimeoutError:
+            text = '<html></html>'
+
+        body = lxml.html.fromstring(text)
 
         for item in body.cssselect('#content > ul'):
             item_desc = item.text_content()
