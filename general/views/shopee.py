@@ -28,13 +28,16 @@ class ShopeeView(View):
 
         try:
             body = json.loads(r.text)
+            items = body['items']
+            if not isinstance(items, list):
+                items = []
         except json.decoder.JSONDecodeError:
-            body = {'items': []}
+            items = []
 
         session = FuturesSession(executor=ThreadPoolExecutor(max_workers=8))
         futures = []
 
-        for item in body['items']:
+        for item in items:
             shopid = item['shopid']
             shopapi_url = 'https://shopee.tw/api/v2/shop/get?is_brief=1&shopid=%d' % shopid
             futures.append(
@@ -57,7 +60,7 @@ class ShopeeView(View):
         session = FuturesSession(executor=ThreadPoolExecutor(max_workers=8))
         futures = []
 
-        for item in body['items']:
+        for item in items:
             itemid = item['itemid']
             name = item['name']
             shopid = item['shopid']
