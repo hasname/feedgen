@@ -21,9 +21,12 @@ class Job518View(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = requests.Session()
-        r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
-        body = lxml.html.fromstring(r.text)
+        try:
+            s = requests.Session()
+            r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
+            body = lxml.html.fromstring(r.text)
+        except:
+            body = lxml.html.fromstring('<html></html>')
 
         for item in body.cssselect('#listContent > ul'):
             try:
