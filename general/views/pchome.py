@@ -19,10 +19,13 @@ class PChomeLightNovelView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = requests.Session()
-        r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
-        body = re.match(r'^[^\[]*(\[.*\])[^\[]*$', r.text).group(1)
-        items = json.loads(body)
+        try:
+            s = requests.Session()
+            r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
+            body = re.match(r'^[^\[]*(\[.*\])[^\[]*$', r.text).group(1)
+            items = json.loads(body)
+        except:
+            items = []
 
         for item in items:
             content = '{}<br/><img alt="{}" src="https://a.ecimg.tw{}"/>'.format(
@@ -60,9 +63,12 @@ class PChomeView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = requests.Session()
-        r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
-        body = json.loads(r.text)
+        try:
+            s = requests.Session()
+            r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
+            body = json.loads(r.text)
+        except:
+            body = {'prods': []}
 
         for prod in body['prods']:
             # Product name & description
