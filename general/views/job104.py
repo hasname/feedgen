@@ -28,22 +28,25 @@ class Job104View(View):
             body = lxml.html.fromstring('</html></html>')
 
         for item in body.cssselect('article.job-list-item'):
-            job_company = item.get('data-cust-name')
-            job_desc = item.cssselect('p.job-list-item__info')[0].text_content()
-            job_title = item.get('data-job-name')
-            job_url = item.cssselect('a.js-job-link')[0].get('href')
-            job_url = re.sub(r'^//', 'https://', job_url)
-            job_url = re.sub(r'&jobsource=\w*$', '', job_url)
+            try:
+                job_company = item.get('data-cust-name')
+                job_desc = item.cssselect('p.job-list-item__info')[0].text_content()
+                job_title = item.get('data-job-name')
+                job_url = item.cssselect('a.js-job-link')[0].get('href')
+                job_url = re.sub(r'^//', 'https://', job_url)
+                job_url = re.sub(r'&jobsource=\w*$', '', job_url)
 
-            content = '<h3>{}</h3><pre>{}</pre>'.format(
-                html.escape(job_company), html.escape(job_desc)
-            )
+                content = '<h3>{}</h3><pre>{}</pre>'.format(
+                    html.escape(job_company), html.escape(job_desc)
+                )
 
-            entry = feed.add_entry()
-            entry.content(content, type='xhtml')
-            entry.id(job_url)
-            entry.link(href=job_url)
-            entry.title(job_title)
+                entry = feed.add_entry()
+                entry.content(content, type='xhtml')
+                entry.id(job_url)
+                entry.link(href=job_url)
+                entry.title(job_title)
+            except:
+                pass
 
         res = HttpResponse(feed.atom_str(), content_type='application/atom+xml')
         res['Cache-Control'] = 'max-age=300,public'
