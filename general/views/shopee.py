@@ -23,15 +23,15 @@ class ShopeeView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = requests.Session()
-        r = s.get(url, headers={'Referer': referer, 'User-agent': 'feedgen'}, timeout=5)
-
         try:
+            s = requests.Session()
+            r = s.get(url, headers={'Referer': referer, 'User-agent': 'feedgen'}, timeout=5)
             body = json.loads(r.text)
             items = body['items']
-            if not isinstance(items, list):
-                items = []
-        except json.decoder.JSONDecodeError:
+        except:
+            items = []
+
+        if not isinstance(items, list):
             items = []
 
         session = FuturesSession(executor=ThreadPoolExecutor(max_workers=8))
