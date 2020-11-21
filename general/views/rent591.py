@@ -34,7 +34,7 @@ class Rent591View(View):
             s = requests.Session()
             r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
             text = r.text
-        except urllib3.exceptions.ReadTimeoutError:
+        except Exception:
             text = '<html></html>'
 
         body = lxml.html.fromstring(text)
