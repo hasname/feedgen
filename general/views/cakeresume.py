@@ -24,7 +24,7 @@ class CakeResumeView(View):
 
         try:
             r = requests.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
-            state = re.search(r'window\.__APP_INITIAL_REDUX_STATE__ = (.*?)</script>', r.text, re.MULTILINE).group(1)
+            state = re.search(r'<script>window\.__APP_INITIAL_REDUX_STATE__ = (.*?)</script>', r.text, re.MULTILINE).group(1)
             state = state.replace('"jwt":undefined', '"jwt":false')
             items = json.loads(state)['jobSearch']['jobResultsState']['content']['_rawResults'][0]['hits']
         except:
