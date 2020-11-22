@@ -14,6 +14,15 @@ class SmokeTestCase(TestCase):
         self.assertEqual(res.status_code, 200)
 
     @requests_mock.mock()
+    def test_cakeresume(self, m):
+        text = open(os.path.dirname(__file__) + '/html_cakeresume.txt').read()
+        m.get('https://www.cakeresume.com/jobs?q=php', text=text)
+
+        c = Client()
+        res = c.get('/cakeresume/php')
+        self.assertEqual(res.status_code, 200)
+
+    @requests_mock.mock()
     def test_dcard_main(self, m):
         text = open(os.path.dirname(__file__) + '/html_dcard_main.txt').read()
         m.get('https://www.dcard.tw/f', text=text)

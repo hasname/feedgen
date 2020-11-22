@@ -8,6 +8,7 @@ Recruting platform search systems:
 * https://www.104.com.tw/
 * https://www.1111.com.tw/
 * https://www.518.com.tw/
+* https://www.cakeresume.com/
 
 EC search systems:
 * https://24h.pchome.com.tw/ (including other PChome's EC systems)
@@ -33,6 +34,7 @@ Others:
 * https://feedgen.hasname.com/1111/devops
 * https://feedgen.hasname.com/518/devops
 * https://feedgen.hasname.com/bookwalker-lightnovel
+* https://feedgen.hasname.com/cakeresume/devops
 * https://feedgen.hasname.com/dcard/main
 * https://feedgen.hasname.com/pchome-lightnovel
 * https://feedgen.hasname.com/pchome/測試
