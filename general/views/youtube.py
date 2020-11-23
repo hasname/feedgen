@@ -60,6 +60,8 @@ class YouTubeView(View):
 
             except IndexError:
                 pass
+            except KeyError:
+                pass
 
         res = HttpResponse(feed.atom_str(), content_type='application/atom+xml')
         res['Cache-Control'] = 'max-age=300,public'
