@@ -112,7 +112,7 @@ class SmokeTestCase(TestCase):
     @requests_mock.mock()
     def test_youtube(self, m):
         text = open(os.path.dirname(__file__) + '/html_youtube.txt').read()
-        m.get('https://www.youtube.com/results?sp=CAI%253D&search_query=test', text=text)
+        m.get('https://www.youtube.com/results?search_query=test&sp=CAI%253D', text=text)
 
         c = Client()
         res = c.get('/youtube/test')
