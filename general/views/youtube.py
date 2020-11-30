@@ -24,13 +24,10 @@ class YouTubeView(View):
         s = requests.Session()
         r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
 
-        m = re.search(r"var ytInitialData = (.*);\s*$", r.text, re.MULTILINE)
-        if m is None:
-            items = []
-        else:
-            ytInitialData = m.group(1)
-            j = json.loads(ytInitialData)
-            items = j['contents']['twoColumnSearchResultsRenderer']['primaryContents']['sectionListRenderer']['contents'][0]['itemSectionRenderer']['contents']
+        m = re.search(r"var ytInitialData = (.*);\s*</script>", r.text, re.MULTILINE)
+        ytInitialData = m.group(1)
+        j = json.loads(ytInitialData)
+        items = j['contents']['twoColumnSearchResultsRenderer']['primaryContents']['sectionListRenderer']['contents'][0]['itemSectionRenderer']['contents']
 
         for item in items:
             try:
