@@ -12,7 +12,7 @@ class ShopeeView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://shopee.tw/api/v2/search_items/?by=ctime&keyword={}&limit=50&newest=0&order=desc&page_type=search'.format(urllib.parse.quote_plus(keyword))
+        url = 'https://shopee.tw/api/v2/search_items/?by=ctime&keyword={}&limit=50&newest=0&order=desc&page_type=search&version=2'.format(urllib.parse.quote_plus(keyword))
         referer = 'https://shopee.tw/search?keyword={}'.format(urllib.parse.quote_plus(keyword))
 
         title = '蝦皮搜尋 - {}'.format(keyword)
