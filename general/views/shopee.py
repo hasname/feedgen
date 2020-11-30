@@ -25,6 +25,7 @@ class ShopeeView(View):
 
         try:
             s = requests.Session()
+            s.proxies = {'http': 'socks5://127.0.0.1:9050', 'https': 'socks5://127.0.0.1:9050'}
             r = s.get(url, headers={'Referer': referer, 'User-agent': 'feedgen'}, timeout=5)
             body = json.loads(r.text)
             items = body['items']
@@ -34,7 +35,7 @@ class ShopeeView(View):
         if not isinstance(items, list):
             items = []
 
-        session = FuturesSession(executor=ThreadPoolExecutor(max_workers=4))
+        session = FuturesSession(executor=ThreadPoolExecutor(max_workers=8))
         futures = []
 
         for item in items:
