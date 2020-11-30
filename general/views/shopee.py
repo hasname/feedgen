@@ -34,7 +34,7 @@ class ShopeeView(View):
         if not isinstance(items, list):
             items = []
 
-        session = FuturesSession(executor=ThreadPoolExecutor(max_workers=8))
+        session = FuturesSession(executor=ThreadPoolExecutor(max_workers=4))
         futures = []
 
         for item in items:
