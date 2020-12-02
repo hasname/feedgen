@@ -42,6 +42,7 @@ class Rent591View(View):
         for item in body.cssselect('#content > ul'):
             item_desc = item.text_content()
             item_img = item.cssselect('.imageBox img')[0].get('data-original')
+            item_price = item.cssselect('.price')[0].text_content()
             item_title = item.cssselect('.infoContent')[0].text_content()
             item_url = item.cssselect('a')[0].get('href')
             item_url = re.sub(r'^//', 'https://', item_url)
@@ -57,7 +58,7 @@ class Rent591View(View):
             entry.content(content, type='xhtml')
             entry.id(item_url)
             entry.link(href=item_url)
-            entry.title(item_title)
+            entry.title(item_price + ' - ' + item_title)
 
         res = HttpResponse(feed.atom_str(), content_type='application/atom+xml')
         res['Cache-Control'] = 'max-age=300,public'
