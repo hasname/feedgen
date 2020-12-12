@@ -36,6 +36,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'django.middleware.gzip.GZipMiddleware',
 ]
 
 ROOT_URLCONF = 'feedgen_hasname.urls'
