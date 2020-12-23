@@ -72,9 +72,12 @@ class PChomeView(View):
 
         for item in body['prods']:
             # Product name & description
-            item_name = self.str_clean(item['name'])
-            item_desc = self.str_clean(item['describe'])
             item_author = self.str_clean(item['author'])
+            item_desc = self.str_clean(item['describe'])
+            item_name = self.str_clean(item['name'])
+            item_origin_price = item['originPrice']
+            item_price = item['price']
+            item_title = '({}/{}) {}'.format(item_origin_price, item_price, item_name)
 
             # URL
             if item['cateId'][0] == 'D':
@@ -92,7 +95,7 @@ class PChomeView(View):
             entry.content(content, type='xhtml')
             entry.id(item_url)
             entry.link(href=item_url)
-            entry.title(item_name)
+            entry.title(item_title)
 
         res = HttpResponse(feed.atom_str(), content_type='application/atom+xml')
         res['Cache-Control'] = 'max-age=300,public'
