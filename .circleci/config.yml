@@ -6,6 +6,7 @@ jobs:
       - image: python:3.8
     steps:
       - checkout
+      - run: pip install -U poetry
       - run: make test
 
 workflows:
