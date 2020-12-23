@@ -49,6 +49,11 @@ class Rent591View(View):
             item_url = item.cssselect('a')[0].get('href')
             item_url = re.sub(r'^//', 'https://', item_url)
 
+            item_price_num = item_price.replace(',', '')
+            item_price_num = float(re.sub(r' .*', '', item_price_num))
+            item_area_num = float(re.sub(r'坪.*', '', item_area))
+            item_unitprice = int(item_price_num / item_area_num)
+
             content = '<img alt="{}" src="{}"/><br/>{}<br/>{}'.format(
                 html.escape(item_title),
                 html.escape(item_img),
@@ -60,7 +65,7 @@ class Rent591View(View):
             entry.content(content, type='xhtml')
             entry.id(item_url)
             entry.link(href=item_url)
-            entry.title(item_price + ' - ' + item_area + ' - ' + item_title)
+            entry.title('${}/坪 - {} - {}'.format(item_unitprice, item_area, item_title))
 
         res = HttpResponse(feed.atom_str(), content_type='application/atom+xml')
         res['Cache-Control'] = 'max-age=300,public'
