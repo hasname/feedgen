@@ -70,29 +70,29 @@ class PChomeView(View):
         except:
             body = {'prods': []}
 
-        for prod in body['prods']:
+        for item in body['prods']:
             # Product name & description
-            prod_name = self.str_clean(prod['name'])
-            prod_desc = self.str_clean(prod['describe'])
-            prod_author = self.str_clean(prod['author'])
+            item_name = self.str_clean(item['name'])
+            item_desc = self.str_clean(item['describe'])
+            item_author = self.str_clean(item['author'])
 
             # URL
-            if prod['cateId'][0] == 'D':
-                prod_url = 'https://24h.pchome.com.tw/prod/' + prod['Id']
+            if item['cateId'][0] == 'D':
+                item_url = 'https://24h.pchome.com.tw/prod/' + item['Id']
             else:
-                prod_url = 'https://mall.pchome.com.tw/prod/' + prod['Id']
-            img_url = 'https://a.ecimg.tw%s' % (prod['picB'])
+                item_url = 'https://mall.pchome.com.tw/prod/' + item['Id']
+            img_url = 'https://a.ecimg.tw%s' % (item['picB'])
 
             content = '{}<br/><img alt="{}" src="{}"/>'.format(
-                html.escape(prod_desc), html.escape(prod_name), html.escape(img_url)
+                html.escape(item_desc), html.escape(item_name), html.escape(img_url)
             )
 
             entry = feed.add_entry()
-            entry.author({'name': prod_author})
+            entry.author({'name': item_author})
             entry.content(content, type='xhtml')
-            entry.id(prod_url)
-            entry.link(href=prod_url)
-            entry.title(prod_name)
+            entry.id(item_url)
+            entry.link(href=item_url)
+            entry.title(item_name)
 
         res = HttpResponse(feed.atom_str(), content_type='application/atom+xml')
         res['Cache-Control'] = 'max-age=300,public'
