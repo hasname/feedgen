@@ -6,7 +6,15 @@ jobs:
       - image: python:3.8
     steps:
       - checkout
+      - restore_cache:
+        keys:
+          - v1-deps-{{ checksum "poetry.lock" }}
+          - v1-deps
       - run: pip install -U poetry
+      - save_cache:
+        key: v1-deps-{{ checksum "poetry.lock" }}
+        paths:
+          - /home/circleci/.cache/pypoetry/virtualenvs
       - run: make test
 
 workflows:
