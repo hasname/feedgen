@@ -77,7 +77,7 @@ class PChomeView(View):
             item_name = self.str_clean(item['name'])
             item_origin_price = item['originPrice']
             item_price = item['price']
-            item_title = '({}/{}) {}'.format(item_origin_price, item_price, item_name)
+            item_title = '(${}/${}) {}'.format(item_origin_price, item_price, item_name)
 
             # URL
             if item['cateId'][0] == 'D':
