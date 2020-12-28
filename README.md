@@ -35,6 +35,7 @@ Others:
 * https://feedgen.hasname.com/518/devops
 * https://feedgen.hasname.com/bookwalker-lightnovel
 * https://feedgen.hasname.com/cakeresume/devops
+* https://feedgen.hasname.com/dcard/board/moon
 * https://feedgen.hasname.com/dcard/main
 * https://feedgen.hasname.com/pchome-lightnovel
 * https://feedgen.hasname.com/pchome/測試
