@@ -38,7 +38,9 @@ class Rent591View(View):
 
         body = lxml.html.fromstring(text)
 
-        for item in body.cssselect('#content > ul'):
+        items = body.cssselect('#content > ul')
+
+        for item in items:
             item_metainfo = item.cssselect('.infoContent .lightBox')[0].text_content()
             item_area = re.search(r'([\.0-9]+坪)', item_metainfo).group(1)
             item_desc = item.text_content()
