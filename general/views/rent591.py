@@ -5,7 +5,6 @@ import html
 import lxml.html
 import re
 import requests
-import urllib3
 
 class Rent591View(View):
     def get(self, *args, **kwargs):
