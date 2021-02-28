@@ -71,7 +71,7 @@ class ShopeeView(View):
                 shopid,
             )
             futures.append(
-                session.get(itemapi_url, headers={'User-agent': 'feedgen'}, timeout=5)
+                session.get(itemapi_url, headers={'Referer': referer, 'User-agent': 'feedgen'}, timeout=5)
             )
 
         for f in futures:
