@@ -108,12 +108,6 @@ class SmokeTestCase(TestCase):
         text = open(os.path.dirname(__file__) + '/json_shopee.txt').read()
         m.get('https://shopee.tw/api/v2/search_items/?by=ctime&keyword=test&limit=50&newest=0&order=desc&page_type=search&version=2', text=text)
 
-        text = open(os.path.dirname(__file__) + '/json_shopee_item.txt').read()
-        m.get(re.compile('https://shopee.tw/api/v2/item/get'), text=text)
-
-        text = open(os.path.dirname(__file__) + '/json_shopee_shop.txt').read()
-        m.get(re.compile('https://shopee.tw/api/v2/shop/get'), text=text)
-
         c = Client()
         res = c.get('/shopee/test')
         self.assertEqual(res.status_code, 200)

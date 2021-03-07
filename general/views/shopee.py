@@ -1,7 +1,5 @@
-from concurrent.futures import ThreadPoolExecutor
 from django.http import HttpResponse
 from django.views.generic import View
-from requests_futures.sessions import FuturesSession
 import feedgen.feed
 import html
 import json
@@ -35,52 +33,7 @@ class ShopeeView(View):
         if not isinstance(items, list):
             items = []
 
-        session = FuturesSession(executor=ThreadPoolExecutor(max_workers=8))
-        futures = []
-
         for item in items:
-            shopid = item['shopid']
-            shopapi_url = 'https://shopee.tw/api/v2/shop/get?is_brief=1&shopid=%d' % shopid
-            futures.append(
-                session.get(shopapi_url, headers={'Referer': referer, 'User-agent': 'feedgen'}, timeout=5)
-            )
-
-        shops = {}
-        for f in futures:
-            r = f.result()
-            try:
-                data = json.loads(r.text)['data']
-            except json.decoder.JSONDecodeError:
-                continue
-
-            shopid = data['shopid']
-            username = data['account']['username']
-
-            shops[shopid] = username
-
-        session = FuturesSession(executor=ThreadPoolExecutor(max_workers=8))
-        futures = []
-
-        for item in items:
-            itemid = item['itemid']
-            name = item['name']
-            shopid = item['shopid']
-
-            itemapi_url = 'https://shopee.tw/api/v2/item/get?itemid=%d&shopid=%d' % (
-                itemid,
-                shopid,
-            )
-            futures.append(
-                session.get(itemapi_url, headers={'Referer': referer, 'User-agent': 'feedgen'}, timeout=5)
-            )
-
-        for f in futures:
-            r = f.result()
-            try:
-                item = json.loads(r.text)['item']
-            except json.decoder.JSONDecodeError:
-                continue
-
             itemid = item['itemid']
             name = item['name']
             shopid = item['shopid']
@@ -93,7 +46,6 @@ class ShopeeView(View):
             )
 
             entry = feed.add_entry()
-            entry.author({'name': shops.get(shopid, None)})
             entry.content(content, type='xhtml')
             entry.id(prod_url)
             entry.link(href=prod_url)
