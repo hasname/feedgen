@@ -9,6 +9,7 @@ class GenProxy(object):
     def main(self):
         dotenv.load_dotenv(os.path.dirname(__file__) + '/../.env')
 
+        headers = {'User-agent': 'feedgen'}
         sample_url = 'https://feedgen.hasname.com/robots.txt'
         url = os.getenv('PROXYLIST_URL')
 
@@ -22,7 +23,7 @@ class GenProxy(object):
             proxies = {'http': 'http://' + proxy, 'https': 'http://' + proxy}
 
             try:
-                res = requests.get(sample_url, headers={'User-agent': 'feedgen'}, proxies=proxies, timeout=3)
+                res = requests.get(sample_url, headers=headers, proxies=proxies, timeout=3)
 
                 if res.status_code == 200:
                     proxy_list_working.append(proxy)
