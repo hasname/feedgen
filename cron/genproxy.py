@@ -18,10 +18,10 @@ class GenProxy(object):
         sample_url = 'https://feedgen.hasname.com/robots.txt'
 
         for proxy in proxy_list:
-            try:
-                print('* ' + proxy + ' is testing.')
+            print('* ' + proxy + ' is testing.')
+            proxies = {'http': 'http://' + proxy, 'https': 'http://' + proxy}
 
-                proxies = {'http': 'http://' + proxy, 'https': 'http://' + proxy}
+            try:
                 res = requests.get(sample_url, headers={'User-agent': 'feedgen'}, proxies=proxies, timeout=3)
 
                 if res.status_code == 200:
