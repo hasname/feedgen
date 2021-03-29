@@ -7,7 +7,7 @@ import requests
 
 class GenProxy(object):
     def main(self):
-        dotenv.load_dotenv()
+        dotenv.load_dotenv(os.path.dirname(__file__) + '/../.env')
         url = os.getenv('PROXYLIST_URL')
 
         res = requests.get(url)
