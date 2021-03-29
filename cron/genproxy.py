@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 
-import dotenv
 import json
 import os
 import requests
 
 class GenProxy(object):
     def main(self):
-        # Ubuntu 18.04
+        # Workaround for Ubuntu 18.04
         try:
             import dotenv.version
             dotenv.load_dotenv(os.path.dirname(__file__) + '/../')
         except:
+            import dotenv
             dotenv.load_dotenv(os.path.dirname(__file__) + '/../.env')
 
         url = os.getenv('PROXYLIST_URL')
