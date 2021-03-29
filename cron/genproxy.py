@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import dotenv
-import dotenv.version
 import json
 import os
 import requests
@@ -9,10 +8,11 @@ import requests
 class GenProxy(object):
     def main(self):
         # Ubuntu 18.04
-        if dotenv.version.__version__ == '0.7.1':
-            dotenv.load_dotenv(os.path.dirname(__file__) + '/../.env')
-        else:
+        try:
+            import dotenv.version
             dotenv.load_dotenv(os.path.dirname(__file__) + '/../')
+        except:
+            dotenv.load_dotenv(os.path.dirname(__file__) + '/../.env')
 
         url = os.getenv('PROXYLIST_URL')
 
