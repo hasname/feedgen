@@ -15,13 +15,14 @@ class GenProxy(object):
         raw = res.text
         proxy_list = list(filter(lambda x: x != "", raw.split("\n")))
         proxy_list_working = []
+        sample_url = 'https://feedgen.hasname.com/robots.txt'
 
         for proxy in proxy_list:
             try:
                 print('* ' + proxy + ' is testing.')
 
                 proxies = {'http': 'http://' + proxy, 'https': 'http://' + proxy}
-                res = requests.get('https://feedgen.hasname.com/robots.txt', headers={'User-agent': 'feedgen'}, proxies=proxies, timeout=3)
+                res = requests.get(sample_url, headers={'User-agent': 'feedgen'}, proxies=proxies, timeout=3)
 
                 if res.status_code == 200:
                     proxy_list_working.append(proxy)
