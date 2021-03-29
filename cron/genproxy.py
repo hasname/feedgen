@@ -14,9 +14,24 @@ class GenProxy(object):
         res = requests.get(url)
         raw = res.text
         proxies = list(filter(lambda x: x != "", raw.split("\n")))
+        proxies_working = []
+
+        for proxy in proxies:
+            try:
+                print('* ' + proxy + ' is testing.')
+
+                proxies = {'http': 'http://' + proxy, 'https': 'http://' + proxy}
+                res = requests.get('https://feedgen.hasname.com/robots.txt', headers={'User-agent': 'feedgen'}, proxies=proxies, timeout=3)
+
+                if res.status_code == 200:
+                    proxies_working.append(proxy)
+                    print('! ' + proxy + ' is working.')
+
+            except:
+                pass
 
         with open('/tmp/proxylist.json', 'w+') as fh:
-            fh.write(json.dumps(proxies))
+            fh.write(json.dumps(proxies_working))
 
 if __name__ == '__main__':
     GenProxy().main()
