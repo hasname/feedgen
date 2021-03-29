@@ -9,13 +9,13 @@ class GenProxy(object):
     def main(self):
         dotenv.load_dotenv(os.path.dirname(__file__) + '/../.env')
 
+        sample_url = 'https://feedgen.hasname.com/robots.txt'
         url = os.getenv('PROXYLIST_URL')
 
         res = requests.get(url)
         raw = res.text
         proxy_list = list(filter(lambda x: x != "", raw.split("\n")))
         proxy_list_working = []
-        sample_url = 'https://feedgen.hasname.com/robots.txt'
 
         for proxy in proxy_list:
             print('* ' + proxy + ' is testing.')
