@@ -7,8 +7,6 @@ import os
 import requests
 
 class GenProxy(object):
-    proxy_list_working = []
-
     def fetch_target(self, proxy):
         print('* ' + proxy + ' is testing.')
         proxies = {'http': 'http://' + proxy, 'https': 'http://' + proxy}
@@ -20,11 +18,13 @@ class GenProxy(object):
             res = requests.get(sample_url, headers=headers, proxies=proxies, timeout=3)
 
             if res.status_code == 200:
-                self.proxy_list_working.append(proxy)
                 print('! ' + proxy + ' is working.')
+                return proxy
 
         except:
             pass
+
+        return None
 
     def main(self):
         dotenv.load_dotenv(os.path.dirname(__file__) + '/../.env')
@@ -33,11 +33,11 @@ class GenProxy(object):
         res = requests.get(url)
         proxy_list = list(filter(lambda x: x != "", res.text.split("\n")))
 
-        pool = multiprocessing.Pool(processes=8)
-        pool_outputs = pool.map(self.fetch_target, proxy_list)
+        pool = multiprocessing.Pool(processes=4)
+        proxy_list_working = list(filter(lambda x: x is not None, pool.map(self.fetch_target, proxy_list)))
 
         with open('/tmp/proxylist.json', 'w+') as fh:
-            fh.write(json.dumps(self.proxy_list_working))
+            fh.write(json.dumps(proxy_list_working))
 
 if __name__ == '__main__':
     GenProxy().main()
