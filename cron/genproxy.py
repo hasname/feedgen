@@ -6,34 +6,37 @@ import os
 import requests
 
 class GenProxy(object):
-    def main(self):
-        dotenv.load_dotenv(os.path.dirname(__file__) + '/../.env')
+    proxy_list_working = []
+
+    def fetch_target(self, proxy):
+        print('* ' + proxy + ' is testing.')
+        proxies = {'http': 'http://' + proxy, 'https': 'http://' + proxy}
 
         headers = {'User-agent': 'feedgen'}
         sample_url = 'https://feedgen.hasname.com/robots.txt'
-        url = os.getenv('PROXYLIST_URL')
 
+        try:
+            res = requests.get(sample_url, headers=headers, proxies=proxies, timeout=3)
+
+            if res.status_code == 200:
+                self.proxy_list_working.append(proxy)
+                print('! ' + proxy + ' is working.')
+
+        except:
+            pass
+
+    def main(self):
+        dotenv.load_dotenv(os.path.dirname(__file__) + '/../.env')
+
+        url = os.getenv('PROXYLIST_URL')
         res = requests.get(url)
-        raw = res.text
-        proxy_list = list(filter(lambda x: x != "", raw.split("\n")))
-        proxy_list_working = []
+        proxy_list = list(filter(lambda x: x != "", res.text.split("\n")))
 
         for proxy in proxy_list:
-            print('* ' + proxy + ' is testing.')
-            proxies = {'http': 'http://' + proxy, 'https': 'http://' + proxy}
-
-            try:
-                res = requests.get(sample_url, headers=headers, proxies=proxies, timeout=3)
-
-                if res.status_code == 200:
-                    proxy_list_working.append(proxy)
-                    print('! ' + proxy + ' is working.')
-
-            except:
-                pass
+            self.fetch_target(proxy)
 
         with open('/tmp/proxylist.json', 'w+') as fh:
-            fh.write(json.dumps(proxies_working))
+            fh.write(json.dumps(self.proxies_working))
 
 if __name__ == '__main__':
     GenProxy().main()
