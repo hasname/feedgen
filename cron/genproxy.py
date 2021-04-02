@@ -2,6 +2,7 @@
 
 import dotenv
 import json
+import multiprocessing
 import os
 import requests
 
@@ -32,11 +33,11 @@ class GenProxy(object):
         res = requests.get(url)
         proxy_list = list(filter(lambda x: x != "", res.text.split("\n")))
 
-        for proxy in proxy_list:
-            self.fetch_target(proxy)
+        pool = multiprocessing.Pool(processes=8)
+        pool_outputs = pool.map(self.fetch_target, proxy_list)
 
         with open('/tmp/proxylist.json', 'w+') as fh:
-            fh.write(json.dumps(self.proxies_working))
+            fh.write(json.dumps(self.proxy_list_working))
 
 if __name__ == '__main__':
     GenProxy().main()
