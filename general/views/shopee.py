@@ -31,7 +31,7 @@ class ShopeeView(View):
             body = json.loads(r.text)
             items = body['items']
         except:
-            items = []
+            return HttpResponse('Service Unavailable', status=503)
 
         if not isinstance(items, list):
             items = []
