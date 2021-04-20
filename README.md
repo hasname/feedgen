@@ -12,7 +12,7 @@ Recruting platform search systems:
 
 EC search systems:
 * https://24h.pchome.com.tw/ (including other PChome's EC systems)
-* https://shopee.tw/ (including other PChome's EC systems)
+* https://shopee.tw/
 
 Housing platform:
 * https://rent.591.com.tw/
