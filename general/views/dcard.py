@@ -2,7 +2,9 @@ from django.http import HttpResponse
 from django.views.generic import View
 import feedgen.feed
 import html
+import json
 import lxml.html
+import random
 import re
 import requests
 import urllib
@@ -20,9 +22,15 @@ class DcardBoardView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = requests.Session()
-        r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
-        body = lxml.html.fromstring(r.text)
+        try:
+            proxy = self.get_proxy()
+
+            s = requests.Session()
+            s.proxies = {'http': proxy, 'https': proxy}
+            r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
+            body = lxml.html.fromstring(r.text)
+        except:
+            return HttpResponse('Service Unavailable', status=503)
 
         items = body.cssselect('div[data-index]')
         for item in items:
@@ -66,6 +74,12 @@ class DcardBoardView(View):
         res['Cache-Control'] = 'max-age=300,public'
 
         return res
+
+    def get_proxy(self):
+        with open('/tmp/proxylist.json') as fh:
+            proxies = json.load(fh)
+
+        return 'http://' + random.choice(proxies)
 
 class DcardMainView(View):
     def get(self, *args, **kwargs):
@@ -79,9 +93,15 @@ class DcardMainView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = requests.Session()
-        r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
-        body = lxml.html.fromstring(r.text)
+        try:
+            proxy = self.get_proxy()
+
+            s = requests.Session()
+            s.proxies = {'http': proxy, 'https': proxy}
+            r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
+            body = lxml.html.fromstring(r.text)
+        except:
+            return HttpResponse('Service Unavailable', status=503)
 
         items = body.cssselect('div[data-index]')
         for item in items:
@@ -125,3 +145,9 @@ class DcardMainView(View):
         res['Cache-Control'] = 'max-age=300,public'
 
         return res
+
+    def get_proxy(self):
+        with open('/tmp/proxylist.json') as fh:
+            proxies = json.load(fh)
+
+        return 'http://' + random.choice(proxies)
