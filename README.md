@@ -1,6 +1,4 @@
-# feedgen
-
-[![CircleCI](https://circleci.com/gh/hasname/feedgen.svg?style=svg)](https://circleci.com/gh/hasname/feedgen)
+# feedgen [![CircleCI](https://circleci.com/gh/hasname/feedgen.svg?style=svg)](https://circleci.com/gh/hasname/feedgen)
 
 Generate Atom feeds for sites which do not support feeds, mostly in Taiwan.  Currently we support these services:
 
