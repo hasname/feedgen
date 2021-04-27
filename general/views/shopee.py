@@ -3,9 +3,10 @@ from django.views.generic import View
 import feedgen.feed
 import html
 import json
-import random
 import requests
 import urllib
+
+from .. import services
 
 class ShopeeView(View):
     def get(self, *args, **kwargs):
@@ -23,7 +24,7 @@ class ShopeeView(View):
         feed.title(title)
 
         try:
-            proxy = self.get_proxy()
+            proxy = services.ProxyService().process()
 
             s = requests.Session()
             s.proxies = {'http': proxy, 'https': proxy}
@@ -58,9 +59,3 @@ class ShopeeView(View):
         res['Cache-Control'] = 'max-age=300,public'
 
         return res
-
-    def get_proxy(self):
-        with open('/tmp/proxylist.json') as fh:
-            proxies = json.load(fh)
-
-        return 'http://' + random.choice(proxies)

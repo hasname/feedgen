@@ -20,6 +20,7 @@ keywords = ["feed"]
 base36 = "*"
 cssselect = "*"
 django = "*"
+django-service-objects = "*"
 feedgen = "*"
 lxml = "*"
 pip = "*"

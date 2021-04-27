@@ -4,10 +4,11 @@ import feedgen.feed
 import html
 import json
 import lxml.html
-import random
 import re
 import requests
 import urllib
+
+from .. import services
 
 class DcardBoardView(View):
     def get(self, *args, **kwargs):
@@ -23,7 +24,7 @@ class DcardBoardView(View):
         feed.title(title)
 
         try:
-            proxy = self.get_proxy()
+            proxy = services.ProxyService().process()
 
             s = requests.Session()
             s.proxies = {'http': proxy, 'https': proxy}
@@ -74,12 +75,6 @@ class DcardBoardView(View):
         res['Cache-Control'] = 'max-age=300,public'
 
         return res
-
-    def get_proxy(self):
-        with open('/tmp/proxylist.json') as fh:
-            proxies = json.load(fh)
-
-        return 'http://' + random.choice(proxies)
 
 class DcardMainView(View):
     def get(self, *args, **kwargs):
@@ -94,7 +89,7 @@ class DcardMainView(View):
         feed.title(title)
 
         try:
-            proxy = self.get_proxy()
+            proxy = services.ProxyService().process()
 
             s = requests.Session()
             s.proxies = {'http': proxy, 'https': proxy}
@@ -145,9 +140,3 @@ class DcardMainView(View):
         res['Cache-Control'] = 'max-age=300,public'
 
         return res
-
-    def get_proxy(self):
-        with open('/tmp/proxylist.json') as fh:
-            proxies = json.load(fh)
-
-        return 'http://' + random.choice(proxies)
