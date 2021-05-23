@@ -68,7 +68,7 @@ class Rent591View(View):
             entry.link(href=item_url)
             entry.title('${}/坪 - {} - {}'.format(item_unitprice, item_area, item_title))
 
-        res = HttpResponse(feed.atom_str(), content_type='application/atom+xml')
+        res = HttpResponse(feed.atom_str(), content_type='application/atom+xml; charset=utf-8')
         res['Cache-Control'] = 'max-age=300,public'
 
         return res

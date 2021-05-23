@@ -41,7 +41,7 @@ class PlurkTopView(View):
             entry.published(stat['posted'])
             entry.title(self.str_clean(stat['content_raw']))
 
-        res = HttpResponse(feed.atom_str(), content_type='application/atom+xml')
+        res = HttpResponse(feed.atom_str(), content_type='application/atom+xml; charset=utf-8')
         res['Cache-Control'] = 'max-age=300,public'
 
         return res

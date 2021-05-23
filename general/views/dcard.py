@@ -71,7 +71,7 @@ class DcardBoardView(View):
             entry.title(item_title)
             entry.link(href=item_url)
 
-        res = HttpResponse(feed.atom_str(), content_type='application/atom+xml')
+        res = HttpResponse(feed.atom_str(), content_type='application/atom+xml; charset=utf-8')
         res['Cache-Control'] = 'max-age=300,public'
 
         return res
@@ -136,7 +136,7 @@ class DcardMainView(View):
             entry.title(item_title)
             entry.link(href=item_url)
 
-        res = HttpResponse(feed.atom_str(), content_type='application/atom+xml')
+        res = HttpResponse(feed.atom_str(), content_type='application/atom+xml; charset=utf-8')
         res['Cache-Control'] = 'max-age=300,public'
 
         return res
