@@ -11,6 +11,7 @@ Recruting platform search systems:
 EC search systems:
 * https://24h.pchome.com.tw/ (including other PChome's EC systems)
 * https://shopee.tw/
+* https://www.momoshop.com.tw/
 
 Housing platform:
 * https://rent.591.com.tw/
@@ -35,6 +36,7 @@ Others:
 * https://feedgen.hasname.com/cakeresume/devops
 * https://feedgen.hasname.com/dcard/board/moon
 * https://feedgen.hasname.com/dcard/main
+* https://feedgen.hasname.com/momoshop/測試
 * https://feedgen.hasname.com/pchome-lightnovel
 * https://feedgen.hasname.com/pchome/測試
 * https://feedgen.hasname.com/plurk/top/zh

@@ -68,6 +68,17 @@ class SmokeTestCase(TestCase):
         self.assertEqual(res.status_code, 200)
 
     @requests_mock.mock()
+    def test_momoshop(self, m):
+        m.get('https://www.momoshop.com.tw/', text='')
+
+        text = open(os.path.dirname(__file__) + '/json_momoshop.txt').read()
+        m.post('https://www.momoshop.com.tw/ajax/ajaxTool.jsp?n=2018', text=text)
+
+        c = Client()
+        res = c.get('/momoshop/test')
+        self.assertEqual(res.status_code, 200)
+
+    @requests_mock.mock()
     def test_pchome(self, m):
         text = open(os.path.dirname(__file__) + '/json_pchome.txt').read()
         m.get('https://ecshweb.pchome.com.tw/search/v3.3/all/results?q=test&page=1&sort=new/dc', text=text)
