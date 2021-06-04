@@ -11,7 +11,7 @@ class MomoshopView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://www.momoshop.com.tw/search/searchShop.jsp?keyword={}&searchType=1&cateLevel=0&cateCode=&curPage=1&_isFuzzy=0&showType=chessboardType'.format(urllib.parse.quote_plus(keyword))
+        url = 'https://www.momoshop.com.tw/search/searchShop.jsp?keyword={}&searchType=4&cateLevel=0&cateCode=&curPage=1&_isFuzzy=0&showType=chessboardType'.format(urllib.parse.quote_plus(keyword))
 
         title = 'Momoshop 搜尋 - {}'.format(keyword)
 
@@ -35,7 +35,7 @@ class MomoshopView(View):
                     'specialGoodsType': '',
                     'searchValue': keyword,
                     'cateCode': '',
-                    'cateLevel': '0',
+                    'cateLevel': '-1',
                     'cp': 'N',
                     'NAM': 'N',
                     'first': 'N',
@@ -56,7 +56,7 @@ class MomoshopView(View):
                     'isFuzzy': '0',
                     'rtnCateDatainfo':  {
                         'cateCode': '',
-                        'cateLv': '0',
+                        'cateLv': '-1',
                         'keyword': keyword,
                         'curPage': '1',
                         'historyDoPush': False,
@@ -64,6 +64,7 @@ class MomoshopView(View):
                     },
                 }
             }
+
             url = 'https://www.momoshop.com.tw/ajax/ajaxTool.jsp?n=2018'
             r = s.post(url, data={'data': json.dumps(data)}, headers={'Referer': 'https://www.momoshop.com.tw/', 'User-agent': 'feedgen'}, timeout=5)
             body = json.loads(r.text)
