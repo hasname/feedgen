@@ -71,6 +71,12 @@ class MomoshopView(View):
         except:
             return HttpResponse('Service Unavailable', status=503)
 
+        # If it's not 200 then return an empty feed.
+        if body['rtnData']['searchResult']['resultCode'] != '200':
+            res = HttpResponse(feed.atom_str(), content_type='application/atom+xml; charset=utf-8')
+            res['Cache-Control'] = 'max-age=300,public'
+            return res
+
         for item in body['rtnData']['searchResult']['rtnSearchData']['goodsInfoList']:
             # Product name & description
             item_name = item['goodsName']
