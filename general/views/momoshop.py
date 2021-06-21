@@ -80,7 +80,7 @@ class MomoshopView(View):
         for item in body['rtnData']['searchResult']['rtnSearchData']['goodsInfoList']:
             # Product name & description
             item_name = item['goodsName']
-            item_title = '(${}) {}'.format(item['goodsPrice'], item_name)
+            item_title = '({}) {}'.format(item['goodsPrice'], item_name)
             item_url = 'https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code={}'.format(item['goodsCode'])
 
             content = '<img alt="{}" src="{}"/>'.format(html.escape(item_name), html.escape(item['imgUrl']))
