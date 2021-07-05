@@ -84,6 +84,9 @@ class MomoshopView(View):
             item_title = '({}) {}'.format(item['goodsPrice'], item_name)
             item_url = 'https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code={}'.format(item['goodsCode'])
 
+            # Use larger size.
+            item_img = item_img.replace('_L.', '_B.')
+
             content = '<img alt="{}" src="{}"/>'.format(html.escape(item_name), html.escape(item_img))
 
             entry = feed.add_entry()
