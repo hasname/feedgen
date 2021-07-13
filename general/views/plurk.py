@@ -12,7 +12,7 @@ class PlurkTopView(View):
     def get(self, *args, **kwargs):
         lang = kwargs['lang']
 
-        url = 'https://www.plurk.com/Stats/topReplurks?period=day&lang={}&limit=20'.format(urllib.parse.quote_plus(lang))
+        url = 'https://www.plurk.com/Stats/topReplurks?period=day&lang={}&limit=10'.format(urllib.parse.quote_plus(lang))
 
         title = 'Plurk Top ({})'.format(lang)
 
