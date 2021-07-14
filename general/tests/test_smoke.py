@@ -99,7 +99,7 @@ class SmokeTestCase(TestCase):
     @requests_mock.mock()
     def test_plurk(self, m):
         text = open(os.path.dirname(__file__) + '/json_plurk_top_zh.txt').read()
-        m.get('https://www.plurk.com/Stats/topReplurks?period=day&lang=zh&limit=20', text=text)
+        m.get('https://www.plurk.com/Stats/topReplurks?period=day&lang=zh&limit=10', text=text)
 
         c = Client()
         res = c.get('/plurk/top/zh')
