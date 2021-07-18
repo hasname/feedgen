@@ -30,7 +30,7 @@ class PlurkSearchView(View):
         for p in body['plurks']:
             url = 'https://www.plurk.com/p/' + base36.dumps(p['id'])
 
-            content = html.escape(self.str_clean(p['content_raw']))
+            content = self.str_clean(p['content'])
 
             entry = feed.add_entry()
             entry.content(content, type='xhtml')
