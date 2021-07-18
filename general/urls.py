@@ -16,6 +16,7 @@ urlpatterns = [
     path('momoshop/<str:keyword>', momoshop.MomoshopView.as_view(), name='momoshop'),
     path('pchome/<str:keyword>', pchome.PChomeView.as_view(), name='pchome'),
     path('pchome-lightnovel', pchome.PChomeLightNovelView.as_view(), name='pchome_lightnovel'),
+    path('plurk/search/<str:keyword>', plurk.PlurkSearchView.as_view(), name='plurk_search'),
     path('plurk/top/<str:lang>', plurk.PlurkTopView.as_view(), name='plurk_top'),
     path('rent591/<int:region>/<str:keyword>', rent591.Rent591View.as_view(), name='rent591'),
     path('shopee/<str:keyword>', shopee.ShopeeView.as_view(), name='shopee'),

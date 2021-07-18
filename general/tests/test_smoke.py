@@ -97,7 +97,16 @@ class SmokeTestCase(TestCase):
         self.assertEqual(res.status_code, 200)
 
     @requests_mock.mock()
-    def test_plurk(self, m):
+    def test_plurk_search(self, m):
+        text = open(os.path.dirname(__file__) + '/json_plurk_search.txt').read()
+        m.post('https://www.plurk.com/Search/search2', text=text)
+
+        c = Client()
+        res = c.get('/plurk/search/test')
+        self.assertEqual(res.status_code, 200)
+
+    @requests_mock.mock()
+    def test_plurk_top(self, m):
         text = open(os.path.dirname(__file__) + '/json_plurk_top_zh.txt').read()
         m.get('https://www.plurk.com/Stats/topReplurks?period=day&lang=zh&limit=10', text=text)
 

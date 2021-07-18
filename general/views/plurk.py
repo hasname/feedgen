@@ -1,12 +1,51 @@
 from django.http import HttpResponse
 from django.views.generic import View
 import base36
+import dateutil.parser
 import feedgen.feed
 import html
 import json
 import re
 import requests
 import urllib
+
+class PlurkSearchView(View):
+    def get(self, *args, **kwargs):
+        keyword = kwargs['keyword']
+
+        url = 'https://www.plurk.com/Search/search2'
+
+        title = 'Plurk Search - {}'.format(keyword)
+
+        feed = feedgen.feed.FeedGenerator()
+        feed.author({'name': 'Feed Generator'})
+        feed.id(url)
+        feed.link(href=url, rel='alternate')
+        feed.title(title)
+
+        s = requests.Session()
+        r = s.post(url, headers={'User-agent': 'feedgen'}, data={'query': keyword}, timeout=5)
+        body = json.loads(r.text)
+
+        for p in body['plurks']:
+            url = 'https://www.plurk.com/p/' + base36.dumps(p['id'])
+
+            content = html.escape(self.str_clean(p['content_raw']))
+
+            entry = feed.add_entry()
+            entry.content(content, type='xhtml')
+            entry.id(url)
+            entry.link(href=url)
+            entry.published(dateutil.parser.parse(p['posted']))
+            entry.title(self.str_clean(p['content_raw']))
+
+        res = HttpResponse(feed.atom_str(), content_type='application/atom+xml; charset=utf-8')
+        res['Cache-Control'] = 'max-age=300,public'
+
+        return res
+
+    def str_clean(self, s):
+        return re.sub(r'[\x00-\x09]', ' ', s)
 
 class PlurkTopView(View):
     def get(self, *args, **kwargs):
