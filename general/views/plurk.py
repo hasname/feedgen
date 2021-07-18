@@ -33,7 +33,7 @@ class PlurkSearchView(View):
             content = self.str_clean(p['content'])
 
             entry = feed.add_entry()
-            entry.content(content, type='xhtml')
+            entry.content(content, type='CDATA')
             entry.id(url)
             entry.link(href=url)
             entry.published(dateutil.parser.parse(p['posted']))
