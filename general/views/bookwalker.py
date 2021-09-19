@@ -4,6 +4,8 @@ import feedgen.feed
 import lxml.html
 import requests
 
+from .. import services
+
 class BookwalkerLightNovelView(View):
     def get(self, *args, **kwargs):
         url = 'https://www.bookwalker.com.tw/more/fiction/1/3'
@@ -16,8 +18,9 @@ class BookwalkerLightNovelView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = requests.Session()
-        r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
+        s = services.RequestsService().process()
+
+        r = s.get(url)
         body = lxml.html.fromstring(r.text)
 
         for item in body.cssselect('.bwbookitem a'):

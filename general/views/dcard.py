@@ -25,10 +25,10 @@ class DcardBoardView(View):
 
         try:
             proxy = services.ProxyService().process()
+            s = services.RequestsService().process()
 
-            s = requests.Session()
             s.proxies = {'http': proxy, 'https': proxy}
-            r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
+            r = s.get(url)
             body = lxml.html.fromstring(r.text)
         except:
             return HttpResponse('Service Unavailable', status=503)
@@ -90,8 +90,8 @@ class DcardMainView(View):
 
         try:
             proxy = services.ProxyService().process()
+            s = services.RequestsService().process()
 
-            s = requests.Session()
             s.proxies = {'http': proxy, 'https': proxy}
             r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
             body = lxml.html.fromstring(r.text)

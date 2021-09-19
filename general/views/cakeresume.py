@@ -8,6 +8,8 @@ import re
 import requests
 import urllib
 
+from .. import services
+
 class CakeResumeView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
@@ -23,7 +25,9 @@ class CakeResumeView(View):
         feed.title(title)
 
         try:
-            r = requests.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
+            s = services.RequestsService().process()
+
+            r = s.get(url)
             state = re.search(r'<script>window\.__APP_INITIAL_REDUX_STATE__ = (.*?)</script>', r.text, re.MULTILINE).group(1)
             state = state.replace('"jwt":undefined', '"jwt":false')
             items = json.loads(state)['jobSearch']['jobResultsState']['content']['_rawResults'][0]['hits']

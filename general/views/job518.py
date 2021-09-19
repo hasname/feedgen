@@ -7,6 +7,8 @@ import re
 import requests
 import urllib
 
+from .. import services
+
 class Job518View(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
@@ -22,8 +24,9 @@ class Job518View(View):
         feed.title(title)
 
         try:
-            s = requests.Session()
-            r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
+            s = services.RequestsService().process()
+
+            r = s.get(url)
             body = lxml.html.fromstring(r.text)
         except:
             body = lxml.html.fromstring('<html></html>')

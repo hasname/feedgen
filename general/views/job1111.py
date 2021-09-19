@@ -7,6 +7,8 @@ import re
 import requests
 import urllib
 
+from .. import services
+
 class Job1111View(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
@@ -21,8 +23,9 @@ class Job1111View(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = requests.Session()
-        r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
+        s = services.RequestsService().process()
+
+        r = s.get(url)
         r.encoding = 'utf-8'
         body = lxml.html.fromstring(r.text)
 

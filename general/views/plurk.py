@@ -9,6 +9,8 @@ import re
 import requests
 import urllib
 
+from .. import services
+
 class PlurkSearchView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
@@ -23,8 +25,9 @@ class PlurkSearchView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = requests.Session()
-        r = s.post(url, headers={'User-agent': 'feedgen'}, data={'query': keyword}, timeout=5)
+        s = services.RequestsService().process()
+
+        r = s.post(url, data={'query': keyword})
         body = json.loads(r.text)
 
         for p in body['plurks']:
@@ -61,8 +64,9 @@ class PlurkTopView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = requests.Session()
-        r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
+        s = services.RequestsService().process()
+
+        r = s.get(url)
         body = json.loads(r.text)
 
         for (x, stat) in body['stats']:

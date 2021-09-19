@@ -25,10 +25,10 @@ class ShopeeView(View):
 
         try:
             proxy = services.ProxyService().process()
+            s = services.RequestsService().process()
 
-            s = requests.Session()
             s.proxies = {'http': proxy, 'https': proxy}
-            r = s.get(url, headers={'Referer': referer, 'User-agent': 'feedgen'}, timeout=5)
+            r = s.get(url, headers={'Referer': referer})
             body = json.loads(r.text)
             items = body['items']
         except:

@@ -6,6 +6,8 @@ import lxml.html
 import re
 import requests
 
+from .. import services
+
 class Rent591View(View):
     def get(self, *args, **kwargs):
         region = kwargs['region']
@@ -30,8 +32,9 @@ class Rent591View(View):
         feed.title(title)
 
         try:
-            s = requests.Session()
-            r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
+            s = services.RequestsService().process()
+
+            r = s.get(url)
             text = r.text
         except:
             text = '<html></html>'

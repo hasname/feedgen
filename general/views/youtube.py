@@ -7,6 +7,8 @@ import re
 import requests
 import urllib
 
+from .. import services
+
 class YouTubeView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
@@ -21,8 +23,9 @@ class YouTubeView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = requests.Session()
-        r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
+        s = services.RequestsService().process()
+
+        r = s.get(url)
 
         m = re.search(r"var ytInitialData = (.*?);?</script>", r.text, re.MULTILINE)
         ytInitialData = m.group(1)

@@ -7,6 +7,8 @@ import requests
 import time
 import urllib
 
+from .. import services
+
 class MomoshopView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
@@ -22,10 +24,10 @@ class MomoshopView(View):
         feed.title(title)
 
         try:
-            s = requests.Session()
+            s = services.RequestsService().process()
 
             # Environment cookie.
-            r = s.get('https://www.momoshop.com.tw/', headers={'User-agent': 'feedgen'}, timeout=5)
+            r = s.get('https://www.momoshop.com.tw/')
 
             # Get the actual content.
             now = int(time.time())
@@ -66,7 +68,7 @@ class MomoshopView(View):
             }
 
             url = 'https://www.momoshop.com.tw/ajax/ajaxTool.jsp?n=2018'
-            r = s.post(url, data={'data': json.dumps(data)}, headers={'Referer': 'https://www.momoshop.com.tw/', 'User-agent': 'feedgen'}, timeout=5)
+            r = s.post(url, data={'data': json.dumps(data)}, headers={'Referer': 'https://www.momoshop.com.tw/'})
             body = json.loads(r.text)
         except:
             return HttpResponse('Service Unavailable', status=503)

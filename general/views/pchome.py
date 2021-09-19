@@ -7,6 +7,8 @@ import re
 import requests
 import urllib
 
+from .. import services
+
 class PChomeLightNovelView(View):
     def get(self, *args, **kwargs):
         url = 'https://ecapi.pchome.com.tw/cdn/ecshop/prodapi/v2/newarrival/DJAZ/prod&offset=1&limit=20&fields=Id,Nick,Pic,Price,Discount,isSpec,Name,isCarrier,isSnapUp,isBigCart&_callback=jsonp_prodlist?_callback=jsonp_prodlist'
@@ -20,8 +22,9 @@ class PChomeLightNovelView(View):
         feed.title(title)
 
         try:
-            s = requests.Session()
-            r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
+            s = services.RequestsService().process()
+
+            r = s.get(url)
             body = re.match(r'^[^\[]*(\[.*\])[^\[]*$', r.text).group(1)
             items = json.loads(body)
         except:
@@ -64,7 +67,8 @@ class PChomeView(View):
         feed.title(title)
 
         try:
-            s = requests.Session()
+            s = services.RequestsService().process()
+
             r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
             body = json.loads(r.text)
         except:
