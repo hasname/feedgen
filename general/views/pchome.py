@@ -69,7 +69,7 @@ class PChomeView(View):
         try:
             s = services.RequestsService().process()
 
-            r = s.get(url, headers={'User-agent': 'feedgen'}, timeout=5)
+            r = s.get(url)
             body = json.loads(r.text)
         except:
             body = {'prods': []}
