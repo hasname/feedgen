@@ -89,7 +89,7 @@ class DcardMainView(View):
         feed.title(title)
 
         try:
-            proxy = services.ProxyService().process()
+            proxy = services.ProxySocks5Service().process()
             s = services.RequestsService().process()
 
             s.proxies = {'http': proxy, 'https': proxy}
