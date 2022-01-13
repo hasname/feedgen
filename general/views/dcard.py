@@ -88,18 +88,17 @@ class DcardMainView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        try:
-            proxy = services.ProxySocks5Service().process()
-            s = services.RequestsService().process()
+        proxy = services.ProxySocks5Service().process()
+        s = services.RequestsService().process()
 
-            r = s.get('https://www.dcard.tw/service/api/v2/popularForums/GetHead?listKey=popularForums')
-
+        r = s.get('https://www.dcard.tw/service/api/v2/popularForums/GetHead?listKey=popularForums')
+        if r.status_code == 200:
             head = r.json()['head']
             r = s.get('https://www.dcard.tw/service/api/v2/popularForums/GetPage?pageKey={}'.format(head))
-        except:
-            return HttpResponse('Service Unavailable', status=503)
+            items = r.json()['items']
+        else:
+            items = []
 
-        items = r.json()['items']
         for item in items:
             item_title = item['posts'][0]['title']
             item_url = 'https://www.dcard.tw/f/{}/p/{}'.format(item['alias'], item['posts'][0]['id'])
