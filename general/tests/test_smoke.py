@@ -33,8 +33,10 @@ class SmokeTestCase(TestCase):
 
     @requests_mock.mock()
     def test_dcard_main(self, m):
-        text = open(os.path.dirname(__file__) + '/html_dcard_main.txt').read()
-        m.get('https://www.dcard.tw/f', text=text)
+        m.get('https://www.dcard.tw/service/api/v2/popularForums/GetHead?listKey=popularForums', text='{"listKey":"popularForums","head":"00000000-0000-0000-0000-000000000000"}')
+
+        text = open(os.path.dirname(__file__) + '/json_dcard_popular.txt').read()
+        m.get('https://www.dcard.tw/service/api/v2/popularForums/GetPage?pageKey=00000000-0000-0000-0000-000000000000', text=text)
 
         c = Client()
         res = c.get('/dcard/main')

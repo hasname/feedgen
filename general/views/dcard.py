@@ -92,43 +92,22 @@ class DcardMainView(View):
             proxy = services.ProxySocks5Service().process()
             s = services.RequestsService().process()
 
-            s.proxies = {'http': proxy, 'https': proxy}
-            r = s.get(url)
-            body = lxml.html.fromstring(r.text)
+            r = s.get('https://www.dcard.tw/service/api/v2/popularForums/GetHead?listKey=popularForums')
+
+            head = r.json()['head']
+            r = s.get('https://www.dcard.tw/service/api/v2/popularForums/GetPage?pageKey={}'.format(head))
         except:
             return HttpResponse('Service Unavailable', status=503)
 
-        items = body.cssselect('div[data-index]')
+        items = r.json()['items']
         for item in items:
-            if not item.cssselect('article'):
-                continue
+            item_title = item['posts'][0]['title']
+            item_url = 'https://www.dcard.tw/f/{}/p/{}'.format(item['alias'], item['posts'][0]['id'])
+            item_desc = item['posts'][0]['excerpt']
 
-            item_title = item.cssselect('article > h2')[0].text_content()
-            item_url = item.cssselect('article > h2 > a')[0].get('href')
-            item_desc = item.cssselect('article > h2 + div')[0].text_content()
-            try:
-                item_img = item.cssselect('article > img')[0]
-            except IndexError:
-                item_img_src = None
-            else:
-                item_img_src = item_img.get('src')
-                g = re.match(r'^(https://imgur\.dcard\.tw/\w+)b(\.jpg)$', item_img_src)
-                if g:
-                    item_img_src = g.group(1) + g.group(2)
-
-            if item_url.startswith('/f/'):
-                item_url = 'https://www.dcard.tw' + item_url
-
-            if item_img_src is None:
-                item_content = '{}'.format(
-                    html.escape(item_desc)
-                )
-            else:
-                item_content = '<img alt="{}" src="{}"/><br/>{}'.format(
-                    html.escape(item_title),
-                    html.escape(item_img_src),
-                    html.escape(item_desc)
-                )
+            item_content = '<p>{}</p>'.format(
+                html.escape(item_desc)
+            )
 
             entry = feed.add_entry()
             entry.content(item_content, type='xhtml')
