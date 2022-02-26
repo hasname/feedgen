@@ -31,7 +31,7 @@ class PChomeLightNovelView(View):
             items = []
 
         for item in items:
-            content = '{}<br/><img alt="{}" src="https://a.ecimg.tw{}"/>'.format(
+            content = '{}<br/><img alt="{}" src="https://cs-a.ecimg.tw{}"/>'.format(
                 html.escape(item['Nick']),
                 html.escape(item['Nick']),
                 html.escape(item['Pic']['B']),
@@ -88,7 +88,7 @@ class PChomeView(View):
                 item_url = 'https://24h.pchome.com.tw/prod/' + item['Id']
             else:
                 item_url = 'https://mall.pchome.com.tw/prod/' + item['Id']
-            img_url = 'https://a.ecimg.tw%s' % (item['picB'])
+            img_url = 'https://cs-a.ecimg.tw%s' % (item['picB'])
 
             content = '{}<br/><img alt="{}" src="{}"/>'.format(
                 html.escape(item_desc), html.escape(item_name), html.escape(img_url)
