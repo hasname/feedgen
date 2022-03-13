@@ -24,7 +24,9 @@ class ShopeeView(View):
         feed.title(title)
 
         try:
+            proxy = services.ProxySocks5Service().process()
             s = services.RequestsService().process()
+            s.proxies = {'http': proxy, 'https': proxy}
 
             r = s.get(url, headers={'Referer': referer})
             body = json.loads(r.text)
