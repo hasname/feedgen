@@ -101,7 +101,7 @@ class DcardMainView(View):
             items = []
 
         for item in items:
-            item_title = item['posts'][0]['title']
+            item_title = '[{}] {}'.format(item['name'], item['posts'][0]['title'])
             item_url = 'https://www.dcard.tw/f/{}/p/{}'.format(item['alias'], item['posts'][0]['id'])
             item_desc = item['posts'][0]['excerpt']
 
