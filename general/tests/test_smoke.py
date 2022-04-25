@@ -128,7 +128,7 @@ class SmokeTestCase(TestCase):
     @requests_mock.mock()
     def test_shopee(self, m):
         text = open(os.path.dirname(__file__) + '/json_shopee.txt').read()
-        m.get('https://shopee.tw/api/v2/search_items/?by=ctime&keyword=test&limit=50&newest=0&order=desc&page_type=search&version=2', text=text)
+        m.get('https://shopee.tw/api/v4/search/search_items/?by=ctime&keyword=test&limit=60&newest=0&order=desc&page_type=search&scenario=PAGE_GLOBAL_SEARCH&version=2', text=text)
 
         c = Client()
         res = c.get('/shopee/test')

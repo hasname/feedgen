@@ -12,7 +12,7 @@ class ShopeeView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://shopee.tw/api/v2/search_items/?by=ctime&keyword={}&limit=50&newest=0&order=desc&page_type=search&version=2'.format(urllib.parse.quote_plus(keyword))
+        url = 'https://shopee.tw/api/v4/search/search_items/?by=ctime&keyword={}&limit=60&newest=0&order=desc&page_type=search&scenario=PAGE_GLOBAL_SEARCH&version=2'.format(urllib.parse.quote_plus(keyword))
         referer = 'https://shopee.tw/search?keyword={}'.format(urllib.parse.quote_plus(keyword))
 
         title = '蝦皮搜尋 - {}'.format(keyword)
@@ -39,11 +39,13 @@ class ShopeeView(View):
 
         for item in items:
             itemid = item['itemid']
-            name = item['name']
-            shopid = item['shopid']
+            item_basic = item['item_basic']
+
+            name = item_basic['name']
+            shopid = item_basic['shopid']
 
             prod_url = 'https://shopee.tw/product/%d/%d' % (shopid, itemid)
-            img_url = 'https://cf.shopee.tw/file/%s' % (item['image'])
+            img_url = 'https://cf.shopee.tw/file/%s' % (item_basic['image'])
 
             content = '{}<br/><img alt="{}" src="{}"/>'.format(
                 html.escape(name), html.escape(name), html.escape(img_url)
