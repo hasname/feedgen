@@ -11,7 +11,7 @@ build:
 dependency.ci:
 	poetry install
 
-deploy:
+deploy: build
 	docker tag feedgen_hasname ghcr.io/hasname/feedgen:latest
 	docker push ghcr.io/hasname/feedgen:latest
 
