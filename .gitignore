@@ -1,7 +1,3 @@
-*.egg-info/
 *.retry
-.coverage
-.dev.sqlite3
 .env
 GNUmakefile.local
-general/migrations/0001_initial.py

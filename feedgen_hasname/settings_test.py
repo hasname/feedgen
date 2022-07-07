@@ -16,13 +16,9 @@ DATABASES = {
 LOGGING = {}
 SECRET_KEY = ''.join(random.SystemRandom().choice(string.ascii_letters) for _ in range(50))
 
-# SQLite3 Database for dev
+# Test environment
 import os
 from django.core.management import execute_from_command_line
 
-try:
-    os.unlink('general/migrations/0001_initial.py')
-except:
-    pass
 execute_from_command_line(['', 'makemigrations'])
 execute_from_command_line(['', 'migrate'])

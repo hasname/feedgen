@@ -33,13 +33,5 @@ SECRET_KEY = ''.join(random.SystemRandom().choice(string.ascii_letters) for _ in
 import os
 from django.core.management import execute_from_command_line
 
-try:
-    os.unlink('.dev.sqlite3')
-except:
-    pass
-try:
-    os.unlink('general/migrations/0001_initial.py')
-except:
-    pass
 execute_from_command_line(['', 'makemigrations'])
 execute_from_command_line(['', 'migrate'])
