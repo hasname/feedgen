@@ -11,8 +11,9 @@ build:
 dependency.ci:
 	poetry install
 
-deploy: .env dependency
-	cd ansible; ansible-playbook feedgen-hasname.yml
+deploy:
+	docker tag feedgen_hasname ghcr.io/hasname/feedgen:latest
+	docker push ghcr.io/hasname/feedgen:latest
 
 rundev: build
 	docker run -t -p 127.0.0.1:8000:8000/tcp --entrypoint ./entrypoint.dev.sh feedgen_hasname
