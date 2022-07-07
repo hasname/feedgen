@@ -32,6 +32,3 @@ SECRET_KEY = ''.join(random.SystemRandom().choice(string.ascii_letters) for _ in
 # SQLite3 Database for dev
 import os
 from django.core.management import execute_from_command_line
-
-execute_from_command_line(['', 'makemigrations'])
-execute_from_command_line(['', 'migrate'])
