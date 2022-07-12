@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: python:3.8
+      - image: python:3.9
     steps:
       - checkout
       - restore_cache:
