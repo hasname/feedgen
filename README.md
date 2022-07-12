@@ -1,6 +1,14 @@
 # feedgen [![CircleCI](https://circleci.com/gh/hasname/feedgen.svg?style=svg)](https://circleci.com/gh/hasname/feedgen)
 
-Generate Atom feeds for sites which do not support feeds, mostly in Taiwan.  Currently we support these services:
+Generate Atom feeds for sites which do not support feeds, mostly in Taiwan.
+
+## Installation
+
+You need to install docker compose plugin and set up `~/.config/feedgen/.env`, afterwards you can run then:
+
+    docker compose --env-file ~/.config/feedgen/.env up -d
+
+## Supporting platforms
 
 Recruting platform search systems:
 * https://www.104.com.tw/
@@ -26,9 +34,11 @@ Others:
 * https://www.bookwalker.com.tw/more/fiction/1/3
 
 ## Endpoint
+
 * https://feedgen.hasname.com/
 
-## Example
+## Examples
+
 * https://feedgen.hasname.com/104/devops
 * https://feedgen.hasname.com/1111/devops
 * https://feedgen.hasname.com/518/devops
