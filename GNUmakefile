@@ -1,4 +1,7 @@
 #
+-include GNUmakefile.local
+
+#
 .DEFAULT_GOAL:=		rundev
 .PHONY:			.env build clean dependency.ci rundev test test.ci
 
