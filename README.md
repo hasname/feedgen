@@ -35,6 +35,8 @@ Others:
 
 ## Endpoint
 
+We have set up a public service since I use it and you can test it as well, but please set up your own service if you use it heavily.
+
 * https://feedgen.hasname.com/
 
 ## Examples
