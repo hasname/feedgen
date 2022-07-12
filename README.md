@@ -2,7 +2,7 @@
 
 Generate Atom feeds for sites which do not support feeds, mostly in Taiwan.
 
-## Installation
+## Install
 
 You need to install docker compose plugin and set up `~/.config/feedgen/.env`, afterwards you can run then:
 
