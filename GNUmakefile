@@ -19,7 +19,7 @@ test: build
 	docker run --entrypoint ./entrypoint.test.sh feedgen_hasname
 
 up:
-	docker-compose --env-file ~/.config/feedgen/.env up -d
+	docker compose --env-file ~/.config/feedgen/.env up -d
 
 # Used by CI
 dependency.ci:
