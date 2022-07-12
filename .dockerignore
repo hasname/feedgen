@@ -1,3 +1,4 @@
 .env
 .git
 GNUmakefile
+docker-compose.yml
