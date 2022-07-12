@@ -17,7 +17,7 @@ For `GNUmakefile.local`, you can set something like this:
             ssh server.example.com \
                     'sudo su - user -c "cd git/feedgen; docker compose down; git pull; docker compose --env-file ~/.config/feedgen/.env up -d"'
 
-Then you can update the service.
+Then you can use `make deploy` to update the service.
 
 ## Supporting platforms
 
