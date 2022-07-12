@@ -10,8 +10,6 @@
 
 build::
 	docker build -t feedgen_hasname .
-	docker container prune -f
-	docker image prune -f
 
 clean::
 	docker container prune -f
