@@ -8,8 +8,10 @@
 .env::
 	test $(shell wc -l .env | cut -d ' ' -f 1) -eq $(shell wc -l .env.sample | cut -d ' ' -f 1)
 
-build:: clean
+build::
 	docker build -t feedgen_hasname .
+	docker container prune -f
+	docker image prune -f
 
 clean::
 	docker container prune -f
