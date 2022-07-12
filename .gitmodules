@@ -1,3 +1,0 @@
-[submodule "mitogen"]
-	path = mitogen
-	url = https://github.com/mitogen-hq/mitogen.git
