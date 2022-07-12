@@ -8,6 +8,17 @@ You need to install docker compose plugin and set up `~/.config/feedgen/.env`, a
 
     docker compose --env-file ~/.config/feedgen/.env up -d
 
+## Update
+
+For `GNUmakefile.local`, you can set something like this:
+
+    #
+    deploy::
+            ssh server.example.com \
+                    'sudo su - user -c "cd git/feedgen; docker compose down; git pull; docker compose --env-file ~/.config/feedgen/.env up -d"'
+
+Then you can update the service.
+
 ## Supporting platforms
 
 Recruting platform search systems:
