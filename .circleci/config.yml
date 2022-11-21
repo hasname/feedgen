@@ -15,7 +15,7 @@ jobs:
           key: v1-deps-{{ checksum "poetry.lock" }}
           paths:
             - /home/circleci/.cache/pypoetry/virtualenvs
-      - run: make test.ci
+      - run: make test
 
 workflows:
   build_and_test:
