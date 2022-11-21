@@ -1,3 +1,4 @@
 *.retry
+.coverage
 .env
 GNUmakefile.local
