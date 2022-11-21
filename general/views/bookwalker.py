@@ -8,7 +8,7 @@ from .. import services
 
 class BookwalkerLightNovelView(View):
     def get(self, *args, **kwargs):
-        url = 'https://www.bookwalker.com.tw/more/fiction/1/3'
+        url = 'https://www.bookwalker.com.tw/block/5?order=sell_desc'
 
         title = 'BOOKWALKER 輕小說'
 

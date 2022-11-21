@@ -7,7 +7,7 @@ class SmokeTestCase(TestCase):
     @requests_mock.mock()
     def test_bookwalker_lightnovel(self, m):
         text = open(os.path.dirname(__file__) + '/html_bookwalker_lightnovel.txt').read()
-        m.get('https://www.bookwalker.com.tw/more/fiction/1/3', text=text)
+        m.get('https://www.bookwalker.com.tw/block/5?order=sell_desc', text=text)
 
         c = Client()
         res = c.get('/bookwalker-lightnovel')
