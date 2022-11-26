@@ -23,7 +23,7 @@ class BookwalkerLightNovelView(View):
         r = s.get(url)
         body = lxml.html.fromstring(r.text)
 
-        for item in body.cssselect('.bwbookitem a'):
+        for item in body.cssselect('.bookitem a'):
             img = item.cssselect('img')[0]
             img.set('src', img.get('data-src'))
             content = lxml.etree.tostring(item, encoding='unicode')
