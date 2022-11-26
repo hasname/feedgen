@@ -14,6 +14,18 @@ clean::
 dependency::
 	poetry install
 
+deploy::
+ifndef DEPLOY_HOST
+	$(error $$DEPLOY_HOST is not defined in GNUmakefile.local)
+endif
+ifndef DEPLOY_USER
+	$(error $$DEPLOY_USER is not defined in GNUmakefile.local)
+endif
+	rsync -avz --delete \
+		--exclude .git/ \
+		./ ${DEPLOY_USER}@${DEPLOY_HOST}:~${DEPLOY_USER}/feedgen/
+	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "bash -c -l 'pkill uwsgi; sleep 1; cd feedgen; poetry install; poetry run uwsgi --ini uwsgi.ini'"
+
 rundev:: dependency
 	poetry run ./manage.py runserver --settings=feedgen_hasname.settings_dev
 
