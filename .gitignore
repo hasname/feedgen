@@ -1,4 +1,5 @@
 *.retry
 .coverage
+.dev.sqlite3
 .env
 GNUmakefile.local
