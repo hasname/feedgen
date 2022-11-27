@@ -2,7 +2,6 @@ from django.http import HttpResponse
 from django.views.generic import View
 import feedgen.feed
 import lxml.html
-import requests
 
 from .. import services
 
