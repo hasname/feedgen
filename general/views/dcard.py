@@ -5,7 +5,6 @@ import html
 import json
 import lxml.html
 import re
-import requests
 import urllib
 
 from .. import services

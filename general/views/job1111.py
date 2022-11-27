@@ -4,7 +4,6 @@ import feedgen.feed
 import html
 import lxml.html
 import re
-import requests
 import urllib
 
 from .. import services

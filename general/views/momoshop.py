@@ -3,7 +3,6 @@ from django.views.generic import View
 import feedgen.feed
 import html
 import json
-import requests
 import time
 import urllib
 
