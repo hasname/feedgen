@@ -35,6 +35,7 @@ class TaipeiMetroTimetableView(View):
             entry.id(id)
             entry.link(href=url)
             entry.title(title)
+            entry.updated(lastmodified)
         except:
             pass
 
