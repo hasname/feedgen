@@ -27,7 +27,7 @@ class TaipeiMetroTimetableView(View):
             t = datetime.datetime.strptime(lastmodified, '%a, %d %b %Y %H:%M:%S %Z')
 
             content = '<p>{}</p>'.format(html.escape(lastmodified))
-            id = '{}?v={}'.format(url, t)
+            id = '{}?v={}'.format(url, t.strftime('%s'))
             title = '台北捷運時刻表 ({}) - {}'.format(keyword, lastmodified)
 
             entry = feed.add_entry()
