@@ -32,7 +32,7 @@ class TaipeiMetroTimetableView(View):
             entry = feed.add_entry()
             entry.content(content, type='xhtml')
             entry.id(id)
-            entry.link(url)
+            entry.link(href=url)
             entry.title(title)
         except:
             pass
