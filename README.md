@@ -42,6 +42,7 @@ Social networks:
 
 Others:
 * https://24h.pchome.com.tw/books/store/?fq=/R/DJAZ/new
+* https://web.metro.taipei/img/ALL/timetables/079a.PDF (Taipei metro timetable)
 * https://www.bookwalker.com.tw/more/fiction/1/3
 
 ## Endpoint
@@ -66,6 +67,7 @@ We have set up a public service since I use it and you can test it as well, but 
 * https://feedgen.hasname.com/plurk/top/zh
 * https://feedgen.hasname.com/rent591/1/忠孝東路 (region = `1` means `台北市`, please check 591 site)
 * https://feedgen.hasname.com/shopee/測試
+* https://feedgen.hasname.com/taipeimetrotimetable/079a
 * https://feedgen.hasname.com/youtube/測試
 
 ## License
