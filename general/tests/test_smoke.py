@@ -135,6 +135,15 @@ class SmokeTestCase(TestCase):
         self.assertEqual(res.status_code, 200)
 
     @requests_mock.mock()
+    def test_taipeimetrotimetable(self, m):
+        text = open(os.path.dirname(__file__) + '/html_taipeimetrotimetable.txt').read()
+        m.get('https://web.metro.taipei/img/ALL/timetables/079a.PDF', headers={'last-modified': 'Fri, 11 Nov 2022 16:20:50 GMT'}, text=text)
+
+        c = Client()
+        res = c.get('/taipeimetrotimetable/079a')
+        self.assertEqual(res.status_code, 200)
+
+    @requests_mock.mock()
     def test_youtube(self, m):
         text = open(os.path.dirname(__file__) + '/html_youtube.txt').read()
         m.get('https://www.youtube.com/results?search_query=test&sp=CAI%253D', text=text)
