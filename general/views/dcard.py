@@ -30,16 +30,13 @@ class DcardBoardView(View):
         except:
             return HttpResponse('Service Unavailable', status=503)
 
-        items = body.cssselect('div[data-index]')
+        items = body.cssselect('div[role="main"] article')
         for item in items:
-            if not item.cssselect('article'):
-                continue
-
-            item_title = item.cssselect('article > h2')[0].text_content()
-            item_url = item.cssselect('article > h2 > a')[0].get('href')
-            item_desc = item.cssselect('article > h2 + div')[0].text_content()
+            item_title = item.cssselect('h2')[0].text_content()
+            item_url = item.cssselect('h2 > a')[0].get('href')
+            item_desc = item.cssselect('h2 + div')[0].text_content()
             try:
-                item_img = item.cssselect('article > img')[0]
+                item_img = item.cssselect('img')[0]
             except IndexError:
                 item_img_src = None
             else:
