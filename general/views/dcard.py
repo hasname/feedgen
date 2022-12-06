@@ -23,7 +23,9 @@ class DcardBoardView(View):
         feed.title(title)
 
         try:
+            proxy = services.ProxySocks5Service().process()
             s = services.RequestsService().process()
+            s.proxies = {'http': proxy, 'https': proxy}
 
             r = s.get(url)
             body = lxml.html.fromstring(r.text)
@@ -82,7 +84,9 @@ class DcardMainView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
+        proxy = services.ProxySocks5Service().process()
         s = services.RequestsService().process()
+        s.proxies = {'http': proxy, 'https': proxy}
 
         r = s.get('https://www.dcard.tw/service/api/v2/popularForums/GetHead?listKey=popularForums')
         if r.status_code == 200:
