@@ -4,6 +4,7 @@ import feedgen.feed
 import datetime
 import html
 import json
+import lxml
 import re
 import urllib
 
@@ -13,7 +14,7 @@ class CakeResumeView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://www.cakeresume.com/jobs?q={}'.format(urllib.parse.quote_plus(keyword))
+        url = 'https://www.cakeresume.com/jobs/{}?location_list%5B0%5D=Taiwan&order=latest'.format(urllib.parse.quote_plus(keyword))
 
         title = 'CakeResume 搜尋 - {}'.format(keyword)
 
@@ -27,18 +28,22 @@ class CakeResumeView(View):
             s = services.RequestsService().process()
 
             r = s.get(url)
-            state = re.search(r'<script>window\.__APP_INITIAL_REDUX_STATE__ = (.*?)</script>', r.text, re.MULTILINE).group(1)
-            state = state.replace('"jwt":undefined', '"jwt":false')
-            items = json.loads(state)['jobSearch']['jobResultsState']['content']['_rawResults'][0]['hits']
+            body = lxml.html.fromstring(r.text)
+            items = body.cssselect('div[class^="JobSearchItem_wrapper__"]')
         except:
             items = []
 
         for item in items:
-            item_author = item['page']['name']
-            item_content = '<p>{}</p><p>{}</p>'.format(html.escape(item.get('requirements_plain_text', '')), html.escape(item.get('description_plain_text', '')))
-            item_title = item['title']
-            item_url = 'https://www.cakeresume.com/companies/{}/jobs/{}'.format(item['page']['path'], item['path'])
-            item_updated_at = datetime.datetime.fromtimestamp(item['content_updated_at'] / 1000, tz=datetime.timezone.utc)
+            job_company = item.cssselect('a[class^="JobSearchItem_companyName__"]')[0].text_content()
+            job_desc = item.cssselect('div[class^="JobSearchItem_description__"]')[0].text_content()
+            job_features = item.cssselect('div[class^="JobSearchItem_features__"]')[0].text_content()
+            job_link = item.cssselect('a[class^="JobSearchItem_jobTitle__"]')[0].get('href')
+            job_title = item.cssselect('a[class^="JobSearchItem_jobTitle__"]')[0].text_content()
+
+            item_author = job_company
+            item_content = '<p>{}</p><p>{}</p>'.format(html.escape(job_features), html.escape(job_desc))
+            item_title = job_title
+            item_url = job_link
 
             entry = feed.add_entry()
             entry.author({'name': item_author})
@@ -46,7 +51,6 @@ class CakeResumeView(View):
             entry.id(item_url)
             entry.link(href=item_url)
             entry.title(item_title)
-            entry.updated(item_updated_at)
 
         res = HttpResponse(feed.atom_str(), content_type='application/atom+xml; charset=utf-8')
         res['Cache-Control'] = 'max-age=300,public'

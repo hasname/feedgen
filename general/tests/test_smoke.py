@@ -16,10 +16,10 @@ class SmokeTestCase(TestCase):
     @requests_mock.mock()
     def test_cakeresume(self, m):
         text = open(os.path.dirname(__file__) + '/html_cakeresume.txt').read()
-        m.get('https://www.cakeresume.com/jobs?q=php', text=text)
+        m.get('https://www.cakeresume.com/jobs/test?location_list%5B0%5D=Taiwan&order=latest', text=text)
 
         c = Client()
-        res = c.get('/cakeresume/php')
+        res = c.get('/cakeresume/test')
         self.assertEqual(res.status_code, 200)
 
     @requests_mock.mock()
