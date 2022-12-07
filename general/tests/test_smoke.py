@@ -54,7 +54,7 @@ class SmokeTestCase(TestCase):
     @requests_mock.mock()
     def test_job1111(self, m):
         text = open(os.path.dirname(__file__) + '/html_job1111.txt').read()
-        m.get('https://www.1111.com.tw/search/job?flag=13&ks=test&fs=1&si=1&ts=4&col=da&sort=desc', text=text)
+        m.get('https://www.1111.com.tw/search/job?col=da&ks=test&page=1&sort=desc', text=text)
 
         c = Client()
         res = c.get('/1111/test')

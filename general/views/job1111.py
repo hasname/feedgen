@@ -12,7 +12,7 @@ class Job1111View(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://www.1111.com.tw/search/job?flag=13&ks={}&fs=1&si=1&ts=4&col=da&sort=desc'.format(urllib.parse.quote_plus(keyword))
+        url = 'https://www.1111.com.tw/search/job?col=da&ks={}&page=1&sort=desc'.format(urllib.parse.quote_plus(keyword))
 
         title = '1111 搜尋 - {}'.format(keyword)
 
@@ -28,16 +28,16 @@ class Job1111View(View):
         r.encoding = 'utf-8'
         body = lxml.html.fromstring(r.text)
 
-        for item in body.cssselect('li.jbInfo'):
-            a = item.cssselect('a.mobileItemClick')[0]
-            job_title = a.get('title')
+        for item in body.cssselect('div.job_item'):
+            a = item.cssselect('.job_item_info a')[0]
+            job_title = a.text_content()
             job_url = a.get('href')
             if job_url.startswith('/job/'):
                 job_url = 'https://www.1111.com.tw' + job_url
 
-            job_company = item.cssselect('a.d-block.organ')[0].get('title')
+            job_company = item.cssselect('div.card-subtitle a')[0].get('title')
 
-            job_desc = item.cssselect('.jbInfoTxt')[0].text_content()
+            job_desc = item.cssselect('p.job_item_description')[0].text_content()
             content = '<h3>{}</h3><p>{}</p>'.format(
                 html.escape(job_company), html.escape(job_desc)
             )
