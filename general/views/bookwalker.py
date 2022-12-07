@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.views.generic import View
 import feedgen.feed
 import lxml.html
+import re
 
 from .. import services
 
@@ -24,7 +25,10 @@ class BookwalkerLightNovelView(View):
 
         for item in body.cssselect('.bookitem a'):
             img = item.cssselect('img')[0]
-            img.set('src', img.get('data-src'))
+            img_src = img.get('data-src')
+            img_src = re.sub(r'_4\.jpg$', '_1.jpg', img_src)
+            img.set('src', img_src)
+
             content = lxml.etree.tostring(item, encoding='unicode')
             book_title = item.get('title')
             book_url = item.get('href')
