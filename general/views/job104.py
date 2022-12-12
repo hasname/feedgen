@@ -36,7 +36,7 @@ class Job104View(View):
                 job_title = item.get('data-job-name')
                 job_url = item.cssselect('a.js-job-link')[0].get('href')
                 job_url = re.sub(r'^//', 'https://', job_url)
-                job_url = re.sub(r'&jobsource=\w*$', '', job_url)
+                job_url = re.sub(r'[?&]jobsource=\w*$', '', job_url)
 
                 content = '<h3>{}</h3><pre>{}</pre>'.format(
                     html.escape(job_company), html.escape(job_desc)
