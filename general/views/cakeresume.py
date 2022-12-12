@@ -40,6 +40,10 @@ class CakeResumeView(View):
             job_link = item.cssselect('a[class^="JobSearchItem_jobTitle__"]')[0].get('href')
             job_title = item.cssselect('a[class^="JobSearchItem_jobTitle__"]')[0].text_content()
 
+            # "/"-prefix but not "//"-prefix:
+            if re.match(r'^/($|[^/])', job_link):
+                job_link = 'https://www.cakeresume.com' + job_link
+
             item_author = job_company
             item_content = '<p>{}</p><p>{}</p>'.format(html.escape(job_features), html.escape(job_desc))
             item_title = job_title
