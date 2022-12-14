@@ -38,11 +38,12 @@ class Job104View(View):
                 job_url = re.sub(r'^//', 'https://', job_url)
                 job_url = re.sub(r'[?&]jobsource=\w*$', '', job_url)
 
-                content = '<h3>{}</h3><pre>{}</pre>'.format(
-                    html.escape(job_company), html.escape(job_desc)
+                content = '<pre>{}</pre>'.format(
+                    html.escape(job_desc)
                 )
 
                 entry = feed.add_entry()
+                entry.author({'name': job_company})
                 entry.content(content, type='xhtml')
                 entry.id(job_url)
                 entry.link(href=job_url)
