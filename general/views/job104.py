@@ -38,7 +38,8 @@ class Job104View(View):
                 job_url = re.sub(r'^//', 'https://', job_url)
                 job_url = re.sub(r'[?&]jobsource=\w*$', '', job_url)
 
-                content = '<pre>{}</pre>'.format(
+                content = '<h3>{}</h3><pre>{}</pre>'.format(
+                    html.escape(job_company),
                     html.escape(job_desc)
                 )
 
