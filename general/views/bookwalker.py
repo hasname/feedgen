@@ -28,6 +28,7 @@ class BookwalkerLightNovelView(View):
             img_src = img.get('data-src')
             img_src = re.sub(r'_4\.jpg$', '.jpg', img_src)
             img.set('src', img_src)
+            del img.attrib['data-src']
 
             content = lxml.etree.tostring(item, encoding='unicode')
             book_title = item.get('title')
