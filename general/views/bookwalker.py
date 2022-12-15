@@ -26,7 +26,7 @@ class BookwalkerLightNovelView(View):
         for item in body.cssselect('.bookitem a'):
             img = item.cssselect('img')[0]
             img_src = img.get('data-src')
-            img_src = re.sub(r'_4\.jpg$', '.jpg', img_src)
+            img_src = re.sub(r'_4(_mask)?\.jpg$', '.jpg', img_src)
             img.set('src', img_src)
             del img.attrib['data-src']
 
