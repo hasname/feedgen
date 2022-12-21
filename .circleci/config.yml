@@ -5,6 +5,7 @@ jobs:
     docker:
       - image: python:3.9
     steps:
+      - run: locale-gen
       - checkout
       - restore_cache:
           keys:
