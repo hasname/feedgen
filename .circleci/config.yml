@@ -10,7 +10,7 @@ jobs:
           keys:
             - v1-deps-{{ checksum "poetry.lock" }}
             - v1-deps
-      - run: pip install -U pip poetry
+      - run: pip install -U pip poetry==1.3.0
       - save_cache:
           key: v1-deps-{{ checksum "poetry.lock" }}
           paths:
