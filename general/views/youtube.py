@@ -29,7 +29,13 @@ class YouTubeView(View):
         m = re.search(r"var ytInitialData = (.*?);?</script>", r.text, re.MULTILINE)
         ytInitialData = m.group(1)
         j = json.loads(ytInitialData)
-        items = j['contents']['twoColumnSearchResultsRenderer']['primaryContents']['sectionListRenderer']['contents'][0]['itemSectionRenderer']['contents']
+
+        items = []
+        for loop in j['contents']['twoColumnSearchResultsRenderer']['primaryContents']['sectionListRenderer']['contents']:
+            try:
+                items += loop['itemSectionRenderer']['contents']
+            except KeyError:
+                continue
 
         for item in items:
             try:
