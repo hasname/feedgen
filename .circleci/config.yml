@@ -5,13 +5,12 @@ jobs:
     docker:
       - image: python:3.9
     steps:
-      - run: locale-gen
       - checkout
       - restore_cache:
           keys:
             - v1-deps-{{ checksum "poetry.lock" }}
             - v1-deps
-      - run: pip install -U poetry
+      - run: pip install -U pip poetry
       - save_cache:
           key: v1-deps-{{ checksum "poetry.lock" }}
           paths:
