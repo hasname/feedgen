@@ -3,7 +3,7 @@
 
 #
 .DEFAULT_GOAL:=		rundev
-.PHONY:			.env build dependency rundev test
+.PHONY:			.env build dependency dependency.dev rundev test
 
 .env::
 	test $(shell wc -l .env | cut -d ' ' -f 1) -eq $(shell wc -l .env.sample | cut -d ' ' -f 1)
@@ -12,7 +12,10 @@ clean::
 	rm -f .coverage .dev.sqlite3 db.sqlite3
 
 dependency::
-	poetry install || true
+	poetry install --without dev
+
+dependency.dev::
+	poetry install --with dev
 
 deploy::
 ifndef DEPLOY_HOST
@@ -32,5 +35,5 @@ run::
 rundev:: dependency
 	poetry run ./manage.py runserver --settings=feedgen_hasname.settings_dev
 
-test:: dependency
+test:: dependency.dev
 	poetry run coverage run --source=. ./manage.py test --settings=feedgen_hasname.settings_test
