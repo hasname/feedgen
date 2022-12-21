@@ -12,7 +12,7 @@ clean::
 	rm -f .coverage .dev.sqlite3 db.sqlite3
 
 dependency::
-	env LANG=C LANGUAGE=C LC_ALL=C poetry install
+	poetry install
 
 deploy::
 ifndef DEPLOY_HOST
