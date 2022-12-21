@@ -12,7 +12,7 @@ clean::
 	rm -f .coverage .dev.sqlite3 db.sqlite3
 
 dependency::
-	poetry install
+	poetry install || true
 
 deploy::
 ifndef DEPLOY_HOST
