@@ -22,6 +22,7 @@ Then you can use `make deploy` to update the service.
 ## Supporting platforms
 
 Recruting platform search systems:
+* https://meet.jobs/
 * https://www.104.com.tw/
 * https://www.1111.com.tw/
 * https://www.518.com.tw/
@@ -60,6 +61,7 @@ We have set up a public service since I use it and you can test it as well, but 
 * https://feedgen.hasname.com/cakeresume/devops
 * https://feedgen.hasname.com/dcard/board/mood
 * https://feedgen.hasname.com/dcard/main
+* https://feedgen.hasname.com/meetjobs/test
 * https://feedgen.hasname.com/momoshop/測試
 * https://feedgen.hasname.com/pchome-lightnovel
 * https://feedgen.hasname.com/pchome/測試
