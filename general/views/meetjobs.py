@@ -37,7 +37,7 @@ class MeetJobsView(View):
         for item in items:
             try:
                 job_company = item['employer']['name']
-                job_desc = lxml.etree.tostring(lxml.html.fromstring(lxml.html.clean.clean_html(item['description'])))
+                job_desc = lxml.etree.tostring(lxml.html.fromstring(lxml.html.clean.clean_html(item['description']))).decode('utf8')
                 job_features = item['work_type']
                 job_link = 'https://meet.jobs/zh-TW/jobs/{}-{}'.format(item['id'], item['slug'])
                 job_published_at = item['published_at']
