@@ -4,6 +4,8 @@ import feedgen.feed
 import datetime
 import html
 import json
+import lxml.html
+import lxml.html.clean
 import re
 import urllib
 
@@ -35,7 +37,7 @@ class MeetJobsView(View):
         for item in items:
             try:
                 job_company = item['employer']['name']
-                job_desc = item['description']
+                job_desc = lxml.etree.tostring(lxml.html.fromstring(lxml.html.clean.clean_html(item['description'])))
                 job_features = item['work_type']
                 job_link = 'https://meet.jobs/zh-TW/jobs/{}-{}'.format(item['id'], item['slug'])
                 job_published_at = item['published_at']
@@ -43,7 +45,7 @@ class MeetJobsView(View):
                 job_updated_at = item['updated_at']
 
                 item_author = job_company
-                item_content = '<p>{}</p><p>{}</p>'.format(html.escape(job_features), html.escape(job_desc))
+                item_content = '<p>{}</p><p>{}</p>'.format(html.escape(job_features), job_desc)
                 item_title = job_title
                 item_url = job_link
 
