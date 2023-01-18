@@ -27,7 +27,7 @@ class Job104View(View):
             r = s.get(url)
             body = lxml.html.fromstring(r.text)
         except:
-            body = lxml.html.fromstring('</html></html>')
+            body = lxml.html.fromstring('<html></html>')
 
         for item in body.cssselect('article.job-list-item'):
             try:
