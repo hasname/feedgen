@@ -4,20 +4,17 @@ Generate Atom feeds for sites which do not support feeds, mostly in Taiwan.
 
 ## Install
 
-You need to install docker compose plugin and set up `~/.config/feedgen/.env`, afterwards you can run then:
-
-    docker compose --env-file ~/.config/feedgen/.env up -d
+We use `poetry` to manage the running environment, therefore you choose whatever you like to adopt poetry's settings.
 
 ## Update
 
 For `GNUmakefile.local`, you can set something like this:
 
     #
-    deploy::
-            ssh server.example.com \
-                    'sudo su - user -c "cd git/feedgen; docker compose down; git pull; docker compose build; docker compose --env-file ~/.config/feedgen/.env up -d"'
+    DEPLOY_HOST=    server.example.com
+    DEPLOY_USER=    service-feedgen
 
-Then you can use `make deploy` to update the service.
+Then you can use `make deploy` to update the service.  Scripts in `GNUmakefile` will use `rsync` to update code and re-run `uwsgi` services.
 
 ## Supporting platforms
 
