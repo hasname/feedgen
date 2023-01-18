@@ -55,6 +55,7 @@ We have set up a public service since I use it and you can test it as well, but 
 ## Examples
 
 * https://feedgen.hasname.com/104/devops
+* https://feedgen.hasname.com/104company/devops
 * https://feedgen.hasname.com/1111/devops
 * https://feedgen.hasname.com/518/devops
 * https://feedgen.hasname.com/bookwalker-lightnovel
