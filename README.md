@@ -18,27 +18,27 @@ Then you can use `make deploy` to update the service.  Scripts in `GNUmakefile` 
 
 ## Supporting platforms
 
-Recruting platform search systems:
+Recruting platform search systems (求職平台):
 * https://meet.jobs/
 * https://www.104.com.tw/
 * https://www.1111.com.tw/
 * https://www.518.com.tw/
 * https://www.cakeresume.com/
 
-EC search systems:
+EC search systems (電子商務平台):
 * https://24h.pchome.com.tw/ (including other PChome's EC systems)
 * https://shopee.tw/
 * https://www.momoshop.com.tw/
 
-Housing platform:
+Housing platform (租屋平台):
 * https://rent.591.com.tw/
 
-Social networks:
+Social networks (社群平台):
 * https://www.dcard.tw/ (main section)
 * https://www.plurk.com/ (popular section)
 * https://www.youtube.com/ (search system)
 
-Others:
+Others (其他):
 * https://24h.pchome.com.tw/books/store/?fq=/R/DJAZ/new
 * https://web.metro.taipei/img/ALL/timetables/079a.PDF (Taipei metro timetable)
 * https://www.bookwalker.com.tw/more/fiction/1/3
