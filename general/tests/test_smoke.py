@@ -51,6 +51,9 @@ class SmokeTestCase(TestCase):
         res = c.get('/104/test')
         self.assertEqual(res.status_code, 200)
 
+        res = c.get('/104company/test')
+        self.assertEqual(res.status_code, 200)
+
     @requests_mock.mock()
     def test_job1111(self, m):
         text = open(os.path.dirname(__file__) + '/html_job1111.txt').read()

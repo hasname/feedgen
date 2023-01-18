@@ -7,6 +7,7 @@ urlpatterns = [
     path('robots.txt', robotstxt.RobotsTxtView.as_view(), name='robotstxt'),
 
     path('104/<str:keyword>', job104.Job104View.as_view(), name='job104'),
+    path('104company/<str:keyword>', job104.Job104CompanyView.as_view(), name='job104company'),
     path('1111/<str:keyword>', job1111.Job1111View.as_view(), name='job1111'),
     path('518/<str:keyword>', job518.Job518View.as_view(), name='job518'),
     path('bookwalker-lightnovel', bookwalker.BookwalkerLightNovelView.as_view(), name='bookwalker_lightnovel'),

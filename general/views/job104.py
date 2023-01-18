@@ -7,6 +7,51 @@ import re
 
 from .. import services
 
+class Job104CompanyView(View):
+    def get(self, *args, **kwargs):
+        keyword = kwargs['keyword']
+
+        url = 'https://www.104.com.tw/jobs/search/?ro=0&kwop=7&keyword={}&order=11&asc=0&page=1&mode=s'.format(keyword)
+
+        title = '104 公司搜尋 - {}'.format(keyword)
+
+        feed = feedgen.feed.FeedGenerator()
+        feed.author({'name': 'Feed Generator'})
+        feed.id(url)
+        feed.link(href=url, rel='alternate')
+        feed.title(title)
+
+        try:
+            s = services.RequestsService().process()
+
+            r = s.get(url)
+            body = lxml.html.fromstring(r.text)
+        except:
+            body = lxml.html.fromstring('<html></html>')
+
+        for item in body.cssselect('article.job-list-item'):
+            try:
+                job_company = item.get('data-cust-name')
+                job_company_url = item.cssselect('.b-block__left a[href*="/company/"]')[0].get('href')
+
+                content = '<h3>{}</h3>'.format(
+                    html.escape(job_company),
+                )
+
+                entry = feed.add_entry()
+                entry.author({'name': job_company})
+                entry.content(content, type='xhtml')
+                entry.id(job_company_url)
+                entry.link(href=job_company_url)
+                entry.title(job_company)
+            except:
+                pass
+
+        res = HttpResponse(feed.atom_str(), content_type='application/atom+xml; charset=utf-8')
+        res['Cache-Control'] = 'max-age=300,public'
+
+        return res
+
 class Job104View(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
