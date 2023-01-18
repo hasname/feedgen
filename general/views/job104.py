@@ -33,6 +33,8 @@ class Job104CompanyView(View):
             try:
                 job_company = item.get('data-cust-name')
                 job_company_url = item.cssselect('.b-block__left a[href*="/company/"]')[0].get('href')
+                job_company_url = re.sub(r'^//', 'https://', job_company_url)
+                job_company_url = re.sub(r'[?&]jobsource=\w*$', '', job_company_url)
 
                 content = '<h3>{}</h3>'.format(
                     html.escape(job_company),
