@@ -14,7 +14,7 @@ For `GNUmakefile.local`, you can set something like this:
     DEPLOY_HOST=    server.example.com
     DEPLOY_USER=    service-feedgen
 
-Then you can use `make deploy` to update the service.  Scripts in `GNUmakefile` will call `rsync` via SSH to update code and re-run `uwsgi` services.
+Then you can use `make deploy` to update the service.  Scripts in `GNUmakefile` will call `rsync` to update code via SSH and re-run `uwsgi` services.
 
 ## Supporting platforms
 
