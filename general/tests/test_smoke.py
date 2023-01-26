@@ -156,6 +156,15 @@ class SmokeTestCase(TestCase):
         self.assertEqual(res.status_code, 200)
 
     @requests_mock.mock()
+    def test_yourator(self, m):
+        text = open(os.path.dirname(__file__) + '/json_yourator.txt').read()
+        m.get('https://www.yourator.co/api/v2/jobs?term[]=test', text=text)
+
+        c = Client()
+        res = c.get('/yourator/test')
+        self.assertEqual(res.status_code, 200)
+
+    @requests_mock.mock()
     def test_youtube(self, m):
         text = open(os.path.dirname(__file__) + '/html_youtube.txt').read()
         m.get('https://www.youtube.com/results?search_query=test&sp=CAI%253D', text=text)

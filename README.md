@@ -24,6 +24,7 @@ Recruting platform search systems (求職平台):
 * https://www.1111.com.tw/
 * https://www.518.com.tw/
 * https://www.cakeresume.com/
+* https://www.yourator.co/
 
 EC search systems (電子商務平台):
 * https://24h.pchome.com.tw/ (including other PChome's EC systems)
@@ -68,6 +69,7 @@ We have set up a public service since I use it and you can test it as well, but 
 * https://feedgen.hasname.com/rent591/1/忠孝東路 (region = `1` means `台北市`, please check 591 site)
 * https://feedgen.hasname.com/shopee/測試
 * https://feedgen.hasname.com/taipeimetrotimetable/079a
+* https://feedgen.hasname.com/yourator/測試
 * https://feedgen.hasname.com/youtube/測試
 
 ## License

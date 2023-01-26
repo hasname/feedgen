@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import bookwalker, cakeresume, dcard, index, job104, job1111, job518, meetjobs, momoshop, pchome, plurk, rent591, robotstxt, shopee, taipeimetrotimetable, youtube
+from .views import bookwalker, cakeresume, dcard, index, job104, job1111, job518, meetjobs, momoshop, pchome, plurk, rent591, robotstxt, shopee, taipeimetrotimetable, yourator, youtube
 
 urlpatterns = [
     path('', index.IndexView.as_view(), name='index'),
@@ -23,5 +23,6 @@ urlpatterns = [
     path('rent591/<int:region>/<str:keyword>', rent591.Rent591View.as_view(), name='rent591'),
     path('shopee/<str:keyword>', shopee.ShopeeView.as_view(), name='shopee'),
     path('taipeimetrotimetable/<str:keyword>', taipeimetrotimetable.TaipeiMetroTimetableView.as_view(), name='taipeimetrotimetable'),
+    path('yourator/<str:keyword>', yourator.YouratorView.as_view(), name='yourator'),
     path('youtube/<str:keyword>', youtube.YouTubeView.as_view(), name='youtube'),
 ]
