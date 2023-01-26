@@ -39,7 +39,7 @@ class YouratorView(View):
             job_title = item['name']
 
             item_author = job_company
-            item_content = '<p>{} {}</p>'.format(html.escape(job_city), html.escape(job_salary))
+            item_content = '<h3>{}</h3><p>{} {}</p>'.format(html.escape(job_company), html.escape(job_city), html.escape(job_salary))
             item_title = job_title
             item_url = job_link
 
