@@ -39,7 +39,7 @@ class PlurkSearchView(View):
             entry.id(url)
             entry.link(href=url)
             entry.published(dateutil.parser.parse(p['posted']))
-            entry.title(self.str_clean(p['content_raw']))
+            entry.title(self.str_clean(p['content_raw']) or 'None')
 
         res = HttpResponse(feed.atom_str(), content_type='application/atom+xml; charset=utf-8')
         res['Cache-Control'] = 'max-age=300,public'
