@@ -2,4 +2,5 @@
 .coverage
 .dev.sqlite3
 .env
+.ruff_cache
 GNUmakefile.local
