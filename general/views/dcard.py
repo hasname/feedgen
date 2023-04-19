@@ -2,7 +2,6 @@ from django.http import HttpResponse
 from django.views.generic import View
 import feedgen.feed
 import html
-import json
 import lxml.html
 import re
 import urllib

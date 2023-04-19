@@ -1,10 +1,7 @@
 from django.http import HttpResponse
 from django.views.generic import View
 import feedgen.feed
-import datetime
 import html
-import json
-import re
 import urllib
 
 from .. import services

@@ -3,10 +3,8 @@ from django.views.generic import View
 import feedgen.feed
 import datetime
 import html
-import json
 import lxml.html
 import lxml.html.clean
-import re
 import urllib
 
 from .. import services

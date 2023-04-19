@@ -3,7 +3,6 @@ from django.views.generic import View
 import base36
 import dateutil.parser
 import feedgen.feed
-import html
 import json
 import re
 import urllib

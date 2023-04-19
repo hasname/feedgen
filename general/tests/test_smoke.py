@@ -1,6 +1,5 @@
 from django.test import Client, TestCase
 import os
-import re
 import requests_mock
 
 class SmokeTestCase(TestCase):
