@@ -22,7 +22,7 @@ ifndef DEPLOY_USER
 	$(error $$DEPLOY_USER is not defined in GNUmakefile.local)
 endif
 	rsync \
-		-aCvz \
+		-Favz \
 		--delete-after \
 		./ \
 		${DEPLOY_USER}@${DEPLOY_HOST}:~${DEPLOY_USER}/feedgen/
