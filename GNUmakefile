@@ -23,7 +23,7 @@ ifndef DEPLOY_USER
 endif
 	rsync \
 		-aCvz \
-		--delete \
+		--delete-after \
 		./ \
 		${DEPLOY_USER}@${DEPLOY_HOST}:~${DEPLOY_USER}/feedgen/
 	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "bash -c -l 'cd feedgen; pkill -QUIT uwsgi; sleep 1; poetry install; poetry run uwsgi --ini uwsgi.ini' > /dev/null 2>&1 &"
