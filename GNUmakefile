@@ -21,7 +21,11 @@ endif
 ifndef DEPLOY_USER
 	$(error $$DEPLOY_USER is not defined in GNUmakefile.local)
 endif
-	rsync -aCvz --delete ./ ${DEPLOY_USER}@${DEPLOY_HOST}:~${DEPLOY_USER}/feedgen/
+	rsync \
+		-aCvz \
+		--delete \
+		./ \
+		${DEPLOY_USER}@${DEPLOY_HOST}:~${DEPLOY_USER}/feedgen/
 	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "bash -c -l 'cd feedgen; pkill -QUIT uwsgi; sleep 1; poetry install; poetry run uwsgi --ini uwsgi.ini' > /dev/null 2>&1 &"
 
 run::
