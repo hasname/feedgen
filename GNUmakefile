@@ -26,7 +26,7 @@ endif
 		--delete-after \
 		./ \
 		${DEPLOY_USER}@${DEPLOY_HOST}:~${DEPLOY_USER}/feedgen/
-	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "bash -c -l 'cd feedgen; pkill -QUIT uwsgi; sleep 1; poetry install; poetry run uwsgi --ini uwsgi.ini' > /dev/null 2>&1 &"
+	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "systemctl --user restart feedgen.service"
 
 run::
 	pkill -QUIT uwsgi; sleep 1; poetry run uwsgi --ini uwsgi.ini > /dev/null 2>&1 &
