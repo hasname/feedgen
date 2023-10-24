@@ -34,7 +34,7 @@ class Job104CompanyView(View):
                 job_desc = item.cssselect('p.job-list-item__info')[0].text_content()
                 job_title = item.get('data-job-name')
 
-                if keyword not in job_title and keyword not in job_desc:
+                if keyword.lower() not in job_title.lower() and keyword.lower() not in job_desc.lower():
                     continue
 
                 job_company = item.get('data-cust-name')
@@ -87,7 +87,7 @@ class Job104View(View):
                 job_desc = item.cssselect('p.job-list-item__info')[0].text_content()
                 job_title = item.get('data-job-name')
 
-                if keyword not in job_title and keyword not in job_desc:
+                if keyword.lower() not in job_title.lower() and keyword.lower() not in job_desc.lower():
                     continue
 
                 job_company = item.get('data-cust-name')
