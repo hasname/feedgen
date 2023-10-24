@@ -31,6 +31,12 @@ class Job104CompanyView(View):
 
         for item in body.cssselect('article.job-list-item'):
             try:
+                job_desc = item.cssselect('p.job-list-item__info')[0].text_content()
+                job_title = item.get('data-job-name')
+
+                if keyword not in job_title and keyword not in job_desc:
+                    continue
+
                 job_company = item.get('data-cust-name')
                 job_company_url = item.cssselect('.b-block__left a[href*="/company/"]')[0].get('href')
                 job_company_url = re.sub(r'^//', 'https://', job_company_url)
@@ -78,9 +84,13 @@ class Job104View(View):
 
         for item in body.cssselect('article.job-list-item'):
             try:
-                job_company = item.get('data-cust-name')
                 job_desc = item.cssselect('p.job-list-item__info')[0].text_content()
                 job_title = item.get('data-job-name')
+
+                if keyword not in job_title and keyword not in job_desc:
+                    continue
+
+                job_company = item.get('data-cust-name')
                 job_url = item.cssselect('a.js-job-link')[0].get('href')
                 job_url = re.sub(r'^//', 'https://', job_url)
                 job_url = re.sub(r'[?&]jobsource=\w*$', '', job_url)
