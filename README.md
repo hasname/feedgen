@@ -4,6 +4,10 @@ Generate Atom feeds for sites which do not support feeds, mostly in Taiwan.
 
 ## Install
 
+You need to set up `.env` first.  The sample environment file is in `.env.sample`.
+
+## Run
+
 We use `poetry` to manage the running environment along with `uwsgi` to run the uWSGI server, therefore you choose whatever you like to adopt these utilities.
 
 ## Update
