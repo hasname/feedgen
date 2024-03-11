@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "feedgen_hasname"
-version = "0.2020.0628.0"
+version = "0.2024.0311.0"
 description = "feedgen.hasname.com"
 
 license = "MIT"
