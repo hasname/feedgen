@@ -25,7 +25,9 @@ class ShopeeView(View):
         try:
             proxy = services.ProxySocks5Service().process()
             s = services.RequestsService().process()
-            s.proxies = {'http': proxy, 'https': proxy}
+
+            if proxy is not None:
+                s.proxies = {'http': proxy, 'https': proxy}
 
             r = s.get(url, headers={'Referer': referer})
             body = json.loads(r.text)
