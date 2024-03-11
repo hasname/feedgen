@@ -1,0 +1,2476 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+        <meta http-equiv="x-dns-prefetch-control" content="on">
+        <link rel="preconnect dns-prefetch" href="//www.google.com">
+        <link rel="preconnect dns-prefetch" href="//www.google-analytics.com">
+        <link rel="preconnect dns-prefetch" href="//www.googletagmanager.com">
+        <link rel="preconnect dns-prefetch" href="//maps.google.com">
+        <link rel="preconnect dns-prefetch" href="//www.yahoo.com/">
+        <link rel="preconnect dns-prefetch" href="//developers.google.com">
+        <link rel="preconnect dns-prefetch" href="//fonts.google.com/">
+        <link rel='preconnect dns-prefetch' href="//connect.facebook.net" />
+        <link rel="canonical" href="https://www.bookwalker.com.tw/block/3" />
+        
+                <meta name="csrf-token" content="vIHCXcueAAxkXkEIlcE9CjKGA6iNZggvC7d0Ks4T" />
+        
+            <meta name="member-url" content="https://member.bookwalker.com.tw" />
+        <meta name="author" content="BOOK☆WALKER 台灣漫讀 / 電子書平台">
+        <meta name="copyright" content="BOOK☆WALKER 台灣漫讀 / 電子書平台版權所有、轉載必究 ● Copyright BOOK☆WALKER 台灣漫讀 / 電子書平台">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta property="og:title" content="更多熱門新書 系列  簡單顯示  依發售日新至舊排序 第1頁 BOOK☆WALKER 台灣漫讀 / 電子書平台">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <meta property="og:description" content="">
+        <meta property="og:site_name" content="BOOK☆WALKER 台灣漫讀 / 電子書平台">
+        <title>更多熱門新書 系列  簡單顯示  依發售日新至舊排序 第1頁 BOOK☆WALKER 台灣漫讀 / 電子書平台</title>
+        <script src="https://www.bookwalker.com.tw/lib/jquery-3.6.0.min.js"></script>
+        <script src="https://www.bookwalker.com.tw/lib/sweetalert2@11.js"></script>
+        
+        <script src="https://www.bookwalker.com.tw/js/all.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+        <script src="https://www.bookwalker.com.tw/js/app.js"></script>
+        
+            
+                <link rel="stylesheet" type="text/css" href="https://www.bookwalker.com.tw/vendor/bw/bwicon/css/style.css">
+        <!--舊站css放這邊----------->
+        <link rel="stylesheet" type="text/css" href="https://www.bookwalker.com.tw/origin/css/bw_common.css">
+        <link rel="stylesheet" type="text/css" href="https://www.bookwalker.com.tw/origin/css/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="https://www.bookwalker.com.tw/origin/css/bootstrap.min.css">
+                <link rel="stylesheet" type="text/css" href="https://www.bookwalker.com.tw/origin/css/bw_style_pc.css">
+        <link rel="stylesheet" type="text/css" href="https://www.bookwalker.com.tw/origin/css/bw_style_pc_s.css">
+                <link rel="stylesheet" type="text/css" href="https://www.bookwalker.com.tw/origin/css/lightbox.css">
+        <link rel="stylesheet" type="text/css" href="https://www.bookwalker.com.tw/origin/font-awesome/css/font-awesome.min.css">
+        <!--這兩支要放在所有css的最下面-->
+        <link rel="stylesheet" type="text/css" href="https://www.bookwalker.com.tw/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="/css/index.css?id=b6bc1374d8d0133d62f6"><!--新版樣式(含商品module)-->
+        <link rel="stylesheet" type="text/css" href="https://www.bookwalker.com.tw/origin/css/bw_origin.css"><!--新版+舊站衝突解決-->
+        
+            <!-- Facebook Pixel Code -->
+    <script >
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/zh_TW/fbevents.js');
+                fbq('init', '166342850942037' );
+            </script>
+    <!-- End Facebook Pixel Code -->
+    <script>setTimeout(function(){ fbq('track','PageView',{"eventID":"9f9ade6b-fea6-423e-905c-8d3ea5c74db9-73ee84af80f5990f11c2dfd09d954cc8"}); }, 500);</script>
+<!-- LINE Tag Base Code -->
+<!-- Do Not Modify -->
+<script>
+    (function(g,d,o){
+        g._ltq=g._ltq||[];g._lt=g._lt||function(){g._ltq.push(arguments)};
+        var h=location.protocol==='https:'?'https://d.line-scdn.net':'http://d.line-cdn.net';
+        var s=d.createElement('script');s.async=1;
+        s.src=o||h+'/n/line_tag/public/release/v1/lt.js';
+        var t=d.getElementsByTagName('script')[0];t.parentNode.insertBefore(s,t);
+    })(window, document);
+    _lt('init', {
+        customerType: 'lap',
+        tagId: '9dbead1f-e514-4e1d-ac07-51018bad16b5'
+    });
+    _lt('send', 'pv', ['9dbead1f-e514-4e1d-ac07-51018bad16b5']);
+</script>
+<noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://tr.line.me/tag.gif?c_t=lap&t_id=9dbead1f-e514-4e1d-ac07-51018bad16b5&e=pv&noscript=1" />
+</noscript>
+<!-- End LINE Tag Base Code -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-72422763-1');
+    gtag('config', 'G-QKSKV5XSBD');
+</script>
+<script type="text/javascript">
+    let temp_gtag = function () {
+            /**商品：商務、參與率轉換  */
+        this.gtagData = function (items, action, label, category, noninteraction) {
+                var category = typeof category !== 'undefined' ? category : null;
+                var noninteraction = typeof noninteraction !== 'undefined' ? noninteraction : null;
+                var gaData = {"event_label": label, "items":items}
+                if (category) {
+                    gaData = Object.assign(gaData, {'event_category': category});
+                }
+                if (noninteraction) {
+                    gaData = Object.assign(gaData, {'non_interaction': noninteraction});
+                }
+                if (action == "select_content") {
+                    gaData = Object.assign(gaData, {'content_type': 'product'});
+                }
+
+                // console.log(gaData);
+                gtag('event', action, gaData);
+            }
+    }
+    let Gtag = new temp_gtag();
+</script>
+<script type='text/javascript'>
+    var tagtoo_advertiser_id = 1376;
+</script>
+<script async src="//ad.tagtoo.co/media/ad/track.js"></script>
+    </head>
+    <body data-controller="web--body" data-action="resize@window->web--body#onResize scroll@window->web--body#onScroll" >
+        <style>
+    .fixed-bottom {position: fixed;bottom: 0;width:100%;}
+</style>
+<header class="bwTopHeader">
+    <!--小功能列-->
+    <div class="headerShoulder">
+        <div class="shoulderW">
+            <h2 class="shoulderInfo">BOOK☆WALKER 台灣漫讀 / 電子書平台</h2>
+            <nav class="shoulderNav">
+                <a href="/explanation">使用說明</a>｜
+                <a href="/explanation/problem">常見問題</a>｜
+                <a href="/explanation/point">點數說明</a>｜
+                <a href="/explanation/app_download/ios">下載APP</a>｜
+                <a href="/company">關於我們</a>｜
+                <a href="/customer">聯繫客服</a>
+            </nav>
+        </div>
+    </div>
+    <!--./小功能列-->
+
+    <!--主要header-->
+    <div class="headerMain" data-controller="header" data-action="resize@window->header#onResize">
+        <input type="text" data-header-target="width" style="display: none;" id="header-width">
+        <input type="text" data-header-target="height" style="display: none;" id="header-height">
+        <div class="headerBwLogo">
+            <a href="https://www.bookwalker.com.tw">
+                <img src="/images/bw_logo.svg" alt="BOOK☆WALKER台灣漫讀/電子書平台">
+            </a>
+        </div>
+        <!--搜尋bar-->
+        <div class="headerSearchBox">
+            <i class="bwi-cancel headerSearchClose"></i>
+            <form class="headerSearchBorder" action="https://www.bookwalker.com.tw/search">
+                <!--選擇搜尋類別-->
+                <div class="searchCategory">
+                    <div class="searchCagName">
+                        全部
+                    </div>
+                    <!--請帶入選取後的類別-->
+                    <ul class="searchCagList">
+                                                                                    <li data-value="{&quot;restricted_status&quot;:2}">全部</li>
+                                                            <li data-value="{&quot;category_id&quot;:&quot;2&quot;,&quot;vertical_viewer&quot;:&quot;1&quot;}">條漫</li>
+                                                            <li data-value="{&quot;category_id&quot;:&quot;2&quot;}">漫畫</li>
+                                                            <li data-value="{&quot;category_id&quot;:&quot;3&quot;}">輕小說</li>
+                                                            <li data-value="{&quot;category_id&quot;:&quot;4&quot;}">文學</li>
+                                                            <li data-value="{&quot;category_id&quot;:&quot;5&quot;}">實用書</li>
+                                                            <li data-value="{&quot;category_id&quot;:&quot;6&quot;}">日文書</li>
+                                                            <li data-value="{&quot;category_id&quot;:&quot;1&quot;}">雜誌</li>
+                                                            <li data-value="{&quot;restricted_status&quot;:&quot;1&quot;}">限制級</li>
+                                                            <li data-value="{&quot;category_id&quot;:&quot;7&quot;}">聲音作品</li>
+                                                                        </ul>
+                </div>
+                <!--./選擇搜尋類別-->
+                <input type="text" placeholder="可搜尋書名、副書名、作者、出版社、標籤" class="searchTxt" name="w" value="">
+                <button type="submit" class="searchBtn">
+                    <i class="bwi-search" title="搜尋"></i>
+                </button>
+                                                                                                                <input style="display: none;" type="text" name="series_display" value="1">
+            </form>
+            <div class="searchSafty">
+                <span class="bwi-safty" title="安全搜尋"></span>
+                <div class="searchSaftyList">
+                    <div class="saftyItem">安全搜尋</div>
+                    <div class="saftySwitch">
+                        <label for="switchSafty" class="switchLabel">
+                            <input type="checkbox"
+                                   id="switchSafty"
+                                   class="switchBtn" onchange="location.href='https://www.bookwalker.com.tw/toggle_restricted_hidden'"
+                                                               >
+                            <label for="switchSafty" class="switchLabel"><p class="switchCircle"></p></label>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--./搜尋bar-->
+
+        <!--右側icon-->
+        <nav class="headerNav">
+            <ul>
+                <li class="topLogin">
+                                        <div class="topLoginBtn">
+                        <a href="https://www.bookwalker.com.tw/login" class="topLoginStyle">登入</a>
+                        <a href="https://www.bookwalker.com.tw/register" class="topRegiStyle">註冊</a>
+                    </div>
+                                    </li>
+                <li class="pcNav isPc">
+                    <a href="https://www.bookwalker.com.tw/bookcase/available_book_list" class="topIcon">
+                        <i class="bwi-bookshelf" title="書櫃"></i>
+                        <!-- <span class="topIconNum">3</span> --><!--沒有數字時移除整個span-->
+                    </a>
+                </li>
+                <li class="pcNav isPc">
+                    <a href="https://www.bookwalker.com.tw/member/wishlist" class="topIcon" id="ajax-heart">
+                        <i class="bwi-heart" title="願望清單"></i>
+                                            </a>
+                </li>
+                <li class="isPc">
+                                            <a href="https://www.bookwalker.com.tw/member/notice" class="topIcon">
+                            <i class="bwi-notice" title="通知"></i>
+                                                    </a>
+                                    </li>
+                <li>
+                    <a href="/old/cart" class="topIcon" id="ajax-cart">
+                        <i class="bwi-cart" title="購物車"></i>
+                                            </a>
+                </li>
+                <li>
+                    <div class="mHamMenuOverlay">
+                        <i class="bwi-cancel mHamClose" title="關閉選單"></i>
+                    </div>
+                    <div class="mHamMenuFixed">
+                        <ul class="fastIconBox">
+                            <li>
+                                <a href="https://www.bookwalker.com.tw/bookcase/available_book_list"><i class="bwi-bookshelf">閱讀書櫃</i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.bookwalker.com.tw/member/wishlist"><i class="bwi-heart">願望清單</i></a>
+                            </li>
+                        </ul>
+                        <!--會員level(用原本的套過來就可以)-->
+                                                <!--./會員level-->
+
+                        <ul class="mHamMenuList">
+                            <li><p class="mHamMenuFirst">使用方法<i class="bwi-arrow-d"></i></p>
+                                <div class="mHamMenuSlide">
+                                    <ul class="mHamMenuSec">
+                                        <li><a href="/explanation">使用步驟</a></li>
+                                        <li><a href="/explanation/create_account">如何註冊？</a></li>
+                                        <li><a href="/explanation/buy_book">如何購書？</a></li>
+                                        <li><a href="/explanation/rent_book">如何租書？</a></li>
+                                        <li><a href="/explanation/read_book">如何使用App閱讀？</a></li>
+                                        <li><a href="/explanation/webreader">如何在網站上閱讀？</a></li>
+                                        <li><a href="/explanation/invoice">發票載具教學new</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><p class="mHamMenuFirst">功能說明<i class="bwi-arrow-d"></i></p>
+                                <div class="mHamMenuSlide">
+                                    <ul class="mHamMenuSec">
+                                        <li><a href="/explanation/point">點數</a></li>
+                                        <li><a href="/explanation/coupon">折價券</a></li>
+                                        <li><a href="https://www.bookwalker.com.tw/member/fast_pay_service">快速結帳服務</a></li>
+                                        <li><a href="/explanation/level">會員獎勵制度</a></li>
+                                    </ul>
+                                </div>
+                                <div class="specialHamMenu"><a href="/explanation/point">點數</a><a href="/explanation/level">獎勵</a></div>
+                            </li>
+                            <li class="noList"><a href="/explanation/problem">常見問題</a></li>
+                            <li><p class="mHamMenuFirst">下載APP<i class="bwi-arrow-d"></i></p>
+                                <div class="mHamMenuSlide">
+                                    <ul class="mHamMenuSec">
+                                        <li><a href="/explanation/app_download/ios">iPhone / iPad 的使用方法</a></li>
+                                        <li><a href="/explanation/app_download/android">Android 的使用方法</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><p class="mHamMenuFirst">關於我們<i class="bwi-arrow-d"></i></p>
+                                <div class="mHamMenuSlide">
+                                    <ul class="mHamMenuSec">
+                                        <li><a href="/company">公司介紹</a></li>
+                                        <li><a href="/company/media">媒體資料</a></li>
+                                        <li><a href="https://www.104.com.tw/company/1a2x6bjb24">徵才資訊</a></li>
+                                        <li><a href="/company/terms">服務條款</a></li>
+                                        <li><a href="/company/privacy">隱私權政策</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="noList"><a href="/customer">聯繫客服</a></li>
+                        </ul>
+
+                    </div>
+                </li>
+                <!--./m版漢堡選單===============================-->
+                                    <li class="isPc">
+                        <div class="topMember">
+                            <div class="topIcon topMemberClick" style="cursor: pointer;">
+                                <i class="bwi-member" title="個人專頁"></i>
+                            </div>
+                        </div>
+                        <div class="headerNavSlide memberMenuSlide">
+                            <div class="topMemberMenu">
+                            <!-- <div class="topMemberSpecial"><a href="https://www.bookwalker.com.tw/gifting_page"><i class="bwi-gift2"></i><span>限時送書還有 <b>10</b> 天</span></a></div> -->
+                                <div class="topMemberItem"><i class="bwi-member">個人</i></div>
+                                <ul class="topMemberList">
+                                    <li><a href="https://www.bookwalker.com.tw/member">會員資料一覽</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/member/query_message">客服訊息一覽</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/member/notice">會員通知一覽</a></li>
+                                </ul>
+                                <div class="topMemberItem"><i class="bwi-money">消費</i></div>
+                                <ul class="topMemberList">
+                                    <li><a href="https://www.bookwalker.com.tw/member/shopping_detail">訂單記錄</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/member/member_gift">贈品領取與明細</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/member/discount_master">優惠券領取與明細</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/member/bonus_master">點數領取與明細</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/member/point_shop_detail">點數商品兌換明細<i class="bwi-new bwiNew"></i></a></li>
+                                </ul>
+                                <div class="topMemberItem"><i class="bwi-heart3">服務</i></div>
+                                <ul class="topMemberList">
+                                    <li><a href="https://www.bookwalker.com.tw/member/wishlist">願望清單</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/member/fast_pay_service">快速結帳服務</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/bookcase/available_book_list">書櫃</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/member/attention">關注</a></li><!--20231012-->
+                                    <li><a href="https://www.bookwalker.com.tw/member/service_giveaway">贈書<i class="bwi-new bwiNew"></i></a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/selfapply">個人作者申請</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                                <li class="menuHam isMobile">
+                    <a href="#" class="topIcon">
+                        <i class="bwi-menuham" title="選單"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!--./右側icon-->
+    </div>
+    <!--./主要header-->
+</header>
+<!--./bwTopHeader-->
+    <nav class="categoryNavBox " data-controller="navbar" data-action="resize@window->navbar#onResize">
+    <div class="categoryNavSearch">
+        <i class="bwi-search" title="搜尋"></i>
+    </div>
+    <div class="swiper">
+        <div class="swiper-wrapper" style="display: flex;" data-action="mouseleave->navbar#cancelShowCategory">
+                                                                        <div class="swiper-slide "
+                     data-action="mouseover->navbar#showCategory" onclick="location.href='https://www.bookwalker.com.tw/scrollmanga'"
+                     data-navbar-id-param="1" style="width: auto !important;flex-shrink: 0;"><b class="categoryNav"><span>條漫</span></b></div>
+                                                            <div class="swiper-slide "
+                     data-action="mouseover->navbar#showCategory" onclick="location.href='https://www.bookwalker.com.tw/manga'"
+                     data-navbar-id-param="2" style="width: auto !important;flex-shrink: 0;"><b class="categoryNav"><span>漫畫</span></b></div>
+                                                            <div class="swiper-slide "
+                     data-action="mouseover->navbar#showCategory" onclick="location.href='https://www.bookwalker.com.tw/lightnovel'"
+                     data-navbar-id-param="3" style="width: auto !important;flex-shrink: 0;"><b class="categoryNav"><span>輕小說</span></b></div>
+                                                            <div class="swiper-slide "
+                     data-action="mouseover->navbar#showCategory" onclick="location.href='https://www.bookwalker.com.tw/fiction'"
+                     data-navbar-id-param="4" style="width: auto !important;flex-shrink: 0;"><b class="categoryNav"><span>文學</span></b></div>
+                                                            <div class="swiper-slide "
+                     data-action="mouseover->navbar#showCategory" onclick="location.href='https://www.bookwalker.com.tw/nonfiction'"
+                     data-navbar-id-param="5" style="width: auto !important;flex-shrink: 0;"><b class="categoryNav"><span>實用書</span></b></div>
+                                                            <div class="swiper-slide "
+                     data-action="mouseover->navbar#showCategory" onclick="location.href='https://www.bookwalker.com.tw/japanese'"
+                     data-navbar-id-param="6" style="width: auto !important;flex-shrink: 0;"><b class="categoryNav"><span>日文書</span></b></div>
+                                                            <div class="swiper-slide "
+                     data-action="mouseover->navbar#showCategory" onclick="location.href='https://www.bookwalker.com.tw/magazine'"
+                     data-navbar-id-param="7" style="width: auto !important;flex-shrink: 0;"><b class="categoryNav"><span>雜誌</span></b></div>
+                                                            <div class="swiper-slide "
+                     data-action="mouseover->navbar#showCategory" onclick="location.href='https://www.bookwalker.com.tw/restricted'"
+                     data-navbar-id-param="8" style="width: auto !important;flex-shrink: 0;"><b class="categoryNav"><span>限制級</span></b></div>
+                                                            <div class="swiper-slide "
+                     data-action="mouseover->navbar#showCategory" onclick="location.href='https://www.bookwalker.com.tw/audio'"
+                     data-navbar-id-param="9" style="width: auto !important;flex-shrink: 0;"><b class="categoryNav"><span>聲音作品</span></b></div>
+                                        <div class="swiper-slide " onclick="location.href='https://www.bookwalker.com.tw/pointshop'">
+                <b class="categoryNav"><span>點數商店</span></b>
+            </div><!--20231102點數商店-->
+        </div>
+    </div>
+        <div class="categoryNavList hall_0 " data-action="mouseleave->navbar#hideCategory" data-navbar-id-param="0">
+        <ul class="categoryNavSec">
+                                </ul>
+    </div>
+            <div class="categoryNavList hall_1 " data-action="mouseleave->navbar#hideCategory" data-navbar-id-param="1">
+        <ul class="categoryNavSec">
+                                                            <li><a href="https://www.bookwalker.com.tw/search?m=2&amp;restricted=2&amp;series_display=1&amp;vertical=1&amp;order=sell_desc&amp;s=20">少女漫畫</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?m=2&amp;restricted=2&amp;series_display=1&amp;vertical=1&amp;order=sell_desc&amp;s=19">少年漫畫</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?m=2&amp;restricted=2&amp;series_display=1&amp;vertical=1&amp;order=sell_desc&amp;s=23">BL漫畫</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?m=2&amp;restricted=2&amp;series_display=1&amp;vertical=1&amp;order=sell_desc&amp;s=22">淑女漫畫</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?m=2&amp;restricted=2&amp;series_display=1&amp;vertical=1&amp;order=sell_desc&amp;s=24">百合漫畫</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?m=2&amp;restricted=2&amp;series_display=1&amp;vertical=1&amp;order=sell_desc&amp;s=21">青年漫畫</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?m=2&amp;restricted=2&amp;series_display=1&amp;vertical=1&amp;order=sell_desc&amp;s=91">其他</a></li>
+                                    </ul>
+    </div>
+            <div class="categoryNavList hall_2 " data-action="mouseleave->navbar#hideCategory" data-navbar-id-param="2">
+        <ul class="categoryNavSec">
+                                                            <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=2&amp;s=19">少年漫畫</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=2&amp;s=20">少女漫畫</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=2&amp;s=21">青年漫畫</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=2&amp;s=22">淑女漫畫</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=2&amp;s=23">BL漫畫</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=2&amp;s=24">百合漫畫</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=2&amp;s=25">兒童漫畫</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=2&amp;s=26">漫畫雜誌</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=2&amp;s=27">畫集．設定集</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=2&amp;s=69">日文書</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=2&amp;s=78">同人誌</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=2&amp;s=91">其他</a></li>
+                                    </ul>
+    </div>
+            <div class="categoryNavList hall_3 " data-action="mouseleave->navbar#hideCategory" data-navbar-id-param="3">
+        <ul class="categoryNavSec">
+                                                            <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=3&amp;s=28">男性向輕小說</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=3&amp;s=29">女性向輕小說</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=3&amp;s=30">華文輕小說</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=3&amp;s=31">華文網路小說</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=3&amp;s=32">動漫改編小說</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=3&amp;s=33">BL小說</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=3&amp;s=70">日文書</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=3&amp;s=79">同人誌</a></li>
+                                    </ul>
+    </div>
+            <div class="categoryNavList hall_4 " data-action="mouseleave->navbar#hideCategory" data-navbar-id-param="4">
+        <ul class="categoryNavSec">
+                                                            <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=4&amp;s=34">文學小說</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=4&amp;s=35">奇幻．科幻</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=4&amp;s=36">歷史．武俠</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=4&amp;s=37">愛情文藝</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=4&amp;s=38">懸疑．推理</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=4&amp;s=39">恐怖驚悚</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=4&amp;s=40">文學研究．評論</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=4&amp;s=41">詩集散文</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=4&amp;s=42">言情小說</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=4&amp;s=43">同性愛小說</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=4&amp;s=44">其他</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=4&amp;s=71">日文書</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=4&amp;s=80">同人誌</a></li>
+                                    </ul>
+    </div>
+            <div class="categoryNavList hall_5 " data-action="mouseleave->navbar#hideCategory" data-navbar-id-param="5">
+        <ul class="categoryNavSec">
+                                                            <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=45">商業理財</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=46">旅遊</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=47">藝術．設計</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=48">生活．休閒．嗜好</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=49">流行．彩妝</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=50">社會人文</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=51">自然．科學</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=52">哲學．心靈．勵志</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=53">親子．教育</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=54">星座．占卜</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=55">宗教．命理</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=56">語言學習</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=57">科技資訊</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=58">娛樂影視</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=59">運動．保健</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=60">寫真</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=72">日文書</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=73">建築．室內設計</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=74">攝影．電影</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=81">同人誌</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=88">男性寫真</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=5&amp;s=89">工具書</a></li>
+                                    </ul>
+    </div>
+            <div class="categoryNavList hall_6 " data-action="mouseleave->navbar#hideCategory" data-navbar-id-param="6">
+        <ul class="categoryNavSec">
+                                                            <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=6&amp;s=82">雜誌</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=6&amp;s=83">漫畫</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=6&amp;s=84">輕小說</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=6&amp;s=85">文學．小說</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=6&amp;s=86">一般．實用書</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=6&amp;s=90">文芸・小説</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=6&amp;s=92">新文芸</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=6&amp;s=93">寫真</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=6&amp;s=94">話・連載（マンガ）</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=6&amp;s=95">セット販売（マンガ）</a></li>
+                                    </ul>
+    </div>
+            <div class="categoryNavList hall_7 " data-action="mouseleave->navbar#hideCategory" data-navbar-id-param="7">
+        <ul class="categoryNavSec">
+                                                            <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=1">商業理財</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=2">旅遊．美食</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=3">娛樂影視</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=4">流行．彩妝</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=5">新聞時事</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=6">設計．建築．攝影</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=7">運動．保健</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=8">生活．休閒．嗜好</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=9">親子教育</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=10">星座．占卜</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=12">語言學習</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=13">文學．藝術</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=14">電玩．攻略</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=15">汽車．機車</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=16">科技資訊</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=17">寫真</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=75">自然．科學</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=77">同人誌</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=1&amp;s=87">男性寫真</a></li>
+                                    </ul>
+    </div>
+            <div class="categoryNavList hall_8 " data-action="mouseleave->navbar#hideCategory" data-navbar-id-param="8">
+        <ul class="categoryNavSec">
+                                                            <li><a href="https://www.bookwalker.com.tw/search?restricted=1&amp;series_display=1&amp;order=sell_desc&amp;m=1">雜誌</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?restricted=1&amp;series_display=1&amp;order=sell_desc&amp;m=2">漫畫</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?restricted=1&amp;series_display=1&amp;order=sell_desc&amp;m=3">輕小說</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?restricted=1&amp;series_display=1&amp;order=sell_desc&amp;m=4">文學</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?restricted=1&amp;series_display=1&amp;order=sell_desc&amp;m=5">實用書</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?restricted=1&amp;series_display=1&amp;order=sell_desc&amp;m=6">日文書</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?restricted=1&amp;series_display=1&amp;order=sell_desc&amp;m=7">聲音作品</a></li>
+                                    </ul>
+    </div>
+            <div class="categoryNavList hall_9 " data-action="mouseleave->navbar#hideCategory" data-navbar-id-param="9">
+        <ul class="categoryNavSec">
+                                                            <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=7&amp;s=96">男性向廣播劇</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=7&amp;s=97">BL廣播劇</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=7&amp;s=98">乙女向廣播劇</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=7&amp;s=99">百合廣播劇</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=7&amp;s=100">男性向ASMR</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=7&amp;s=101">BL ASMR</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=7&amp;s=102">乙女向ASMR</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=7&amp;s=103">百合ASMR</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=7&amp;s=104">文學小說</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=7&amp;s=105">一般實用</a></li>
+                                    <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;restricted=2&amp;m=7&amp;s=106">輕小說</a></li>
+                                    </ul>
+    </div>
+        </nav>
+    <main class="mainCon originContent">
+        <div class="bw_wmid2">
+        <!--安全搜尋提示-->
+        <div class="noticeBarBox" >
+            <ul class="noticeBar">
+                <li><i class="bwi-cancel2 noticeBarClose" title="關閉"></i></li>
+                <li class="noticeBarCon">依內容分級制度，<span class="noticeBarImpor">未登入</span>僅能顯示<span class="noticeBarImpor">普遍級內容</span>，登入後即可觀看全站內容。</li>
+                <li class="noticeBarBtn"><a href=" https://www.bookwalker.com.tw/login">馬上登入</a></li>
+            </ul>
+        </div>
+        <!--./安全搜尋提示-->
+    </div>
+                        <div id="bw_search">
+    <div class="barcenter bw_wmid2">
+        
+        <ul class="breadcrumb" id="breadcrumb_list">
+            <li><a href="https://www.bookwalker.com.tw">BOOK☆WALKER首頁</a></li>
+                <li><a href="javascript:void(0)">熱門新書</a></li>
+        </ul>
+
+                    <script>
+                $(document).ready(function() {
+                    $(".bookItemHover").show();
+                });
+            </script>
+            <div class="bw_main2">
+                <div class="listbox">
+                    <div class="listbox_title2">
+                        <h1 class="hidden-h1">更多熱門新書 系列  簡單顯示  依發售日新至舊排序 第1頁</h1>
+                        <div class="bw_title">
+                                                            熱門新書
+                                                    </div>
+                        <div class="bw_more">1 ~ 16 筆 / 共250筆</div>
+                    </div>
+                    <div class="inner" >
+                        <div class="row mar0pad0" >
+                                                        <div class="col-md-2 col-lg-2 select12 mar0pad0">
+                                <select onchange="location = this.value;" class="form-control ">
+                <option  value='https://www.bookwalker.com.tw/block/3?order=rank'>依人氣度排序</option>
+                    <option selected value='https://www.bookwalker.com.tw/block/3?order=sell_desc'>依發售日新至舊排序</option>
+                    <option  value='https://www.bookwalker.com.tw/block/3?order=sell_asc'>依發售日舊至新排序</option>
+                    <option  value='https://www.bookwalker.com.tw/block/3?order=price_asc'>依價格低至高排序</option>
+                    <option  value='https://www.bookwalker.com.tw/block/3?order=price_desc'>依價格高至低排序</option>
+        </select>
+                            </div>
+                            <div class="col-md-4 col-lg-4">
+                                <div class="col-md-12 col-lg-12 text-center pagebar" style="position:initial">
+    	<nav>
+            <ul class="bw_pagination text-center">
+                
+                                    <li class="disabled"><span> </span></li>
+                                                                
+                
+                
+        		                                                                        <li><span class="active">1</span></li>
+                                                                                                                                    <li><a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;page=2">2</a></li>
+                                                                                                                                    <li><a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;page=3">3</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                    <li class="disabled hidden-xs"><span>...</span></li>
+                                                    <li class="hidden-xs"><a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;page=16">16</a></li>
+                                
+                                    <li class= "rotateimg" ><a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;page=2" rel="next"><img
+    					src="/images/p_img/pagination_arrownext.png"></a></li>
+                            </ul>
+        </nav>
+    </div>
+
+                            </div>
+                            <div class="col-md-4 col-lg-4 pageorder text-right">
+                                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series_display=1">
+    <div class="ordericon"><i class="bwi-style-series"></i> 系列顯示</div>
+</a>
+<a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;detail=1">
+    <div class="ordericon3  padr0"><i class="bwi-style-list"></i> 詳細顯示</div>
+</a>
+
+                            </div>
+                                                    </div>
+                    </div>
+                </div>
+                                                            <div class="listbox">
+    <div class="listbox_title">
+        <div class="bw_title">熱門新書</div>
+        <div class="bw_more">
+                </div>
+    </div>
+    <div class="listbox_bwmain2 clearfix" id="bw_search0">
+        <div class="slick_bwcontentbw responsive"  data-slick='{"rows": 2, "adaptiveHeight": true}' >
+                    <div class="book_package">
+    <div class="bookItemHover">
+        <p class="cat-label">漫畫</p><!--書籍分類：移除圖片改為文字-->
+        <a href="#" class="bookHoverCover" target="_blank" alt="" title=""></a><!--新增class名稱 bookHoverCover-->
+        <ul data-controller="cart">
+            
+                            <li id="add_cart187306" class="btnBookItemCart "
+                    data-action="click->cart#add" data-gtag='[{"id":187306,"name":"\u3010\u5957\u66f8\u3011\u7570\u4e16\u754c\u60a0\u9592\u8fb2\u5bb6\uff08\u6f2b\u756b\uff091-10\uff08\u517110\u518a\uff09","category":"\u6f2b\u756b","brand":"\u53f0\u7063\u89d2\u5ddd","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":705,"price":940,"currency":"TWD","quantity":1}]'  data-product_id="[187306]">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cart_word187306">
+                        
+                                                    放入購物車
+                                            </span>
+                </li>
+                
+                                <li class="btnBookItemReview btnDisabled">
+                                        <i class="bwi-read"></i> <span>無試閱</span>
+                                    </li>
+                                <!--li的class名稱改為 btnBookItemReview-->
+                
+
+                
+                <li id="add_wish187306" class="btnBookItemWish "
+                    data-action="click->cart#wish" data-gtag='[{"id":187306,"name":"\u3010\u5957\u66f8\u3011\u7570\u4e16\u754c\u60a0\u9592\u8fb2\u5bb6\uff08\u6f2b\u756b\uff091-10\uff08\u517110\u518a\uff09","category":"\u6f2b\u756b","brand":"\u53f0\u7063\u89d2\u5ddd","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":705,"price":940,"currency":"TWD","quantity":1}]'  data-product_id="[187306]">
+                <i class="fa fa-heart"></i>
+                </li>
+                
+
+                    </ul>
+    </div>
+    
+    <div class="bookside" >
+                            <img src="/images/p_img/side2.png" >
+            </div>
+    
+    <div class="bookitem">
+        <a href="https://www.bookwalker.com.tw/product/187306" target="_blank" alt="【套書】異世界悠閒農家（漫畫）1-10（共10冊）" title="【套書】異世界悠閒農家（漫畫）1-10（共10冊）" onclick='Gtag.gtagData([{&quot;id&quot;:187306,&quot;name&quot;:&quot;\u3010\u5957\u66f8\u3011\u7570\u4e16\u754c\u60a0\u9592\u8fb2\u5bb6\uff08\u6f2b\u756b\uff091-10\uff08\u517110\u518a\uff09&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u53f0\u7063\u89d2\u5ddd&quot;,&quot;variant&quot;:&quot;\u5c11\u5e74\u6f2b\u756b&quot;,&quot;sale_price&quot;:705,&quot;price&quot;:940,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}],"select_content","熱門新書");'>
+            <div class="bookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://taiwan-image.bookwalker.com.tw/product/187306/187306_4.jpg"
+                    class="bookbor lozad"
+                    data-placeholder-background="white"
+                    style="max-width: 104px; max-height: 147px;"
+                    alt="【套書】異世界悠閒農家（漫畫）1-10（共10冊）" data-controller="gTag" data-gTag-block-value="熱門新書" data-gTag-product-value="[{&quot;id&quot;:187306,&quot;name&quot;:&quot;\u3010\u5957\u66f8\u3011\u7570\u4e16\u754c\u60a0\u9592\u8fb2\u5bb6\uff08\u6f2b\u756b\uff091-10\uff08\u517110\u518a\uff09&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u53f0\u7063\u89d2\u5ddd&quot;,&quot;variant&quot;:&quot;\u5c11\u5e74\u6f2b\u756b&quot;,&quot;sale_price&quot;:705,&quot;price&quot;:940,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}]" title="【套書】異世界悠閒農家（漫畫）1-10（共10冊）">
+            </div>
+
+                            <div class="lablename" >
+					<img src="/images/p_img/lable3.png" title="贈品"> 
+                </div>
+            
+            <h4 class="bookname" >【套書】異世界悠閒農家（漫畫）1-10（共10冊）</h4>
+            <h5 class="booknamesub" >
+                                    劍康之,內藤騎之介,やすも
+                            </h5>
+            <p class='hidden'>
+                            </p>
+            <h5 class="bprice" >705元</h5>
+        </a>
+    </div>
+</div>
+                                <div class="book_package">
+    <div class="bookItemHover">
+        <p class="cat-label">漫畫</p><!--書籍分類：移除圖片改為文字-->
+        <a href="#" class="bookHoverCover" target="_blank" alt="" title=""></a><!--新增class名稱 bookHoverCover-->
+        <ul data-controller="cart">
+            
+                            <li id="add_cart190779" class="btnBookItemCart "
+                    data-action="click->cart#add" data-gtag='[{"id":190779,"name":"\u4efb\u4fe0\u8f49\u751f\u2500\u7570\u4e16\u754c\u7684\u9ed1\u5e6b\u516c\u4e3b\u2500(01)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]'  data-product_id="[190779]">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cart_word190779">
+                        
+                                                    放入購物車
+                                            </span>
+                </li>
+                
+                                <li class="btnBookItemReview" data-action="click->cart#read" data-gtag='[{"id":190779,"name":"\u4efb\u4fe0\u8f49\u751f\u2500\u7570\u4e16\u754c\u7684\u9ed1\u5e6b\u516c\u4e3b\u2500(01)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]' onclick="location.href='https://www.bookwalker.com.tw/browserViewer/190779/trial';">
+                                        <i class="bwi-read"></i> <span>試閱</span>
+                                    </li><!--li的class名稱改為 btnBookItemReview-->
+                                <!--li的class名稱改為 btnBookItemReview-->
+                
+
+                
+                <li id="add_wish190779" class="btnBookItemWish "
+                    data-action="click->cart#wish" data-gtag='[{"id":190779,"name":"\u4efb\u4fe0\u8f49\u751f\u2500\u7570\u4e16\u754c\u7684\u9ed1\u5e6b\u516c\u4e3b\u2500(01)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]'  data-product_id="[190779]">
+                <i class="fa fa-heart"></i>
+                </li>
+                
+
+                    </ul>
+    </div>
+    
+    <div class="bookside" >
+                    </div>
+    
+    <div class="bookitem">
+        <a href="https://www.bookwalker.com.tw/product/190779" target="_blank" alt="任俠轉生─異世界的黑幫公主─(01)" title="任俠轉生─異世界的黑幫公主─(01)" onclick='Gtag.gtagData([{&quot;id&quot;:190779,&quot;name&quot;:&quot;\u4efb\u4fe0\u8f49\u751f\u2500\u7570\u4e16\u754c\u7684\u9ed1\u5e6b\u516c\u4e3b\u2500(01)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u9752\u6587\u51fa\u7248&quot;,&quot;variant&quot;:&quot;\u5c11\u5e74\u6f2b\u756b&quot;,&quot;sale_price&quot;:98,&quot;price&quot;:98,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}],"select_content","熱門新書");'>
+            <div class="bookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://taiwan-image.bookwalker.com.tw/product/190779/190779_4.jpg"
+                    class="bookbor lozad"
+                    data-placeholder-background="white"
+                    style="max-width: 104px; max-height: 147px;"
+                    alt="任俠轉生─異世界的黑幫公主─(01)" data-controller="gTag" data-gTag-block-value="熱門新書" data-gTag-product-value="[{&quot;id&quot;:190779,&quot;name&quot;:&quot;\u4efb\u4fe0\u8f49\u751f\u2500\u7570\u4e16\u754c\u7684\u9ed1\u5e6b\u516c\u4e3b\u2500(01)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u9752\u6587\u51fa\u7248&quot;,&quot;variant&quot;:&quot;\u5c11\u5e74\u6f2b\u756b&quot;,&quot;sale_price&quot;:98,&quot;price&quot;:98,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}]" title="任俠轉生─異世界的黑幫公主─(01)">
+            </div>
+
+                            <div class="lablename" >
+					<img src="/images/p_img/lable4.png" title="EP同步"> 
+                </div>
+            
+            <h4 class="bookname" >任俠轉生─異世界的黑幫公主─(01)</h4>
+            <h5 class="booknamesub" >
+                                    宮下裕樹,夏原武
+                            </h5>
+            <p class='hidden'>
+                            </p>
+            <h5 class="bprice" >98元</h5>
+        </a>
+    </div>
+</div>
+                                <div class="book_package">
+    <div class="bookItemHover">
+        <p class="cat-label">漫畫</p><!--書籍分類：移除圖片改為文字-->
+        <a href="#" class="bookHoverCover" target="_blank" alt="" title=""></a><!--新增class名稱 bookHoverCover-->
+        <ul data-controller="cart">
+            
+                            <li id="add_cart190780" class="btnBookItemCart "
+                    data-action="click->cart#add" data-gtag='[{"id":190780,"name":"\u9b54\u6cd5\u5c11\u5973\u4e09\u5341\u597d\u5e7e(01)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]'  data-product_id="[190780]">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cart_word190780">
+                        
+                                                    放入購物車
+                                            </span>
+                </li>
+                
+                                <li class="btnBookItemReview" data-action="click->cart#read" data-gtag='[{"id":190780,"name":"\u9b54\u6cd5\u5c11\u5973\u4e09\u5341\u597d\u5e7e(01)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]' onclick="location.href='https://www.bookwalker.com.tw/browserViewer/190780/trial';">
+                                        <i class="bwi-read"></i> <span>試閱</span>
+                                    </li><!--li的class名稱改為 btnBookItemReview-->
+                                <!--li的class名稱改為 btnBookItemReview-->
+                
+
+                
+                <li id="add_wish190780" class="btnBookItemWish "
+                    data-action="click->cart#wish" data-gtag='[{"id":190780,"name":"\u9b54\u6cd5\u5c11\u5973\u4e09\u5341\u597d\u5e7e(01)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]'  data-product_id="[190780]">
+                <i class="fa fa-heart"></i>
+                </li>
+                
+
+                    </ul>
+    </div>
+    
+    <div class="bookside" >
+                    </div>
+    
+    <div class="bookitem">
+        <a href="https://www.bookwalker.com.tw/product/190780" target="_blank" alt="魔法少女三十好幾(01)" title="魔法少女三十好幾(01)" onclick='Gtag.gtagData([{&quot;id&quot;:190780,&quot;name&quot;:&quot;\u9b54\u6cd5\u5c11\u5973\u4e09\u5341\u597d\u5e7e(01)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u9752\u6587\u51fa\u7248&quot;,&quot;variant&quot;:&quot;\u5c11\u5e74\u6f2b\u756b&quot;,&quot;sale_price&quot;:98,&quot;price&quot;:98,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}],"select_content","熱門新書");'>
+            <div class="bookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://taiwan-image.bookwalker.com.tw/product/190780/190780_4.jpg"
+                    class="bookbor lozad"
+                    data-placeholder-background="white"
+                    style="max-width: 104px; max-height: 147px;"
+                    alt="魔法少女三十好幾(01)" data-controller="gTag" data-gTag-block-value="熱門新書" data-gTag-product-value="[{&quot;id&quot;:190780,&quot;name&quot;:&quot;\u9b54\u6cd5\u5c11\u5973\u4e09\u5341\u597d\u5e7e(01)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u9752\u6587\u51fa\u7248&quot;,&quot;variant&quot;:&quot;\u5c11\u5e74\u6f2b\u756b&quot;,&quot;sale_price&quot;:98,&quot;price&quot;:98,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}]" title="魔法少女三十好幾(01)">
+            </div>
+
+                            <div class="lablename" >
+					<img src="/images/p_img/lable4.png" title="EP同步"> 
+                </div>
+            
+            <h4 class="bookname" >魔法少女三十好幾(01)</h4>
+            <h5 class="booknamesub" >
+                                    三倉ゆめ
+                            </h5>
+            <p class='hidden'>
+                            </p>
+            <h5 class="bprice" >98元</h5>
+        </a>
+    </div>
+</div>
+                                <div class="book_package">
+    <div class="bookItemHover">
+        <p class="cat-label">漫畫</p><!--書籍分類：移除圖片改為文字-->
+        <a href="#" class="bookHoverCover" target="_blank" alt="" title=""></a><!--新增class名稱 bookHoverCover-->
+        <ul data-controller="cart">
+            
+                            <li id="add_cart190784" class="btnBookItemCart "
+                    data-action="click->cart#add" data-gtag='[{"id":190784,"name":"\u653e\u5b78\u5f8c\u5824\u9632\u65e5\u8a8c(07)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]'  data-product_id="[190784]">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cart_word190784">
+                        
+                                                    放入購物車
+                                            </span>
+                </li>
+                
+                                <li class="btnBookItemReview" data-action="click->cart#read" data-gtag='[{"id":190784,"name":"\u653e\u5b78\u5f8c\u5824\u9632\u65e5\u8a8c(07)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]' onclick="location.href='https://www.bookwalker.com.tw/browserViewer/190784/trial';">
+                                        <i class="bwi-read"></i> <span>試閱</span>
+                                    </li><!--li的class名稱改為 btnBookItemReview-->
+                                <!--li的class名稱改為 btnBookItemReview-->
+                
+
+                
+                <li id="add_wish190784" class="btnBookItemWish "
+                    data-action="click->cart#wish" data-gtag='[{"id":190784,"name":"\u653e\u5b78\u5f8c\u5824\u9632\u65e5\u8a8c(07)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]'  data-product_id="[190784]">
+                <i class="fa fa-heart"></i>
+                </li>
+                
+
+                    </ul>
+    </div>
+    
+    <div class="bookside" >
+                    </div>
+    
+    <div class="bookitem">
+        <a href="https://www.bookwalker.com.tw/product/190784" target="_blank" alt="放學後堤防日誌(07)" title="放學後堤防日誌(07)" onclick='Gtag.gtagData([{&quot;id&quot;:190784,&quot;name&quot;:&quot;\u653e\u5b78\u5f8c\u5824\u9632\u65e5\u8a8c(07)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u9752\u6587\u51fa\u7248&quot;,&quot;variant&quot;:&quot;\u5c11\u5e74\u6f2b\u756b&quot;,&quot;sale_price&quot;:98,&quot;price&quot;:98,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}],"select_content","熱門新書");'>
+            <div class="bookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://taiwan-image.bookwalker.com.tw/product/190784/190784_4.jpg"
+                    class="bookbor lozad"
+                    data-placeholder-background="white"
+                    style="max-width: 104px; max-height: 147px;"
+                    alt="放學後堤防日誌(07)" data-controller="gTag" data-gTag-block-value="熱門新書" data-gTag-product-value="[{&quot;id&quot;:190784,&quot;name&quot;:&quot;\u653e\u5b78\u5f8c\u5824\u9632\u65e5\u8a8c(07)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u9752\u6587\u51fa\u7248&quot;,&quot;variant&quot;:&quot;\u5c11\u5e74\u6f2b\u756b&quot;,&quot;sale_price&quot;:98,&quot;price&quot;:98,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}]" title="放學後堤防日誌(07)">
+            </div>
+
+                            <div class="lablename" >
+					<img src="/images/p_img/lable4.png" title="EP同步"> 
+                </div>
+            
+            <h4 class="bookname" >放學後堤防日誌(07)</h4>
+            <h5 class="booknamesub" >
+                                    小坂泰之
+                            </h5>
+            <p class='hidden'>
+                            </p>
+            <h5 class="bprice" >98元</h5>
+        </a>
+    </div>
+</div>
+                                <div class="book_package">
+    <div class="bookItemHover">
+        <p class="cat-label">漫畫</p><!--書籍分類：移除圖片改為文字-->
+        <a href="#" class="bookHoverCover" target="_blank" alt="" title=""></a><!--新增class名稱 bookHoverCover-->
+        <ul data-controller="cart">
+            
+                            <li id="add_cart190785" class="btnBookItemCart "
+                    data-action="click->cart#add" data-gtag='[{"id":190785,"name":"\u5931\u8272\u4e16\u754c(07)END","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]'  data-product_id="[190785]">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cart_word190785">
+                        
+                                                    放入購物車
+                                            </span>
+                </li>
+                
+                                <li class="btnBookItemReview" data-action="click->cart#read" data-gtag='[{"id":190785,"name":"\u5931\u8272\u4e16\u754c(07)END","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]' onclick="location.href='https://www.bookwalker.com.tw/browserViewer/190785/trial';">
+                                        <i class="bwi-read"></i> <span>試閱</span>
+                                    </li><!--li的class名稱改為 btnBookItemReview-->
+                                <!--li的class名稱改為 btnBookItemReview-->
+                
+
+                
+                <li id="add_wish190785" class="btnBookItemWish "
+                    data-action="click->cart#wish" data-gtag='[{"id":190785,"name":"\u5931\u8272\u4e16\u754c(07)END","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]'  data-product_id="[190785]">
+                <i class="fa fa-heart"></i>
+                </li>
+                
+
+                    </ul>
+    </div>
+    
+    <div class="bookside" >
+                    </div>
+    
+    <div class="bookitem">
+        <a href="https://www.bookwalker.com.tw/product/190785" target="_blank" alt="失色世界(07)END" title="失色世界(07)END" onclick='Gtag.gtagData([{&quot;id&quot;:190785,&quot;name&quot;:&quot;\u5931\u8272\u4e16\u754c(07)END&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u9752\u6587\u51fa\u7248&quot;,&quot;variant&quot;:&quot;\u5c11\u5e74\u6f2b\u756b&quot;,&quot;sale_price&quot;:98,&quot;price&quot;:98,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}],"select_content","熱門新書");'>
+            <div class="bookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://taiwan-image.bookwalker.com.tw/product/190785/190785_4.jpg"
+                    class="bookbor lozad"
+                    data-placeholder-background="white"
+                    style="max-width: 104px; max-height: 147px;"
+                    alt="失色世界(07)END" data-controller="gTag" data-gTag-block-value="熱門新書" data-gTag-product-value="[{&quot;id&quot;:190785,&quot;name&quot;:&quot;\u5931\u8272\u4e16\u754c(07)END&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u9752\u6587\u51fa\u7248&quot;,&quot;variant&quot;:&quot;\u5c11\u5e74\u6f2b\u756b&quot;,&quot;sale_price&quot;:98,&quot;price&quot;:98,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}]" title="失色世界(07)END">
+            </div>
+
+                            <div class="lablename" >
+					<img src="/images/p_img/lable1.png" title="已完結"> <img src="/images/p_img/lable4.png" title="EP同步"> 
+                </div>
+            
+            <h4 class="bookname" >失色世界(07)END</h4>
+            <h5 class="booknamesub" >
+                                    KENT
+                            </h5>
+            <p class='hidden'>
+                            </p>
+            <h5 class="bprice" >98元</h5>
+        </a>
+    </div>
+</div>
+                                <div class="book_package">
+    <div class="bookItemHover">
+        <p class="cat-label">漫畫</p><!--書籍分類：移除圖片改為文字-->
+        <a href="#" class="bookHoverCover" target="_blank" alt="" title=""></a><!--新增class名稱 bookHoverCover-->
+        <ul data-controller="cart">
+            
+                            <li id="add_cart190786" class="btnBookItemCart "
+                    data-action="click->cart#add" data-gtag='[{"id":190786,"name":"\u9130\u5ea7\u7684\u4fe1\u570b\u540c\u5b78\u597d\u50cf\u559c\u6b61\u6211(02)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]'  data-product_id="[190786]">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cart_word190786">
+                        
+                                                    放入購物車
+                                            </span>
+                </li>
+                
+                                <li class="btnBookItemReview" data-action="click->cart#read" data-gtag='[{"id":190786,"name":"\u9130\u5ea7\u7684\u4fe1\u570b\u540c\u5b78\u597d\u50cf\u559c\u6b61\u6211(02)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]' onclick="location.href='https://www.bookwalker.com.tw/browserViewer/190786/trial';">
+                                        <i class="bwi-read"></i> <span>試閱</span>
+                                    </li><!--li的class名稱改為 btnBookItemReview-->
+                                <!--li的class名稱改為 btnBookItemReview-->
+                
+
+                
+                <li id="add_wish190786" class="btnBookItemWish "
+                    data-action="click->cart#wish" data-gtag='[{"id":190786,"name":"\u9130\u5ea7\u7684\u4fe1\u570b\u540c\u5b78\u597d\u50cf\u559c\u6b61\u6211(02)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]'  data-product_id="[190786]">
+                <i class="fa fa-heart"></i>
+                </li>
+                
+
+                    </ul>
+    </div>
+    
+    <div class="bookside" >
+                    </div>
+    
+    <div class="bookitem">
+        <a href="https://www.bookwalker.com.tw/product/190786" target="_blank" alt="鄰座的信國同學好像喜歡我(02)" title="鄰座的信國同學好像喜歡我(02)" onclick='Gtag.gtagData([{&quot;id&quot;:190786,&quot;name&quot;:&quot;\u9130\u5ea7\u7684\u4fe1\u570b\u540c\u5b78\u597d\u50cf\u559c\u6b61\u6211(02)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u9752\u6587\u51fa\u7248&quot;,&quot;variant&quot;:&quot;\u5c11\u5e74\u6f2b\u756b&quot;,&quot;sale_price&quot;:98,&quot;price&quot;:98,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}],"select_content","熱門新書");'>
+            <div class="bookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://taiwan-image.bookwalker.com.tw/product/190786/190786_4.jpg"
+                    class="bookbor lozad"
+                    data-placeholder-background="white"
+                    style="max-width: 104px; max-height: 147px;"
+                    alt="鄰座的信國同學好像喜歡我(02)" data-controller="gTag" data-gTag-block-value="熱門新書" data-gTag-product-value="[{&quot;id&quot;:190786,&quot;name&quot;:&quot;\u9130\u5ea7\u7684\u4fe1\u570b\u540c\u5b78\u597d\u50cf\u559c\u6b61\u6211(02)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u9752\u6587\u51fa\u7248&quot;,&quot;variant&quot;:&quot;\u5c11\u5e74\u6f2b\u756b&quot;,&quot;sale_price&quot;:98,&quot;price&quot;:98,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}]" title="鄰座的信國同學好像喜歡我(02)">
+            </div>
+
+                            <div class="lablename" >
+					<img src="/images/p_img/lable4.png" title="EP同步"> 
+                </div>
+            
+            <h4 class="bookname" >鄰座的信國同學好像喜歡我(02)</h4>
+            <h5 class="booknamesub" >
+                                    安田剛助
+                            </h5>
+            <p class='hidden'>
+                            </p>
+            <h5 class="bprice" >98元</h5>
+        </a>
+    </div>
+</div>
+                                <div class="book_package">
+    <div class="bookItemHover">
+        <p class="cat-label">漫畫</p><!--書籍分類：移除圖片改為文字-->
+        <a href="#" class="bookHoverCover" target="_blank" alt="" title=""></a><!--新增class名稱 bookHoverCover-->
+        <ul data-controller="cart">
+            
+                            <li id="add_cart190787" class="btnBookItemCart "
+                    data-action="click->cart#add" data-gtag='[{"id":190787,"name":"\u9b54\u5973\u4e09\u767e\u624d\u958b\u59cb(04)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]'  data-product_id="[190787]">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cart_word190787">
+                        
+                                                    放入購物車
+                                            </span>
+                </li>
+                
+                                <li class="btnBookItemReview" data-action="click->cart#read" data-gtag='[{"id":190787,"name":"\u9b54\u5973\u4e09\u767e\u624d\u958b\u59cb(04)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]' onclick="location.href='https://www.bookwalker.com.tw/browserViewer/190787/trial';">
+                                        <i class="bwi-read"></i> <span>試閱</span>
+                                    </li><!--li的class名稱改為 btnBookItemReview-->
+                                <!--li的class名稱改為 btnBookItemReview-->
+                
+
+                
+                <li id="add_wish190787" class="btnBookItemWish "
+                    data-action="click->cart#wish" data-gtag='[{"id":190787,"name":"\u9b54\u5973\u4e09\u767e\u624d\u958b\u59cb(04)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]'  data-product_id="[190787]">
+                <i class="fa fa-heart"></i>
+                </li>
+                
+
+                    </ul>
+    </div>
+    
+    <div class="bookside" >
+                    </div>
+    
+    <div class="bookitem">
+        <a href="https://www.bookwalker.com.tw/product/190787" target="_blank" alt="魔女三百才開始(04)" title="魔女三百才開始(04)" onclick='Gtag.gtagData([{&quot;id&quot;:190787,&quot;name&quot;:&quot;\u9b54\u5973\u4e09\u767e\u624d\u958b\u59cb(04)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u9752\u6587\u51fa\u7248&quot;,&quot;variant&quot;:&quot;\u5c11\u5e74\u6f2b\u756b&quot;,&quot;sale_price&quot;:98,&quot;price&quot;:98,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}],"select_content","熱門新書");'>
+            <div class="bookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://taiwan-image.bookwalker.com.tw/product/190787/190787_4.jpg"
+                    class="bookbor lozad"
+                    data-placeholder-background="white"
+                    style="max-width: 104px; max-height: 147px;"
+                    alt="魔女三百才開始(04)" data-controller="gTag" data-gTag-block-value="熱門新書" data-gTag-product-value="[{&quot;id&quot;:190787,&quot;name&quot;:&quot;\u9b54\u5973\u4e09\u767e\u624d\u958b\u59cb(04)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u9752\u6587\u51fa\u7248&quot;,&quot;variant&quot;:&quot;\u5c11\u5e74\u6f2b\u756b&quot;,&quot;sale_price&quot;:98,&quot;price&quot;:98,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}]" title="魔女三百才開始(04)">
+            </div>
+
+                            <div class="lablename" >
+					<img src="/images/p_img/lable4.png" title="EP同步"> 
+                </div>
+            
+            <h4 class="bookname" >魔女三百才開始(04)</h4>
+            <h5 class="booknamesub" >
+                                    松本救助,原田重光
+                            </h5>
+            <p class='hidden'>
+                            </p>
+            <h5 class="bprice" >98元</h5>
+        </a>
+    </div>
+</div>
+                                <div class="book_package">
+    <div class="bookItemHover">
+        <p class="cat-label">漫畫</p><!--書籍分類：移除圖片改為文字-->
+        <a href="#" class="bookHoverCover" target="_blank" alt="" title=""></a><!--新增class名稱 bookHoverCover-->
+        <ul data-controller="cart">
+            
+                            <li id="add_cart190788" class="btnBookItemCart "
+                    data-action="click->cart#add" data-gtag='[{"id":190788,"name":"\u5c71\u8207\u98df\u6b32\u8207\u6211(14)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]'  data-product_id="[190788]">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cart_word190788">
+                        
+                                                    放入購物車
+                                            </span>
+                </li>
+                
+                                <li class="btnBookItemReview" data-action="click->cart#read" data-gtag='[{"id":190788,"name":"\u5c71\u8207\u98df\u6b32\u8207\u6211(14)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]' onclick="location.href='https://www.bookwalker.com.tw/browserViewer/190788/trial';">
+                                        <i class="bwi-read"></i> <span>試閱</span>
+                                    </li><!--li的class名稱改為 btnBookItemReview-->
+                                <!--li的class名稱改為 btnBookItemReview-->
+                
+
+                
+                <li id="add_wish190788" class="btnBookItemWish "
+                    data-action="click->cart#wish" data-gtag='[{"id":190788,"name":"\u5c71\u8207\u98df\u6b32\u8207\u6211(14)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5e74\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]'  data-product_id="[190788]">
+                <i class="fa fa-heart"></i>
+                </li>
+                
+
+                    </ul>
+    </div>
+    
+    <div class="bookside" >
+                    </div>
+    
+    <div class="bookitem">
+        <a href="https://www.bookwalker.com.tw/product/190788" target="_blank" alt="山與食欲與我(14)" title="山與食欲與我(14)" onclick='Gtag.gtagData([{&quot;id&quot;:190788,&quot;name&quot;:&quot;\u5c71\u8207\u98df\u6b32\u8207\u6211(14)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u9752\u6587\u51fa\u7248&quot;,&quot;variant&quot;:&quot;\u5c11\u5e74\u6f2b\u756b&quot;,&quot;sale_price&quot;:98,&quot;price&quot;:98,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}],"select_content","熱門新書");'>
+            <div class="bookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://taiwan-image.bookwalker.com.tw/product/190788/190788_4.jpg"
+                    class="bookbor lozad"
+                    data-placeholder-background="white"
+                    style="max-width: 104px; max-height: 147px;"
+                    alt="山與食欲與我(14)" data-controller="gTag" data-gTag-block-value="熱門新書" data-gTag-product-value="[{&quot;id&quot;:190788,&quot;name&quot;:&quot;\u5c71\u8207\u98df\u6b32\u8207\u6211(14)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u9752\u6587\u51fa\u7248&quot;,&quot;variant&quot;:&quot;\u5c11\u5e74\u6f2b\u756b&quot;,&quot;sale_price&quot;:98,&quot;price&quot;:98,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}]" title="山與食欲與我(14)">
+            </div>
+
+                            <div class="lablename" >
+					<img src="/images/p_img/lable4.png" title="EP同步"> 
+                </div>
+            
+            <h4 class="bookname" >山與食欲與我(14)</h4>
+            <h5 class="booknamesub" >
+                                    信濃川日出雄
+                            </h5>
+            <p class='hidden'>
+                            </p>
+            <h5 class="bprice" >98元</h5>
+        </a>
+    </div>
+</div>
+                                <div class="book_package">
+    <div class="bookItemHover">
+        <p class="cat-label">漫畫</p><!--書籍分類：移除圖片改為文字-->
+        <a href="#" class="bookHoverCover" target="_blank" alt="" title=""></a><!--新增class名稱 bookHoverCover-->
+        <ul data-controller="cart">
+            
+                            <li id="add_cart190791" class="btnBookItemCart "
+                    data-action="click->cart#add" data-gtag='[{"id":190791,"name":"\u7687\u5e1d\u7684\u96a8\u884c\u5973\u5b98\u662f\u5099\u53d7\u671f\u5f85\u7684\u65b0\u5a18(02)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5973\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]'  data-product_id="[190791]">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cart_word190791">
+                        
+                                                    放入購物車
+                                            </span>
+                </li>
+                
+                                <li class="btnBookItemReview" data-action="click->cart#read" data-gtag='[{"id":190791,"name":"\u7687\u5e1d\u7684\u96a8\u884c\u5973\u5b98\u662f\u5099\u53d7\u671f\u5f85\u7684\u65b0\u5a18(02)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5973\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]' onclick="location.href='https://www.bookwalker.com.tw/browserViewer/190791/trial';">
+                                        <i class="bwi-read"></i> <span>試閱</span>
+                                    </li><!--li的class名稱改為 btnBookItemReview-->
+                                <!--li的class名稱改為 btnBookItemReview-->
+                
+
+                
+                <li id="add_wish190791" class="btnBookItemWish "
+                    data-action="click->cart#wish" data-gtag='[{"id":190791,"name":"\u7687\u5e1d\u7684\u96a8\u884c\u5973\u5b98\u662f\u5099\u53d7\u671f\u5f85\u7684\u65b0\u5a18(02)","category":"\u6f2b\u756b","brand":"\u9752\u6587\u51fa\u7248","variant":"\u5c11\u5973\u6f2b\u756b","sale_price":98,"price":98,"currency":"TWD","quantity":1}]'  data-product_id="[190791]">
+                <i class="fa fa-heart"></i>
+                </li>
+                
+
+                    </ul>
+    </div>
+    
+    <div class="bookside" >
+                    </div>
+    
+    <div class="bookitem">
+        <a href="https://www.bookwalker.com.tw/product/190791" target="_blank" alt="皇帝的隨行女官是備受期待的新娘(02)" title="皇帝的隨行女官是備受期待的新娘(02)" onclick='Gtag.gtagData([{&quot;id&quot;:190791,&quot;name&quot;:&quot;\u7687\u5e1d\u7684\u96a8\u884c\u5973\u5b98\u662f\u5099\u53d7\u671f\u5f85\u7684\u65b0\u5a18(02)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u9752\u6587\u51fa\u7248&quot;,&quot;variant&quot;:&quot;\u5c11\u5973\u6f2b\u756b&quot;,&quot;sale_price&quot;:98,&quot;price&quot;:98,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}],"select_content","熱門新書");'>
+            <div class="bookcover">
+                <img
+                
+                                    restricted_status="2"
+                                    
+                    data-src="https://taiwan-image.bookwalker.com.tw/product/190791/190791_4.jpg"
+                    class="bookbor lozad"
+                    data-placeholder-background="white"
+                    style="max-width: 104px; max-height: 147px;"
+                    alt="皇帝的隨行女官是備受期待的新娘(02)" data-controller="gTag" data-gTag-block-value="熱門新書" data-gTag-product-value="[{&quot;id&quot;:190791,&quot;name&quot;:&quot;\u7687\u5e1d\u7684\u96a8\u884c\u5973\u5b98\u662f\u5099\u53d7\u671f\u5f85\u7684\u65b0\u5a18(02)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u9752\u6587\u51fa\u7248&quot;,&quot;variant&quot;:&quot;\u5c11\u5973\u6f2b\u756b&quot;,&quot;sale_price&quot;:98,&quot;price&quot;:98,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}]" title="皇帝的隨行女官是備受期待的新娘(02)">
+            </div>
+
+                            <div class="lablename" >
+					<img src="/images/p_img/lable4.png" title="EP同步"> 
+                </div>
+            
+            <h4 class="bookname" >皇帝的隨行女官是備受期待的新娘(02)</h4>
+            <h5 class="booknamesub" >
+                                    千種あかり,佐槻奏多,一花夜
+                            </h5>
+            <p class='hidden'>
+                            </p>
+            <h5 class="bprice" >98元</h5>
+        </a>
+    </div>
+</div>
+                                <div class="book_package">
+    <div class="bookItemHover">
+        <p class="cat-label">漫畫</p><!--書籍分類：移除圖片改為文字-->
+        <a href="#" class="bookHoverCover" target="_blank" alt="" title=""></a><!--新增class名稱 bookHoverCover-->
+        <ul data-controller="cart">
+            
+                            <li id="add_cart190798" class="btnBookItemCart "
+                    data-action="click->cart#add" data-gtag='[{"id":190798,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c1\u8a71)","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]'  data-product_id="[190798]">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cart_word190798">
+                        
+                                                    放入購物車
+                                            </span>
+                </li>
+                
+                                <li class="btnBookItemReview" data-action="click->cart#read" data-gtag='[{"id":190798,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c1\u8a71)","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]' onclick="location.href='https://www.bookwalker.com.tw/browserViewer/190798/trial';">
+                                        <i class="bwi-read"></i> <span>試閱</span>
+                                    </li><!--li的class名稱改為 btnBookItemReview-->
+                                <!--li的class名稱改為 btnBookItemReview-->
+                
+
+                
+                <li id="add_wish190798" class="btnBookItemWish "
+                    data-action="click->cart#wish" data-gtag='[{"id":190798,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c1\u8a71)","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]'  data-product_id="[190798]">
+                <i class="fa fa-heart"></i>
+                </li>
+                
+
+                    </ul>
+    </div>
+    
+    <div class="bookside" >
+                    </div>
+    
+    <div class="bookitem">
+        <a href="https://www.bookwalker.com.tw/product/190798" target="_blank" alt="心愛的引退生活×陽痿×夢魔(第1話)" title="心愛的引退生活×陽痿×夢魔(第1話)" onclick='Gtag.gtagData([{&quot;id&quot;:190798,&quot;name&quot;:&quot;\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c1\u8a71)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u6085\u6587\u793e&quot;,&quot;variant&quot;:&quot;BL\u6f2b\u756b&quot;,&quot;sale_price&quot;:39,&quot;price&quot;:39,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}],"select_content","熱門新書");'>
+            <div class="bookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://taiwan-image.bookwalker.com.tw/product/190798/190798_4_mask.jpg"
+                    class="bookbor lozad"
+                    data-placeholder-background="white"
+                    style="max-width: 104px; max-height: 147px;"
+                    alt="心愛的引退生活×陽痿×夢魔(第1話)" data-controller="gTag" data-gTag-block-value="熱門新書" data-gTag-product-value="[{&quot;id&quot;:190798,&quot;name&quot;:&quot;\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c1\u8a71)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u6085\u6587\u793e&quot;,&quot;variant&quot;:&quot;BL\u6f2b\u756b&quot;,&quot;sale_price&quot;:39,&quot;price&quot;:39,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}]" title="心愛的引退生活×陽痿×夢魔(第1話)">
+            </div>
+
+                            <div class="lablename" >
+					<img src="/images/p_img/lable1.png" title="已完結"> 
+                </div>
+            
+            <h4 class="bookname" >心愛的引退生活×陽痿×夢魔(第1話)</h4>
+            <h5 class="booknamesub" >
+                                    鶴子
+                            </h5>
+            <p class='hidden'>
+                            </p>
+            <h5 class="bprice" >39元</h5>
+        </a>
+    </div>
+</div>
+                                <div class="book_package">
+    <div class="bookItemHover">
+        <p class="cat-label">漫畫</p><!--書籍分類：移除圖片改為文字-->
+        <a href="#" class="bookHoverCover" target="_blank" alt="" title=""></a><!--新增class名稱 bookHoverCover-->
+        <ul data-controller="cart">
+            
+                            <li id="add_cart190799" class="btnBookItemCart "
+                    data-action="click->cart#add" data-gtag='[{"id":190799,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c2\u8a71)","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]'  data-product_id="[190799]">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cart_word190799">
+                        
+                                                    放入購物車
+                                            </span>
+                </li>
+                
+                                <li class="btnBookItemReview" data-action="click->cart#read" data-gtag='[{"id":190799,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c2\u8a71)","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]' onclick="location.href='https://www.bookwalker.com.tw/browserViewer/190799/trial';">
+                                        <i class="bwi-read"></i> <span>試閱</span>
+                                    </li><!--li的class名稱改為 btnBookItemReview-->
+                                <!--li的class名稱改為 btnBookItemReview-->
+                
+
+                
+                <li id="add_wish190799" class="btnBookItemWish "
+                    data-action="click->cart#wish" data-gtag='[{"id":190799,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c2\u8a71)","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]'  data-product_id="[190799]">
+                <i class="fa fa-heart"></i>
+                </li>
+                
+
+                    </ul>
+    </div>
+    
+    <div class="bookside" >
+                    </div>
+    
+    <div class="bookitem">
+        <a href="https://www.bookwalker.com.tw/product/190799" target="_blank" alt="心愛的引退生活×陽痿×夢魔(第2話)" title="心愛的引退生活×陽痿×夢魔(第2話)" onclick='Gtag.gtagData([{&quot;id&quot;:190799,&quot;name&quot;:&quot;\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c2\u8a71)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u6085\u6587\u793e&quot;,&quot;variant&quot;:&quot;BL\u6f2b\u756b&quot;,&quot;sale_price&quot;:39,&quot;price&quot;:39,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}],"select_content","熱門新書");'>
+            <div class="bookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://taiwan-image.bookwalker.com.tw/product/190799/190799_4_mask.jpg"
+                    class="bookbor lozad"
+                    data-placeholder-background="white"
+                    style="max-width: 104px; max-height: 147px;"
+                    alt="心愛的引退生活×陽痿×夢魔(第2話)" data-controller="gTag" data-gTag-block-value="熱門新書" data-gTag-product-value="[{&quot;id&quot;:190799,&quot;name&quot;:&quot;\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c2\u8a71)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u6085\u6587\u793e&quot;,&quot;variant&quot;:&quot;BL\u6f2b\u756b&quot;,&quot;sale_price&quot;:39,&quot;price&quot;:39,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}]" title="心愛的引退生活×陽痿×夢魔(第2話)">
+            </div>
+
+                            <div class="lablename" >
+					<img src="/images/p_img/lable1.png" title="已完結"> 
+                </div>
+            
+            <h4 class="bookname" >心愛的引退生活×陽痿×夢魔(第2話)</h4>
+            <h5 class="booknamesub" >
+                                    鶴子
+                            </h5>
+            <p class='hidden'>
+                            </p>
+            <h5 class="bprice" >39元</h5>
+        </a>
+    </div>
+</div>
+                                <div class="book_package">
+    <div class="bookItemHover">
+        <p class="cat-label">漫畫</p><!--書籍分類：移除圖片改為文字-->
+        <a href="#" class="bookHoverCover" target="_blank" alt="" title=""></a><!--新增class名稱 bookHoverCover-->
+        <ul data-controller="cart">
+            
+                            <li id="add_cart190801" class="btnBookItemCart "
+                    data-action="click->cart#add" data-gtag='[{"id":190801,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c4\u8a71)","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]'  data-product_id="[190801]">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cart_word190801">
+                        
+                                                    放入購物車
+                                            </span>
+                </li>
+                
+                                <li class="btnBookItemReview" data-action="click->cart#read" data-gtag='[{"id":190801,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c4\u8a71)","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]' onclick="location.href='https://www.bookwalker.com.tw/browserViewer/190801/trial';">
+                                        <i class="bwi-read"></i> <span>試閱</span>
+                                    </li><!--li的class名稱改為 btnBookItemReview-->
+                                <!--li的class名稱改為 btnBookItemReview-->
+                
+
+                
+                <li id="add_wish190801" class="btnBookItemWish "
+                    data-action="click->cart#wish" data-gtag='[{"id":190801,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c4\u8a71)","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]'  data-product_id="[190801]">
+                <i class="fa fa-heart"></i>
+                </li>
+                
+
+                    </ul>
+    </div>
+    
+    <div class="bookside" >
+                    </div>
+    
+    <div class="bookitem">
+        <a href="https://www.bookwalker.com.tw/product/190801" target="_blank" alt="心愛的引退生活×陽痿×夢魔(第4話)" title="心愛的引退生活×陽痿×夢魔(第4話)" onclick='Gtag.gtagData([{&quot;id&quot;:190801,&quot;name&quot;:&quot;\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c4\u8a71)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u6085\u6587\u793e&quot;,&quot;variant&quot;:&quot;BL\u6f2b\u756b&quot;,&quot;sale_price&quot;:39,&quot;price&quot;:39,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}],"select_content","熱門新書");'>
+            <div class="bookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://taiwan-image.bookwalker.com.tw/product/190801/190801_4_mask.jpg"
+                    class="bookbor lozad"
+                    data-placeholder-background="white"
+                    style="max-width: 104px; max-height: 147px;"
+                    alt="心愛的引退生活×陽痿×夢魔(第4話)" data-controller="gTag" data-gTag-block-value="熱門新書" data-gTag-product-value="[{&quot;id&quot;:190801,&quot;name&quot;:&quot;\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c4\u8a71)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u6085\u6587\u793e&quot;,&quot;variant&quot;:&quot;BL\u6f2b\u756b&quot;,&quot;sale_price&quot;:39,&quot;price&quot;:39,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}]" title="心愛的引退生活×陽痿×夢魔(第4話)">
+            </div>
+
+                            <div class="lablename" >
+					<img src="/images/p_img/lable1.png" title="已完結"> 
+                </div>
+            
+            <h4 class="bookname" >心愛的引退生活×陽痿×夢魔(第4話)</h4>
+            <h5 class="booknamesub" >
+                                    鶴子
+                            </h5>
+            <p class='hidden'>
+                            </p>
+            <h5 class="bprice" >39元</h5>
+        </a>
+    </div>
+</div>
+                                <div class="book_package">
+    <div class="bookItemHover">
+        <p class="cat-label">漫畫</p><!--書籍分類：移除圖片改為文字-->
+        <a href="#" class="bookHoverCover" target="_blank" alt="" title=""></a><!--新增class名稱 bookHoverCover-->
+        <ul data-controller="cart">
+            
+                            <li id="add_cart190800" class="btnBookItemCart "
+                    data-action="click->cart#add" data-gtag='[{"id":190800,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c3\u8a71)","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]'  data-product_id="[190800]">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cart_word190800">
+                        
+                                                    放入購物車
+                                            </span>
+                </li>
+                
+                                <li class="btnBookItemReview" data-action="click->cart#read" data-gtag='[{"id":190800,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c3\u8a71)","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]' onclick="location.href='https://www.bookwalker.com.tw/browserViewer/190800/trial';">
+                                        <i class="bwi-read"></i> <span>試閱</span>
+                                    </li><!--li的class名稱改為 btnBookItemReview-->
+                                <!--li的class名稱改為 btnBookItemReview-->
+                
+
+                
+                <li id="add_wish190800" class="btnBookItemWish "
+                    data-action="click->cart#wish" data-gtag='[{"id":190800,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c3\u8a71)","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]'  data-product_id="[190800]">
+                <i class="fa fa-heart"></i>
+                </li>
+                
+
+                    </ul>
+    </div>
+    
+    <div class="bookside" >
+                    </div>
+    
+    <div class="bookitem">
+        <a href="https://www.bookwalker.com.tw/product/190800" target="_blank" alt="心愛的引退生活×陽痿×夢魔(第3話)" title="心愛的引退生活×陽痿×夢魔(第3話)" onclick='Gtag.gtagData([{&quot;id&quot;:190800,&quot;name&quot;:&quot;\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c3\u8a71)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u6085\u6587\u793e&quot;,&quot;variant&quot;:&quot;BL\u6f2b\u756b&quot;,&quot;sale_price&quot;:39,&quot;price&quot;:39,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}],"select_content","熱門新書");'>
+            <div class="bookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://taiwan-image.bookwalker.com.tw/product/190800/190800_4_mask.jpg"
+                    class="bookbor lozad"
+                    data-placeholder-background="white"
+                    style="max-width: 104px; max-height: 147px;"
+                    alt="心愛的引退生活×陽痿×夢魔(第3話)" data-controller="gTag" data-gTag-block-value="熱門新書" data-gTag-product-value="[{&quot;id&quot;:190800,&quot;name&quot;:&quot;\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c3\u8a71)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u6085\u6587\u793e&quot;,&quot;variant&quot;:&quot;BL\u6f2b\u756b&quot;,&quot;sale_price&quot;:39,&quot;price&quot;:39,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}]" title="心愛的引退生活×陽痿×夢魔(第3話)">
+            </div>
+
+                            <div class="lablename" >
+					<img src="/images/p_img/lable1.png" title="已完結"> 
+                </div>
+            
+            <h4 class="bookname" >心愛的引退生活×陽痿×夢魔(第3話)</h4>
+            <h5 class="booknamesub" >
+                                    鶴子
+                            </h5>
+            <p class='hidden'>
+                            </p>
+            <h5 class="bprice" >39元</h5>
+        </a>
+    </div>
+</div>
+                                <div class="book_package">
+    <div class="bookItemHover">
+        <p class="cat-label">漫畫</p><!--書籍分類：移除圖片改為文字-->
+        <a href="#" class="bookHoverCover" target="_blank" alt="" title=""></a><!--新增class名稱 bookHoverCover-->
+        <ul data-controller="cart">
+            
+                            <li id="add_cart190802" class="btnBookItemCart "
+                    data-action="click->cart#add" data-gtag='[{"id":190802,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c5\u8a71)","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]'  data-product_id="[190802]">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cart_word190802">
+                        
+                                                    放入購物車
+                                            </span>
+                </li>
+                
+                                <li class="btnBookItemReview" data-action="click->cart#read" data-gtag='[{"id":190802,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c5\u8a71)","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]' onclick="location.href='https://www.bookwalker.com.tw/browserViewer/190802/trial';">
+                                        <i class="bwi-read"></i> <span>試閱</span>
+                                    </li><!--li的class名稱改為 btnBookItemReview-->
+                                <!--li的class名稱改為 btnBookItemReview-->
+                
+
+                
+                <li id="add_wish190802" class="btnBookItemWish "
+                    data-action="click->cart#wish" data-gtag='[{"id":190802,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c5\u8a71)","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]'  data-product_id="[190802]">
+                <i class="fa fa-heart"></i>
+                </li>
+                
+
+                    </ul>
+    </div>
+    
+    <div class="bookside" >
+                    </div>
+    
+    <div class="bookitem">
+        <a href="https://www.bookwalker.com.tw/product/190802" target="_blank" alt="心愛的引退生活×陽痿×夢魔(第5話)" title="心愛的引退生活×陽痿×夢魔(第5話)" onclick='Gtag.gtagData([{&quot;id&quot;:190802,&quot;name&quot;:&quot;\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c5\u8a71)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u6085\u6587\u793e&quot;,&quot;variant&quot;:&quot;BL\u6f2b\u756b&quot;,&quot;sale_price&quot;:39,&quot;price&quot;:39,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}],"select_content","熱門新書");'>
+            <div class="bookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://taiwan-image.bookwalker.com.tw/product/190802/190802_4_mask.jpg"
+                    class="bookbor lozad"
+                    data-placeholder-background="white"
+                    style="max-width: 104px; max-height: 147px;"
+                    alt="心愛的引退生活×陽痿×夢魔(第5話)" data-controller="gTag" data-gTag-block-value="熱門新書" data-gTag-product-value="[{&quot;id&quot;:190802,&quot;name&quot;:&quot;\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c5\u8a71)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u6085\u6587\u793e&quot;,&quot;variant&quot;:&quot;BL\u6f2b\u756b&quot;,&quot;sale_price&quot;:39,&quot;price&quot;:39,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}]" title="心愛的引退生活×陽痿×夢魔(第5話)">
+            </div>
+
+                            <div class="lablename" >
+					<img src="/images/p_img/lable1.png" title="已完結"> 
+                </div>
+            
+            <h4 class="bookname" >心愛的引退生活×陽痿×夢魔(第5話)</h4>
+            <h5 class="booknamesub" >
+                                    鶴子
+                            </h5>
+            <p class='hidden'>
+                            </p>
+            <h5 class="bprice" >39元</h5>
+        </a>
+    </div>
+</div>
+                                <div class="book_package">
+    <div class="bookItemHover">
+        <p class="cat-label">漫畫</p><!--書籍分類：移除圖片改為文字-->
+        <a href="#" class="bookHoverCover" target="_blank" alt="" title=""></a><!--新增class名稱 bookHoverCover-->
+        <ul data-controller="cart">
+            
+                            <li id="add_cart190803" class="btnBookItemCart "
+                    data-action="click->cart#add" data-gtag='[{"id":190803,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c6\u8a71)\u5b8c","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]'  data-product_id="[190803]">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cart_word190803">
+                        
+                                                    放入購物車
+                                            </span>
+                </li>
+                
+                                <li class="btnBookItemReview" data-action="click->cart#read" data-gtag='[{"id":190803,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c6\u8a71)\u5b8c","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]' onclick="location.href='https://www.bookwalker.com.tw/browserViewer/190803/trial';">
+                                        <i class="bwi-read"></i> <span>試閱</span>
+                                    </li><!--li的class名稱改為 btnBookItemReview-->
+                                <!--li的class名稱改為 btnBookItemReview-->
+                
+
+                
+                <li id="add_wish190803" class="btnBookItemWish "
+                    data-action="click->cart#wish" data-gtag='[{"id":190803,"name":"\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c6\u8a71)\u5b8c","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]'  data-product_id="[190803]">
+                <i class="fa fa-heart"></i>
+                </li>
+                
+
+                    </ul>
+    </div>
+    
+    <div class="bookside" >
+                    </div>
+    
+    <div class="bookitem">
+        <a href="https://www.bookwalker.com.tw/product/190803" target="_blank" alt="心愛的引退生活×陽痿×夢魔(第6話)完" title="心愛的引退生活×陽痿×夢魔(第6話)完" onclick='Gtag.gtagData([{&quot;id&quot;:190803,&quot;name&quot;:&quot;\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c6\u8a71)\u5b8c&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u6085\u6587\u793e&quot;,&quot;variant&quot;:&quot;BL\u6f2b\u756b&quot;,&quot;sale_price&quot;:39,&quot;price&quot;:39,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}],"select_content","熱門新書");'>
+            <div class="bookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://taiwan-image.bookwalker.com.tw/product/190803/190803_4_mask.jpg"
+                    class="bookbor lozad"
+                    data-placeholder-background="white"
+                    style="max-width: 104px; max-height: 147px;"
+                    alt="心愛的引退生活×陽痿×夢魔(第6話)完" data-controller="gTag" data-gTag-block-value="熱門新書" data-gTag-product-value="[{&quot;id&quot;:190803,&quot;name&quot;:&quot;\u5fc3\u611b\u7684\u5f15\u9000\u751f\u6d3b\u00d7\u967d\u75ff\u00d7\u5922\u9b54(\u7b2c6\u8a71)\u5b8c&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u6085\u6587\u793e&quot;,&quot;variant&quot;:&quot;BL\u6f2b\u756b&quot;,&quot;sale_price&quot;:39,&quot;price&quot;:39,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}]" title="心愛的引退生活×陽痿×夢魔(第6話)完">
+            </div>
+
+                            <div class="lablename" >
+					<img src="/images/p_img/lable1.png" title="已完結"> 
+                </div>
+            
+            <h4 class="bookname" >心愛的引退生活×陽痿×夢魔(第6話)完</h4>
+            <h5 class="booknamesub" >
+                                    鶴子
+                            </h5>
+            <p class='hidden'>
+                            </p>
+            <h5 class="bprice" >39元</h5>
+        </a>
+    </div>
+</div>
+                                <div class="book_package">
+    <div class="bookItemHover">
+        <p class="cat-label">漫畫</p><!--書籍分類：移除圖片改為文字-->
+        <a href="#" class="bookHoverCover" target="_blank" alt="" title=""></a><!--新增class名稱 bookHoverCover-->
+        <ul data-controller="cart">
+            
+                            <li id="add_cart186780" class="btnBookItemCart "
+                    data-action="click->cart#add" data-gtag='[{"id":186780,"name":"\u8c5a\u9f20\u770b\u4e0d\u898b\u7c60\u5b50\u5916\u7684\u5922\u60f3(\u7b2c6\u8a71)","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]'  data-product_id="[186780]">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cart_word186780">
+                        
+                                                    放入購物車
+                                            </span>
+                </li>
+                
+                                <li class="btnBookItemReview btnDisabled">
+                                        <i class="bwi-read"></i> <span>無試閱</span>
+                                    </li>
+                                <!--li的class名稱改為 btnBookItemReview-->
+                
+
+                
+                <li id="add_wish186780" class="btnBookItemWish "
+                    data-action="click->cart#wish" data-gtag='[{"id":186780,"name":"\u8c5a\u9f20\u770b\u4e0d\u898b\u7c60\u5b50\u5916\u7684\u5922\u60f3(\u7b2c6\u8a71)","category":"\u6f2b\u756b","brand":"\u6085\u6587\u793e","variant":"BL\u6f2b\u756b","sale_price":39,"price":39,"currency":"TWD","quantity":1}]'  data-product_id="[186780]">
+                <i class="fa fa-heart"></i>
+                </li>
+                
+
+                    </ul>
+    </div>
+    
+    <div class="bookside" >
+                    </div>
+    
+    <div class="bookitem">
+        <a href="https://www.bookwalker.com.tw/product/186780" target="_blank" alt="豚鼠看不見籠子外的夢想(第6話)" title="豚鼠看不見籠子外的夢想(第6話)" onclick='Gtag.gtagData([{&quot;id&quot;:186780,&quot;name&quot;:&quot;\u8c5a\u9f20\u770b\u4e0d\u898b\u7c60\u5b50\u5916\u7684\u5922\u60f3(\u7b2c6\u8a71)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u6085\u6587\u793e&quot;,&quot;variant&quot;:&quot;BL\u6f2b\u756b&quot;,&quot;sale_price&quot;:39,&quot;price&quot;:39,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}],"select_content","熱門新書");'>
+            <div class="bookcover">
+                <img
+                
+                                    restricted_status="1"
+                                    
+                    data-src="https://taiwan-image.bookwalker.com.tw/product/186780/186780_4_mask.jpg"
+                    class="bookbor lozad"
+                    data-placeholder-background="white"
+                    style="max-width: 104px; max-height: 147px;"
+                    alt="豚鼠看不見籠子外的夢想(第6話)" data-controller="gTag" data-gTag-block-value="熱門新書" data-gTag-product-value="[{&quot;id&quot;:186780,&quot;name&quot;:&quot;\u8c5a\u9f20\u770b\u4e0d\u898b\u7c60\u5b50\u5916\u7684\u5922\u60f3(\u7b2c6\u8a71)&quot;,&quot;category&quot;:&quot;\u6f2b\u756b&quot;,&quot;brand&quot;:&quot;\u6085\u6587\u793e&quot;,&quot;variant&quot;:&quot;BL\u6f2b\u756b&quot;,&quot;sale_price&quot;:39,&quot;price&quot;:39,&quot;currency&quot;:&quot;TWD&quot;,&quot;quantity&quot;:1,&quot;list_name&quot;:&quot;\u71b1\u9580\u65b0\u66f8&quot;}]" title="豚鼠看不見籠子外的夢想(第6話)">
+            </div>
+
+                            <div class="lablename" >
+					
+                </div>
+            
+            <h4 class="bookname" >豚鼠看不見籠子外的夢想(第6話)</h4>
+            <h5 class="booknamesub" >
+                                    理原
+                            </h5>
+            <p class='hidden'>
+                            </p>
+            <h5 class="bprice" >39元</h5>
+        </a>
+    </div>
+</div>
+                            </div>
+    </div>
+</div>
+                                                                                                <div class="listbox">
+                            <div class="inner">
+                                <div class="row mar0pad0">
+                                    <div class="col-md-2 col-lg-2 select12 mar0pad0"></div>
+                                    <div class="col-md-12 col-lg-12 text-center pagebar" style="position:initial">
+    	<nav>
+            <ul class="bw_pagination text-center">
+                
+                                    <li class="disabled"><span> </span></li>
+                                                                
+                
+                
+        		                                                                        <li><span class="active">1</span></li>
+                                                                                                                                    <li><a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;page=2">2</a></li>
+                                                                                                                                    <li><a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;page=3">3</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                    <li class="disabled hidden-xs"><span>...</span></li>
+                                                    <li class="hidden-xs"><a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;page=16">16</a></li>
+                                
+                                    <li class= "rotateimg" ><a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;page=2" rel="next"><img
+    					src="/images/p_img/pagination_arrownext.png"></a></li>
+                            </ul>
+        </nav>
+    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                                                </div><!-- ./bw_main2 -->
+
+            <div class="bw_aside2" >
+            
+            <!-- 類別-->
+<div class="asidebox">
+    <div class="boxtitle2"><span class="topic"><i class="fa fa-search"></i> 全部類別</span></div>
+    <div class="aside_inner">
+        <ul class="search_cate">
+                        <li>
+                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;m=2">漫畫 (250)</a>
+                            </li>
+                    </ul>
+    </div>
+</div>
+<!-- 閱讀方式-->
+<!-- ./閱讀方式-->
+<!-- 類別-->
+<!-- ./類別-->
+<!-- 作者-->
+<div class="asidebox">
+    <div class="boxtitle"><span class="topic">作者</span></div>
+    <div class="aside_inner">
+        <div id="search_author_ten">
+            <ul class="search_cate">
+                                 <li>
+                                        <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=SAICHIKOU">SAICHIKOU (8)</a>
+                                        </li>
+                                                         <li>
+                                        <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=gentlemennakamura">gentlemennakamura (7)</a>
+                                        </li>
+                                                         <li>
+                                        <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=KomaiChihiro">KomaiChihiro (6)</a>
+                                        </li>
+                                                         <li>
+                                        <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E9%B6%B4%E5%AD%90">鶴子 (6)</a>
+                                        </li>
+                                                         <li>
+                                        <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=Mitsunami">Mitsunami (5)</a>
+                                        </li>
+                                                         <li>
+                                        <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=MiyakoTsuzuki">MiyakoTsuzuki (5)</a>
+                                        </li>
+                                                         <li>
+                                        <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=Su">Su (5)</a>
+                                        </li>
+                                                         <li>
+                                        <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=yuri">yuri (5)</a>
+                                        </li>
+                                                         <li>
+                                        <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E6%B2%99%E6%9D%91%E5%BB%A3%E6%98%8E">沙村廣明 (5)</a>
+                                        </li>
+                                                         <li>
+                                        <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E6%BB%9D%E5%B7%9D%E5%BB%89%E6%B2%BB">滝川廉治 (5)</a>
+                                        </li>
+                                                         <li>
+                                        <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E9%99%B6%E5%BB%B6%E3%83%AA%E3%83%A5%E3%82%A6">陶延リュウ (5)</a>
+                                        </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+        </div>
+        <div id="author_get_more" style="display:none;">
+            <ul class="search_cate">
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=SAICHIKOU">SAICHIKOU (8)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=gentlemennakamura">gentlemennakamura (7)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=KomaiChihiro">KomaiChihiro (6)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E9%B6%B4%E5%AD%90">鶴子 (6)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=Mitsunami">Mitsunami (5)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=MiyakoTsuzuki">MiyakoTsuzuki (5)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=Su">Su (5)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=yuri">yuri (5)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E6%B2%99%E6%9D%91%E5%BB%A3%E6%98%8E">沙村廣明 (5)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E6%BB%9D%E5%B7%9D%E5%BB%89%E6%B2%BB">滝川廉治 (5)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E9%99%B6%E5%BB%B6%E3%83%AA%E3%83%A5%E3%82%A6">陶延リュウ (5)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E3%81%82%E3%81%B6%E3%81%8F">あぶく (4)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E3%81%95%E3%81%8F%E3%82%89%E8%92%BC">さくら蒼 (4)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=PIBI">PIBI (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E3%82%B7%E3%83%AB%E3%82%A8%E3%83%83%E3%83%88%E3%81%95%E3%81%8F%E3%82%89">シルエットさくら (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E3%83%8A%E3%82%B4%E3%83%AA%E3%83%A6%E3%82%A6%E3%82%AD">ナゴリユウキ (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E4%B8%89%E7%A7%8B%E7%B8%8B">三秋縋 (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E5%90%B3%E9%87%87%E8%92%A8">吳采蒨 (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E5%9D%82%E8%A5%BF%E3%81%82%E3%81%8D%E3%82%89">坂西あきら (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E5%A4%8F%E6%9C%AC%E5%A4%95%E5%AD%90">夏本夕子 (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E5%B0%8F%E5%A4%AA%E5%88%80%E5%8F%B3%E4%BA%AC">小太刀右京 (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E5%B2%B8%E6%9C%AC%E6%96%89%E5%8F%B2">岸本斉史 (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E5%B9%B3%E5%81%A5%E5%8F%B2">平健史 (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E5%BA%AD%E5%92%B2%E3%81%B4%E3%82%87%E3%82%93">庭咲ぴょん (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E6%99%82%E8%A8%88%E3%83%AB%E3%83%BC%E3%82%B3">時計ルーコ (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E6%B1%A0%E6%9C%AC%E5%B9%B9%E9%9B%84">池本幹雄 (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E7%94%B0%E5%8F%A3%E5%9B%81%E4%B8%80">田口囁一 (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E8%BC%95%E9%83%A8%E7%B6%A0%E5%A4%A2">輕部綠夢 (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E9%87%8E%E8%8A%B1%E3%81%95%E3%81%8A%E3%82%8A">野花さおり (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E9%B3%A5%E5%B1%B1%E6%98%8E">鳥山明 (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=BANCO">BANCO (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=Chugong">Chugong (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=DUBU%28REDICESTUDIO%29">DUBU(REDICESTUDIO) (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=KakaoEntertainmentTaiwan">KakaoEntertainmentTaiwan (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=hacone">hacone (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=kanipan">kanipan (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E3%81%8B%E3%82%93%E3%81%96%E3%81%8D%E3%81%B2%E3%82%8D">かんざきひろ (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E3%81%8D%E3%81%BF%E3%81%8A%E3%81%9F%E3%81%BE%E3%81%93">きみおたまこ (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E3%81%8F%E3%81%99%E3%81%BF%E6%9D%8E%E5%A4%AE">くすみ李央 (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E3%81%93%E3%82%8D%E3%81%99%E3%81%91">ころすけ (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E3%81%99%E3%83%BC%E3%81%B1%E3%83%BC%E3%81%9E%E3%82%93%E3%81%B3">すーぱーぞんび (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E3%81%AF%E3%82%8B%E3%81%8B%E3%82%8F%E7%89%A7">はるかわ牧 (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E3%81%B1%E3%82%89%E3%82%89%E3%82%93">ぱららん (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E3%81%B2%E3%81%B3%E3%81%8D%E6%BE%AA">ひびき澪 (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E3%83%8A%E3%83%8A%E3%83%88%E3%81%AA%E3%81%AA">ナナトなな (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E3%83%9C%E3%83%AB%E3%83%86%E3%83%BC%E3%82%B8">ボルテージ (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E3%83%9F%E3%83%9E">ミマ (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E3%83%A6%E3%83%BC%E3%83%AA">ユーリ (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E4%B8%80%E7%AD%89%E7%B1%B3">一等米 (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;a=%E4%B8%83%E8%89%B2%E9%A2%A8%E9%A6%99">七色風香 (2)</a>
+                </li>
+                            </ul>
+        </div>
+                <p id="author_more"><a class="btn board_more"
+            data-controller="leftbcr" data-action="click->leftbcr#get_more" data-id="author_get_more" data-more_block="author_more" data-default_ten="search_author_ten">
+            看更多 <i class="fa fa-caret-down fa-rotate-270"></i></a></p>
+            </div>
+</div>
+<!-- ./作者-->
+<!-- 系列-->
+<div class="asidebox">
+    <div class="boxtitle"><span class="topic">系列</span></div>
+    <div class="aside_inner">
+        <div id="search_series_ten">
+            <ul class="search_cate">
+                                                                                                                <li>
+                                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=15888">和溫柔處男結婚後，發現他其實是個不得了的肉食系抖Ｓ。 (8)</a>
+                                </li>
+                                                                                                                                                                                        <li>
+                                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=14728">異世界摔角手．真樹人 (7)</a>
+                                </li>
+                                                                                                                                                                                        <li>
+                                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=22012">無法被滿足，無法去抑制 (6)</a>
+                                </li>
+                                                                                                                                                                                        <li>
+                                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23913">心愛的引退生活×陽痿×夢魔 (6)</a>
+                                </li>
+                                                                                                                                                                                        <li>
+                                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=18461">高谷君正在單戀課長中 (5)</a>
+                                </li>
+                                                                                                                                                                                        <li>
+                                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=18603">兩人爸爸 (5)</a>
+                                </li>
+                                                                                                                                                                                        <li>
+                                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23857">無限住人~幕末之章~ (5)</a>
+                                </li>
+                                                                                                                                                                                        <li>
+                                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=17977">狼大人專情的霸道之愛 (4)</a>
+                                </li>
+                                                                                                                                                                                        <li>
+                                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=22241">意料之外的戀愛 (3)</a>
+                                </li>
+                                                                                                                                                                                        <li>
+                                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23476">七龍珠彩色漫畫 少年篇 (3)</a>
+                                </li>
+                                                                                                                                                                                        <li>
+                                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23870">透過肌膚接觸向我講述你 (3)</a>
+                                </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+        </div>
+        <div id="series_get_more" style="display:none;">
+            <ul class="search_cate">
+                                                            <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=15888">和溫柔處男結婚後，發現他其實是個不得了的肉食系抖Ｓ。 (8)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=14728">異世界摔角手．真樹人 (7)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=22012">無法被滿足，無法去抑制 (6)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23913">心愛的引退生活×陽痿×夢魔 (6)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=18461">高谷君正在單戀課長中 (5)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=18603">兩人爸爸 (5)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23857">無限住人~幕末之章~ (5)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=17977">狼大人專情的霸道之愛 (4)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=22241">意料之外的戀愛 (3)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23476">七龍珠彩色漫畫 少年篇 (3)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23870">透過肌膚接觸向我講述你 (3)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23871">身為牛郎的我竟然被抖S的金主客人開發了！ (3)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23872">性慾婚姻～精力旺盛的丈夫與我的狂野性愛 (3)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23873">「積蓄得越多越是難耐…又要…高潮了！」～在波利尼西亞性交中將巨物插入後 (3)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23874">發情兔子的淫蕩報恩 (3)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23875">失敗的寵物～撿到的男人竟是一個舔技高超的野獸 (3)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23905">BORUTO-SAIKYO DASH GENERATIONS-最強狂奔世代 (3)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23907">以一年一萬圓的價格，賣掉我剩餘的壽命。 (3)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=14861">C.M.B.森羅博物館之事件目錄 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=15490">猛男課長的SEX按摩～超強技術下高潮迭起的新人OL… (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=15554">淫無止境的職員旅行「我被自己的青梅竹馬插進去了…！」 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=17174">「還能再高潮3次吧？」丈夫沒回家，人妻被精力無限的小叔子弄得高潮不斷 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=17367">新常態 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=18103">即使妳將其稱為愛 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=18252">姐姐活 -被她包養- (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=20363">帳篷裡竟然…正在激情SEX！？~在露營中爛醉如泥，一直到天亮… (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=20894">我的妹妹哪有這麼可愛！ 綾瀨if (漫畫) (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=21668">告別處女的性愛，延長戰～上司的愛撫可並不止於一晚 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=21935">為期一週的NTR性愛～被人渣青梅竹馬戲弄到高潮… (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=22245">我獨自升級  漫畫版 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=22374">感謝對戰。 ～大小姐才不玩格鬥遊戲～ (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=22433">離開A級隊伍的我，和從前的弟子往迷宮深處邁進 (漫畫) (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=22580">黑瀨君脫衣後變身猛獸。給予滿足和肯定的猛烈性愛 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=22752">難逃哥哥的魔掌！身為處男，失去了處女之身 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=22755">學生是我的菜，好想要被他擁抱！ (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23087">腹黑執事的色情調教～我無法反抗抖S的他 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23088">再來一次那天的吻 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23089">腹黑少爺玩弄愛妻嬌喘連連～契約婚姻是糖衣陷阱 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23090">深夜加班～肉食後輩的不斷高潮語言進攻SEX (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23091">淫魔先生！可以和我做愛嗎？～當執拗的二人捨棄理性後 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23092">色氣滿滿的你讓人想緊咬不放 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23104">現視研～現代視覺研究會～ (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23293">賺到！住院性活～來探病的巨乳妹們都說要和我偷偷做愛 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23301">豚鼠看不見籠子外的夢想 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23307">魔族威爾海姆從零開始的戀愛戰術 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23856">渴望的果實 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23860">在異世界旅途中拯救我的是一名少年殺手 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23885">在祕密的早晨裡吻如雨下 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23902">GLOW!耀眼青春 (2)</a>
+                        </li>
+                                                                                <li>
+                            <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;series=23904">25歲的Big Baby (2)</a>
+                        </li>
+                                                </ul>
+        </div>
+                <p id="series_more"><a class="btn board_more"
+            data-controller="leftbcr" data-action="click->leftbcr#get_more" data-id="series_get_more" data-more_block="series_more" data-default_ten="search_series_ten">
+            看更多 <i class="fa fa-caret-down fa-rotate-270"></i></a></p>
+            </div>
+</div>
+<!-- ./系列-->
+<!-- 出版社-->
+<div class="asidebox">
+    <div class="boxtitle"><span class="topic">出版社</span></div>
+    <div class="aside_inner">
+        <div id="search_vendor_ten">
+            <ul class="search_cate">
+                                 <li>
+                                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=427">悅文社 (135)</a>
+                                        </li>
+                                                         <li>
+                                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=17">東立出版社 (52)</a>
+                                        </li>
+                                                         <li>
+                                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=4">青文出版 (25)</a>
+                                        </li>
+                                                         <li>
+                                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=1">台灣角川 (16)</a>
+                                        </li>
+                                                         <li>
+                                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=103">長鴻出版社 (7)</a>
+                                        </li>
+                                                         <li>
+                                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=158">未來數位 (3)</a>
+                                        </li>
+                                                         <li>
+                                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=431">d/art (3)</a>
+                                        </li>
+                                                         <li>
+                                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=499">平心出版 (3)</a>
+                                        </li>
+                                                         <li>
+                                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=181">威向 (2)</a>
+                                        </li>
+                                                         <li>
+                                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=498">知翎文化 (2)</a>
+                                        </li>
+                                                         <li>
+                                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=26">尖端出版 (1)</a>
+                                        </li>
+                                                                                        </ul>
+        </div>
+        <div id="vendor_get_more" style="display:none;">
+            <ul class="search_cate">
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=427">悅文社 (135)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=17">東立出版社 (52)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=4">青文出版 (25)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=1">台灣角川 (16)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=103">長鴻出版社 (7)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=158">未來數位 (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=431">d/art (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=499">平心出版 (3)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=181">威向 (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=498">知翎文化 (2)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=26">尖端出版 (1)</a>
+                </li>
+                                <li>
+                    <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;v=726">集合！RENDEZVOUS (1)</a>
+                </li>
+                            </ul>
+        </div>
+                <p id="vendor_more"><a class="btn board_more"
+            data-controller="leftbcr" data-action="click->leftbcr#get_more" data-id="vendor_get_more" data-more_block="vendor_more" data-default_ten="search_vendor_ten">
+            看更多 <i class="fa fa-caret-down fa-rotate-270"></i></a></p>
+            </div>
+</div>
+<!-- ./出版社-->
+<!-- 價格-->
+<div class="asidebox">
+    <div class="boxtitle"><span class="topic">價格</span></div>
+    <div class="aside_inner">
+        <div id="search_price_ten">
+            <ul class="search_cate">
+                                <li>
+                                        <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;p=1">免費 (1)</a>
+                                    </li>
+                                <li>
+                                        <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;p=2">1元~49元 (134)</a>
+                                    </li>
+                                <li>
+                                        <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;p=3">50元~99元 (57)</a>
+                                    </li>
+                                <li>
+                                        <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;p=4">100元~199元 (44)</a>
+                                    </li>
+                                <li>
+                                        <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;p=5">200元~299元 (12)</a>
+                                    </li>
+                                <li>
+                                        <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;p=6">300元以上 (2)</a>
+                                    </li>
+                            </ul>
+        </div>
+    </div>
+</div>
+<!-- ./價格-->
+<!-- 發售日-->
+<div class="asidebox">
+    <div class="boxtitle"><span class="topic">發售日</span></div>
+    <div class="aside_inner">
+        <ul class="search_cate">
+                        <li>
+                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;d=1">近期新書 (62)</a>
+                            </li>
+                        <li>
+                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;d=2">1週內 (212)</a>
+                            </li>
+                        <li>
+                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;d=3">1個月內 (250)</a>
+                            </li>
+                        <li>
+                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;d=4">3個月內 (250)</a>
+                            </li>
+                        <li>
+                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;d=5">半年內 (250)</a>
+                            </li>
+                        <li>
+                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;d=6">1年內 (250)</a>
+                            </li>
+                        <li>
+                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;d=7">超過1年 (250)</a>
+                            </li>
+                    </ul>
+    </div>
+</div>
+<!-- ./發售日-->
+<!-- 年齡分級-->
+<div class="asidebox">
+    <div class="boxtitle"><span class="topic">年齡分級</span></div>
+    <div class="aside_inner">
+        <ul class="search_cate">
+                        <li>
+                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;restricted=1">限制級 (144)</a>
+                            </li>
+                        <li>
+                                <a href="https://www.bookwalker.com.tw/block/3?order=sell_desc&amp;restricted=2">全年齡 (106)</a>
+                            </li>
+                    </ul>
+    </div>
+</div>
+<!-- ./年齡分級-->
+
+            
+            <!-- 推薦主題&活動-->
+<div class="asidebox"  >
+
+    <div class="boxtitle"><span class="topic">推薦主題&amp;活動</span></div>
+    <div class="aside_innerad">
+                            <div class="aside_banner">
+                    <a href="https://cp.bookwalker.com.tw/event/2024/20240308_asa_kjs" target="_blank">
+                        <img data-placeholder-background="white" data-src="https://taiwan-image.bookwalker.com.tw/banner/pc/400/banner400_28448.gif" alt="3月Asa讀書會全新活動" title="3月Asa讀書會全新活動" class="ad220 ad220_aside lozad" style="max-width:275px;max-height:100px;">
+                    </a>
+                    <h4>
+                        3月Asa讀書會全新活動<br />
+                        <a href="https://cp.bookwalker.com.tw/event/2024/20240308_asa_kjs" target="_blank">3/8-3/31 領券看直播、抽點數！</a>
+                    </h4>
+                </div>
+                            <div class="aside_banner">
+                    <a href="https://www.bookwalker.com.tw/event/20240308" target="_blank">
+                        <img data-placeholder-background="white" data-src="https://taiwan-image.bookwalker.com.tw/banner/pc/400/banner400_28446.gif" alt="這就是我要的戀愛喜劇" title="這就是我要的戀愛喜劇" class="ad220 ad220_aside lozad" style="max-width:275px;max-height:100px;">
+                    </a>
+                    <h4>
+                        這就是我要的戀愛喜劇<br />
+                        <a href="https://www.bookwalker.com.tw/event/20240308" target="_blank">3/8-3/28 精選漫畫輕小說79折起</a>
+                    </h4>
+                </div>
+                            <div class="aside_banner">
+                    <a href="https://www.bookwalker.com.tw/event/cite20240221" target="_blank">
+                        <img data-placeholder-background="white" data-src="https://taiwan-image.bookwalker.com.tw/banner/pc/400/banner400_28439.webp" alt="《少女的安魂歌》延伸書展" title="《少女的安魂歌》延伸書展" class="ad220 ad220_aside lozad" style="max-width:275px;max-height:100px;">
+                    </a>
+                    <h4>
+                        《少女的安魂歌》延伸書展<br />
+                        <a href="https://www.bookwalker.com.tw/event/cite20240221" target="_blank">單本88折/2本以上85折</a>
+                    </h4>
+                </div>
+                            <div class="aside_banner">
+                    <a href="https://www.bookwalker.com.tw/event/cite20240307/4996" target="_blank">
+                        <img data-placeholder-background="white" data-src="https://taiwan-image.bookwalker.com.tw/banner/pc/400/banner400_28435.webp" alt="《陰摩羅鬼之瑕》延伸書展" title="《陰摩羅鬼之瑕》延伸書展" class="ad220 ad220_aside lozad" style="max-width:275px;max-height:100px;">
+                    </a>
+                    <h4>
+                        《陰摩羅鬼之瑕》延伸書展<br />
+                        <a href="https://www.bookwalker.com.tw/event/cite20240307/4996" target="_blank">單本88折/2本以上85折</a>
+                    </h4>
+                </div>
+                            <div class="aside_banner">
+                    <a href="https://www.bookwalker.com.tw/event/20240307_rings" target="_blank">
+                        <img data-placeholder-background="white" data-src="https://taiwan-image.bookwalker.com.tw/banner/pc/400/banner400_28433.webp" alt="《托爾金傳說故事集》新書上市" title="《托爾金傳說故事集》新書上市" class="ad220 ad220_aside lozad" style="max-width:275px;max-height:100px;">
+                    </a>
+                    <h4>
+                        《托爾金傳說故事集》新書上市<br />
+                        <a href="https://www.bookwalker.com.tw/event/20240307_rings" target="_blank">4/12前 單書9折，套書85折</a>
+                    </h4>
+                </div>
+                    <div class="aside_banner">
+            <p><a class="btn btn-default board_more" href="https://www.bookwalker.com.tw/event">看更多 <i class="fa fa-caret-down fa-rotate-270"></i></a></p>
+        </div>
+    </div>
+
+</div>
+<!-- ./推薦主題&活動-->
+
+            
+            <div class="asidebox"  >
+        <div class="boxtitle"><span class="topic">社群連結</span></div>
+        <div class="aside_innerad">
+            <div class="social_list" >
+                <ul>
+                    <li ><a href="https://www.facebook.com/BOOKWALKER.tw" target="_blank"><img src="/images/social_fb.svg" data-src="/images/social_fb.svg" class="lozad" data-placeholder-background="white" alt="BOOKWALKER Facebook"></a></li>
+                    <li ><a href="https://www.facebook.com/groups/BOOKWALKERTW" target="_blank"><img src="/images/social_fb_group.svg" data-src="/images/social_fb_group.svg" class="lozad" data-placeholder-background="white" alt="BOOKWALKER Facebook社團"></a></li>
+                    <li ><a href="https://www.plurk.com/BOOKWALKER" target="_blank"><img src="/images/social_plurk.svg" data-src="/images/social_plurk.svg" class="lozad" data-placeholder-background="white" alt="BOOKWALKER Plurk"></a></li>
+                    <li ><a href="https://www.instagram.com/bookwalker_tw/" target="_blank"><img src="/images/social_ig.svg" data-src="/images/social_ig.svg" class="lozad" data-placeholder-background="white" alt="BOOKWALKER Instagram"></a></li>
+                    <li ><a href="https://line.me/R/ti/p/@wes8952w" target="_blank"><img src="/images/social_line.svg" data-src="/images/social_line.svg" class="lozad" data-placeholder-background="white" alt="BOOKWALKER Line"></a></li>
+                    <li ><a href="https://twitter.com/BOOKWALKER_TW?lang=zh-tw" target="_blank"><img src="/images/social_x.svg" data-src="/images/social_x.svg" data-placeholder-background="white" class="lozad" alt="BOOKWALKER X"></a></li>
+                    <li ><a href="https://www.youtube.com/@bookwalker_TW" target="_blank"><img src="/images/social_yt.svg" data-src="/images/social_yt.svg" data-placeholder-background="white" class="lozad" alt="BOOKWALKER YouTube"></a></li>
+                    <li ><a href="https://www.tiktok.com/@bookwalker_tw" target="_blank"><img src="/images/social_tiktok.svg" data-src="/images/social_tiktok.svg" data-placeholder-background="white" class="lozad" alt="BOOKWALKER TikTok"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+            </div><!-- ./bw_aside  -->
+
+            </div>
+</div><!-- barcenter bw_wmid2 -->
+        <form action="/old/cart/fast_pay" method="post" accept-charset="UTF-8" name="fast_pay_post" id="fast_pay_post" style="display: none;">
+    <input type="text" name="product_id"/>
+    <input type="text" name="pay_type"/>
+    <input type="text" name="give"/>
+    <input type="text" name="quantity"/>
+    <input type="text" name="_token" value=""/>
+</form>
+    </main>
+    <!--首頁側邊浮動廣告-->
+<div class="inxAdBox">
+    <div class="inxAdBtn"><img src="https://www.bookwalker.com.tw/images/ad_btn.svg" alt="優惠情報"></div>
+    <div class="inxAd" >
+        <div class="inxAdClose"><i class="bwi-cancel2" title="關閉優惠情報"></i></div>
+                <a href="https://cp.bookwalker.com.tw/event/2024/20240301/" onclick='Gtag.gtagData({
+                                                        "event_category": "click",
+                                                        "value": 1
+                                                        },"button","BOOK☆WALKER 愛情告解室X小高潮色計事務所");'>
+            <img class="lozad" data-placeholder-background="white" data-src="https://taiwan-image.bookwalker.com.tw/inxAd/15.png" alt="BOOK☆WALKER 愛情告解室X小高潮色計事務所" style="width:130px;height:182px;">
+        </a>
+            </div>
+</div>
+<!--./首頁側邊浮動廣告-->
+    <!--GoTop鈕-->
+<div class="mainGoTop" data-action="click->web--body#goTop"><i class="bwi-arrow-u3" title="回到頁面頂端"></i></div>
+    <!--footer用原本的套過來就可以=================================================================================================================-->
+<footer class="footerRwd">
+        <div class="footerW">
+            <div class="mapGroup">
+                <div class="mapTitle">會員服務<i class="bwi-arrow-d pcNOmBL arrow" aria-hidden="true"></i></div>
+                <div class="mapListJS" style="display: block;">
+                    <ul class="mapList">
+                                                <li class="mapJoin"><a href="https://www.bookwalker.com.tw/register">立即加入</a></li>
+                        <li><a href="https://www.bookwalker.com.tw/login">登入</a></li>
+                                                <li><a href="https://www.bookwalker.com.tw/member">個人專頁</a></li>
+                        <li><a href="https://www.bookwalker.com.tw/member/notice">會員通知</a></li>
+                        <li><a href="https://www.bookwalker.com.tw/selfapply">個人作者申請</a></li>
+                        <li class="mapApp">
+                            <span class="mapAppTitle">APP 下載<i class="bwi-arrow-d mNOpcINBL arrow" aria-hidden="true"></i></span>
+                            <div class="appIconJS" style="display: none;">
+                                <a href="https://apps.apple.com/tw/app/book-walker-dian-zi-shu/id1069284333?l=zh" target="_blank"><img src="/images/app_ios.svg" alt="BOOKWALKER ios APP下載" class="lozad" loading="lazy"></a>
+                                <a href="https://play.google.com/store/apps/details?id=tw.com.bookwalker" target="_blank"><img src="/images/app_android.svg" alt="BOOKWALKER android APP下載" class="lozad" loading="lazy"></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mapGroup">
+                <div class="mapTitle">書籍館別<i class="bwi-arrow-d pcNOmBL arrow" aria-hidden="true"></i></div>
+                <div class="mapListJS" style="display: block;">
+                    <ul class="mapList">
+                        <li><a href="/magazine">雜誌</a></li>
+                        <li><a href="/manga">漫畫</a></li>
+                        <li><a href="/scrollmanga">條漫</a></li>
+                        <li><a href="/lightnovel">輕小說</a></li>
+                        <li><a href="/fiction">文學小說</a></li>
+                        <li><a href="/nonfiction">一般實用書</a></li>
+                        <li><a href="/japanese">日文書</a></li>
+                        <li><a href="/restricted">限制級</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mapGroup">
+                <div class="mapTitle">人氣推薦<i class="bwi-arrow-d pcNOmBL arrow" aria-hidden="true"></i></div>
+                <div class="mapListJS" style="display: block;">
+                    <ul class="mapList">
+                        <li><a href="https://www.bookwalker.com.tw/search?order=sell_desc&amp;series_display=1&amp;d=1&amp;restricted=2">熱門新書</a></li>
+                        <li><a href="https://www.bookwalker.com.tw/vendor_list">出版社一覽</a></li>
+                        <li><a href="https://www.bookwalker.com.tw/leaderboard">排行榜</a></li>
+                        <li><a href="https://www.bookwalker.com.tw/event">主題活動</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mapGroup">
+                <div class="mapTitle">客戶服務<i class="bwi-arrow-d pcNOmBL arrow" aria-hidden="true"></i></div>
+                <div class="mapListJS" style="display: block;">
+                    <ul class="mapList">
+                        <li><a href="https://www.bookwalker.com.tw/announce">最新公告</a></li>
+                        <li><a href="https://www.bookwalker.com.tw/explanation">使用說明</a></li>
+                        <li><a href="https://www.bookwalker.com.tw/explanation/problem">常見問題</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mapGroup">
+                <div class="mapTitle">關於我們<i class="bwi-arrow-d pcNOmBL arrow" aria-hidden="true"></i></div>
+                <div class="mapListJS" style="display: block;">
+                    <ul class="mapList">
+                        <li><a href="/company">公司介紹</a></li>
+                        <li><a href="/company/media">媒體資料</a></li>
+                        <li><a href="https://www.104.com.tw/company/1a2x6bjb24" target="_blank">徵才資訊</a></li>
+                        <li><a href="/company/terms">服務條款</a></li>
+                        <li><a href="/company/privacy">隱私權政策</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mapGroup mapContact">
+                <div class="mapTitle">聯絡我們</div>
+                <ul class="mapList">
+                    <li><a href="https://www.bookwalker.com.tw/customer">聯繫客服</a></li>
+                    <li><a href="/company/contact">合作接洽</a></li>
+                    <li class="mapContactTime">服務時間：09:00-18:00<br>周一至周五，國定假日以外</li>
+                    <li class="mapAddress">台北市中山區松江路223號3樓<br>統一編號：42619455</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footerBottom">
+            <div class="footerInfo">
+                <ul class="footerSocial">
+                    <li><a href="https://www.facebook.com/BOOKWALKER.tw/" target="_blank"><img src="/images/social_fb.svg" alt="BOOKWALKER Facebook" loading="lazy"></a></li>
+                    <li><a href="https://www.facebook.com/groups/BOOKWALKERTW" target="_blank"><img src="/images/social_fb_group.svg" alt="BOOKWALKER Facebook社團" loading="lazy"></a></li>
+                    <li><a href="https://www.plurk.com/BOOKWALKER/" target="_blank"><img src="/images/social_plurk.svg" alt="BOOKWALKER Plurk" loading="lazy"></a></li>
+                    <li><a href="https://www.instagram.com/bookwalker_tw/" target="_blank"><img src="/images/social_ig.svg" alt="BOOKWALKER Instagram" loading="lazy"></a></li>
+                    <li><a href="https://page.line.me/wes8952w?openQrModal=true" target="_blank"><img src="/images/social_line.svg" alt="BOOKWALKER Line" loading="lazy"></a></li>
+                    <li><a href="https://twitter.com/BOOKWALKER_TW" target="_blank"><img src="/images/social_x.svg" alt="BOOKWALKER X" loading="lazy"></a></li>
+                    <li><a href="https://www.youtube.com/@bookwalker_TW" target="_blank"><img src="/images/social_yt.svg" alt="BOOKWALKER YouTube" loading="lazy"></a></li>
+                    <li><a href="https://www.tiktok.com/@bookwalker_tw" target="_blank"><img src="/images/social_tiktok.svg" alt="BOOKWALKER TikTok" loading="lazy"></a></li>
+                </ul>
+                <div class="footerCopyright">
+                    <a href="https://www.bookwalker.com.tw"><img src="/images/bw_logo.svg" alt="BOOK☆WALKER" class="footerLogo"></a>
+                    <p>
+                        台灣漫讀股份有限公司版權所有，未經許可不可轉載<br>
+                        Copyright © BOOKWALKER TAIWAN CO. Ltd. ALL rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--./footer用原本的套過來就可以=================================================================================================================-->
+    <script>
+    </script>
+    </body>
+    <script>
+        window.lazyLoadOptions = {
+            elements_selector: ".lozad",
+            unobserve_entered: true // Stop observing .horizContainer(s) after they entered
+        };
+        window.addEventListener(
+            "LazyLoad::Initialized",
+            function (event) {
+                window.lazyLoadInstance = event.detail.instance;
+            }, false);
+    </script>
+    <script async src="https://www.bookwalker.com.tw/lib/lazyload.min.js"></script>
+            <script type="text/javascript">
+            jQuery.get('https://www.cloudflare.com/cdn-cgi/trace', function(output) {
+                output = output.trim().split('\n').reduce(function(obj, pair) {
+                    pair = pair.split('=');
+                    return obj[pair[0]] = pair[1], obj;
+                }, {});
+                jQuery.ajax({
+                    method: "POST",
+                    url: "/cgi/cdn_trace",
+                    dataType: "json",
+                    data: output
+                });
+            });
+        </script>
+    </html>

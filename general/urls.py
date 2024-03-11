@@ -11,6 +11,7 @@ urlpatterns = [
     path('1111/<str:keyword>', job1111.Job1111View.as_view(), name='job1111'),
     path('518/<str:keyword>', job518.Job518View.as_view(), name='job518'),
     path('bookwalker-lightnovel', bookwalker.BookwalkerLightNovelView.as_view(), name='bookwalker_lightnovel'),
+    path('bookwalker-manga', bookwalker.BookwalkerMangaView.as_view(), name='bookwalker_manga'),
     path('cakeresume/<str:keyword>', cakeresume.CakeResumeView.as_view(), name='cakeresume'),
     path('dcard/board/<str:board>', dcard.DcardBoardView.as_view(), name='dcard_board'),
     path('dcard/main', dcard.DcardMainView.as_view(), name='dcard_main'),

@@ -61,6 +61,7 @@ We have set up a public service since I use it and you can test it as well, but 
 * https://feedgen.hasname.com/1111/devops
 * https://feedgen.hasname.com/518/devops
 * https://feedgen.hasname.com/bookwalker-lightnovel
+* https://feedgen.hasname.com/bookwalker-manga
 * https://feedgen.hasname.com/cakeresume/devops
 * https://feedgen.hasname.com/dcard/board/mood
 * https://feedgen.hasname.com/dcard/main

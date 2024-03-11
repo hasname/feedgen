@@ -5,6 +5,15 @@ import requests_mock
 class SmokeTestCase(TestCase):
     @requests_mock.mock()
     def test_bookwalker_lightnovel(self, m):
+        text = open(os.path.dirname(__file__) + '/html_bookwalker_manga.txt').read()
+        m.get('https://www.bookwalker.com.tw/block/3?order=sell_desc', text=text)
+
+        c = Client()
+        res = c.get('/bookwalker-manga')
+        self.assertEqual(res.status_code, 200)
+
+    @requests_mock.mock()
+    def test_bookwalker_lightnovel(self, m):
         text = open(os.path.dirname(__file__) + '/html_bookwalker_lightnovel.txt').read()
         m.get('https://www.bookwalker.com.tw/block/5?order=sell_desc', text=text)
 
