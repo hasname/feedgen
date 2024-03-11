@@ -22,18 +22,15 @@ class ShopeeView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        try:
-            proxy = services.ProxySocks5Service().process()
-            s = services.RequestsService().process()
+        proxy = services.ProxySocks5Service().process()
+        s = services.RequestsService().process()
 
-            if proxy is not None:
-                s.proxies = {'http': proxy, 'https': proxy}
+        if proxy is not None:
+            s.proxies = {'http': proxy, 'https': proxy}
 
-            r = s.get(url, headers={'Referer': referer})
-            body = json.loads(r.text)
-            items = body['items']
-        except:
-            return HttpResponse('Service Unavailable', status=503)
+        r = s.get(url, headers={'Referer': referer})
+        body = json.loads(r.text)
+        items = body['items']
 
         if not isinstance(items, list):
             items = []
