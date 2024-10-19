@@ -23,7 +23,7 @@ class Job104CompanyView(View):
         try:
             s = services.RequestsService().process()
 
-            r = s.get(url)
+            r = s.get(url, headers={'Referer': 'https://www.104.com.tw/'})
             items = json.loads(r.text)['data']
         except:
             items = []
@@ -74,7 +74,7 @@ class Job104View(View):
         try:
             s = services.RequestsService().process()
 
-            r = s.get(url)
+            r = s.get(url, headers={'Referer': 'https://www.104.com.tw/'})
             items = json.loads(r.text)['data']
         except:
             items = []
