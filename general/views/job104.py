@@ -2,8 +2,7 @@ from django.http import HttpResponse
 from django.views.generic import View
 import feedgen.feed
 import html
-import lxml.html
-import re
+import json
 
 from .. import services
 
@@ -11,7 +10,7 @@ class Job104CompanyView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://www.104.com.tw/jobs/search/?ro=0&kwop=7&keyword={}&order=16&asc=0&page=1&mode=s'.format(keyword)
+        url = 'https://www.104.com.tw/jobs/search/api/jobs?jobsource=index_s&keyword={}&mode=s&order=15&page=1&pagesize=20&searchJobs=1'.format(keyword)
 
         title = '104 公司搜尋 - {}'.format(keyword)
 
@@ -25,22 +24,20 @@ class Job104CompanyView(View):
             s = services.RequestsService().process()
 
             r = s.get(url)
-            body = lxml.html.fromstring(r.text)
+            items = json.loads(r.text)['data']
         except:
-            body = lxml.html.fromstring('<html></html>')
+            items = []
 
-        for item in body.cssselect('article.job-list-item'):
+        for item in items:
             try:
-                job_desc = item.cssselect('p.job-list-item__info')[0].text_content()
-                job_title = item.get('data-job-name')
+                job_desc = item['description']
+                job_title = item['jobName']
 
                 if keyword.lower() not in job_title.lower() and keyword.lower() not in job_desc.lower():
                     continue
 
-                job_company = item.get('data-cust-name')
-                job_company_url = item.cssselect('.b-block__left a[href*="/company/"]')[0].get('href')
-                job_company_url = re.sub(r'^//', 'https://', job_company_url)
-                job_company_url = re.sub(r'[?&]jobsource=\w*$', '', job_company_url)
+                job_company = item['custName']
+                job_company_url = item['link']['cust']
 
                 content = '<h3>{}</h3>'.format(
                     html.escape(job_company),
@@ -64,7 +61,7 @@ class Job104View(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://www.104.com.tw/jobs/search/?ro=0&kwop=7&keyword={}&order=16&asc=0&page=1&mode=s'.format(keyword)
+        url = 'https://www.104.com.tw/jobs/search/api/jobs?jobsource=index_s&keyword={}&mode=s&order=15&page=1&pagesize=20&searchJobs=1'.format(keyword)
 
         title = '104 搜尋 - {}'.format(keyword)
 
@@ -78,22 +75,20 @@ class Job104View(View):
             s = services.RequestsService().process()
 
             r = s.get(url)
-            body = lxml.html.fromstring(r.text)
+            items = json.loads(r.text)['data']
         except:
-            body = lxml.html.fromstring('<html></html>')
+            items = []
 
-        for item in body.cssselect('article.job-list-item'):
+        for item in items:
             try:
-                job_desc = item.cssselect('p.job-list-item__info')[0].text_content()
-                job_title = item.get('data-job-name')
+                job_desc = item['description']
+                job_title = item['jobName']
 
                 if keyword.lower() not in job_title.lower() and keyword.lower() not in job_desc.lower():
                     continue
 
-                job_company = item.get('data-cust-name')
-                job_url = item.cssselect('a.js-job-link')[0].get('href')
-                job_url = re.sub(r'^//', 'https://', job_url)
-                job_url = re.sub(r'[?&]jobsource=\w*$', '', job_url)
+                job_company = item['custName']
+                job_url = item['link']['job']
 
                 content = '<h3>{}</h3><pre>{}</pre>'.format(
                     html.escape(job_company),
