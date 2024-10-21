@@ -11,7 +11,7 @@ class Job104CompanyView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://www.104.com.tw/jobs/search/api/jobs?jobsource=index_s&keyword={}&mode=s&order=15&page=1&pagesize=20&searchJobs=1&_t='.format(keyword, time.time())
+        url = 'https://www.104.com.tw/jobs/search/api/jobs?jobsource=index_s&keyword={}&mode=s&order=15&page=1&pagesize=20&searchJobs=1&_t={}'.format(keyword, time.time())
 
         title = '104 公司搜尋 - {}'.format(keyword)
 
@@ -62,7 +62,7 @@ class Job104View(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://www.104.com.tw/jobs/search/api/jobs?jobsource=index_s&keyword={}&mode=s&order=15&page=1&pagesize=20&searchJobs=1&_t='.format(keyword, time.time())
+        url = 'https://www.104.com.tw/jobs/search/api/jobs?jobsource=index_s&keyword={}&mode=s&order=15&page=1&pagesize=20&searchJobs=1&_t={}'.format(keyword, time.time())
 
         title = '104 搜尋 - {}'.format(keyword)
 
