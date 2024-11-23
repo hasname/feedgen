@@ -459,6 +459,20 @@ htmlsoup = ["BeautifulSoup4"]
 source = ["Cython (>=3.0.11)"]
 
 [[package]]
+name = "lxml-html-clean"
+version = "0.4.1"
+description = "HTML cleaner from lxml project"
+optional = false
+python-versions = "*"
+files = [
+    {file = "lxml_html_clean-0.4.1-py3-none-any.whl", hash = "sha256:b704f2757e61d793b1c08bf5ad69e4c0b68d6696f4c3c1429982caf90050bcaf"},
+    {file = "lxml_html_clean-0.4.1.tar.gz", hash = "sha256:40c838bbcf1fc72ba4ce811fbb3135913017b27820d7c16e8bc412ae1d8bc00b"},
+]
+
+[package.dependencies]
+lxml = "*"
+
+[[package]]
 name = "pip"
 version = "24.3.1"
 description = "The PyPA recommended tool for installing Python packages."
@@ -723,4 +737,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "ad93fb63264ab3f1d7b9b11ba76cff59b372d29d4b5f8138ba6edab2e780e5ea"
+content-hash = "e4dd32867c93355ce024f95a7591be4cb1b89cfda2ddb7573b54a4a5fdc138c0"
