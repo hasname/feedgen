@@ -28,12 +28,16 @@ class PlurkSearchView(View):
         r = s.post(url, data={'query': keyword})
         body = json.loads(r.text)
 
+        users = body['users']
+
         for p in body['plurks']:
             url = 'https://www.plurk.com/p/' + base36.dumps(p['id'])
 
+            author = users[str(p['owner_id'])]['nick_name']
             content = self.str_clean(p['content'])
 
             entry = feed.add_entry()
+            entry.author(name=author)
             entry.content(content, type='CDATA')
             entry.id(url)
             entry.link(href=url)
