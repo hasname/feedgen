@@ -3,16 +3,16 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: python:3.9
+      - image: python:3.13
     steps:
       - checkout
       - restore_cache:
           keys:
-            - v1-deps-{{ checksum "poetry.lock" }}
+            - v1-deps-{{ checksum "uv.lock" }}
             - v1-deps
-      - run: pip install -U pip poetry==1.2.2
+      - run: pip install -U pip uv
       - save_cache:
-          key: v1-deps-{{ checksum "poetry.lock" }}
+          key: v1-deps-{{ checksum "uv.lock" }}
           paths:
             - /home/circleci/.cache/pypoetry/virtualenvs
       - run: make test
