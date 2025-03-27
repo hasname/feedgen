@@ -23,7 +23,7 @@ endif
 		--delete-after \
 		./ \
 		${DEPLOY_USER}@${DEPLOY_HOST}:~${DEPLOY_USER}/feedgen/
-	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "cd feedgen && ~/.pyenv/shims/poetry install && systemctl --user restart feedgen.service"
+	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "systemctl --user restart feedgen.service"
 
 run::
 	pkill -QUIT uwsgi; sleep 1; uv run uwsgi --ini uwsgi.ini > /dev/null 2>&1 &
