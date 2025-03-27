@@ -10,6 +10,13 @@ You need to set up `.env` first.  The sample environment file is in `.env.sample
 
 We use `uv` to manage the running environment along with `uwsgi` to run the uWSGI server, therefore you choose whatever you like to adopt these utilities.
 
+## Development
+
+There are two commands in GNUmakefile to help you develop:
+
+    make rundev
+    make test
+
 ## Update
 
 For `GNUmakefile.local`, you can set something like this:
