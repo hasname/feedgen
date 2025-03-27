@@ -3,4 +3,5 @@
 .dev.sqlite3
 .env
 .ruff_cache
+.venv
 GNUmakefile.local
