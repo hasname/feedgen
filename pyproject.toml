@@ -1,40 +1,37 @@
-[tool.poetry]
+[project]
 name = "feedgen_hasname"
 version = "0.2024.0311.0"
 description = "feedgen.hasname.com"
-
+authors = [{ name = "Gea-Suan Lin", email = "gslin@gslin.com" }]
+requires-python = "~=3.9"
+readme = "README.md"
 license = "MIT"
-
-authors = [
-    "Gea-Suan Lin <gslin@gslin.com>"
+keywords = ["feed"]
+dependencies = [
+    "base36",
+    "cssselect",
+    "django",
+    "django-service-objects",
+    "feedgen",
+    "lxml",
+    "lxml_html_clean",
+    "pip",
+    "pysocks",
+    "python-dateutil",
+    "python-dotenv",
+    "requests",
+    "requests_futures",
+    "sentry-sdk",
+    "uwsgi",
 ]
 
-readme = "README.md"
+[project.urls]
+Homepage = "https://github.com/hasname/feedgen"
+Repository = "https://github.com/hasname/feedgen.git"
 
-repository = "https://github.com/hasname/feedgen.git"
-homepage = "https://github.com/hasname/feedgen"
-
-keywords = ["feed"]
-
-[tool.poetry.dependencies]
-base36 = "*"
-cssselect = "*"
-django = "*"
-django-service-objects = "*"
-feedgen = "*"
-lxml = "*"
-lxml_html_clean = "*"
-pip = "*"
-pysocks = "*"
-python = "^3.9"
-python-dateutil = "*"
-python-dotenv = "*"
-requests = "*"
-requests_futures = "*"
-sentry-sdk = "*"
-uwsgi = "*"
-
-[tool.poetry.dev-dependencies]
-coverage = "*"
-requests-mock = "*"
-ruff = "*"
+[dependency-groups]
+dev = [
+    "coverage",
+    "requests-mock",
+    "ruff",
+]
