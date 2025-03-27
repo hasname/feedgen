@@ -3,7 +3,7 @@ name = "feedgen_hasname"
 version = "0.2024.0311.0"
 description = "feedgen.hasname.com"
 authors = [{ name = "Gea-Suan Lin", email = "gslin@gslin.com" }]
-requires-python = "~=3.9"
+requires-python = "~=3.13"
 readme = "README.md"
 license = "MIT"
 keywords = ["feed"]
