@@ -12,7 +12,7 @@ We use `uv` to manage the running environment along with `uwsgi` to run the uWSG
 
 ## Development
 
-There are two commands in GNUmakefile to help you develop:
+There are two commands in `GNUmakefile` to help you develop:
 
     make rundev
     make test
