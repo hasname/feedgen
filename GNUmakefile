@@ -21,6 +21,7 @@ endif
 	rsync \
 		-Favz \
 		--delete-after \
+		--exclude-from=.gitignore \
 		./ \
 		${DEPLOY_USER}@${DEPLOY_HOST}:~${DEPLOY_USER}/feedgen/
 	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "systemctl --user restart feedgen.service"
