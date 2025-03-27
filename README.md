@@ -8,7 +8,7 @@ You need to set up `.env` first.  The sample environment file is in `.env.sample
 
 ## Run
 
-We use `poetry` to manage the running environment along with `uwsgi` to run the uWSGI server, therefore you choose whatever you like to adopt these utilities.
+We use `uv` to manage the running environment along with `uwsgi` to run the uWSGI server, therefore you choose whatever you like to adopt these utilities.
 
 ## Update
 
