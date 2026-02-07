@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.views.generic import View
+import datetime
 import feedgen.feed
 import html
 import json
@@ -8,11 +9,36 @@ import urllib
 
 from .. import services
 
+
+def _parse_relative_time(text):
+    # Strip "Streamed " prefix for past live streams
+    text = re.sub(r'^Streamed\s+', '', text)
+
+    m = re.match(r'(\d+)\s+(second|minute|hour|day|week|month|year)s?\s+ago', text)
+    if not m:
+        return None
+
+    amount = int(m.group(1))
+    unit = m.group(2)
+
+    multipliers = {
+        'second': 1,
+        'minute': 60,
+        'hour': 3600,
+        'day': 86400,
+        'week': 604800,
+        'month': 2592000,
+        'year': 31536000,
+    }
+
+    seconds = amount * multipliers[unit]
+    return datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(seconds=seconds)
+
 class YouTubeView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://www.youtube.com/results?search_query={}&sp=CAI%253D'.format(urllib.parse.quote_plus(keyword))
+        url = 'https://www.youtube.com/results?search_query={}&sp=CAI%253D&hl=en'.format(urllib.parse.quote_plus(keyword))
 
         title = 'YouTube Search - {}'.format(keyword)
 
@@ -62,6 +88,14 @@ class YouTubeView(View):
                 entry.id(link)
                 entry.title(title)
                 entry.link(href=link)
+
+                try:
+                    published_text = item['videoRenderer']['publishedTimeText']['simpleText']
+                    published = _parse_relative_time(published_text)
+                    if published:
+                        entry.published(published)
+                except KeyError:
+                    pass
 
             except IndexError:
                 pass
