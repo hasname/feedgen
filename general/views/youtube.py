@@ -50,7 +50,7 @@ class YouTubeView(View):
 
         s = services.RequestsService().process()
 
-        r = s.get(url)
+        r = s.get(url, headers={'Accept-Language': 'en'})
 
         m = re.search(r"var ytInitialData = (.*?);?</script>", r.text, re.MULTILINE)
         ytInitialData = m.group(1)
