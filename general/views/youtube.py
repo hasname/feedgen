@@ -94,6 +94,7 @@ class YouTubeView(View):
                     published = _parse_relative_time(published_text)
                     if published:
                         entry.published(published)
+                        entry.updated(published)
                 except KeyError:
                     pass
 
