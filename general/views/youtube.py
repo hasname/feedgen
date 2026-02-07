@@ -1,5 +1,7 @@
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from django.http import HttpResponse
 from django.views.generic import View
+import dateutil.parser
 import datetime
 import feedgen.feed
 import html
@@ -34,6 +36,20 @@ def _parse_relative_time(text):
     seconds = amount * multipliers[unit]
     return datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(seconds=seconds)
 
+
+def _fetch_upload_date(session, video_id):
+    """Fetch actual upload date from video page JSON-LD."""
+    url = 'https://www.youtube.com/watch?v=' + video_id
+    try:
+        r = session.get(url)
+        m = re.search(r'"uploadDate"\s*:\s*"([^"]+)"', r.text)
+        if m:
+            return video_id, dateutil.parser.parse(m.group(1))
+    except Exception:
+        pass
+    return video_id, None
+
+
 class YouTubeView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
@@ -63,16 +79,35 @@ class YouTubeView(View):
             except KeyError:
                 continue
 
+        # Collect video IDs
+        video_ids = []
         for item in items:
             try:
+                video_ids.append(item['videoRenderer']['videoId'])
+            except KeyError:
+                pass
+
+        # Fetch actual upload dates in parallel
+        upload_dates = {}
+        with ThreadPoolExecutor(max_workers=4) as executor:
+            futures = {executor.submit(_fetch_upload_date, s, vid): vid for vid in video_ids}
+            for future in as_completed(futures):
+                vid, date = future.result()
+                if date:
+                    upload_dates[vid] = date
+
+        for item in items:
+            try:
+                video_id = item['videoRenderer']['videoId']
+
                 # author
                 author = item['videoRenderer']['longBylineText']['runs'][0]['text']
 
                 # link
-                link = 'https://www.youtube.com/watch?v=' + urllib.parse.quote(item['videoRenderer']['videoId'])
+                link = 'https://www.youtube.com/watch?v=' + urllib.parse.quote(video_id)
 
                 # img
-                img = 'https://i.ytimg.com/vi/' + item['videoRenderer']['videoId'] + '/hqdefault.jpg'
+                img = 'https://i.ytimg.com/vi/' + video_id + '/hqdefault.jpg'
 
                 # title
                 title = item['videoRenderer']['title']['runs'][0]['text']
@@ -89,14 +124,18 @@ class YouTubeView(View):
                 entry.title(title)
                 entry.link(href=link)
 
-                try:
-                    published_text = item['videoRenderer']['publishedTimeText']['simpleText']
-                    published = _parse_relative_time(published_text)
-                    if published:
-                        entry.published(published)
-                        entry.updated(published)
-                except KeyError:
-                    pass
+                # Use actual upload date from JSON-LD, fall back to relative time
+                published = upload_dates.get(video_id)
+                if not published:
+                    try:
+                        published_text = item['videoRenderer']['publishedTimeText']['simpleText']
+                        published = _parse_relative_time(published_text)
+                    except KeyError:
+                        pass
+
+                if published:
+                    entry.published(published)
+                    entry.updated(published)
 
             except IndexError:
                 pass
