@@ -54,7 +54,7 @@ class YouTubeView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://www.youtube.com/results?search_query={}&sp=CAI%253D&hl=en'.format(urllib.parse.quote_plus(keyword))
+        url = 'https://www.youtube.com/results?search_query={}&sp=EgIIAw%253D%253D&hl=en'.format(urllib.parse.quote_plus(keyword))
 
         title = 'YouTube Search - {}'.format(keyword)
 
