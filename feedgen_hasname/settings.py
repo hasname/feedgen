@@ -32,8 +32,7 @@ ALLOWED_HOSTS = [
 
 # Application definition
 
-INSTALLED_APPS = [
-]
+INSTALLED_APPS = []
 
 MIDDLEWARE = [
     'django.middleware.gzip.GZipMiddleware',
@@ -47,8 +46,7 @@ TEMPLATES = [
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
-            'context_processors': [
-            ],
+            'context_processors': [],
         },
     },
 ]
@@ -70,8 +68,7 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
-AUTH_PASSWORD_VALIDATORS = [
-]
+AUTH_PASSWORD_VALIDATORS = []
 
 
 # Internationalization

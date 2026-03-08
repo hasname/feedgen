@@ -4,9 +4,11 @@ import string
 
 os.environ['SENTRY_DSN'] = ''
 
-from .settings import *
+from .settings import *  # noqa: F403,F401
 
-ALLOWED_HOSTS = [ '127.0.0.1', ]
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+]
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
