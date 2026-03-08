@@ -27,7 +27,7 @@ class Job518View(View):
 
             r = s.get(url)
             body = lxml.html.fromstring(r.text)
-        except:
+        except Exception:
             body = lxml.html.fromstring('<html></html>')
 
         for item in body.cssselect('#listContent > ul'):

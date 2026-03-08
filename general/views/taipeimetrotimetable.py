@@ -36,7 +36,7 @@ class TaipeiMetroTimetableView(View):
             entry.link(href=url)
             entry.title(title)
             entry.updated(lastmodified)
-        except:
+        except Exception:
             pass
 
         res = HttpResponse(feed.atom_str(), content_type='application/atom+xml; charset=utf-8')

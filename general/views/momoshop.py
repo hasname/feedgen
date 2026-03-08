@@ -69,7 +69,7 @@ class MomoshopView(View):
             url = 'https://www.momoshop.com.tw/ajax/ajaxTool.jsp?n=2018'
             r = s.post(url, data={'data': json.dumps(data)}, headers={'Referer': 'https://www.momoshop.com.tw/'})
             body = json.loads(r.text)
-        except:
+        except Exception:
             return HttpResponse('Service Unavailable', status=503)
 
         # If it's not 200 then return an empty feed.

@@ -35,7 +35,7 @@ class Rent591View(View):
 
             r = s.get(url)
             text = r.text
-        except:
+        except Exception:
             text = '<html></html>'
 
         body = lxml.html.fromstring(text)

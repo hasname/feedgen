@@ -26,7 +26,7 @@ class Job104CompanyView(View):
 
             r = s.get(url, headers={'Referer': 'https://www.104.com.tw/'})
             items = json.loads(r.text)['data']
-        except:
+        except Exception:
             items = []
 
         for item in items:
@@ -50,7 +50,7 @@ class Job104CompanyView(View):
                 entry.id(job_company_url)
                 entry.link(href=job_company_url)
                 entry.title(job_company)
-            except:
+            except Exception:
                 pass
 
         res = HttpResponse(feed.atom_str(), content_type='application/atom+xml; charset=utf-8')
@@ -77,7 +77,7 @@ class Job104View(View):
 
             r = s.get(url, headers={'Referer': 'https://www.104.com.tw/'})
             items = json.loads(r.text)['data']
-        except:
+        except Exception:
             items = []
 
         for item in items:
@@ -102,7 +102,7 @@ class Job104View(View):
                 entry.id(job_url)
                 entry.link(href=job_url)
                 entry.title(job_title)
-            except:
+            except Exception:
                 pass
 
         res = HttpResponse(feed.atom_str(), content_type='application/atom+xml; charset=utf-8')

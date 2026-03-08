@@ -29,7 +29,7 @@ class MeetJobsView(View):
 
             r = s.get(api_url)
             items = r.json()['collection']
-        except:
+        except Exception:
             items = []
 
         for item in items:

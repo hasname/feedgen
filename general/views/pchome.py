@@ -26,7 +26,7 @@ class PChomeLightNovelView(View):
             r = s.get(url)
             body = re.match(r'^[^\[]*(\[.*\])[^\[]*$', r.text).group(1)
             items = json.loads(body)
-        except:
+        except Exception:
             items = []
 
         for item in items:
@@ -70,7 +70,7 @@ class PChomeView(View):
 
             r = s.get(url)
             body = json.loads(r.text)
-        except:
+        except Exception:
             body = {'prods': []}
 
         for item in body['prods']:

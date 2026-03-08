@@ -28,7 +28,7 @@ class CakeResumeView(View):
             r = s.get(url)
             body = lxml.html.fromstring(r.text)
             items = body.cssselect('div[class^="JobSearchItem_wrapper__"]')
-        except:
+        except Exception:
             items = []
 
         for item in items:

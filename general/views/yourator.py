@@ -25,7 +25,7 @@ class YouratorView(View):
 
             r = s.get(url)
             items = r.json()['jobs']
-        except:
+        except Exception:
             items = []
 
         for item in items:

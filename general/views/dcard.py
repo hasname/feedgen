@@ -30,7 +30,7 @@ class DcardBoardView(View):
 
             r = s.get(url)
             body = lxml.html.fromstring(r.text)
-        except:
+        except Exception:
             return HttpResponse('Service Unavailable', status=503)
 
         items = body.cssselect('div[role="main"] article')
