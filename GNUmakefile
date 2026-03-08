@@ -26,6 +26,9 @@ endif
 		${DEPLOY_USER}@${DEPLOY_HOST}:~${DEPLOY_USER}/feedgen/
 	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "systemctl --user restart feedgen.service"
 
+lint::
+	uv run ruff check .
+
 run::
 	pkill -QUIT uwsgi; sleep 1; uv run uwsgi --ini uwsgi.ini > /dev/null 2>&1 &
 
