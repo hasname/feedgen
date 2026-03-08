@@ -68,7 +68,7 @@ class YouTubeView(View):
 
         r = s.get(url, headers={'Accept-Language': 'en'})
 
-        m = re.search(r"var ytInitialData = (.*?);?</script>", r.text, re.MULTILINE)
+        m = re.search(r'var ytInitialData = (.*?);?</script>', r.text, re.MULTILINE)
         ytInitialData = m.group(1)
         j = json.loads(ytInitialData)
 
