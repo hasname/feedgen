@@ -29,8 +29,8 @@ LOGGING = {
         'level': 'DEBUG',
     },
 }
-SECRET_KEY = ''.join(random.SystemRandom().choice(string.ascii_letters) for _ in range(50))
+SECRET_KEY = ''.join(
+    random.SystemRandom().choice(string.ascii_letters) for _ in range(50)
+)
 
 # SQLite3 Database for dev
-import os
-from django.core.management import execute_from_command_line
