@@ -3,7 +3,6 @@ from django.views.generic import View
 import feedgen.feed
 import html
 import json
-import time
 
 from .. import services
 

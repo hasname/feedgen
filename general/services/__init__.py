@@ -1,2 +1,2 @@
-from .proxy_socks5_service import ProxySocks5Service
-from .requests_service import RequestsService
+from .proxy_socks5_service import ProxySocks5Service as ProxySocks5Service
+from .requests_service import RequestsService as RequestsService
