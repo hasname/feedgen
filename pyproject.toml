@@ -29,6 +29,9 @@ dependencies = [
 Homepage = "https://github.com/hasname/feedgen"
 Repository = "https://github.com/hasname/feedgen.git"
 
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = 'single'
+
 [dependency-groups]
 dev = [
     "coverage",
