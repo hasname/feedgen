@@ -3,7 +3,7 @@
 
 #
 .DEFAULT_GOAL:=		rundev
-.PHONY:			.env build rundev test
+.PHONY:			.env build lint rundev test
 
 .env::
 	test $(shell wc -l .env | cut -d ' ' -f 1) -eq $(shell wc -l .env.sample | cut -d ' ' -f 1)
