@@ -35,5 +35,5 @@ run::
 rundev::
 	uv run ./manage.py runserver --settings=feedgen_hasname.settings_dev
 
-test::
+test:: lint
 	uv run coverage run --source=. ./manage.py test --settings=feedgen_hasname.settings_test
