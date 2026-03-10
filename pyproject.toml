@@ -35,6 +35,7 @@ inline-quotes = 'single'
 [dependency-groups]
 dev = [
     "coverage",
+    "radon>=6.0.1",
     "requests-mock",
     "ruff",
 ]
