@@ -1,8 +1,11 @@
 *.retry
+.claude
 .coverage
 .dev.sqlite3
 .env
+.pytest_cache
 .ruff_cache
 .venv
 GNUmakefile.local
 __pycache__
+db.sqlite3
