@@ -25,7 +25,19 @@ For `GNUmakefile.local`, you can set something like this:
     DEPLOY_HOST=    server.example.com
     DEPLOY_USER=    service-feedgen
 
-Then you can use `make deploy` to update the service.  Scripts in `GNUmakefile` will call `rsync` to update code via SSH and re-run `uwsgi` services via userland systemd.
+Then you can use `make deploy` to update the service.  Scripts in `GNUmakefile` will call `rsync` to update code via SSH, run `uv sync` on the remote host, install `feedgen.service` into `~/.config/systemd/user/`, and then reload and restart the `uwsgi` service via userland systemd.
+
+`feedgen.service` is a systemd user unit, therefore remember to use `systemctl --user` on the remote host.  Two things have to be set up once by hand before the first deploy:
+
+* `uv` has to be reachable from a login shell of `DEPLOY_USER`, because `make deploy` installs the dependencies through `bash -lc`:
+
+        ssh service-feedgen@server.example.com 'bash -lc "uv --version"'
+
+* The account needs lingering, otherwise its systemd user manager stops along with the last session and the service does not come back after a reboot:
+
+        sudo loginctl enable-linger service-feedgen
+
+Please note that `.env` lives on the remote host only.  It is listed in `.gitignore`, which `rsync` uses for `--exclude-from`, so `make deploy` neither uploads nor deletes it.  The application loads it with `python-dotenv` from the current working directory, which is why the unit sets `WorkingDirectory=%h/feedgen`.
 
 ## Supporting platforms
 
