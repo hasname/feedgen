@@ -1,0 +1,17 @@
+[Unit]
+Description=feedgen.hasname.com (uWSGI)
+Documentation=https://github.com/hasname/feedgen
+
+[Service]
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStart=%h/feedgen/.venv/bin/uwsgi --ini uwsgi.ini
+KillSignal=SIGINT
+Restart=always
+RestartSec=5
+SyslogIdentifier=feedgen
+TimeoutStopSec=30
+Type=exec
+WorkingDirectory=%h/feedgen
+
+[Install]
+WantedBy=default.target
