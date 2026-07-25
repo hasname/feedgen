@@ -27,7 +27,9 @@ endif
 		--exclude-from=.gitignore \
 		./ \
 		${DEPLOY_USER}@${DEPLOY_HOST}:~${DEPLOY_USER}/feedgen/
-	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "systemctl --user restart feedgen.service"
+	ssh ${DEPLOY_USER}@${DEPLOY_HOST} 'bash -lc "cd ~/feedgen && uv sync --frozen"'
+	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "install -D -m 0644 ~/feedgen/feedgen.service ~/.config/systemd/user/feedgen.service && systemctl --user daemon-reload && systemctl --user reenable feedgen.service"
+	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "systemctl --user restart feedgen.service && sleep 3 && systemctl --user is-active feedgen.service"
 
 lint::
 	uv run ruff check .
