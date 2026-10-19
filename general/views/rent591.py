@@ -1,4 +1,5 @@
 import html
+import logging
 import re
 
 import feedgen.feed
@@ -7,6 +8,8 @@ from django.http import HttpResponse
 from django.views.generic import View
 
 from .. import services
+
+logger = logging.getLogger(__name__)
 
 
 class Rent591View(View):
@@ -38,6 +41,7 @@ class Rent591View(View):
             r = s.get(url)
             text = r.text
         except Exception:
+            logger.exception('Failed to fetch 591 search results')
             text = '<html></html>'
 
         body = lxml.html.fromstring(text)

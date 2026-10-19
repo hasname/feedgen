@@ -1,11 +1,14 @@
 import html
 import json
+import logging
 
 import feedgen.feed
 from django.http import HttpResponse
 from django.views.generic import View
 
 from .. import services
+
+logger = logging.getLogger(__name__)
 
 
 class Job104CompanyView(View):
@@ -28,6 +31,7 @@ class Job104CompanyView(View):
             r = s.get(url, headers={'Referer': 'https://www.104.com.tw/'})
             items = json.loads(r.text)['data']
         except Exception:
+            logger.exception('Failed to fetch or parse 104 company search results')
             items = []
 
         for item in items:
@@ -50,7 +54,7 @@ class Job104CompanyView(View):
                 entry.link(href=job_company_url)
                 entry.title(job_company)
             except Exception:
-                pass
+                logger.exception('Failed to generate 104 company entry')
 
         res = HttpResponse(feed.atom_str(), content_type='application/atom+xml; charset=utf-8')
         res['Cache-Control'] = 'max-age=300,public'
@@ -77,6 +81,7 @@ class Job104View(View):
             r = s.get(url, headers={'Referer': 'https://www.104.com.tw/'})
             items = json.loads(r.text)['data']
         except Exception:
+            logger.exception('Failed to fetch or parse 104 job search results')
             items = []
 
         for item in items:
@@ -99,7 +104,7 @@ class Job104View(View):
                 entry.link(href=job_url)
                 entry.title(job_title)
             except Exception:
-                pass
+                logger.exception('Failed to generate 104 job entry')
 
         res = HttpResponse(feed.atom_str(), content_type='application/atom+xml; charset=utf-8')
         res['Cache-Control'] = 'max-age=300,public'

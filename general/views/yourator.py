@@ -1,4 +1,5 @@
 import html
+import logging
 import urllib
 
 import feedgen.feed
@@ -6,6 +7,8 @@ from django.http import HttpResponse
 from django.views.generic import View
 
 from .. import services
+
+logger = logging.getLogger(__name__)
 
 
 class YouratorView(View):
@@ -28,6 +31,7 @@ class YouratorView(View):
             r = s.get(url)
             items = r.json()['jobs']
         except Exception:
+            logger.exception('Failed to fetch or parse Yourator search results')
             items = []
 
         for item in items:

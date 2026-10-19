@@ -1,4 +1,5 @@
 import html
+import logging
 import re
 import urllib
 
@@ -8,6 +9,8 @@ from django.http import HttpResponse
 from django.views.generic import View
 
 from .. import services
+
+logger = logging.getLogger(__name__)
 
 
 class Job518View(View):
@@ -30,6 +33,7 @@ class Job518View(View):
             r = s.get(url)
             body = lxml.html.fromstring(r.text)
         except Exception:
+            logger.exception('Failed to fetch or parse 518 search results')
             body = lxml.html.fromstring('<html></html>')
 
         for item in body.cssselect('#listContent > ul'):

@@ -1,4 +1,5 @@
 import html
+import logging
 import re
 import urllib
 
@@ -8,6 +9,8 @@ from django.http import HttpResponse
 from django.views.generic import View
 
 from .. import services
+
+logger = logging.getLogger(__name__)
 
 
 class DcardBoardView(View):
@@ -33,6 +36,7 @@ class DcardBoardView(View):
             r = s.get(url)
             body = lxml.html.fromstring(r.text)
         except Exception:
+            logger.exception('Failed to fetch or parse Dcard board')
             return HttpResponse('Service Unavailable', status=503)
 
         items = body.cssselect('div[role="main"] article')

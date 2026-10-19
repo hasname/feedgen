@@ -1,11 +1,14 @@
 import datetime
 import html
+import logging
 
 import feedgen.feed
 from django.http import HttpResponse
 from django.views.generic import View
 
 from .. import services
+
+logger = logging.getLogger(__name__)
 
 
 class TaipeiMetroTimetableView(View):
@@ -39,7 +42,7 @@ class TaipeiMetroTimetableView(View):
             entry.title(title)
             entry.updated(lastmodified)
         except Exception:
-            pass
+            logger.exception('Failed to generate Taipei Metro timetable entry')
 
         res = HttpResponse(feed.atom_str(), content_type='application/atom+xml; charset=utf-8')
         res['Cache-Control'] = 'max-age=300,public'

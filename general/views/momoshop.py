@@ -1,5 +1,6 @@
 import html
 import json
+import logging
 import time
 import urllib
 
@@ -8,6 +9,8 @@ from django.http import HttpResponse
 from django.views.generic import View
 
 from .. import services
+
+logger = logging.getLogger(__name__)
 
 
 class MomoshopView(View):
@@ -72,6 +75,7 @@ class MomoshopView(View):
             r = s.post(url, data={'data': json.dumps(data)}, headers={'Referer': 'https://www.momoshop.com.tw/'})
             body = json.loads(r.text)
         except Exception:
+            logger.exception('Failed to fetch or parse Momoshop search results')
             return HttpResponse('Service Unavailable', status=503)
 
         # If it's not 200 then return an empty feed.

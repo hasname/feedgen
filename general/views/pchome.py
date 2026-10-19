@@ -1,5 +1,6 @@
 import html
 import json
+import logging
 import re
 import urllib
 
@@ -8,6 +9,8 @@ from django.http import HttpResponse
 from django.views.generic import View
 
 from .. import services
+
+logger = logging.getLogger(__name__)
 
 
 class PChomeLightNovelView(View):
@@ -29,6 +32,7 @@ class PChomeLightNovelView(View):
             body = re.match(r'^[^\[]*(\[.*\])[^\[]*$', r.text).group(1)
             items = json.loads(body)
         except Exception:
+            logger.exception('Failed to fetch or parse PChome light novel results')
             items = []
 
         for item in items:
@@ -73,6 +77,7 @@ class PChomeView(View):
             r = s.get(url)
             body = json.loads(r.text)
         except Exception:
+            logger.exception('Failed to fetch or parse PChome search results')
             body = {'prods': []}
 
         for item in body['prods']:

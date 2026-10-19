@@ -1,4 +1,5 @@
 import html
+import logging
 import re
 import urllib
 
@@ -8,6 +9,8 @@ from django.http import HttpResponse
 from django.views.generic import View
 
 from .. import services
+
+logger = logging.getLogger(__name__)
 
 
 class CakeResumeView(View):
@@ -31,6 +34,7 @@ class CakeResumeView(View):
             body = lxml.html.fromstring(r.text)
             items = body.cssselect('div[class^="JobSearchItem_wrapper__"]')
         except Exception:
+            logger.exception('Failed to fetch or parse CakeResume search results')
             items = []
 
         for item in items:

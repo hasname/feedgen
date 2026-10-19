@@ -1,5 +1,6 @@
 import datetime
 import html
+import logging
 import urllib
 
 import feedgen.feed
@@ -9,6 +10,8 @@ from django.http import HttpResponse
 from django.views.generic import View
 
 from .. import services
+
+logger = logging.getLogger(__name__)
 
 
 class MeetJobsView(View):
@@ -32,6 +35,7 @@ class MeetJobsView(View):
             r = s.get(api_url)
             items = r.json()['collection']
         except Exception:
+            logger.exception('Failed to fetch or parse meet.jobs search results')
             items = []
 
         for item in items:

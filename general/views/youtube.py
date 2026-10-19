@@ -1,6 +1,7 @@
 import datetime
 import html
 import json
+import logging
 import re
 import urllib
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -11,6 +12,8 @@ from django.http import HttpResponse
 from django.views.generic import View
 
 from .. import services
+
+logger = logging.getLogger(__name__)
 
 
 def _parse_relative_time(text):
@@ -47,7 +50,7 @@ def _fetch_upload_date(session, video_id):
         if m:
             return video_id, dateutil.parser.parse(m.group(1))
     except Exception:
-        pass
+        logger.exception('Failed to fetch or parse YouTube upload date')
     return video_id, None
 
 
