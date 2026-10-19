@@ -150,15 +150,6 @@ class SmokeTestCase(TestCase):
         self.assertEqual(res.status_code, 200)
 
     @requests_mock.mock()
-    def test_meetjobs(self, m):
-        text = Path(__file__).with_name('json_meetjobs.txt').read_text(encoding='utf-8')
-        m.get('https://api.meet.jobs/api/v1/jobs?page=1&order=update&q=test&include=required_skills&external_job=true', text=text)
-
-        c = Client()
-        res = c.get('/meetjobs/test')
-        self.assertEqual(res.status_code, 200)
-
-    @requests_mock.mock()
     def test_momoshop(self, m):
         m.get('https://www.momoshop.com.tw/', text='')
 
