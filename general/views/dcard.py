@@ -44,12 +44,12 @@ class DcardBoardView(View):
             item_title = item.cssselect('h2')[0].text_content()
             item_url = item.cssselect('h2 > a')[0].get('href')
             item_desc = item.cssselect('h2 + div')[0].text_content()
-            try:
-                item_img = item.cssselect('img')[0]
-            except IndexError:
-                item_img_src = None
-            else:
-                item_img_src = item_img.get('src')
+            # Article thumbnails can be in noscript; skip placeholders and reaction icons.
+            item_img_src = next((
+                img.get('src') for img in item.cssselect('img[alt="thumbnail"]')
+                if img.get('src', '').startswith(('https://', 'http://'))
+            ), None)
+            if item_img_src:
                 g = re.match(r'^(https://imgur\.dcard\.tw/\w+)b(\.jpg)$', item_img_src)
                 if g:
                     item_img_src = g.group(1) + g.group(2)

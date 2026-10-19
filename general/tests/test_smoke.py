@@ -93,6 +93,21 @@ class SmokeTestCase(TestCase):
         res = c.get('/dcard/board/moon')
         self.assertEqual(res.status_code, 200)
 
+        ns = {
+            'atom': 'http://www.w3.org/2005/Atom',
+            'xhtml': 'http://www.w3.org/1999/xhtml',
+        }
+        feed = lxml.etree.fromstring(res.content)
+        entries = {entry.findtext('atom:id', namespaces=ns): entry for entry in feed.findall('atom:entry', ns)}
+        self.assertEqual(len(entries), 29)
+        thumbnail = entries['https://www.dcard.tw/f/mood/p/240522156'].find('.//xhtml:img', ns)
+        self.assertEqual(thumbnail.get('src'), 'https://imgur.dcard.tw/tSvCv2c.jpg')
+        self.assertIsNone(entries['https://www.dcard.tw/f/mood/p/240692789'].find('.//xhtml:img', ns))
+        images = feed.findall('.//xhtml:img', ns)
+        self.assertEqual(len(images), 13)
+        for img in images:
+            self.assertRegex(img.get('src'), r'^https://imgur\.dcard\.tw/')
+
     @requests_mock.mock()
     def test_dcard_main(self, m):
         m.get('https://www.dcard.tw/service/api/v2/popularForums/GetHead?listKey=popularForums', text='{"listKey":"popularForums","head":"00000000-0000-0000-0000-000000000000"}')
