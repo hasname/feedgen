@@ -1,5 +1,6 @@
-from service_objects.services import Service
 import requests
+from service_objects.services import Service
+
 
 class RequestsService(Service):
     db_transaction = False

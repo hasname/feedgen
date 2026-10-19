@@ -1,20 +1,22 @@
-from django.http import HttpResponse
-from django.views.generic import View
-import feedgen.feed
 import html
 import json
 import urllib
 
+import feedgen.feed
+from django.http import HttpResponse
+from django.views.generic import View
+
 from .. import services
+
 
 class ShopeeView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://shopee.tw/api/v4/search/search_items/?by=ctime&keyword={}&limit=60&newest=0&order=desc&page_type=search&scenario=PAGE_GLOBAL_SEARCH&version=2'.format(urllib.parse.quote_plus(keyword))
-        referer = 'https://shopee.tw/search?keyword={}'.format(urllib.parse.quote_plus(keyword))
+        url = f'https://shopee.tw/api/v4/search/search_items/?by=ctime&keyword={urllib.parse.quote_plus(keyword)}&limit=60&newest=0&order=desc&page_type=search&scenario=PAGE_GLOBAL_SEARCH&version=2'
+        referer = f'https://shopee.tw/search?keyword={urllib.parse.quote_plus(keyword)}'
 
-        title = '蝦皮搜尋 - {}'.format(keyword)
+        title = f'蝦皮搜尋 - {keyword}'
 
         feed = feedgen.feed.FeedGenerator()
         feed.author({'name': 'Feed Generator'})
@@ -42,12 +44,10 @@ class ShopeeView(View):
             name = item_basic['name']
             shopid = item_basic['shopid']
 
-            prod_url = 'https://shopee.tw/product/%d/%d' % (shopid, itemid)
-            img_url = 'https://cf.shopee.tw/file/%s' % (item_basic['image'])
+            prod_url = f'https://shopee.tw/product/{shopid:d}/{itemid:d}'
+            img_url = f'https://cf.shopee.tw/file/{item_basic["image"]}'
 
-            content = '{}<br/><img alt="{}" src="{}"/>'.format(
-                html.escape(name), html.escape(name), html.escape(img_url)
-            )
+            content = f'{html.escape(name)}<br/><img alt="{html.escape(name)}" src="{html.escape(img_url)}"/>'
 
             entry = feed.add_entry()
             entry.content(content, type='xhtml')

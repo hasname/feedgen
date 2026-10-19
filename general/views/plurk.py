@@ -1,13 +1,15 @@
-from django.http import HttpResponse
-from django.views.generic import View
-import base36
-import dateutil.parser
-import feedgen.feed
 import json
 import re
 import urllib
 
+import base36
+import dateutil.parser
+import feedgen.feed
+from django.http import HttpResponse
+from django.views.generic import View
+
 from .. import services
+
 
 class PlurkSearchView(View):
     def get(self, *args, **kwargs):
@@ -15,7 +17,7 @@ class PlurkSearchView(View):
 
         url = 'https://www.plurk.com/Search/search2'
 
-        title = 'Plurk Search - {}'.format(keyword)
+        title = f'Plurk Search - {keyword}'
 
         feed = feedgen.feed.FeedGenerator()
         feed.author({'name': 'Feed Generator'})
@@ -56,9 +58,9 @@ class PlurkTopView(View):
     def get(self, *args, **kwargs):
         lang = kwargs['lang']
 
-        url = 'https://www.plurk.com/Stats/topReplurks?period=day&lang={}&limit=10'.format(urllib.parse.quote_plus(lang))
+        url = f'https://www.plurk.com/Stats/topReplurks?period=day&lang={urllib.parse.quote_plus(lang)}&limit=10'
 
-        title = 'Plurk Top ({})'.format(lang)
+        title = f'Plurk Top ({lang})'
 
         feed = feedgen.feed.FeedGenerator()
         feed.author({'name': 'Feed Generator'})

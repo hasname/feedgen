@@ -1,6 +1,24 @@
 from django.urls import path
 
-from .views import bookwalker, cakeresume, dcard, index, job104, job1111, job518, meetjobs, momoshop, pchome, plurk, rent591, robotstxt, shopee, taipeimetrotimetable, yourator, youtube
+from .views import (
+    bookwalker,
+    cakeresume,
+    dcard,
+    index,
+    job104,
+    job518,
+    job1111,
+    meetjobs,
+    momoshop,
+    pchome,
+    plurk,
+    rent591,
+    robotstxt,
+    shopee,
+    taipeimetrotimetable,
+    yourator,
+    youtube,
+)
 
 urlpatterns = [
     path('', index.IndexView.as_view(), name='index'),

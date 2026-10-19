@@ -1,19 +1,21 @@
-from django.http import HttpResponse
-from django.views.generic import View
-import feedgen.feed
 import html
-import lxml.html
 import urllib
 
+import feedgen.feed
+import lxml.html
+from django.http import HttpResponse
+from django.views.generic import View
+
 from .. import services
+
 
 class Job1111View(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://www.1111.com.tw/search/job?col=da&ks={}&page=1&sort=desc'.format(urllib.parse.quote_plus(keyword))
+        url = f'https://www.1111.com.tw/search/job?col=da&ks={urllib.parse.quote_plus(keyword)}&page=1&sort=desc'
 
-        title = '1111 搜尋 - {}'.format(keyword)
+        title = f'1111 搜尋 - {keyword}'
 
         feed = feedgen.feed.FeedGenerator()
         feed.author({'name': 'Feed Generator'})
@@ -37,9 +39,7 @@ class Job1111View(View):
             job_company = item.cssselect('div.card-subtitle a')[0].get('title')
 
             job_desc = item.cssselect('p.job_item_description')[0].text_content()
-            content = '<h3>{}</h3><p>{}</p>'.format(
-                html.escape(job_company), html.escape(job_desc)
-            )
+            content = f'<h3>{html.escape(job_company)}</h3><p>{html.escape(job_desc)}</p>'
 
             entry = feed.add_entry()
             entry.content(content, type='xhtml')

@@ -1,10 +1,12 @@
-from django.http import HttpResponse
-from django.views.generic import View
-import feedgen.feed
-import lxml.html
 import re
 
+import feedgen.feed
+import lxml.html
+from django.http import HttpResponse
+from django.views.generic import View
+
 from .. import services
+
 
 class BookwalkerMangaView(View):
     def get(self, *args, **kwargs):

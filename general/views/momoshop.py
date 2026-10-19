@@ -1,20 +1,22 @@
-from django.http import HttpResponse
-from django.views.generic import View
-import feedgen.feed
 import html
 import json
 import time
 import urllib
 
+import feedgen.feed
+from django.http import HttpResponse
+from django.views.generic import View
+
 from .. import services
+
 
 class MomoshopView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://www.momoshop.com.tw/search/searchShop.jsp?keyword={}&searchType=4&cateLevel=0&cateCode=&curPage=1&_isFuzzy=0&showType=chessboardType'.format(urllib.parse.quote_plus(keyword))
+        url = f'https://www.momoshop.com.tw/search/searchShop.jsp?keyword={urllib.parse.quote_plus(keyword)}&searchType=4&cateLevel=0&cateCode=&curPage=1&_isFuzzy=0&showType=chessboardType'
 
-        title = 'Momoshop 搜尋 - {}'.format(keyword)
+        title = f'Momoshop 搜尋 - {keyword}'
 
         feed = feedgen.feed.FeedGenerator()
         feed.author({'name': 'Feed Generator'})
@@ -88,7 +90,7 @@ class MomoshopView(View):
             # Use larger size.
             item_img = item_img.replace('_L.', '_B.')
 
-            content = '<img alt="{}" src="{}"/>'.format(html.escape(item_name), html.escape(item_img))
+            content = f'<img alt="{html.escape(item_name)}" src="{html.escape(item_img)}"/>'
 
             entry = feed.add_entry()
             entry.content(content, type='xhtml')

@@ -1,20 +1,22 @@
-from django.http import HttpResponse
-from django.views.generic import View
-import feedgen.feed
 import html
-import lxml
 import re
 import urllib
 
+import feedgen.feed
+import lxml
+from django.http import HttpResponse
+from django.views.generic import View
+
 from .. import services
+
 
 class CakeResumeView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://www.cakeresume.com/jobs/{}?location_list%5B0%5D=Taiwan&order=latest'.format(urllib.parse.quote_plus(keyword))
+        url = f'https://www.cakeresume.com/jobs/{urllib.parse.quote_plus(keyword)}?location_list%5B0%5D=Taiwan&order=latest'
 
-        title = 'CakeResume 搜尋 - {}'.format(keyword)
+        title = f'CakeResume 搜尋 - {keyword}'
 
         feed = feedgen.feed.FeedGenerator()
         feed.author({'name': 'Feed Generator'})
@@ -43,7 +45,7 @@ class CakeResumeView(View):
                 job_link = 'https://www.cakeresume.com' + job_link
 
             item_author = job_company
-            item_content = '<p>{}</p><p>{}</p>'.format(html.escape(job_features), html.escape(job_desc))
+            item_content = f'<p>{html.escape(job_features)}</p><p>{html.escape(job_desc)}</p>'
             item_title = job_title
             item_url = job_link
 

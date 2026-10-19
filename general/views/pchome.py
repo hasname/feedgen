@@ -1,12 +1,14 @@
-from django.http import HttpResponse
-from django.views.generic import View
-import feedgen.feed
 import html
 import json
 import re
 import urllib
 
+import feedgen.feed
+from django.http import HttpResponse
+from django.views.generic import View
+
 from .. import services
+
 
 class PChomeLightNovelView(View):
     def get(self, *args, **kwargs):
@@ -55,9 +57,9 @@ class PChomeView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://ecshweb.pchome.com.tw/search/v3.3/all/results?q={}&page=1&sort=new/dc'.format(urllib.parse.quote_plus(keyword))
+        url = f'https://ecshweb.pchome.com.tw/search/v3.3/all/results?q={urllib.parse.quote_plus(keyword)}&page=1&sort=new/dc'
 
-        title = 'PChome 搜尋 - {}'.format(keyword)
+        title = f'PChome 搜尋 - {keyword}'
 
         feed = feedgen.feed.FeedGenerator()
         feed.author({'name': 'Feed Generator'})
@@ -80,18 +82,16 @@ class PChomeView(View):
             item_name = self.str_clean(item['name'])
             item_origin_price = item['originPrice']
             item_price = item['price']
-            item_title = '(${}/${}) {}'.format(item_origin_price, item_price, item_name)
+            item_title = f'(${item_origin_price}/${item_price}) {item_name}'
 
             # URL
             if item['cateId'][0] == 'D':
                 item_url = 'https://24h.pchome.com.tw/prod/' + item['Id']
             else:
                 item_url = 'https://mall.pchome.com.tw/prod/' + item['Id']
-            img_url = 'https://cs-a.ecimg.tw%s' % (item['picB'])
+            img_url = f'https://cs-a.ecimg.tw{item["picB"]}'
 
-            content = '{}<br/><img alt="{}" src="{}"/>'.format(
-                html.escape(item_desc), html.escape(item_name), html.escape(img_url)
-            )
+            content = f'{html.escape(item_desc)}<br/><img alt="{html.escape(item_name)}" src="{html.escape(img_url)}"/>'
 
             entry = feed.add_entry()
             entry.author({'name': item_author})

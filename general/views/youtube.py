@@ -1,13 +1,14 @@
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from django.http import HttpResponse
-from django.views.generic import View
-import dateutil.parser
 import datetime
-import feedgen.feed
 import html
 import json
 import re
 import urllib
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+import dateutil.parser
+import feedgen.feed
+from django.http import HttpResponse
+from django.views.generic import View
 
 from .. import services
 
@@ -34,7 +35,7 @@ def _parse_relative_time(text):
     }
 
     seconds = amount * multipliers[unit]
-    return datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(seconds=seconds)
+    return datetime.datetime.now(datetime.UTC) - datetime.timedelta(seconds=seconds)
 
 
 def _fetch_upload_date(session, video_id):
@@ -54,9 +55,9 @@ class YouTubeView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://www.youtube.com/results?search_query={}&sp=CAESAggD&hl=en'.format(urllib.parse.quote_plus(keyword))
+        url = f'https://www.youtube.com/results?search_query={urllib.parse.quote_plus(keyword)}&sp=CAESAggD&hl=en'
 
-        title = 'YouTube Search - {}'.format(keyword)
+        title = f'YouTube Search - {keyword}'
 
         feed = feedgen.feed.FeedGenerator()
         feed.author({'name': 'Feed Generator'})
@@ -113,9 +114,7 @@ class YouTubeView(View):
                 title = item['videoRenderer']['title']['runs'][0]['text']
 
                 # content
-                content = '<img alt="{}" src="{}"/>'.format(
-                    html.escape(title), html.escape(img)
-                )
+                content = f'<img alt="{html.escape(title)}" src="{html.escape(img)}"/>'
 
                 entry = feed.add_entry()
                 entry.author({'name': author})

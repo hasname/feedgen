@@ -1,5 +1,6 @@
 from django.test import Client, TestCase
 
+
 class RobotstxtTestCase(TestCase):
     def test_robotstxt(self):
         c = Client()

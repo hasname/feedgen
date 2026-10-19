@@ -1,8 +1,10 @@
-from django.test import Client, TestCase
-import lxml.etree
 import os
 import re
+
+import lxml.etree
 import requests_mock
+from django.test import Client, TestCase
+
 
 class SmokeTestCase(TestCase):
     def assert_bookwalker_entries(self, response, first_title, first_url):

@@ -1,22 +1,24 @@
-from django.http import HttpResponse
-from django.views.generic import View
-import feedgen.feed
 import datetime
 import html
-import lxml.html
-import lxml.html.clean
 import urllib
 
+import feedgen.feed
+import lxml.html
+import lxml.html.clean
+from django.http import HttpResponse
+from django.views.generic import View
+
 from .. import services
+
 
 class MeetJobsView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://meet.jobs/zh-TW/jobs?page=1&order=update&q={}'.format(urllib.parse.quote_plus(keyword))
-        api_url = 'https://api.meet.jobs/api/v1/jobs?page=1&order=update&q={}&include=required_skills&external_job=true'.format(urllib.parse.quote_plus(keyword))
+        url = f'https://meet.jobs/zh-TW/jobs?page=1&order=update&q={urllib.parse.quote_plus(keyword)}'
+        api_url = f'https://api.meet.jobs/api/v1/jobs?page=1&order=update&q={urllib.parse.quote_plus(keyword)}&include=required_skills&external_job=true'
 
-        title = 'meet.jobs 搜尋 - {}'.format(keyword)
+        title = f'meet.jobs 搜尋 - {keyword}'
 
         feed = feedgen.feed.FeedGenerator()
         feed.author({'name': 'Feed Generator'})
@@ -41,7 +43,7 @@ class MeetJobsView(View):
                 job_title = item['title']
 
                 item_author = job_company
-                item_content = '<p>{}</p><p>{}</p>'.format(html.escape(job_features), job_desc)
+                item_content = f'<p>{html.escape(job_features)}</p><p>{job_desc}</p>'
                 item_title = job_title
                 item_url = job_link
 

@@ -1,18 +1,20 @@
-from django.http import HttpResponse
-from django.views.generic import View
-import feedgen.feed
 import html
 import json
 
+import feedgen.feed
+from django.http import HttpResponse
+from django.views.generic import View
+
 from .. import services
+
 
 class Job104CompanyView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://www.104.com.tw/jobs/search/api/jobs?jobsource=index_s&keyword={}&mode=s&order=16&page=1&pagesize=20&searchJobs=1'.format(keyword)
+        url = f'https://www.104.com.tw/jobs/search/api/jobs?jobsource=index_s&keyword={keyword}&mode=s&order=16&page=1&pagesize=20&searchJobs=1'
 
-        title = '104 公司搜尋 - {}'.format(keyword)
+        title = f'104 公司搜尋 - {keyword}'
 
         feed = feedgen.feed.FeedGenerator()
         feed.author({'name': 'Feed Generator'})
@@ -39,9 +41,7 @@ class Job104CompanyView(View):
                 job_company = item['custName']
                 job_company_url = item['link']['cust']
 
-                content = '<h3>{}</h3>'.format(
-                    html.escape(job_company),
-                )
+                content = f'<h3>{html.escape(job_company)}</h3>'
 
                 entry = feed.add_entry()
                 entry.author({'name': job_company})
@@ -61,9 +61,9 @@ class Job104View(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://www.104.com.tw/jobs/search/api/jobs?jobsource=index_s&keyword={}&mode=s&order=16&page=1&pagesize=20&searchJobs=1'.format(keyword)
+        url = f'https://www.104.com.tw/jobs/search/api/jobs?jobsource=index_s&keyword={keyword}&mode=s&order=16&page=1&pagesize=20&searchJobs=1'
 
-        title = '104 搜尋 - {}'.format(keyword)
+        title = f'104 搜尋 - {keyword}'
 
         feed = feedgen.feed.FeedGenerator()
         feed.author({'name': 'Feed Generator'})
@@ -90,10 +90,7 @@ class Job104View(View):
                 job_company = item['custName']
                 job_url = item['link']['job']
 
-                content = '<h3>{}</h3><pre>{}</pre>'.format(
-                    html.escape(job_company),
-                    html.escape(job_desc)
-                )
+                content = f'<h3>{html.escape(job_company)}</h3><pre>{html.escape(job_desc)}</pre>'
 
                 entry = feed.add_entry()
                 entry.author({'name': job_company})

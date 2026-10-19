@@ -4,7 +4,7 @@ import string
 
 os.environ['SENTRY_DSN'] = ''
 
-from .settings import *  # noqa: F403,F401
+from .settings import *
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
@@ -20,8 +20,8 @@ SECRET_KEY = ''.join(
     random.SystemRandom().choice(string.ascii_letters) for _ in range(50)
 )
 
-# Test environment  # noqa: E402
-from django.core.management import execute_from_command_line  # noqa: E402
+# Test environment
+from django.core.management import execute_from_command_line
 
 execute_from_command_line(['', 'makemigrations'])
 execute_from_command_line(['', 'migrate'])

@@ -1,18 +1,20 @@
-from django.http import HttpResponse
-from django.views.generic import View
-import feedgen.feed
 import html
 import urllib
 
+import feedgen.feed
+from django.http import HttpResponse
+from django.views.generic import View
+
 from .. import services
+
 
 class YouratorView(View):
     def get(self, *args, **kwargs):
         keyword = kwargs['keyword']
 
-        url = 'https://www.yourator.co/api/v2/jobs?term[]={}'.format(urllib.parse.quote_plus(keyword))
+        url = f'https://www.yourator.co/api/v2/jobs?term[]={urllib.parse.quote_plus(keyword)}'
 
-        title = 'Yourator 搜尋 - {}'.format(keyword)
+        title = f'Yourator 搜尋 - {keyword}'
 
         feed = feedgen.feed.FeedGenerator()
         feed.author({'name': 'Feed Generator'})
@@ -36,7 +38,7 @@ class YouratorView(View):
             job_title = item['name']
 
             item_author = job_company
-            item_content = '<h3>{}</h3><p>{} {}</p>'.format(html.escape(job_company), html.escape(job_city), html.escape(job_salary))
+            item_content = f'<h3>{html.escape(job_company)}</h3><p>{html.escape(job_city)} {html.escape(job_salary)}</p>'
             item_title = job_title
             item_url = job_link
 

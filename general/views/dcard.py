@@ -1,19 +1,21 @@
-from django.http import HttpResponse
-from django.views.generic import View
-import feedgen.feed
 import html
-import lxml.html
 import re
 import urllib
 
+import feedgen.feed
+import lxml.html
+from django.http import HttpResponse
+from django.views.generic import View
+
 from .. import services
+
 
 class DcardBoardView(View):
     def get(self, *args, **kwargs):
         board = kwargs['board']
-        url = 'https://www.dcard.tw/f/{}'.format(urllib.parse.quote_plus(board))
+        url = f'https://www.dcard.tw/f/{urllib.parse.quote_plus(board)}'
 
-        title = 'Dcard 看板 - {}'.format(board)
+        title = f'Dcard 看板 - {board}'
 
         feed = feedgen.feed.FeedGenerator()
         feed.author({'name': 'Feed Generator'})
@@ -52,15 +54,9 @@ class DcardBoardView(View):
                 item_url = 'https://www.dcard.tw' + item_url
 
             if item_img_src is None:
-                item_content = '{}'.format(
-                    html.escape(item_desc)
-                )
+                item_content = f'{html.escape(item_desc)}'
             else:
-                item_content = '<img alt="{}" src="{}"/><br/>{}'.format(
-                    html.escape(item_title),
-                    html.escape(item_img_src),
-                    html.escape(item_desc)
-                )
+                item_content = f'<img alt="{html.escape(item_title)}" src="{html.escape(item_img_src)}"/><br/>{html.escape(item_desc)}'
 
             entry = feed.add_entry()
             entry.content(item_content, type='xhtml')
@@ -94,7 +90,7 @@ class DcardMainView(View):
         r = s.get('https://www.dcard.tw/service/api/v2/popularForums/GetHead?listKey=popularForums')
         if r.status_code == 200:
             head = r.json()['head']
-            r = s.get('https://www.dcard.tw/service/api/v2/popularForums/GetPage?pageKey={}'.format(head))
+            r = s.get(f'https://www.dcard.tw/service/api/v2/popularForums/GetPage?pageKey={head}')
             items = r.json()['items']
         else:
             items = []
@@ -104,9 +100,7 @@ class DcardMainView(View):
             item_url = 'https://www.dcard.tw/f/{}/p/{}'.format(item['alias'], item['posts'][0]['id'])
             item_desc = item['posts'][0]['excerpt']
 
-            item_content = '<p>{}</p>'.format(
-                html.escape(item_desc)
-            )
+            item_content = f'<p>{html.escape(item_desc)}</p>'
 
             entry = feed.add_entry()
             entry.content(item_content, type='xhtml')
