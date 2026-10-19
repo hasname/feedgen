@@ -1,5 +1,6 @@
 import re
 from pathlib import Path
+from urllib.parse import parse_qs, urlsplit
 
 import lxml.etree
 import requests_mock
@@ -28,7 +29,11 @@ class SmokeTestCase(TestCase):
                 self.assertEqual(content.get('type'), 'xhtml')
                 cover = content.find('.//xhtml:div[@class="bookcover"]/xhtml:img', ns)
                 product_id = book_url.rsplit('/', 1)[1]
-                self.assertEqual(cover.get('src'), f'https://taiwan-image.bookwalker.com.tw/product/{product_id}/{product_id}.jpg')
+                cover_url = urlsplit(cover.get('src'))
+                self.assertEqual((cover_url.scheme, cover_url.netloc, cover_url.path), ('https', 'wsrv.nl', '/'))
+                self.assertEqual(parse_qs(cover_url.query), {
+                    'url': [f'https://taiwan-image.bookwalker.com.tw/product/{product_id}/{product_id}.jpg'],
+                })
                 self.assertNotIn('data-src', cover.attrib)
                 self.assertNotIn('style', cover.attrib)
                 for img in content.findall('.//xhtml:img', ns):

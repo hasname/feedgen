@@ -1,4 +1,5 @@
 import re
+from urllib.parse import urlencode
 
 import feedgen.feed
 import lxml.html
@@ -33,6 +34,7 @@ class BookwalkerMangaView(View):
             del img.attrib['data-src']
             img.attrib.pop('style', None)
             item.make_links_absolute(url)
+            img.set('src', 'https://wsrv.nl/?' + urlencode({'url': img.get('src')}))
 
             content = lxml.etree.tostring(item, encoding='unicode')
             book_title = item.get('title')
@@ -74,6 +76,7 @@ class BookwalkerLightNovelView(View):
             del img.attrib['data-src']
             img.attrib.pop('style', None)
             item.make_links_absolute(url)
+            img.set('src', 'https://wsrv.nl/?' + urlencode({'url': img.get('src')}))
 
             content = lxml.etree.tostring(item, encoding='unicode')
             book_title = item.get('title')
