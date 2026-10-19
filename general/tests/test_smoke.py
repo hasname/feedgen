@@ -1,9 +1,37 @@
 from django.test import Client, TestCase
+import lxml.etree
 import os
 import re
 import requests_mock
 
 class SmokeTestCase(TestCase):
+    def assert_bookwalker_entries(self, response, first_title, first_url):
+        ns = {
+            'atom': 'http://www.w3.org/2005/Atom',
+            'xhtml': 'http://www.w3.org/1999/xhtml',
+        }
+        feed = lxml.etree.fromstring(response.content)
+        entries = feed.findall('atom:entry', ns)
+        self.assertEqual(len(entries), 16)
+
+        with self.subTest(check='entry order'):
+            self.assertEqual(entries[0].findtext('atom:title', namespaces=ns), first_title)
+            self.assertEqual(entries[0].findtext('atom:id', namespaces=ns), first_url)
+
+        for entry in entries:
+            book_url = entry.findtext('atom:id', namespaces=ns)
+            with self.subTest(book_url=book_url):
+                self.assertEqual(entry.find('atom:link', ns).get('href'), book_url)
+                content = entry.find('atom:content', ns)
+                self.assertEqual(content.get('type'), 'xhtml')
+                cover = content.find('.//xhtml:div[@class="bookcover"]/xhtml:img', ns)
+                product_id = book_url.rsplit('/', 1)[1]
+                self.assertEqual(cover.get('src'), f'https://taiwan-image.bookwalker.com.tw/product/{product_id}/{product_id}.jpg')
+                self.assertNotIn('data-src', cover.attrib)
+                self.assertNotIn('style', cover.attrib)
+                for img in content.findall('.//xhtml:img', ns):
+                    self.assertRegex(img.get('src'), r'^https://')
+
     @requests_mock.mock()
     def test_bookwalker_lightnovel(self, m):
         text = open(os.path.dirname(__file__) + '/html_bookwalker_lightnovel.txt').read()
@@ -12,6 +40,7 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/bookwalker-lightnovel')
         self.assertEqual(res.status_code, 200)
+        self.assert_bookwalker_entries(res, '堤亞穆帝國物語(07)', 'https://www.bookwalker.com.tw/product/152448')
 
     @requests_mock.mock()
     def test_bookwalker_manga(self, m):
@@ -21,6 +50,7 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/bookwalker-manga')
         self.assertEqual(res.status_code, 200)
+        self.assert_bookwalker_entries(res, '【套書】異世界悠閒農家（漫畫）1-10（共10冊）', 'https://www.bookwalker.com.tw/product/187306')
 
     @requests_mock.mock()
     def test_cakeresume(self, m):

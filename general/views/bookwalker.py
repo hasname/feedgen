@@ -29,12 +29,14 @@ class BookwalkerMangaView(View):
             img_src = re.sub(r'_4(_mask)?\.jpg$', '.jpg', img_src)
             img.set('src', img_src)
             del img.attrib['data-src']
+            img.attrib.pop('style', None)
+            item.make_links_absolute(url)
 
             content = lxml.etree.tostring(item, encoding='unicode')
             book_title = item.get('title')
             book_url = item.get('href')
 
-            entry = feed.add_entry()
+            entry = feed.add_entry(order='append')
             entry.content(content, type='xhtml')
             entry.id(book_url)
             entry.title(book_title)
@@ -68,12 +70,14 @@ class BookwalkerLightNovelView(View):
             img_src = re.sub(r'_4(_mask)?\.jpg$', '.jpg', img_src)
             img.set('src', img_src)
             del img.attrib['data-src']
+            img.attrib.pop('style', None)
+            item.make_links_absolute(url)
 
             content = lxml.etree.tostring(item, encoding='unicode')
             book_title = item.get('title')
             book_url = item.get('href')
 
-            entry = feed.add_entry()
+            entry = feed.add_entry(order='append')
             entry.content(content, type='xhtml')
             entry.id(book_url)
             entry.title(book_title)
