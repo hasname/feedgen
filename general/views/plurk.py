@@ -40,7 +40,7 @@ class PlurkSearchView(View):
 
             entry = feed.add_entry()
             entry.author(name=author)
-            entry.content(content, type='CDATA')
+            entry.content(content, type='html')
             entry.id(url)
             entry.link(href=url)
             entry.published(dateutil.parser.parse(p['posted']))
@@ -82,7 +82,7 @@ class PlurkTopView(View):
 
             entry = feed.add_entry()
             entry.author({'name': self.str_clean(stat['owner']['full_name'])})
-            entry.content(content, type='CDATA')
+            entry.content(content, type='html')
             entry.id(url)
             entry.link(href=url)
             entry.published(stat['posted'])

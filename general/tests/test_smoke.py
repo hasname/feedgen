@@ -3,11 +3,27 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 
 import lxml.etree
+import lxml.html
 import requests_mock
 from django.test import Client, TestCase
 
 
 class SmokeTestCase(TestCase):
+    def assert_plurk_images(self, response):
+        ns = {'atom': 'http://www.w3.org/2005/Atom'}
+        feed = lxml.etree.fromstring(response.content)
+        contents = feed.findall('atom:entry/atom:content', ns)
+        self.assertTrue(contents)
+        images = []
+        for content in contents:
+            self.assertEqual(content.get('type'), 'html')
+            self.assertEqual(len(content), 0)
+            body = lxml.html.fragment_fromstring(content.text or '', create_parent='div')
+            images.extend(body.cssselect('img'))
+        self.assertTrue(images)
+        for img in images:
+            self.assertRegex(img.get('src'), r'^https://')
+
     def assert_bookwalker_entries(self, response, first_title, first_url):
         ns = {
             'atom': 'http://www.w3.org/2005/Atom',
@@ -164,6 +180,7 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/plurk/search/test')
         self.assertEqual(res.status_code, 200)
+        self.assert_plurk_images(res)
 
     @requests_mock.mock()
     def test_plurk_top(self, m):
@@ -173,6 +190,7 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/plurk/top/zh')
         self.assertEqual(res.status_code, 200)
+        self.assert_plurk_images(res)
 
     @requests_mock.mock()
     def test_rent591(self, m):
