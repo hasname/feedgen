@@ -190,11 +190,20 @@ class SmokeTestCase(TestCase):
     @requests_mock.mock()
     def test_taipeimetrotimetable(self, m):
         text = Path(__file__).with_name('html_taipeimetrotimetable.txt').read_text(encoding='utf-8')
-        m.get('https://web.metro.taipei/img/ALL/timetables/079a.PDF', headers={'last-modified': 'Fri, 11 Nov 2022 16:20:50 GMT'}, text=text)
+        url = 'https://web.metro.taipei/img/ALL/timetables/079a.PDF'
+        m.get(url, headers={'last-modified': 'Fri, 11 Nov 2022 16:20:50 GMT'}, text=text)
 
         c = Client()
-        res = c.get('/taipeimetrotimetable/079a')
-        self.assertEqual(res.status_code, 200)
+        ns = {'atom': 'http://www.w3.org/2005/Atom'}
+        for time_zone in ('UTC', 'Asia/Taipei'):
+            with self.subTest(time_zone=time_zone), self.settings(TIME_ZONE=time_zone):
+                res = c.get('/taipeimetrotimetable/079a')
+                self.assertEqual(res.status_code, 200)
+                feed = lxml.etree.fromstring(res.content)
+                entries = feed.findall('atom:entry', ns)
+                self.assertEqual(len(entries), 1)
+                self.assertEqual(entries[0].findtext('atom:id', namespaces=ns), f'{url}?v=1668183650')
+                self.assertEqual(entries[0].findtext('atom:updated', namespaces=ns), '2022-11-11T16:20:50+00:00')
 
     @requests_mock.mock()
     def test_yourator(self, m):
