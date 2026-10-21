@@ -1,5 +1,7 @@
+import os
 import re
 from pathlib import Path
+from unittest.mock import patch
 from urllib.parse import parse_qs, urlsplit
 
 import lxml.etree
@@ -9,6 +11,23 @@ from django.test import Client, TestCase
 
 
 class SmokeTestCase(TestCase):
+    def setUp(self):
+        service_names = (
+            '104', '1111', '518', 'bookwalker', 'cakeresume', 'dcard', 'momoshop',
+            'pchome', 'plurk', 'rent591', 'shopee', 'taipeimetrotimetable', 'yourator', 'youtube',
+        )
+        self.enterContext(patch.dict(os.environ, {
+            'FEEDGEN_HTTP_PROXY': 'socks5h://default.proxy.test:1080',
+            **{f'FEEDGEN_{name.upper()}_PROXY': f'socks5h://{name}.proxy.test:1080' for name in service_names},
+        }, clear=True))
+
+    def assert_service_proxy(self, mock, service):
+        self.assertTrue(mock.request_history)
+        proxy = f'socks5h://{service}.proxy.test:1080'
+        for request in mock.request_history:
+            for scheme in ('http', 'https'):
+                self.assertEqual(request.proxies[scheme], proxy)
+
     def assert_plurk_images(self, response):
         ns = {'atom': 'http://www.w3.org/2005/Atom'}
         feed = lxml.etree.fromstring(response.content)
@@ -64,6 +83,7 @@ class SmokeTestCase(TestCase):
         res = c.get('/bookwalker-lightnovel')
         self.assertEqual(res.status_code, 200)
         self.assert_bookwalker_entries(res, '堤亞穆帝國物語(07)', 'https://www.bookwalker.com.tw/product/152448')
+        self.assert_service_proxy(m, 'bookwalker')
 
     @requests_mock.mock()
     def test_bookwalker_manga(self, m):
@@ -74,6 +94,7 @@ class SmokeTestCase(TestCase):
         res = c.get('/bookwalker-manga')
         self.assertEqual(res.status_code, 200)
         self.assert_bookwalker_entries(res, '【套書】異世界悠閒農家（漫畫）1-10（共10冊）', 'https://www.bookwalker.com.tw/product/187306')
+        self.assert_service_proxy(m, 'bookwalker')
 
     @requests_mock.mock()
     def test_cakeresume(self, m):
@@ -83,6 +104,7 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/cakeresume/test')
         self.assertEqual(res.status_code, 200)
+        self.assert_service_proxy(m, 'cakeresume')
 
     @requests_mock.mock()
     def test_dcard_board(self, m):
@@ -107,6 +129,7 @@ class SmokeTestCase(TestCase):
         self.assertEqual(len(images), 13)
         for img in images:
             self.assertRegex(img.get('src'), r'^https://imgur\.dcard\.tw/')
+        self.assert_service_proxy(m, 'dcard')
 
     @requests_mock.mock()
     def test_dcard_main(self, m):
@@ -118,6 +141,7 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/dcard/main')
         self.assertEqual(res.status_code, 200)
+        self.assert_service_proxy(m, 'dcard')
 
     @requests_mock.mock()
     def test_job104(self, m):
@@ -130,6 +154,7 @@ class SmokeTestCase(TestCase):
 
         res = c.get('/104company/test')
         self.assertEqual(res.status_code, 200)
+        self.assert_service_proxy(m, '104')
 
     @requests_mock.mock()
     def test_job1111(self, m):
@@ -139,6 +164,7 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/1111/test')
         self.assertEqual(res.status_code, 200)
+        self.assert_service_proxy(m, '1111')
 
     @requests_mock.mock()
     def test_job518(self, m):
@@ -148,6 +174,7 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/518/test')
         self.assertEqual(res.status_code, 200)
+        self.assert_service_proxy(m, '518')
 
     @requests_mock.mock()
     def test_momoshop(self, m):
@@ -159,6 +186,7 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/momoshop/test')
         self.assertEqual(res.status_code, 200)
+        self.assert_service_proxy(m, 'momoshop')
 
     @requests_mock.mock()
     def test_pchome(self, m):
@@ -168,6 +196,7 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/pchome/test')
         self.assertEqual(res.status_code, 200)
+        self.assert_service_proxy(m, 'pchome')
 
     @requests_mock.mock()
     def test_pchome_lightnovel(self, m):
@@ -177,6 +206,7 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/pchome-lightnovel')
         self.assertEqual(res.status_code, 200)
+        self.assert_service_proxy(m, 'pchome')
 
     @requests_mock.mock()
     def test_plurk_search(self, m):
@@ -187,6 +217,7 @@ class SmokeTestCase(TestCase):
         res = c.get('/plurk/search/test')
         self.assertEqual(res.status_code, 200)
         self.assert_plurk_images(res)
+        self.assert_service_proxy(m, 'plurk')
 
     @requests_mock.mock()
     def test_plurk_top(self, m):
@@ -197,6 +228,7 @@ class SmokeTestCase(TestCase):
         res = c.get('/plurk/top/zh')
         self.assertEqual(res.status_code, 200)
         self.assert_plurk_images(res)
+        self.assert_service_proxy(m, 'plurk')
 
     @requests_mock.mock()
     def test_rent591(self, m):
@@ -206,6 +238,7 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/rent591/1/abc')
         self.assertEqual(res.status_code, 200)
+        self.assert_service_proxy(m, 'rent591')
 
     @requests_mock.mock()
     def test_shopee(self, m):
@@ -215,6 +248,7 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/shopee/test')
         self.assertEqual(res.status_code, 200)
+        self.assert_service_proxy(m, 'shopee')
 
     @requests_mock.mock()
     def test_taipeimetrotimetable(self, m):
@@ -233,6 +267,7 @@ class SmokeTestCase(TestCase):
                 self.assertEqual(len(entries), 1)
                 self.assertEqual(entries[0].findtext('atom:id', namespaces=ns), f'{url}?v=1668183650')
                 self.assertEqual(entries[0].findtext('atom:updated', namespaces=ns), '2022-11-11T16:20:50+00:00')
+        self.assert_service_proxy(m, 'taipeimetrotimetable')
 
     @requests_mock.mock()
     def test_yourator(self, m):
@@ -242,6 +277,7 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/yourator/test')
         self.assertEqual(res.status_code, 200)
+        self.assert_service_proxy(m, 'yourator')
 
     @requests_mock.mock()
     def test_youtube(self, m):
@@ -252,3 +288,4 @@ class SmokeTestCase(TestCase):
         c = Client()
         res = c.get('/youtube/test')
         self.assertEqual(res.status_code, 200)
+        self.assert_service_proxy(m, 'youtube')

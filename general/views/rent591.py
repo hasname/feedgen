@@ -36,7 +36,7 @@ class Rent591View(View):
         feed.title(title)
 
         try:
-            s = services.RequestsService().process()
+            s = services.RequestsService().process('rent591')
 
             r = s.get(url)
             text = r.text

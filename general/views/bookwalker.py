@@ -21,7 +21,7 @@ class BookwalkerMangaView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = services.RequestsService().process()
+        s = services.RequestsService().process('bookwalker')
 
         r = s.get(url)
         body = lxml.html.fromstring(r.text)
@@ -63,7 +63,7 @@ class BookwalkerLightNovelView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = services.RequestsService().process()
+        s = services.RequestsService().process('bookwalker')
 
         r = s.get(url)
         body = lxml.html.fromstring(r.text)

@@ -25,7 +25,7 @@ class TaipeiMetroTimetableView(View):
         feed.title(title)
 
         try:
-            s = services.RequestsService().process()
+            s = services.RequestsService().process('taipeimetrotimetable')
 
             r = s.get(url)
             lastmodified = r.headers['last-modified']

@@ -23,7 +23,7 @@ class Job1111View(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = services.RequestsService().process()
+        s = services.RequestsService().process('1111')
 
         r = s.get(url)
         r.encoding = 'utf-8'

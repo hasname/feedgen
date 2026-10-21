@@ -28,7 +28,7 @@ class Job518View(View):
         feed.title(title)
 
         try:
-            s = services.RequestsService().process()
+            s = services.RequestsService().process('518')
 
             r = s.get(url)
             body = lxml.html.fromstring(r.text)

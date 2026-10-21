@@ -26,7 +26,7 @@ class PChomeLightNovelView(View):
         feed.title(title)
 
         try:
-            s = services.RequestsService().process()
+            s = services.RequestsService().process('pchome')
 
             r = s.get(url)
             body = re.match(r'^[^\[]*(\[.*\])[^\[]*$', r.text).group(1)
@@ -72,7 +72,7 @@ class PChomeView(View):
         feed.title(title)
 
         try:
-            s = services.RequestsService().process()
+            s = services.RequestsService().process('pchome')
 
             r = s.get(url)
             body = json.loads(r.text)

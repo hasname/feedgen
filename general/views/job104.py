@@ -26,7 +26,7 @@ class Job104CompanyView(View):
         feed.title(title)
 
         try:
-            s = services.RequestsService().process()
+            s = services.RequestsService().process('104')
 
             r = s.get(url, headers={'Referer': 'https://www.104.com.tw/'})
             items = json.loads(r.text)['data']
@@ -76,7 +76,7 @@ class Job104View(View):
         feed.title(title)
 
         try:
-            s = services.RequestsService().process()
+            s = services.RequestsService().process('104')
 
             r = s.get(url, headers={'Referer': 'https://www.104.com.tw/'})
             items = json.loads(r.text)['data']

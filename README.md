@@ -6,6 +6,38 @@ Generate Atom feeds for sites which do not support feeds, mostly in Taiwan.
 
 You need to set up `.env` first.  The sample environment file is in `.env.sample`.
 
+### Proxies
+
+Set proxies in `.env`, then restart the service:
+
+```dotenv
+# Optional default for all services.
+FEEDGEN_HTTP_PROXY="socks5h://127.0.0.1:1080"
+
+# Each service can use its own proxy.
+FEEDGEN_DCARD_PROXY="socks5h://127.0.0.1:1081"
+FEEDGEN_SHOPEE_PROXY="socks5h://user:password@proxy.example:1080"
+```
+
+`FEEDGEN_<SERVICE>_PROXY` takes precedence over `FEEDGEN_HTTP_PROXY` for both HTTP
+and HTTPS requests. Missing or empty service values inherit the default. The
+default now applies to all services, including those that previously did not use
+`FEEDGEN_HTTP_PROXY`. If neither is set, Requests keeps its usual behavior,
+including support for the standard `HTTP_PROXY`, `HTTPS_PROXY`, `ALL_PROXY`, and
+`NO_PROXY` environment variables. Explicit Feedgen proxy settings take precedence
+over those standard proxy variables.
+
+Supported service names are `104`, `1111`, `518`, `BOOKWALKER`, `CAKERESUME`,
+`DCARD`, `MOMOSHOP`, `PCHOME`, `PLURK`, `RENT591`, `SHOPEE`,
+`TAIPEIMETROTIMETABLE`, `YOURATOR`, and `YOUTUBE`. All endpoints for the same
+service share its proxy, such as Dcard's board and main feeds.
+
+Use `socks5h://` to resolve destination hostnames through the proxy, or `socks5://`
+to resolve them locally. SOCKS5 authentication uses `user:password@host:port`;
+percent-encode special characters in credentials. HTTP proxies (`http://`) are
+also supported. The existing PySocks dependency supplies SOCKS support; see the
+[Requests proxy documentation](https://requests.readthedocs.io/en/latest/user/advanced/#proxies).
+
 ## Run
 
 We use `uv` to manage the running environment along with `uwsgi` to run the uWSGI server, therefore you choose whatever you like to adopt these utilities.

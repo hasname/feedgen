@@ -68,7 +68,7 @@ class YouTubeView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = services.RequestsService().process()
+        s = services.RequestsService().process('youtube')
 
         r = s.get(url, headers={'Accept-Language': 'en'})
 

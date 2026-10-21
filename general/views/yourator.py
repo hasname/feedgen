@@ -26,7 +26,7 @@ class YouratorView(View):
         feed.title(title)
 
         try:
-            s = services.RequestsService().process()
+            s = services.RequestsService().process('yourator')
 
             r = s.get(url)
             items = r.json()['jobs']

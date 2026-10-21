@@ -25,7 +25,7 @@ class PlurkSearchView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = services.RequestsService().process()
+        s = services.RequestsService().process('plurk')
 
         r = s.post(url, data={'query': keyword})
         body = json.loads(r.text)
@@ -68,7 +68,7 @@ class PlurkTopView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = services.RequestsService().process()
+        s = services.RequestsService().process('plurk')
 
         r = s.get(url)
         body = json.loads(r.text)

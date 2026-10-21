@@ -28,7 +28,7 @@ class MomoshopView(View):
         feed.title(title)
 
         try:
-            s = services.RequestsService().process()
+            s = services.RequestsService().process('momoshop')
 
             # Environment cookie.
             r = s.get('https://www.momoshop.com.tw/')

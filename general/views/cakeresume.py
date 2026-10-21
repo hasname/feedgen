@@ -28,7 +28,7 @@ class CakeResumeView(View):
         feed.title(title)
 
         try:
-            s = services.RequestsService().process()
+            s = services.RequestsService().process('cakeresume')
 
             r = s.get(url)
             body = lxml.html.fromstring(r.text)
