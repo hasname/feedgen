@@ -5,9 +5,8 @@ from service_objects.services import Service
 
 from .proxy_socks5_service import ProxySocks5Service
 
-# Chrome impersonation targets verified against 104's Cloudflare bot check,
-# newest first.  Older fingerprints (chrome131 and below) are rejected.
-IMPERSONATE_TARGETS = ('chrome146', 'chrome145', 'chrome142', 'chrome136')
+# Prefer Chrome 152 for 104, with fallbacks for older curl_cffi versions.
+IMPERSONATE_TARGETS = ('chrome152', 'chrome146', 'chrome145', 'chrome142', 'chrome136')
 
 
 def resolve_impersonate():

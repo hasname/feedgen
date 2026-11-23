@@ -88,8 +88,8 @@ class CurlCffiServiceTestCase(SimpleTestCase):
     def setUp(self):
         self.enterContext(patch.dict(os.environ, {}, clear=True))
 
-    def test_resolve_impersonate_prefers_verified_targets(self):
-        self.assertIn(resolve_impersonate(), ('chrome146', 'chrome145', 'chrome142', 'chrome136'))
+    def test_resolve_impersonate_prefers_chrome152(self):
+        self.assertEqual(resolve_impersonate(), 'chrome152')
 
     def test_104_session_uses_configured_proxy(self):
         default = 'socks5h://default.example:1080'
