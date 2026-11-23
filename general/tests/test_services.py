@@ -1,10 +1,12 @@
 import os
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 import requests_mock
+from curl_cffi import requests as curl_requests
 from django.test import SimpleTestCase
 
-from general.services import RequestsService
+from general.services import CurlCffiService, RequestsService
+from general.services.curl_cffi_service import CurlCffiSession, resolve_impersonate
 
 
 class RequestsServiceTestCase(SimpleTestCase):
@@ -80,3 +82,32 @@ class RequestsServiceTestCase(SimpleTestCase):
             session.get('https://example.test/', proxies=proxies, timeout=3)
             self.assertEqual(self.http.last_request.proxies, proxies)
             self.assertEqual(self.http.last_request.timeout, 3)
+
+
+class CurlCffiServiceTestCase(SimpleTestCase):
+    def setUp(self):
+        self.enterContext(patch.dict(os.environ, {}, clear=True))
+
+    def test_resolve_impersonate_prefers_verified_targets(self):
+        self.assertIn(resolve_impersonate(), ('chrome146', 'chrome145', 'chrome142', 'chrome136'))
+
+    def test_impersonated_session_uses_configured_proxy(self):
+        proxy = 'socks5h://dcard.example:1080'
+        with patch.dict(os.environ, {'FEEDGEN_DCARD_PROXY': proxy}), CurlCffiService().process('dcard') as session:
+            self.assertIsInstance(session, CurlCffiSession)
+
+    def test_impersonated_session_sends_fetch_metadata(self):
+        captured = {}
+
+        def fake_request(self, method, url, **kwargs):
+            captured.update(kwargs, method=method, url=url)
+            response = MagicMock(status_code=200, content=b'', text='', url=url)
+            response.json.return_value = {}
+            return response
+
+        with CurlCffiService().process('104') as session, patch.object(
+            curl_requests.Session, 'request', fake_request,
+        ):
+            session.get('https://www.104.com.tw/jobs/search/api/jobs', headers={'Sec-Fetch-Mode': 'cors'})
+            self.assertEqual(captured['headers']['Sec-Fetch-Mode'], 'cors')
+            self.assertEqual(captured['timeout'], 10)

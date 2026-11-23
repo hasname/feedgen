@@ -16,6 +16,8 @@ See the [104 authorization specification](https://developers.104.com.tw/openapi/
 and [104 Job Search API specification](https://developers.104.com.tw/openapi/5).
 
 With both settings empty, Feedgen uses the existing website search endpoint.
+That request goes through `curl-cffi` with a Chrome TLS fingerprint and fetch
+metadata headers so Cloudflare does not treat it as bot traffic.
 If 104 rejects a request, the feed returns HTTP 502. A successful search with
 zero matches returns an empty Atom feed with HTTP 200.
 

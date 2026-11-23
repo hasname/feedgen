@@ -1,13 +1,15 @@
 import os
 import re
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 from urllib.parse import parse_qs, quote, urlsplit
 
 import lxml.etree
 import lxml.html
 import requests_mock
 from django.test import Client, TestCase
+
+from general import services
 
 
 class SmokeTestCase(TestCase):
@@ -27,6 +29,14 @@ class SmokeTestCase(TestCase):
         for request in mock.request_history:
             for scheme in ('http', 'https'):
                 self.assertEqual(request.proxies[scheme], proxy)
+
+    def use_plain_requests_fallback(self):
+        # The 104 Cloudflare fallback normally uses curl-cffi, which
+        # requests_mock cannot intercept; substitute plain requests sessions.
+        return patch.object(
+            services, 'CurlCffiService',
+            MagicMock(side_effect=lambda: services.RequestsService()),
+        )
 
     def assert_plurk_images(self, response):
         ns = {'atom': 'http://www.w3.org/2005/Atom'}
@@ -149,38 +159,43 @@ class SmokeTestCase(TestCase):
         m.get(re.compile(r'^https://www\.104\.com\.tw/jobs/search/api/jobs'), text=text)
 
         ns = {'atom': 'http://www.w3.org/2005/Atom'}
-        for route, expected_url in (
-            ('104', 'https://www.104.com.tw/job/7w3wb'),
-            ('104company', 'https://www.104.com.tw/company/10wyheso'),
-        ):
-            with self.subTest(route=route):
-                res = self.client.get(f'/{route}/test')
-                self.assertEqual(res.status_code, 200)
-                feed = lxml.etree.fromstring(res.content)
-                self.assertIn(expected_url, feed.xpath('atom:entry/atom:id/text()', namespaces=ns))
-        self.assert_service_proxy(m, '104')
+        with self.use_plain_requests_fallback():
+            for route, expected_url in (
+                ('104', 'https://www.104.com.tw/job/7w3wb'),
+                ('104company', 'https://www.104.com.tw/company/10wyheso'),
+            ):
+                with self.subTest(route=route):
+                    res = self.client.get(f'/{route}/test')
+                    self.assertEqual(res.status_code, 200)
+                    feed = lxml.etree.fromstring(res.content)
+                    self.assertIn(expected_url, feed.xpath('atom:entry/atom:id/text()', namespaces=ns))
+            self.assert_service_proxy(m, '104')
 
     @requests_mock.mock()
     def test_job104_keyword(self, m):
         m.get('https://www.104.com.tw/jobs/search/api/jobs', json={'data': []})
         keyword = '研發 C++ & C#'
-        for route in ('104', '104company'):
-            with self.subTest(route=route):
-                res = self.client.get(f'/{route}/{quote(keyword)}')
-                self.assertEqual(res.status_code, 200)
-                self.assertEqual(parse_qs(urlsplit(m.last_request.url).query)['keyword'], [keyword])
-                self.assertEqual(lxml.etree.fromstring(res.content).findall('{*}entry'), [])
+        with self.use_plain_requests_fallback():
+            for route in ('104', '104company'):
+                with self.subTest(route=route):
+                    res = self.client.get(f'/{route}/{quote(keyword)}')
+                    self.assertEqual(res.status_code, 200)
+                    self.assertEqual(parse_qs(urlsplit(m.last_request.url).query)['keyword'], [keyword])
+                    self.assertEqual(lxml.etree.fromstring(res.content).findall('{*}entry'), [])
+            self.assert_service_proxy(m, '104')
 
     @requests_mock.mock()
     def test_job104_upstream_error(self, m):
         url = 'https://www.104.com.tw/jobs/search/api/jobs'
-        for response in ({'status_code': 403}, {'text': '<html></html>'}, {'json': {'data': {}}}):
-            m.get(url, **response)
-            for route in ('104', '104company'):
-                with self.subTest(response=response, route=route), self.assertLogs('general.views.job104'):
-                    res = self.client.get(f'/{route}/devops')
-                    self.assertEqual(res.status_code, 502)
-                    self.assertEqual(res['Cache-Control'], 'no-store')
+        with self.use_plain_requests_fallback():
+            for response in ({'status_code': 403}, {'text': '<html></html>'}, {'json': {'data': {}}}):
+                m.get(url, **response)
+                for route in ('104', '104company'):
+                    with self.subTest(response=response, route=route), self.assertLogs('general.views.job104'):
+                        res = self.client.get(f'/{route}/devops')
+                        self.assertEqual(res.status_code, 502)
+                        self.assertEqual(res['Cache-Control'], 'no-store')
+            self.assert_service_proxy(m, '104')
 
     @requests_mock.mock()
     @patch.dict(os.environ, FEEDGEN_104_CLIENT_ID='client', FEEDGEN_104_CLIENT_SECRET='secret')

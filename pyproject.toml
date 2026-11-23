@@ -10,6 +10,7 @@ keywords = ["feed"]
 dependencies = [
     "base36",
     "cssselect",
+    "curl-cffi>=0.17.0",
     "django",
     "django-service-objects",
     "feedgen",

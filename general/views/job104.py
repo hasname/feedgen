@@ -46,10 +46,20 @@ def fetch_jobs(session, keyword, web_api_url):
 class Job104View(View):
     company = False
 
+    def _open_session(self, service_name):
+        # Without Open API credentials the request hits www.104.com.tw, which
+        # sits behind Cloudflare and needs a browser TLS fingerprint.  The
+        # Open API host (apis.104api.com.tw) works with plain requests.
+        client_id = os.getenv('FEEDGEN_104_CLIENT_ID')
+        client_secret = os.getenv('FEEDGEN_104_CLIENT_SECRET')
+        if client_id and client_secret:
+            return services.RequestsService().process(service_name)
+        return services.CurlCffiService().process(service_name)
+
     def get(self, request, keyword):
         url = f'https://www.104.com.tw/jobs/search/api/jobs?jobsource=index_s&keyword={quote_plus(keyword)}&mode=s&order=16&page=1&pagesize=20&searchJobs=1'
         try:
-            with services.RequestsService().process('104') as session:
+            with self._open_session('104') as session:
                 items = fetch_jobs(session, keyword, url)
             if not isinstance(items, list):
                 raise TypeError('Expected a list of 104 jobs')
