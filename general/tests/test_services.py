@@ -6,7 +6,7 @@ from curl_cffi import requests as curl_requests
 from django.test import SimpleTestCase
 
 from general.services import CurlCffiService, RequestsService
-from general.services.curl_cffi_service import CurlCffiSession, resolve_impersonate
+from general.services.curl_cffi_service import resolve_impersonate
 
 
 class RequestsServiceTestCase(SimpleTestCase):
@@ -91,10 +91,17 @@ class CurlCffiServiceTestCase(SimpleTestCase):
     def test_resolve_impersonate_prefers_verified_targets(self):
         self.assertIn(resolve_impersonate(), ('chrome146', 'chrome145', 'chrome142', 'chrome136'))
 
-    def test_impersonated_session_uses_configured_proxy(self):
-        proxy = 'socks5h://dcard.example:1080'
-        with patch.dict(os.environ, {'FEEDGEN_DCARD_PROXY': proxy}), CurlCffiService().process('dcard') as session:
-            self.assertIsInstance(session, CurlCffiSession)
+    def test_104_session_uses_configured_proxy(self):
+        default = 'socks5h://default.example:1080'
+        override = 'socks5h://104.example:1080'
+        for service_proxy, expected in ((override, override), ('', default)):
+            with (
+                self.subTest(service_proxy=service_proxy),
+                patch.dict(os.environ, FEEDGEN_HTTP_PROXY=default, FEEDGEN_104_PROXY=service_proxy),
+                patch.object(curl_requests, 'Session') as curl_session,
+                CurlCffiService().process('104'),
+            ):
+                self.assertEqual(curl_session.call_args.kwargs['proxies'], {'http': expected, 'https': expected})
 
     def test_impersonated_session_sends_fetch_metadata(self):
         captured = {}

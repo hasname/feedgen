@@ -1,7 +1,7 @@
 import os
 import re
 from pathlib import Path
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 from urllib.parse import parse_qs, quote, urlsplit
 
 import lxml.etree
@@ -30,13 +30,9 @@ class SmokeTestCase(TestCase):
             for scheme in ('http', 'https'):
                 self.assertEqual(request.proxies[scheme], proxy)
 
-    def use_plain_requests_fallback(self):
-        # The 104 Cloudflare fallback normally uses curl-cffi, which
-        # requests_mock cannot intercept; substitute plain requests sessions.
-        return patch.object(
-            services, 'CurlCffiService',
-            MagicMock(side_effect=lambda: services.RequestsService()),
-        )
+    def mock_104_session(self):
+        # requests_mock intercepts requests sessions.
+        return patch.object(services, 'CurlCffiService', services.RequestsService)
 
     def assert_plurk_images(self, response):
         ns = {'atom': 'http://www.w3.org/2005/Atom'}
@@ -159,7 +155,7 @@ class SmokeTestCase(TestCase):
         m.get(re.compile(r'^https://www\.104\.com\.tw/jobs/search/api/jobs'), text=text)
 
         ns = {'atom': 'http://www.w3.org/2005/Atom'}
-        with self.use_plain_requests_fallback():
+        with self.mock_104_session():
             for route, expected_url in (
                 ('104', 'https://www.104.com.tw/job/7w3wb'),
                 ('104company', 'https://www.104.com.tw/company/10wyheso'),
@@ -175,7 +171,7 @@ class SmokeTestCase(TestCase):
     def test_job104_keyword(self, m):
         m.get('https://www.104.com.tw/jobs/search/api/jobs', json={'data': []})
         keyword = '研發 C++ & C#'
-        with self.use_plain_requests_fallback():
+        with self.mock_104_session():
             for route in ('104', '104company'):
                 with self.subTest(route=route):
                     res = self.client.get(f'/{route}/{quote(keyword)}')
@@ -187,7 +183,7 @@ class SmokeTestCase(TestCase):
     @requests_mock.mock()
     def test_job104_upstream_error(self, m):
         url = 'https://www.104.com.tw/jobs/search/api/jobs'
-        with self.use_plain_requests_fallback():
+        with self.mock_104_session():
             for response in ({'status_code': 403}, {'text': '<html></html>'}, {'json': {'data': {}}}):
                 m.get(url, **response)
                 for route in ('104', '104company'):
@@ -198,16 +194,15 @@ class SmokeTestCase(TestCase):
             self.assert_service_proxy(m, '104')
 
     @requests_mock.mock()
-    @patch.dict(os.environ, FEEDGEN_104_CLIENT_ID='client', FEEDGEN_104_CLIENT_SECRET='secret')
-    def test_job104_open_api(self, m):
-        token_request = m.post('https://apis.104api.com.tw/oauth2/token', json={'access_token': 'test-token'})
+    def test_job104_entry_content(self, m):
+        self.enterContext(self.mock_104_session())
         keyword = 'C++'
         item = {
             'jobName': 'Software Engineer', 'description': '開發 C++ 工具', 'custName': '範例公司',
             'link': {'job': '//www.104.com.tw/job/4u46a', 'cust': '//www.104.com.tw/company/12v3o7uw'},
         }
-        search = m.get('https://apis.104api.com.tw/jobs/1.0/jobs', json={
-            'data': {'list': [item, dict(item, description='其他職務')]},
+        search = m.get('https://www.104.com.tw/jobs/search/api/jobs', json={
+            'data': [item, dict(item, description='其他職務')],
         })
 
         ns = {'atom': 'http://www.w3.org/2005/Atom', 'xhtml': 'http://www.w3.org/1999/xhtml'}
@@ -224,14 +219,7 @@ class SmokeTestCase(TestCase):
                 self.assertEqual(entry.findtext('.//xhtml:h3', namespaces=ns), '範例公司')
                 desc = entry.findtext('.//xhtml:pre', namespaces=ns)
                 self.assertEqual(desc, item['description'] if route == '104' else None)
-                self.assertEqual(parse_qs(token_request.last_request.text), {
-                    'client_id': ['client'], 'client_secret': ['secret'],
-                    'grant_type': ['client_credentials'], 'scope': ['c_job'],
-                })
-                self.assertEqual(search.last_request.headers['Authorization'], 'Bearer test-token')
-                self.assertEqual(parse_qs(urlsplit(search.last_request.url).query), {
-                    'keyword': [keyword], 'order': ['2'], 'asc': ['0'], 'page': ['1'], 'pageSize': ['20'],
-                })
+                self.assertNotIn('Authorization', search.last_request.headers)
         self.assert_service_proxy(m, '104')
 
     @requests_mock.mock()
