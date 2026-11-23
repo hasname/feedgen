@@ -6,6 +6,19 @@ Generate Atom feeds for sites which do not support feeds, mostly in Taiwan.
 
 You need to set up `.env` first.  The sample environment file is in `.env.sample`.
 
+### 104 job and company feeds
+
+To use the 104 Job Search Open API for `/104/` and `/104company/`, set
+`FEEDGEN_104_CLIENT_ID` and `FEEDGEN_104_CLIENT_SECRET` in `.env` and restart
+the service. The credentials need the `c_job` scope. Feedgen exchanges them
+for an access token and requests the first 20 jobs by most recent appearance.
+See the [104 authorization specification](https://developers.104.com.tw/openapi/0)
+and [104 Job Search API specification](https://developers.104.com.tw/openapi/5).
+
+With both settings empty, Feedgen uses the existing website search endpoint.
+If 104 rejects a request, the feed returns HTTP 502. A successful search with
+zero matches returns an empty Atom feed with HTTP 200.
+
 ### Proxies
 
 Set proxies in `.env`, then restart the service:

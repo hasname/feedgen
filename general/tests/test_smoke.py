@@ -183,6 +183,43 @@ class SmokeTestCase(TestCase):
                     self.assertEqual(res['Cache-Control'], 'no-store')
 
     @requests_mock.mock()
+    @patch.dict(os.environ, FEEDGEN_104_CLIENT_ID='client', FEEDGEN_104_CLIENT_SECRET='secret')
+    def test_job104_open_api(self, m):
+        token_request = m.post('https://apis.104api.com.tw/oauth2/token', json={'access_token': 'test-token'})
+        keyword = 'C++'
+        item = {
+            'jobName': 'Software Engineer', 'description': '開發 C++ 工具', 'custName': '範例公司',
+            'link': {'job': '//www.104.com.tw/job/4u46a', 'cust': '//www.104.com.tw/company/12v3o7uw'},
+        }
+        search = m.get('https://apis.104api.com.tw/jobs/1.0/jobs', json={
+            'data': {'list': [item, dict(item, description='其他職務')]},
+        })
+
+        ns = {'atom': 'http://www.w3.org/2005/Atom', 'xhtml': 'http://www.w3.org/1999/xhtml'}
+        for route, key, title in (('104', 'job', 'Software Engineer'), ('104company', 'cust', '範例公司')):
+            with self.subTest(route=route):
+                res = self.client.get(f'/{route}/{quote(keyword)}')
+                self.assertEqual(res.status_code, 200)
+                feed = lxml.etree.fromstring(res.content)
+                entry, = feed.findall('atom:entry', ns)
+                link = 'https:' + item['link'][key]
+                self.assertEqual(entry.findtext('atom:id', namespaces=ns), link)
+                self.assertEqual(entry.find('atom:link', ns).get('href'), link)
+                self.assertEqual(entry.findtext('atom:title', namespaces=ns), title)
+                self.assertEqual(entry.findtext('.//xhtml:h3', namespaces=ns), '範例公司')
+                desc = entry.findtext('.//xhtml:pre', namespaces=ns)
+                self.assertEqual(desc, item['description'] if route == '104' else None)
+                self.assertEqual(parse_qs(token_request.last_request.text), {
+                    'client_id': ['client'], 'client_secret': ['secret'],
+                    'grant_type': ['client_credentials'], 'scope': ['c_job'],
+                })
+                self.assertEqual(search.last_request.headers['Authorization'], 'Bearer test-token')
+                self.assertEqual(parse_qs(urlsplit(search.last_request.url).query), {
+                    'keyword': [keyword], 'order': ['2'], 'asc': ['0'], 'page': ['1'], 'pageSize': ['20'],
+                })
+        self.assert_service_proxy(m, '104')
+
+    @requests_mock.mock()
     def test_job1111(self, m):
         text = Path(__file__).with_name('html_job1111.txt').read_text(encoding='utf-8')
         m.get('https://www.1111.com.tw/search/job?col=da&ks=test&page=1&sort=desc', text=text)
