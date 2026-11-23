@@ -2,7 +2,7 @@ import os
 import re
 from pathlib import Path
 from unittest.mock import patch
-from urllib.parse import parse_qs, urlsplit
+from urllib.parse import parse_qs, quote, urlsplit
 
 import lxml.etree
 import lxml.html
@@ -148,13 +148,39 @@ class SmokeTestCase(TestCase):
         text = Path(__file__).with_name('json_job104.txt').read_text(encoding='utf-8')
         m.get(re.compile(r'^https://www\.104\.com\.tw/jobs/search/api/jobs'), text=text)
 
-        c = Client()
-        res = c.get('/104/test')
-        self.assertEqual(res.status_code, 200)
-
-        res = c.get('/104company/test')
-        self.assertEqual(res.status_code, 200)
+        ns = {'atom': 'http://www.w3.org/2005/Atom'}
+        for route, expected_url in (
+            ('104', 'https://www.104.com.tw/job/7w3wb'),
+            ('104company', 'https://www.104.com.tw/company/10wyheso'),
+        ):
+            with self.subTest(route=route):
+                res = self.client.get(f'/{route}/test')
+                self.assertEqual(res.status_code, 200)
+                feed = lxml.etree.fromstring(res.content)
+                self.assertIn(expected_url, feed.xpath('atom:entry/atom:id/text()', namespaces=ns))
         self.assert_service_proxy(m, '104')
+
+    @requests_mock.mock()
+    def test_job104_keyword(self, m):
+        m.get('https://www.104.com.tw/jobs/search/api/jobs', json={'data': []})
+        keyword = '研發 C++ & C#'
+        for route in ('104', '104company'):
+            with self.subTest(route=route):
+                res = self.client.get(f'/{route}/{quote(keyword)}')
+                self.assertEqual(res.status_code, 200)
+                self.assertEqual(parse_qs(urlsplit(m.last_request.url).query)['keyword'], [keyword])
+                self.assertEqual(lxml.etree.fromstring(res.content).findall('{*}entry'), [])
+
+    @requests_mock.mock()
+    def test_job104_upstream_error(self, m):
+        url = 'https://www.104.com.tw/jobs/search/api/jobs'
+        for response in ({'status_code': 403}, {'text': '<html></html>'}, {'json': {'data': {}}}):
+            m.get(url, **response)
+            for route in ('104', '104company'):
+                with self.subTest(response=response, route=route), self.assertLogs('general.views.job104'):
+                    res = self.client.get(f'/{route}/devops')
+                    self.assertEqual(res.status_code, 502)
+                    self.assertEqual(res['Cache-Control'], 'no-store')
 
     @requests_mock.mock()
     def test_job1111(self, m):

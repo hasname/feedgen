@@ -1,112 +1,70 @@
 import html
-import json
 import logging
+from urllib.parse import quote_plus
 
 import feedgen.feed
 from django.http import HttpResponse
 from django.views.generic import View
+from requests.exceptions import RequestException
 
 from .. import services
 
 logger = logging.getLogger(__name__)
 
 
-class Job104CompanyView(View):
-    def get(self, *args, **kwargs):
-        keyword = kwargs['keyword']
-
-        url = f'https://www.104.com.tw/jobs/search/api/jobs?jobsource=index_s&keyword={keyword}&mode=s&order=16&page=1&pagesize=20&searchJobs=1'
-
-        title = f'104 公司搜尋 - {keyword}'
-
-        feed = feedgen.feed.FeedGenerator()
-        feed.author({'name': 'Feed Generator'})
-        feed.id(url)
-        feed.link(href=url, rel='alternate')
-        feed.title(title)
-
-        try:
-            s = services.RequestsService().process('104')
-
-            r = s.get(url, headers={'Referer': 'https://www.104.com.tw/'})
-            items = json.loads(r.text)['data']
-        except Exception:
-            logger.exception('Failed to fetch or parse 104 company search results')
-            items = []
-
-        for item in items:
-            try:
-                job_desc = item['description']
-                job_title = item['jobName']
-
-                if keyword.lower() not in job_title.lower() and keyword.lower() not in job_desc.lower():
-                    continue
-
-                job_company = item['custName']
-                job_company_url = item['link']['cust']
-
-                content = f'<h3>{html.escape(job_company)}</h3>'
-
-                entry = feed.add_entry()
-                entry.author({'name': job_company})
-                entry.content(content, type='xhtml')
-                entry.id(job_company_url)
-                entry.link(href=job_company_url)
-                entry.title(job_company)
-            except Exception:
-                logger.exception('Failed to generate 104 company entry')
-
-        res = HttpResponse(feed.atom_str(), content_type='application/atom+xml; charset=utf-8')
-        res['Cache-Control'] = 'max-age=300,public'
-
-        return res
-
 class Job104View(View):
-    def get(self, *args, **kwargs):
-        keyword = kwargs['keyword']
+    company = False
 
-        url = f'https://www.104.com.tw/jobs/search/api/jobs?jobsource=index_s&keyword={keyword}&mode=s&order=16&page=1&pagesize=20&searchJobs=1'
-
-        title = f'104 搜尋 - {keyword}'
+    def get(self, request, keyword):
+        url = f'https://www.104.com.tw/jobs/search/api/jobs?jobsource=index_s&keyword={quote_plus(keyword)}&mode=s&order=16&page=1&pagesize=20&searchJobs=1'
+        try:
+            with services.RequestsService().process('104') as session:
+                response = session.get(url, headers={'Referer': 'https://www.104.com.tw/'})
+                response.raise_for_status()
+                items = response.json()['data']
+            if not isinstance(items, list):
+                raise TypeError('Expected a list of 104 jobs')
+        except (RequestException, KeyError, TypeError, ValueError):
+            logger.exception('Failed to fetch or parse 104 search results')
+            return HttpResponse(
+                '無法取得 104 搜尋結果。', status=502, content_type='text/plain; charset=utf-8',
+                headers={'Cache-Control': 'no-store'},
+            )
 
         feed = feedgen.feed.FeedGenerator()
         feed.author({'name': 'Feed Generator'})
         feed.id(url)
         feed.link(href=url, rel='alternate')
-        feed.title(title)
+        feed.title(f'104 公司搜尋 - {keyword}' if self.company else f'104 搜尋 - {keyword}')
 
-        try:
-            s = services.RequestsService().process('104')
-
-            r = s.get(url, headers={'Referer': 'https://www.104.com.tw/'})
-            items = json.loads(r.text)['data']
-        except Exception:
-            logger.exception('Failed to fetch or parse 104 job search results')
-            items = []
-
+        term = keyword.lower()
         for item in items:
             try:
-                job_desc = item['description']
                 job_title = item['jobName']
-
-                if keyword.lower() not in job_title.lower() and keyword.lower() not in job_desc.lower():
+                job_desc = item['description']
+                if term not in job_title.lower() and term not in job_desc.lower():
                     continue
 
-                job_company = item['custName']
-                job_url = item['link']['job']
-
-                content = f'<h3>{html.escape(job_company)}</h3><pre>{html.escape(job_desc)}</pre>'
+                company = item['custName']
+                link = item['link']['cust' if self.company else 'job']
+                content = f'<h3>{html.escape(company)}</h3>'
+                if not self.company:
+                    content += f'<pre>{html.escape(job_desc)}</pre>'
 
                 entry = feed.add_entry()
-                entry.author({'name': job_company})
+                entry.author({'name': company})
                 entry.content(content, type='xhtml')
-                entry.id(job_url)
-                entry.link(href=job_url)
-                entry.title(job_title)
-            except Exception:
-                logger.exception('Failed to generate 104 job entry')
+                entry.id(link)
+                entry.link(href=link)
+                entry.title(company if self.company else job_title)
+            except (AttributeError, KeyError, TypeError, ValueError):
+                logger.exception('Failed to generate 104 entry')
 
-        res = HttpResponse(feed.atom_str(), content_type='application/atom+xml; charset=utf-8')
-        res['Cache-Control'] = 'max-age=300,public'
+        return HttpResponse(
+            feed.atom_str(), content_type='application/atom+xml; charset=utf-8',
+            headers={'Cache-Control': 'max-age=300,public'},
+        )
 
-        return res
+
+class Job104CompanyView(Job104View):
+    company = True
