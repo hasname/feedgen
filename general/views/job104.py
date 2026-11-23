@@ -17,7 +17,10 @@ def fetch_jobs(session, keyword, web_api_url):
     client_id = os.getenv('FEEDGEN_104_CLIENT_ID')
     client_secret = os.getenv('FEEDGEN_104_CLIENT_SECRET')
     if not client_id and not client_secret:
-        response = session.get(web_api_url, headers={'Referer': 'https://www.104.com.tw/'})
+        # Cloudflare rejects the API request without fetch metadata; the website
+        # frontend always sends Sec-Fetch-Mode: cors for these XHR calls.
+        headers = {'Referer': 'https://www.104.com.tw/', 'Sec-Fetch-Mode': 'cors'}
+        response = session.get(web_api_url, headers=headers)
         response.raise_for_status()
         return response.json()['data']
 
