@@ -1,20 +1,8 @@
 import requests
 from curl_cffi import requests as curl_requests
-from curl_cffi.requests.impersonate import BrowserType
 from service_objects.services import Service
 
 from .proxy_socks5_service import ProxySocks5Service
-
-# Prefer Chrome 152 for 104, with fallbacks for older curl_cffi versions.
-IMPERSONATE_TARGETS = ('chrome152', 'chrome146', 'chrome145', 'chrome142', 'chrome136')
-
-
-def resolve_impersonate():
-    supported = {member.name.lower() for member in BrowserType}
-    for target in IMPERSONATE_TARGETS:
-        if target in supported:
-            return target
-    raise RuntimeError(f'No supported impersonation target among {IMPERSONATE_TARGETS}')
 
 
 class CurlCffiResponse:
@@ -55,7 +43,7 @@ class CurlCffiSession:
     '''
 
     def __init__(self, impersonate=None, proxies=None):
-        self._session = curl_requests.Session(impersonate=impersonate or resolve_impersonate(), proxies=proxies)
+        self._session = curl_requests.Session(impersonate=impersonate or 'chrome', proxies=proxies)
 
     def __enter__(self):
         return self

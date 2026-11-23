@@ -6,7 +6,6 @@ from curl_cffi import requests as curl_requests
 from django.test import SimpleTestCase
 
 from general.services import CurlCffiService, RequestsService
-from general.services.curl_cffi_service import resolve_impersonate
 
 
 class RequestsServiceTestCase(SimpleTestCase):
@@ -88,8 +87,9 @@ class CurlCffiServiceTestCase(SimpleTestCase):
     def setUp(self):
         self.enterContext(patch.dict(os.environ, {}, clear=True))
 
-    def test_resolve_impersonate_prefers_chrome152(self):
-        self.assertEqual(resolve_impersonate(), 'chrome152')
+    def test_104_session_uses_latest_chrome(self):
+        with patch.object(curl_requests, 'Session') as curl_session, CurlCffiService().process('104'):
+            self.assertEqual(curl_session.call_args.kwargs['impersonate'], 'chrome')
 
     def test_104_session_uses_configured_proxy(self):
         default = 'socks5h://default.example:1080'
