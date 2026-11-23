@@ -76,7 +76,10 @@ Then you can use `make deploy` to update the service.  Scripts in `GNUmakefile` 
 
         sudo loginctl enable-linger service-feedgen
 
-Please note that `.env` lives on the remote host only.  It is listed in `.gitignore`, which `rsync` uses for `--exclude-from`, so `make deploy` neither uploads nor deletes it.  The application loads it with `python-dotenv` from the current working directory, which is why the unit sets `WorkingDirectory=%h/feedgen`.
+Set deployment values in the project root's `.env`. When this file is present,
+`make deploy` copies it to `~/feedgen/.env` on the host with mode `0600` before
+restarting the service. If the local file is absent, the host keeps its existing
+`.env`. Django loads the file at startup.
 
 ## Supporting platforms
 

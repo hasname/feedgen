@@ -14,6 +14,8 @@ ci:: lint quality test
 clean::
 	rm -f .coverage .dev.sqlite3 db.sqlite3
 
+DEPLOY_DEST = ${DEPLOY_USER}@${DEPLOY_HOST}:~${DEPLOY_USER}/feedgen/
+
 deploy::
 ifndef DEPLOY_HOST
 	$(error $$DEPLOY_HOST is not defined in GNUmakefile.local)
@@ -26,7 +28,8 @@ endif
 		--delete-after \
 		--exclude-from=.gitignore \
 		./ \
-		${DEPLOY_USER}@${DEPLOY_HOST}:~${DEPLOY_USER}/feedgen/
+		${DEPLOY_DEST}
+	rsync -aL --checksum --chmod=600 --ignore-missing-args .env ${DEPLOY_DEST}
 	ssh ${DEPLOY_USER}@${DEPLOY_HOST} 'bash -lc "cd ~/feedgen && uv sync --frozen"'
 	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "install -D -m 0644 ~/feedgen/feedgen.service ~/.config/systemd/user/feedgen.service && systemctl --user daemon-reload && systemctl --user reenable feedgen.service"
 	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "systemctl --user restart feedgen.service && sleep 3 && systemctl --user is-active feedgen.service"
