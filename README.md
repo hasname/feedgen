@@ -19,6 +19,18 @@ zero matches returns an empty Atom feed with HTTP 200.
 [cfsolve](https://github.com/chris124567/cfsolve) when Cloudflare returns a
 challenge. Failed requests return HTTP 503 with `Cache-Control: no-store`.
 
+Both feeds read the popular tab's list key from the page's React Flight data,
+then fetch the first article page through `globalPaging/head` and
+`globalPaging/page`. Board feeds follow that board's popular list; the main feed
+follows the site's current popular article list and prefixes titles with the
+forum name. It no longer takes one article from each popular forum.
+
+Articles come from `forumList` widgets, in their original order with duplicate
+post IDs removed. Ads, recommendations, and pinned/featured sections are skipped.
+Images come from article media metadata. Missing page configuration or unexpected
+article data returns HTTP 503 instead of a misleading empty feed; an explicitly
+empty API page still produces an empty feed.
+
 `make deploy` builds cfsolve locally before uploading anything to the server.
 It checks out the revision pinned in `scripts/install-cfsolve.sh` under the local
 `.cfsolve/` directory, installs rustup for the local user if needed, and builds

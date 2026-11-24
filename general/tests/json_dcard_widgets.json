@@ -1,0 +1,126 @@
+{
+  "pageKey": "fixture-page",
+  "listKey": "fixture-list",
+  "nextKey": "next-page",
+  "lastModified": "2026-11-25T00:00:00Z",
+  "widgets": [
+    {
+      "pinnedPosts": {
+        "posts": [
+          {
+            "id": 900
+          }
+        ]
+      }
+    },
+    {
+      "forumList": {
+        "layout": "classic",
+        "items": [
+          {
+            "post": {
+              "id": 240000001,
+              "forumAlias": "mood",
+              "forumName": "心情",
+              "title": "First <post> & \"title\"",
+              "excerpt": "A <script>alert(1)</script> & B",
+              "mediaMeta": [
+                {
+                  "type": "image/thumbnail",
+                  "url": "https://megapx-assets.dcard.tw/images/test/full.jpeg?x=1&y=2"
+                },
+                {
+                  "type": "video/megapx",
+                  "url": "https://megapx-assets.dcard.tw/videos/test/orig"
+                }
+              ]
+            },
+            "forum": {},
+            "persona": {},
+            "forumLogo": {}
+          }
+        ]
+      }
+    },
+    {
+      "dad": {
+        "unitId": "ad"
+      }
+    },
+    {
+      "featuredPosts": {
+        "posts": [
+          {
+            "id": 901
+          }
+        ]
+      }
+    },
+    {
+      "adNativePostFeed": {
+        "placementId": "ad"
+      }
+    },
+    {
+      "searchForums": {
+        "forums": [],
+        "link": "/f"
+      }
+    },
+    {
+      "forumList": {
+        "layout": "classic",
+        "items": [
+          {
+            "post": {
+              "id": 240000002,
+              "forumAlias": "mood",
+              "forumName": "心情",
+              "title": "Second post",
+              "excerpt": "No image",
+              "mediaMeta": [
+                {
+                  "type": "image/thumbnail",
+                  "url": "data:image/png;base64,placeholder"
+                },
+                {
+                  "type": "video/megapx",
+                  "url": "https://megapx-assets.dcard.tw/videos/test/orig"
+                }
+              ]
+            }
+          },
+          {
+            "post": null
+          }
+        ]
+      }
+    },
+    {
+      "forumList": {
+        "layout": "classic",
+        "items": [
+          {
+            "post": {
+              "id": 240000001,
+              "forumAlias": "mood",
+              "forumName": "心情",
+              "title": "First <post> & \"title\"",
+              "excerpt": "A <script>alert(1)</script> & B",
+              "mediaMeta": [
+                {
+                  "type": "image/thumbnail",
+                  "url": "https://megapx-assets.dcard.tw/images/test/full.jpeg?x=1&y=2"
+                },
+                {
+                  "type": "video/megapx",
+                  "url": "https://megapx-assets.dcard.tw/videos/test/orig"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
