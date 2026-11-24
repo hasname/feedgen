@@ -98,7 +98,7 @@ class CurlCffiServiceTestCase(SimpleTestCase):
     def test_dcard_session_randomly_picks_default_impersonate(self):
         for _ in range(20):
             with patch.object(curl_requests, 'Session') as curl_session, CurlCffiService().process('dcard'):
-                self.assertIn(curl_session.call_args.kwargs['impersonate'], {'chrome146', 'chrome150'})
+                self.assertIn(curl_session.call_args.kwargs['impersonate'], {'safari260_ios'})
 
     def test_impersonate_environment_supports_multiple_targets(self):
         # Service-specific setting wins over the global one; one target is

@@ -16,12 +16,8 @@ from .proxy_socks5_service import ProxySocks5Service
 # is picked at random per session.
 DEFAULT_104_IMPERSONATE = 'chrome136,chrome146,chrome150'
 
-# Dcard also sits behind Cloudflare. With a real-browser fingerprint
-# (chrome150 verified 2026-11) HTML pages (e.g. /f, /robots.txt) pass, but the
-# /service/api/v2/* endpoints keep returning a managed challenge that needs a
-# JS runtime to solve. Random rotation spreads the exit IP / fingerprint pairs;
-# adjust via FEEDGEN_DCARD_IMPERSONATE if the pass list changes.
-DEFAULT_DCARD_IMPERSONATE = 'chrome146,chrome150'
+# Pair cfsolve's safari-26-ios profile with curl_cffi's Safari iOS fingerprint.
+DEFAULT_DCARD_IMPERSONATE = 'safari260_ios'
 
 
 class CurlCffiResponse:
@@ -33,6 +29,14 @@ class CurlCffiResponse:
     @property
     def status_code(self):
         return self._response.status_code
+
+    @property
+    def headers(self):
+        return self._response.headers
+
+    @property
+    def url(self):
+        return self._response.url
 
     @property
     def content(self):
