@@ -29,6 +29,11 @@ cd cfsolve
 cargo build --release --bin challenge
 ```
 
+On Linux, cfsolve also needs the host's IANA time zone for its date probes.
+Install time zone data and configure `/etc/timezone`, or make `/etc/localtime`
+a symlink to the appropriate file under `/usr/share/zoneinfo/`. Setting `TZ`
+alone does not supply the zone name to cfsolve.
+
 Set these values in Feedgen's `.env`, using absolute paths on that host:
 
 ```dotenv
