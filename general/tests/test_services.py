@@ -87,9 +87,35 @@ class CurlCffiServiceTestCase(SimpleTestCase):
     def setUp(self):
         self.enterContext(patch.dict(os.environ, {}, clear=True))
 
-    def test_104_session_uses_latest_chrome(self):
-        with patch.object(curl_requests, 'Session') as curl_session, CurlCffiService().process('104'):
-            self.assertEqual(curl_session.call_args.kwargs['impersonate'], 'chrome')
+    def test_104_session_randomly_picks_default_impersonate(self):
+        for _ in range(20):
+            with patch.object(curl_requests, 'Session') as curl_session, CurlCffiService().process('104'):
+                self.assertIn(
+                    curl_session.call_args.kwargs['impersonate'],
+                    {'chrome136', 'chrome146', 'chrome150'},
+                )
+
+    def test_impersonate_environment_supports_multiple_targets(self):
+        # Service-specific setting wins over the global one; one target is
+        # picked at random from the comma-separated list.
+        for targets in ('chrome136', 'chrome136,chrome146,chrome150'):
+            os.environ.update({'FEEDGEN_IMPERSONATE': 'chrome116', 'FEEDGEN_104_IMPERSONATE': targets})
+            expected = set(targets.split(','))
+            for _ in range(20):
+                with patch.object(curl_requests, 'Session') as curl_session, CurlCffiService().process('104'):
+                    self.assertIn(curl_session.call_args.kwargs['impersonate'], expected)
+
+    def test_impersonate_global_environment_falls_back_to_chrome(self):
+        # Global setting without a service-specific one applies to any service;
+        # unset environment keeps the previous behaviour ('chrome').
+        for impersonate_env, expected in (({'FEEDGEN_IMPERSONATE': 'chrome110'}, 'chrome110'), ({}, 'chrome')):
+            with (
+                self.subTest(impersonate_env=impersonate_env),
+                patch.dict(os.environ, impersonate_env),
+                patch.object(curl_requests, 'Session') as curl_session,
+                CurlCffiService().process('dcard'),
+            ):
+                self.assertEqual(curl_session.call_args.kwargs['impersonate'], expected)
 
     def test_104_session_uses_configured_proxy(self):
         default = 'socks5h://default.example:1080'

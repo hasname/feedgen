@@ -1,8 +1,20 @@
+import os
+import random
+
 import requests
 from curl_cffi import requests as curl_requests
 from service_objects.services import Service
 
 from .proxy_socks5_service import ProxySocks5Service
+
+# Cloudflare on 104.com.tw challenges (403 "Just a moment...") the generic
+# 'chrome' fingerprint and some specific versions (e.g. chrome152), while
+# letting others through. Which versions pass changes over time, so the
+# default below sticks to versions known to work recently (verified 2026-11).
+# Override via FEEDGEN_104_IMPERSONATE / FEEDGEN_{SERVICE}_IMPERSONATE or the
+# global FEEDGEN_IMPERSONATE: comma-separated curl_cffi targets, one of which
+# is picked at random per session.
+DEFAULT_104_IMPERSONATE = 'chrome136,chrome146,chrome150'
 
 
 class CurlCffiResponse:
@@ -76,4 +88,7 @@ class CurlCffiService(Service):
     def process(self, service=None):
         proxy = ProxySocks5Service().process(service)
         proxies = {'http': proxy, 'https': proxy} if proxy else None
-        return CurlCffiSession(proxies=proxies)
+        env_key = f'FEEDGEN_{service.upper()}_IMPERSONATE' if service else 'FEEDGEN_IMPERSONATE'
+        raw = os.getenv(env_key) or os.getenv('FEEDGEN_IMPERSONATE') or (DEFAULT_104_IMPERSONATE if service == '104' else '')
+        targets = [target.strip() for target in raw.split(',') if target.strip()]
+        return CurlCffiSession(impersonate=random.choice(targets) if targets else None, proxies=proxies)
