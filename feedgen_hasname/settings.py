@@ -95,6 +95,24 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 dotenv.load_dotenv()
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.PyMemcacheCache',
+        'LOCATION': os.getenv('FEEDGEN_MEMCACHED_LOCATION') or '127.0.0.1:11211',
+        'KEY_PREFIX': os.getenv('FEEDGEN_CACHE_KEY_PREFIX') or 'feedgen_hasname',
+        'TIMEOUT': 300,
+        'OPTIONS': {
+            'connect_timeout': 1,
+            'timeout': 1,
+            'no_delay': True,
+            'ignore_exc': True,
+            'use_pooling': True,
+            'max_pool_size': 4,
+        },
+    },
+}
+
 sentry_sdk.init(
     dsn=os.getenv('SENTRY_DSN', ''),
     integrations=[DjangoIntegration()],

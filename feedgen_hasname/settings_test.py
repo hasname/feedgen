@@ -15,6 +15,13 @@ DATABASES = {
         'NAME': ':memory:',
     }
 }
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'feedgen-tests',
+        'KEY_PREFIX': 'feedgen_hasname-test',
+    },
+}
 LOGGING = {}
 SECRET_KEY = ''.join(
     random.SystemRandom().choice(string.ascii_letters) for _ in range(50)

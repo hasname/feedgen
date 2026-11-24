@@ -31,6 +31,31 @@ Images come from article media metadata. Missing page configuration or unexpecte
 article data returns HTTP 503 instead of a misleading empty feed; an explicitly
 empty API page still produces an empty feed.
 
+Successful Dcard feeds are cached in memcached for 300 seconds, so repeated
+requests reuse the feed without contacting Dcard or running cfsolve. Different
+boards and the main feed have separate cache entries. HTTP 503 responses are not
+cached. Cache connection failures fall back to fetching the feed normally.
+
+The default memcached address is `127.0.0.1:11211`. All cache keys have the
+`feedgen_hasname` prefix to avoid collisions with other applications sharing the
+server. Override either setting in `.env`; empty values use the defaults:
+
+```dotenv
+FEEDGEN_MEMCACHED_LOCATION="127.0.0.1:11211"
+FEEDGEN_CACHE_KEY_PREFIX="feedgen_hasname"
+```
+
+The Python client is included in `uv sync`. Run a memcached service at the
+configured address; on Debian/Ubuntu, install it with:
+
+```sh
+sudo apt-get install memcached
+```
+
+The configuration uses Django's
+[PyMemcacheCache backend](https://docs.djangoproject.com/en/6.1/topics/cache/#memcached).
+Tests use an isolated in-memory cache and do not require a memcached service.
+
 `make deploy` builds cfsolve locally before uploading anything to the server.
 It checks out the revision pinned in `scripts/install-cfsolve.sh` under the local
 `.cfsolve/` directory, installs rustup for the local user if needed, and builds

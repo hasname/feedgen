@@ -16,6 +16,7 @@ dependencies = [
     "feedgen",
     "lxml",
     "pip",
+    "pymemcache",
     "pysocks",
     "python-dateutil",
     "python-dotenv",

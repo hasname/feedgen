@@ -1,14 +1,19 @@
 import copy
 import json
 import os
+import tempfile
+import time
 from pathlib import Path
 from unittest.mock import patch
 from urllib.parse import parse_qs, urlsplit
 
 import lxml.etree
 import requests_mock
-from django.test import SimpleTestCase
+from django.conf import settings
+from django.core.cache import cache
+from django.test import SimpleTestCase, override_settings
 
+from feedgen_hasname import settings as project_settings
 from general import services
 
 
@@ -18,6 +23,14 @@ class DcardTestCase(SimpleTestCase):
 
     def setUp(self):
         self.ns = {'atom': 'http://www.w3.org/2005/Atom', 'xhtml': 'http://www.w3.org/1999/xhtml'}
+        self.enterContext(override_settings(CACHES={
+            'default': {
+                'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+                'LOCATION': self.id(),
+                'KEY_PREFIX': 'feedgen_hasname-test',
+            },
+        }))
+        cache.clear()
         self.enterContext(patch.dict(os.environ, {
             'FEEDGEN_DCARD_PROXY': 'socks5h://dcard.proxy.test:1080',
         }, clear=True))
@@ -39,7 +52,7 @@ class DcardTestCase(SimpleTestCase):
 
     def entries(self, response):
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response['Cache-Control'], 'max-age=300,public')
+        self.assertEqual({part.strip() for part in response['Cache-Control'].split(',')}, {'max-age=300', 'public'})
         return lxml.etree.fromstring(response.content).findall('atom:entry', self.ns)
 
     @requests_mock.mock()
@@ -139,3 +152,85 @@ class DcardTestCase(SimpleTestCase):
                     response = self.client.get(route)
                 self.assertEqual(response.status_code, 503)
                 self.assertEqual(response['Cache-Control'], 'no-store')
+
+    @requests_mock.mock()
+    def test_successful_feeds_are_reused_without_starting_solver_session(self, mock):
+        for name in ('board', 'main'):
+            with self.subTest(name=name):
+                route = self.configure(mock, name)
+                first = self.client.get(route)
+                self.entries(first)
+                request_count = mock.call_count
+                with patch.object(services.CfsolveService, 'process', side_effect=AssertionError('cache miss')) as process:
+                    second = self.client.get(route)
+                self.assertEqual(second.status_code, 200)
+                self.assertEqual(second.content, first.content)
+                process.assert_not_called()
+                self.assertEqual(mock.call_count, request_count)
+
+    @requests_mock.mock()
+    def test_boards_and_main_have_separate_cache_entries(self, mock):
+        routes = [self.configure(mock), self.configure(mock, 'main'), '/dcard/board/relationship']
+        mock.get(self.base + '/f/relationship', text=self.markup['board'])
+        contents = []
+        for route in routes:
+            response = self.client.get(route)
+            self.entries(response)
+            contents.append(response.content)
+        self.assertEqual(mock.call_count, 9)
+        self.assertEqual(len(set(contents)), 3)
+        for route, content in zip(routes, contents, strict=True):
+            self.assertEqual(self.client.get(route).content, content)
+        self.assertEqual(mock.call_count, 9)
+
+    @requests_mock.mock()
+    def test_cached_feed_expires_after_300_seconds(self, mock):
+        route = self.configure(mock)
+        with patch('django.core.cache.backends.locmem.time.time', return_value=time.time()) as clock:
+            self.entries(self.client.get(route))
+            clock.return_value += 299
+            self.entries(self.client.get(route))
+            self.assertEqual(mock.call_count, 3)
+            clock.return_value += 2
+            self.entries(self.client.get(route))
+            self.assertEqual(mock.call_count, 6)
+
+    @requests_mock.mock()
+    def test_failed_feed_is_retried_and_success_can_be_cached(self, mock):
+        route = self.configure(mock)
+        mock.get(self.paging + '/head', status_code=503)
+        for _ in range(2):
+            with self.assertLogs('general.views.dcard'):
+                response = self.client.get(route)
+            self.assertEqual(response.status_code, 503)
+            self.assertEqual(response['Cache-Control'], 'no-store')
+        self.assertEqual(mock.call_count, 4)
+        mock.get(self.paging + '/head', json={'head': 'fixture-page'})
+        self.entries(self.client.get(route))
+        self.entries(self.client.get(route))
+        self.assertEqual(mock.call_count, 7)
+
+    @requests_mock.mock()
+    def test_cache_prefix_isolates_applications_sharing_storage(self, mock):
+        route = self.configure(mock)
+        self.entries(self.client.get(route))
+        original_key = cache.make_key('same-key')
+        other_config = copy.deepcopy(settings.CACHES)
+        other_config['default']['KEY_PREFIX'] = 'other-application'
+        with override_settings(CACHES=other_config):
+            self.assertNotEqual(cache.make_key('same-key'), original_key)
+            self.entries(self.client.get(route))
+            self.assertEqual(mock.call_count, 6)
+        self.entries(self.client.get(route))
+        self.assertEqual(mock.call_count, 6)
+
+    @requests_mock.mock()
+    def test_unavailable_memcached_falls_back_to_fetching(self, mock):
+        route = self.configure(mock)
+        config = copy.deepcopy(project_settings.CACHES)
+        with tempfile.TemporaryDirectory() as directory:
+            config['default']['LOCATION'] = f'unix:{directory}/missing.sock'
+            with override_settings(CACHES=config):
+                self.entries(self.client.get(route))
+                self.entries(self.client.get(route))
+                self.assertEqual(mock.call_count, 6)

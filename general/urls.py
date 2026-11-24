@@ -1,4 +1,5 @@
 from django.urls import path
+from django.views.decorators.cache import cache_page
 
 from .views import (
     bookwalker,
@@ -30,8 +31,8 @@ urlpatterns = [
     path('bookwalker-lightnovel', bookwalker.BookwalkerLightNovelView.as_view(), name='bookwalker_lightnovel'),
     path('bookwalker-manga', bookwalker.BookwalkerMangaView.as_view(), name='bookwalker_manga'),
     path('cakeresume/<str:keyword>', cakeresume.CakeResumeView.as_view(), name='cakeresume'),
-    path('dcard/board/<str:board>', dcard.DcardBoardView.as_view(), name='dcard_board'),
-    path('dcard/main', dcard.DcardMainView.as_view(), name='dcard_main'),
+    path('dcard/board/<str:board>', cache_page(300)(dcard.DcardBoardView.as_view()), name='dcard_board'),
+    path('dcard/main', cache_page(300)(dcard.DcardMainView.as_view()), name='dcard_main'),
     path('momoshop/<str:keyword>', momoshop.MomoshopView.as_view(), name='momoshop'),
     path('pchome/<str:keyword>', pchome.PChomeView.as_view(), name='pchome'),
     path('pchome-lightnovel', pchome.PChomeLightNovelView.as_view(), name='pchome_lightnovel'),
