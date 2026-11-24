@@ -3,13 +3,16 @@
 
 #
 .DEFAULT_GOAL:=		rundev
-.PHONY:			.env ci clean deploy lint quality run rundev test
+.PHONY:			.env cfsolve ci clean deploy lint quality run rundev test
 
 .env::
 	test $(shell wc -l .env | cut -d ' ' -f 1) -eq $(shell wc -l .env.sample | cut -d ' ' -f 1)
 
 ci:: lint quality test
 	@true
+
+cfsolve::
+	bash scripts/install-cfsolve.sh
 
 clean::
 	rm -f .coverage .dev.sqlite3 db.sqlite3
@@ -31,6 +34,7 @@ endif
 		${DEPLOY_DEST}
 	rsync -aL --checksum --chmod=600 --ignore-missing-args .env ${DEPLOY_DEST}
 	ssh ${DEPLOY_USER}@${DEPLOY_HOST} 'bash -lc "cd ~/feedgen && uv sync --frozen"'
+	ssh ${DEPLOY_USER}@${DEPLOY_HOST} 'bash -lc "cd ~/feedgen && bash scripts/install-cfsolve.sh"'
 	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "install -D -m 0644 ~/feedgen/feedgen.service ~/.config/systemd/user/feedgen.service && systemctl --user daemon-reload && systemctl --user reenable feedgen.service"
 	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "systemctl --user restart feedgen.service && sleep 3 && systemctl --user is-active feedgen.service"
 

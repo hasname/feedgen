@@ -19,26 +19,36 @@ zero matches returns an empty Atom feed with HTTP 200.
 [cfsolve](https://github.com/chris124567/cfsolve) when Cloudflare returns a
 challenge. Failed requests return HTTP 503 with `Cache-Control: no-store`.
 
-Build cfsolve separately on each host running Feedgen. Follow its
-[build requirements](https://github.com/chris124567/cfsolve#building), including
-the pinned Rust toolchain, CMake, a C/C++ compiler, and libclang:
+`make deploy` installs cfsolve on the server before restarting Feedgen. It checks
+out the revision pinned in `scripts/install-cfsolve.sh` under `~/feedgen/.cfsolve/`,
+installs rustup for the deployment user if needed, and builds the `challenge`
+binary with the upstream Rust toolchain and locked Cargo dependencies. The
+checkout includes the browser profiles and their answer files. Later deployments
+reuse the checkout and build cache; `.cfsolve/` is excluded from Git and rsync.
+
+The server needs Git, curl, CMake, a C/C++ compiler, libclang, CA certificates, and
+time zone data. On Debian/Ubuntu, install these system prerequisites once:
 
 ```sh
-git clone https://github.com/chris124567/cfsolve.git
-cd cfsolve
-cargo build --release --bin challenge
+sudo apt-get install build-essential ca-certificates cmake curl git libclang-dev tzdata
 ```
+
+For local development, run `make cfsolve` to perform the same installation in
+the project's `.cfsolve/` directory. Rust and crate downloads require network
+access; the first build can take several minutes. A failed installation stops
+deployment before the service restart.
 
 On Linux, cfsolve also needs the host's IANA time zone for its date probes.
 Install time zone data and configure `/etc/timezone`, or make `/etc/localtime`
 a symlink to the appropriate file under `/usr/share/zoneinfo/`. Setting `TZ`
 alone does not supply the zone name to cfsolve.
 
-Set these values in Feedgen's `.env`, using absolute paths on that host:
+Use these values in Feedgen's `.env`. Paths are relative to the project directory,
+which is also the systemd service's working directory:
 
 ```dotenv
-FEEDGEN_CFSOLVE_BINARY="/path/to/cfsolve/target/release/challenge"
-FEEDGEN_CFSOLVE_PROFILE="/path/to/cfsolve/profiles/safari-26-ios.json"
+FEEDGEN_CFSOLVE_BINARY="./.cfsolve/target/release/challenge"
+FEEDGEN_CFSOLVE_PROFILE="./.cfsolve/profiles/safari-26-ios.json"
 FEEDGEN_DCARD_IMPERSONATE="safari260_ios"
 FEEDGEN_CFSOLVE_ATTEMPTS="3"
 FEEDGEN_CFSOLVE_TIMEOUT="300"
@@ -119,6 +129,9 @@ For `GNUmakefile.local`, you can set something like this:
     DEPLOY_USER=    service-feedgen
 
 Then you can use `make deploy` to update the service.  Scripts in `GNUmakefile` will call `rsync` to update code via SSH, run `uv sync` on the remote host, install `feedgen.service` into `~/.config/systemd/user/`, and then reload and restart the `uwsgi` service via userland systemd.
+
+The deployment also runs `scripts/install-cfsolve.sh` on the server after
+`uv sync` and before installing or restarting the systemd service.
 
 `feedgen.service` is a systemd user unit, therefore remember to use `systemctl --user` on the remote host.  Two things have to be set up once by hand before the first deploy:
 
