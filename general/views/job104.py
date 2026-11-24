@@ -16,10 +16,15 @@ class Job104View(View):
     company = False
 
     def get(self, request, keyword):
-        url = f'https://www.104.com.tw/jobs/search/api/jobs?jobsource=index_s&keyword={quote_plus(keyword)}&mode=s&order=16&page=1&pagesize=20&searchJobs=1'
+        base_url = 'https://www.104.com.tw/jobs/search/'
+        encoded_keyword = quote_plus(keyword)
+        query = f'jobsource=index_s&keyword={encoded_keyword}&mode=s'
+        search_url = f'{base_url}?{query}&page=1'
+        api_url = f'{base_url}api/jobs?{query}&order=16&page=1&pagesize=20&searchJobs=1'
         try:
             with services.CurlCffiService().process('104') as session:
-                response = session.get(url, headers={'Referer': 'https://www.104.com.tw/', 'Sec-Fetch-Mode': 'cors'})
+                session.get(search_url).raise_for_status()
+                response = session.get(api_url, headers={'Referer': search_url, 'Sec-Fetch-Mode': 'cors'})
                 response.raise_for_status()
                 items = response.json()['data']
             if not isinstance(items, list):
@@ -33,8 +38,8 @@ class Job104View(View):
 
         feed = feedgen.feed.FeedGenerator()
         feed.author({'name': 'Feed Generator'})
-        feed.id(url)
-        feed.link(href=f'https://www.104.com.tw/jobs/search/?keyword={quote_plus(keyword)}', rel='alternate')
+        feed.id(api_url)
+        feed.link(href=f'{base_url}?keyword={encoded_keyword}', rel='alternate')
         feed.title(f'104 公司搜尋 - {keyword}' if self.company else f'104 搜尋 - {keyword}')
 
         term = keyword.lower()

@@ -152,7 +152,8 @@ class SmokeTestCase(TestCase):
     @requests_mock.mock()
     def test_job104(self, m):
         text = Path(__file__).with_name('json_job104.txt').read_text(encoding='utf-8')
-        m.get(re.compile(r'^https://www\.104\.com\.tw/jobs/search/api/jobs'), text=text)
+        m.get('https://www.104.com.tw/jobs/search/', text='<html></html>')
+        m.get('https://www.104.com.tw/jobs/search/api/jobs', text=text)
 
         ns = {'atom': 'http://www.w3.org/2005/Atom'}
         with self.mock_104_session():
@@ -169,6 +170,7 @@ class SmokeTestCase(TestCase):
 
     @requests_mock.mock()
     def test_job104_keyword(self, m):
+        m.get('https://www.104.com.tw/jobs/search/', text='<html></html>')
         m.get('https://www.104.com.tw/jobs/search/api/jobs', json={'data': []})
         keyword = '研發 C++ & C#'
         with self.mock_104_session():
@@ -176,12 +178,34 @@ class SmokeTestCase(TestCase):
                 with self.subTest(route=route):
                     res = self.client.get(f'/{route}/{quote(keyword)}')
                     self.assertEqual(res.status_code, 200)
-                    self.assertEqual(parse_qs(urlsplit(m.last_request.url).query)['keyword'], [keyword])
+                    page, api = m.request_history[-2:]
+                    self.assertEqual(urlsplit(page.url).path, '/jobs/search/')
+                    self.assertEqual(parse_qs(urlsplit(page.url).query), {
+                        'jobsource': ['index_s'], 'keyword': [keyword], 'mode': ['s'], 'page': ['1'],
+                    })
+                    self.assertEqual(urlsplit(api.url).path, '/jobs/search/api/jobs')
+                    self.assertEqual(parse_qs(urlsplit(api.url).query)['keyword'], [keyword])
+                    self.assertEqual(api.headers['Referer'], page.url)
                     self.assertEqual(lxml.etree.fromstring(res.content).findall('{*}entry'), [])
+            self.assertEqual(m.call_count, 4)
             self.assert_service_proxy(m, '104')
 
     @requests_mock.mock()
+    def test_job104_search_page_error(self, m):
+        page = m.get('https://www.104.com.tw/jobs/search/', status_code=403)
+        api = m.get('https://www.104.com.tw/jobs/search/api/jobs', json={'data': []})
+        with self.mock_104_session():
+            for route in ('104', '104company'):
+                with self.subTest(route=route), self.assertLogs('general.views.job104'):
+                    res = self.client.get(f'/{route}/devops')
+                    self.assertEqual(res.status_code, 502)
+                    self.assertEqual(res['Cache-Control'], 'no-store')
+        self.assertEqual(page.call_count, 2)
+        self.assertFalse(api.called)
+
+    @requests_mock.mock()
     def test_job104_upstream_error(self, m):
+        m.get('https://www.104.com.tw/jobs/search/', text='<html></html>')
         url = 'https://www.104.com.tw/jobs/search/api/jobs'
         with self.mock_104_session():
             for response in ({'status_code': 403}, {'text': '<html></html>'}, {'json': {'data': {}}}):
@@ -201,6 +225,7 @@ class SmokeTestCase(TestCase):
             'jobName': 'Software Engineer', 'description': '開發 C++ 工具', 'custName': '範例公司',
             'link': {'job': '//www.104.com.tw/job/4u46a', 'cust': '//www.104.com.tw/company/12v3o7uw'},
         }
+        m.get('https://www.104.com.tw/jobs/search/', text='<html></html>')
         search = m.get('https://www.104.com.tw/jobs/search/api/jobs', json={
             'data': [item, dict(item, description='其他職務')],
         })
