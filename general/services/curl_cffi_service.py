@@ -16,6 +16,13 @@ from .proxy_socks5_service import ProxySocks5Service
 # is picked at random per session.
 DEFAULT_104_IMPERSONATE = 'chrome136,chrome146,chrome150'
 
+# Dcard also sits behind Cloudflare. With a real-browser fingerprint
+# (chrome150 verified 2026-11) HTML pages (e.g. /f, /robots.txt) pass, but the
+# /service/api/v2/* endpoints keep returning a managed challenge that needs a
+# JS runtime to solve. Random rotation spreads the exit IP / fingerprint pairs;
+# adjust via FEEDGEN_DCARD_IMPERSONATE if the pass list changes.
+DEFAULT_DCARD_IMPERSONATE = 'chrome146,chrome150'
+
 
 class CurlCffiResponse:
     '''Minimal shim translating a curl_cffi response to the requests API.'''
@@ -89,6 +96,7 @@ class CurlCffiService(Service):
         proxy = ProxySocks5Service().process(service)
         proxies = {'http': proxy, 'https': proxy} if proxy else None
         env_key = f'FEEDGEN_{service.upper()}_IMPERSONATE' if service else 'FEEDGEN_IMPERSONATE'
-        raw = os.getenv(env_key) or os.getenv('FEEDGEN_IMPERSONATE') or (DEFAULT_104_IMPERSONATE if service == '104' else '')
+        defaults = {'104': DEFAULT_104_IMPERSONATE, 'dcard': DEFAULT_DCARD_IMPERSONATE}
+        raw = os.getenv(env_key) or os.getenv('FEEDGEN_IMPERSONATE') or defaults.get(service, '')
         targets = [target.strip() for target in raw.split(',') if target.strip()]
         return CurlCffiSession(impersonate=random.choice(targets) if targets else None, proxies=proxies)

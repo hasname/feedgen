@@ -95,6 +95,11 @@ class CurlCffiServiceTestCase(SimpleTestCase):
                     {'chrome136', 'chrome146', 'chrome150'},
                 )
 
+    def test_dcard_session_randomly_picks_default_impersonate(self):
+        for _ in range(20):
+            with patch.object(curl_requests, 'Session') as curl_session, CurlCffiService().process('dcard'):
+                self.assertIn(curl_session.call_args.kwargs['impersonate'], {'chrome146', 'chrome150'})
+
     def test_impersonate_environment_supports_multiple_targets(self):
         # Service-specific setting wins over the global one; one target is
         # picked at random from the comma-separated list.
@@ -113,7 +118,7 @@ class CurlCffiServiceTestCase(SimpleTestCase):
                 self.subTest(impersonate_env=impersonate_env),
                 patch.dict(os.environ, impersonate_env),
                 patch.object(curl_requests, 'Session') as curl_session,
-                CurlCffiService().process('dcard'),
+                CurlCffiService().process('bookwalker'),
             ):
                 self.assertEqual(curl_session.call_args.kwargs['impersonate'], expected)
 
