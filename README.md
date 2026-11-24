@@ -26,12 +26,21 @@ binary with the upstream Rust toolchain and locked Cargo dependencies. The
 checkout includes the browser profiles and their answer files. Later deployments
 reuse the checkout and build cache; `.cfsolve/` is excluded from Git and rsync.
 
-The server needs Git, curl, CMake, a C/C++ compiler, libclang, CA certificates, and
-time zone data. On Debian/Ubuntu, install these system prerequisites once:
+The server needs Git, curl, CMake, a C/C++ compiler, clang, libclang, CA
+certificates, and time zone data. On Debian/Ubuntu, install these system
+prerequisites once:
 
 ```sh
-sudo apt-get install build-essential ca-certificates cmake curl git libclang-dev tzdata
+sudo apt-get install build-essential ca-certificates clang cmake curl git libclang-dev tzdata
 ```
+
+Bindgen uses the `clang` executable to discover system header directories.
+An error such as `fatal error: 'stddef.h' file not found` during binding
+generation can mean that clang or its resource headers are missing. The installer
+checks that clang can parse `stddef.h` and `stdint.h` before starting the Rust
+build, then exports its absolute path as `CLANG_PATH` for bindgen. For a custom
+LLVM installation, set `CLANG_PATH` to its clang executable and ensure that
+`LIBCLANG_PATH`, if set, selects a matching libclang installation.
 
 For local development, run `make cfsolve` to perform the same installation in
 the project's `.cfsolve/` directory. Rust and crate downloads require network

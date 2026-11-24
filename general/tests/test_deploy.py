@@ -21,6 +21,7 @@ class DeployTestCase(SimpleTestCase):
             **os.environ,
             'PATH': f'{self.bin}:{os.environ["PATH"]}',
             'CARGO_HOME': str(self.directory / 'cargo'),
+            'CLANG_PATH': '',
             'DEPLOY_TEST_LOG': str(self.log),
         }
         fake = self.directory / 'fake-command'
@@ -36,6 +37,12 @@ with open(os.environ['DEPLOY_TEST_LOG'], 'a') as log:
     log.write(json.dumps([name, *args]) + '\\n')
 if name == 'uname':
     print('Darwin')  # Host time zone configuration is checked in the real install.
+elif name.startswith('clang'):
+    source = sys.stdin.read()
+    assert '#include <stddef.h>' in source and '#include <stdint.h>' in source
+    if os.environ.get('DEPLOY_TEST_MISSING_HEADERS'):
+        print("fatal error: 'stddef.h' file not found", file=sys.stderr)
+        sys.exit(1)
 elif name == 'ssh' and 'install-cfsolve.sh' in args[-1]:
     sys.exit(int(os.environ.get('DEPLOY_TEST_FAIL_INSTALL', '0')))
 elif name == 'git':
@@ -50,6 +57,8 @@ elif name == 'git':
     elif args[0] == 'status':
         print(os.environ.get('DEPLOY_TEST_DIRTY', ''), end='')
 elif name == 'cargo':
+    with open(os.environ['DEPLOY_TEST_LOG'], 'a') as log:
+        log.write(json.dumps(['bindgen-clang', os.environ.get('CLANG_PATH')]) + '\\n')
     if os.environ.get('DEPLOY_TEST_FAIL_BUILD'):
         sys.exit(19)
     binary = Path('target/release/challenge')
@@ -58,7 +67,7 @@ elif name == 'cargo':
     binary.chmod(0o755)
 ''')
         fake.chmod(0o755)
-        for command in ('rsync', 'ssh', 'git', 'rustup', 'cargo', 'cmake', 'cc', 'c++', 'uname'):
+        for command in ('rsync', 'ssh', 'git', 'rustup', 'cargo', 'cmake', 'cc', 'c++', 'clang', 'uname'):
             (self.bin / command).symlink_to(fake)
 
     def commands(self):
@@ -117,6 +126,34 @@ elif name == 'cargo':
         result = self.install(DEPLOY_TEST_FAIL_BUILD='1')
         self.assertNotEqual(result.returncode, 0)
         self.assertNotIn('is ready', result.stdout)
+
+    def test_missing_clang_stops_before_rust_install_or_build(self):
+        result = self.install(CLANG_PATH=str(self.directory / 'missing-clang'))
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('install clang and libclang-dev', result.stderr)
+        self.assertFalse(self.log.exists())
+
+    def test_missing_c_headers_stop_before_rust_install_or_build(self):
+        result = self.install(DEPLOY_TEST_MISSING_HEADERS='1')
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("'stddef.h' file not found", result.stderr)
+        self.assertIn('Clang cannot read the standard C headers', result.stderr)
+        self.assertFalse(any(command[0] in ('git', 'rustup', 'cargo') for command in self.commands()))
+
+    def test_bindgen_uses_the_validated_clang(self):
+        result = self.install()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn(['bindgen-clang', str(self.bin / 'clang')], self.commands())
+
+    def test_custom_clang_path_is_absolute_and_handles_spaces(self):
+        clang = self.directory / 'custom LLVM' / 'clang-18'
+        clang.parent.mkdir()
+        clang.symlink_to(self.bin / 'clang')
+        result = self.install(CLANG_PATH=os.path.relpath(clang))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        selected = next(command[1] for command in self.commands() if command[0] == 'bindgen-clang')
+        self.assertTrue(Path(selected).is_absolute())
+        self.assertEqual(Path(selected).absolute().resolve(), clang.resolve())
 
     def test_local_source_changes_are_preserved(self):
         self.assertEqual(self.install().returncode, 0)

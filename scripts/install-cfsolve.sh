@@ -12,6 +12,21 @@ for command in git cmake cc c++; do
     fi
 done
 
+# bindgen queries the clang executable for its system header search paths.
+if ! clang_path=$(command -v "${CLANG_PATH:-clang}"); then
+    printf 'cfsolve requires clang for bindgen; on Debian/Ubuntu, install clang and libclang-dev.\n' >&2
+    exit 1
+fi
+if [[ $clang_path != /* ]]; then
+    clang_path="$PWD/$clang_path"
+fi
+if ! printf '#include <stddef.h>\n#include <stdint.h>\n' | "$clang_path" -x c -fsyntax-only -; then
+    printf 'Clang cannot read the standard C headers; install matching clang, libclang-dev, and libc development headers.\n' >&2
+    exit 1
+fi
+# Use the same compiler for bindgen's include discovery, even after changing cwd.
+export CLANG_PATH="$clang_path"
+
 if [[ $(uname -s) == Linux && ! -s /etc/timezone && ! -L /etc/localtime ]]; then
     printf 'cfsolve requires /etc/timezone or an /etc/localtime symlink to zoneinfo; see README.md.\n' >&2
     exit 1
