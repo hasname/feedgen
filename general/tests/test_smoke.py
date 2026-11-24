@@ -34,6 +34,10 @@ class SmokeTestCase(TestCase):
         # requests_mock intercepts requests sessions.
         return patch.object(services, 'CurlCffiService', services.RequestsService)
 
+    def mock_dcard_session(self):
+        # requests_mock intercepts requests sessions.
+        return patch.object(services, 'CfsolveService', services.RequestsService)
+
     def assert_plurk_images(self, response):
         ns = {'atom': 'http://www.w3.org/2005/Atom'}
         feed = lxml.etree.fromstring(response.content)
@@ -118,7 +122,8 @@ class SmokeTestCase(TestCase):
         m.get('https://www.dcard.tw/f/moon', text=text)
 
         c = Client()
-        res = c.get('/dcard/board/moon')
+        with self.mock_dcard_session():
+            res = c.get('/dcard/board/moon')
         self.assertEqual(res.status_code, 200)
 
         ns = {
@@ -145,9 +150,45 @@ class SmokeTestCase(TestCase):
         m.get('https://www.dcard.tw/service/api/v2/popularForums/GetPage?pageKey=00000000-0000-0000-0000-000000000000', text=text)
 
         c = Client()
-        res = c.get('/dcard/main')
+        with self.mock_dcard_session():
+            res = c.get('/dcard/main')
         self.assertEqual(res.status_code, 200)
+        feed = lxml.etree.fromstring(res.content)
+        self.assertEqual(len(feed.findall('{*}entry')), 30)
+        self.assertIn('https://www.dcard.tw/f/relationship/p/237888017',
+                      [entry.findtext('{*}id') for entry in feed.findall('{*}entry')])
         self.assert_service_proxy(m, 'dcard')
+
+    @requests_mock.mock()
+    def test_dcard_upstream_errors(self, m):
+        head_url = 'https://www.dcard.tw/service/api/v2/popularForums/GetHead?listKey=popularForums'
+        page_url = 'https://www.dcard.tw/service/api/v2/popularForums/GetPage?pageKey=test'
+        cases = (
+            ('/dcard/board/mood', 'https://www.dcard.tw/f/mood', {'status_code': 403}),
+            ('/dcard/main', head_url, {'status_code': 403}),
+            ('/dcard/main', head_url, {'text': '<html></html>'}),
+            ('/dcard/main', head_url, {'json': {}}),
+            ('/dcard/main', page_url, {'status_code': 503}),
+            ('/dcard/main', page_url, {'text': '<html></html>'}),
+            ('/dcard/main', page_url, {'json': {'items': {}}}),
+        )
+        for route, url, response in cases:
+            m.get(head_url, json={'head': 'test'})
+            m.get(page_url, json={'items': []})
+            m.get(url, **response)
+            with self.subTest(route=route, url=url, response=response), self.mock_dcard_session():
+                with self.assertLogs('general.views.dcard'):
+                    res = self.client.get(route)
+                self.assertEqual(res.status_code, 503)
+                self.assertEqual(res['Cache-Control'], 'no-store')
+
+    def test_dcard_solver_unavailable(self):
+        with patch.object(services.CfsolveService, 'process', side_effect=OSError('cfsolve unavailable')):
+            for route in ('/dcard/board/mood', '/dcard/main'):
+                with self.subTest(route=route), self.assertLogs('general.views.dcard'):
+                    res = self.client.get(route)
+                self.assertEqual(res.status_code, 503)
+                self.assertEqual(res['Cache-Control'], 'no-store')
 
     @requests_mock.mock()
     def test_job104(self, m):

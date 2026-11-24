@@ -27,13 +27,13 @@ class DcardBoardView(View):
         feed.title(title)
 
         try:
-            s = services.RequestsService().process('dcard')
-
-            r = s.get(url)
-            body = lxml.html.fromstring(r.text)
+            with services.CfsolveService().process('dcard') as s:
+                r = s.get(url)
+                r.raise_for_status()
+                body = lxml.html.fromstring(r.text)
         except Exception:
             logger.exception('Failed to fetch or parse Dcard board')
-            return HttpResponse('Service Unavailable', status=503)
+            return HttpResponse('Service Unavailable', status=503, headers={'Cache-Control': 'no-store'})
 
         items = body.cssselect('div[role="main"] article')
         for item in items:
@@ -81,15 +81,19 @@ class DcardMainView(View):
         feed.link(href=url, rel='alternate')
         feed.title(title)
 
-        s = services.RequestsService().process('dcard')
-
-        r = s.get('https://www.dcard.tw/service/api/v2/popularForums/GetHead?listKey=popularForums')
-        if r.status_code == 200:
-            head = r.json()['head']
-            r = s.get(f'https://www.dcard.tw/service/api/v2/popularForums/GetPage?pageKey={head}')
-            items = r.json()['items']
-        else:
-            items = []
+        try:
+            with services.CfsolveService().process('dcard') as s:
+                r = s.get('https://www.dcard.tw/service/api/v2/popularForums/GetHead?listKey=popularForums')
+                r.raise_for_status()
+                head = r.json()['head']
+                r = s.get(f'https://www.dcard.tw/service/api/v2/popularForums/GetPage?pageKey={urllib.parse.quote(head, safe="")}')
+                r.raise_for_status()
+                items = r.json()['items']
+                if not isinstance(items, list):
+                    raise TypeError('Invalid Dcard items')
+        except Exception:
+            logger.exception('Failed to fetch or parse Dcard main feed')
+            return HttpResponse('Service Unavailable', status=503, headers={'Cache-Control': 'no-store'})
 
         for item in items:
             item_title = '[{}] {}'.format(item['name'], item['posts'][0]['title'])

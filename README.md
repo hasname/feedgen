@@ -13,6 +13,55 @@ Both feeds use `FEEDGEN_104_PROXY` when set and otherwise inherit `FEEDGEN_HTTP_
 If 104 rejects a request, the feed returns HTTP 502. A successful search with
 zero matches returns an empty Atom feed with HTTP 200.
 
+### Dcard feeds and cfsolve
+
+`/dcard/board/` and `/dcard/main` use curl_cffi and run
+[cfsolve](https://github.com/chris124567/cfsolve) when Cloudflare returns a
+challenge. Failed requests return HTTP 503 with `Cache-Control: no-store`.
+
+Build cfsolve separately on each host running Feedgen. Follow its
+[build requirements](https://github.com/chris124567/cfsolve#building), including
+the pinned Rust toolchain, CMake, a C/C++ compiler, and libclang:
+
+```sh
+git clone https://github.com/chris124567/cfsolve.git
+cd cfsolve
+cargo build --release --bin challenge
+```
+
+Set these values in Feedgen's `.env`, using absolute paths on that host:
+
+```dotenv
+FEEDGEN_CFSOLVE_BINARY="/path/to/cfsolve/target/release/challenge"
+FEEDGEN_CFSOLVE_PROFILE="/path/to/cfsolve/profiles/safari-26-ios.json"
+FEEDGEN_DCARD_IMPERSONATE="safari260_ios"
+FEEDGEN_CFSOLVE_ATTEMPTS="3"
+FEEDGEN_CFSOLVE_TIMEOUT="300"
+```
+
+Keep the profile's referenced answer files beside it, as in the cfsolve checkout.
+The profile supplies the exact User-Agent for all Dcard requests. The
+`FEEDGEN_DCARD_IMPERSONATE` target must match that profile; the bundled Safari iOS
+profile uses `safari260_ios`. Replace any previous comma-separated Chrome list.
+Dcard ignores `FEEDGEN_IMPERSONATE` and rejects lists of targets because a
+clearance must keep the same browser identity. Other services retain their
+existing impersonation settings.
+
+`FEEDGEN_CFSOLVE_ATTEMPTS` limits solver invocations per request, including
+rejected clearances. `FEEDGEN_CFSOLVE_TIMEOUT` is the timeout in seconds for each
+invocation. Successful requests skip the solver. Temporary solver artifacts are
+removed after each attempt. A session reuses clearance cookies for subsequent
+requests to the same host.
+
+Both clients use the same proxy and exit IP. Set `FEEDGEN_DCARD_PROXY` or
+`FEEDGEN_HTTP_PROXY` to a proxy with a stable exit IP. Standard proxy environment
+variables and `NO_PROXY` are resolved once when neither Feedgen setting is set.
+For `gw.dataimpulse.com`, Feedgen adds a
+[session ID](https://docs.dataimpulse.com/proxies/parameters/session-id) to the
+username if one is absent, keeping it for the session. Other proxy credentials
+and existing session IDs are preserved. A direct connection also works if its
+exit IP remains stable.
+
 ### Proxies
 
 Set proxies in `.env`, then restart the service:

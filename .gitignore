@@ -3,6 +3,7 @@
 .coverage
 .dev.sqlite3
 .env
+.env.dataimpulse
 .pytest_cache
 .ruff_cache
 .venv
