@@ -43,12 +43,15 @@ elif name.startswith('clang'):
     if os.environ.get('DEPLOY_TEST_MISSING_HEADERS'):
         print("fatal error: 'stddef.h' file not found", file=sys.stderr)
         sys.exit(1)
-elif name == 'ssh' and 'install-cfsolve.sh' in args[-1]:
-    sys.exit(int(os.environ.get('DEPLOY_TEST_FAIL_INSTALL', '0')))
+elif name == 'ssh' and 'activate-cfsolve.sh' in args[-1]:
+    sys.exit(int(os.environ.get('DEPLOY_TEST_FAIL_ACTIVATE', '0')))
+elif name == 'rsync' and os.environ.get('DEPLOY_TEST_REAL_RSYNC'):
+    os.execv(os.environ['DEPLOY_TEST_REAL_RSYNC'], ['rsync', *args])
 elif name == 'git':
     if args[0] == 'clone':
         checkout = Path(args[-1])
         (checkout / '.git').mkdir(parents=True)
+        (checkout / 'LICENSE').write_text('Upstream license')
         profiles = checkout / 'profiles'
         (profiles / 'safari-26-ios').mkdir(parents=True)
         for filename in ('safari-26-ios.json', 'safari-26-ios/answers.json',
@@ -75,7 +78,8 @@ elif name == 'cargo':
 
     def deploy(self, **env):
         return subprocess.run(
-            ['make', 'deploy', 'DEPLOY_USER=test-user', 'DEPLOY_HOST=example.test'],
+            ['make', 'deploy', 'DEPLOY_USER=test-user', 'DEPLOY_HOST=example.test',
+             f'CFSOLVE_SOURCE_DIR={self.directory / "cfsolve checkout"}'],
             cwd=self.root, env={**self.env, **env}, capture_output=True, text=True, check=False,
         )
 
@@ -85,25 +89,109 @@ elif name == 'cargo':
             env={**self.env, **env}, capture_output=True, text=True, check=False,
         )
 
-    def test_deploy_installs_cfsolve_before_restart_and_uploads_env(self):
+    def runtime_upload(self):
+        return next(command for command in self.commands()
+                    if command[0] == 'rsync' and command[-1].endswith('.cfsolve-upload/'))
+
+    def stage_runtime(self):
+        rsync = shutil.which('rsync')
+        if rsync is None:
+            self.skipTest('rsync is not installed')
+        result = self.deploy()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        staging = self.directory / 'staging'
+        command = self.runtime_upload()
+        subprocess.run([rsync, *command[1:-1], f'{staging}/'], check=True, capture_output=True)
+        return staging
+
+    def activate(self):
+        return subprocess.run(
+            ['bash', str(self.root / 'scripts/activate-cfsolve.sh'),
+             str(self.directory / 'staging'), str(self.directory / 'active')],
+            env={**self.env, 'DEPLOY_TEST_REAL_RSYNC': shutil.which('rsync')},
+            capture_output=True, text=True, check=False,
+        )
+
+    def test_deploy_builds_locally_before_upload_and_activates_before_restart(self):
         result = self.deploy()
         self.assertEqual(result.returncode, 0, result.stderr)
         commands = self.commands()
+        build = next(index for index, command in enumerate(commands) if command[0] == 'cargo')
+        uploads = [index for index, command in enumerate(commands) if command[0] in ('rsync', 'ssh')]
+        self.assertLess(build, min(uploads))
+        runtime_copy = self.runtime_upload()
+        self.assertIn('-avzR', runtime_copy)
+        self.assertEqual([path.split('/./')[1] for path in runtime_copy[3:-1]], [
+            'target/release/challenge', 'profiles/safari-26-ios.json',
+            'profiles/safari-26-ios/answers.json', 'profiles/safari-26-ios/challenge-page-answers.json',
+            'LICENSE',
+        ])
         env_copy = next(command for command in commands if command[0] == 'rsync' and '.env' in command)
         self.assertIn('--chmod=600', env_copy)
         remote = [command[-1] for command in commands if command[0] == 'ssh']
-        install = next(index for index, command in enumerate(remote) if 'install-cfsolve.sh' in command)
+        self.assertFalse(any('install-cfsolve.sh' in command or 'cargo' in command or 'rustup' in command
+                             for command in remote))
+        activate = next(command for command in commands
+                        if command[0] == 'ssh' and 'activate-cfsolve.sh' in command[-1])
+        self.assertLess(commands.index(runtime_copy), commands.index(activate))
+        self.assertLess(commands.index(activate), commands.index(env_copy))
+        install = remote.index(activate[-1])
         sync = next(index for index, command in enumerate(remote) if 'uv sync' in command)
         restart = next(index for index, command in enumerate(remote) if 'systemctl --user restart' in command)
-        self.assertLess(sync, install)
-        self.assertLess(install, restart)
+        self.assertLess(install, sync)
+        self.assertLess(sync, restart)
 
-    def test_failed_cfsolve_install_stops_deployment_before_restart(self):
-        result = self.deploy(DEPLOY_TEST_FAIL_INSTALL='17')
+    def test_failed_local_build_stops_deployment_before_upload(self):
+        result = self.deploy(DEPLOY_TEST_FAIL_BUILD='1')
+        self.assertNotEqual(result.returncode, 0)
+        self.assertFalse(any(command[0] in ('rsync', 'ssh') for command in self.commands()))
+
+    def test_failed_cfsolve_activation_stops_deployment_before_env_and_restart(self):
+        result = self.deploy(DEPLOY_TEST_FAIL_ACTIVATE='17')
         self.assertNotEqual(result.returncode, 0)
         remote = [command[-1] for command in self.commands() if command[0] == 'ssh']
-        self.assertTrue(any('install-cfsolve.sh' in command for command in remote))
-        self.assertFalse(any('systemctl' in command for command in remote))
+        self.assertTrue(any('activate-cfsolve.sh' in command for command in remote))
+        self.assertFalse(any('systemctl' in command or 'uv sync' in command for command in remote))
+        self.assertFalse(any(command[0] == 'rsync' and '.env' in command for command in self.commands()))
+
+    def test_runtime_upload_and_activation_preserve_layout_and_existing_cache(self):
+        staging = self.stage_runtime()
+        self.assertEqual(sorted(str(path.relative_to(staging)) for path in staging.rglob('*') if path.is_file()), [
+            'LICENSE', 'profiles/safari-26-ios.json', 'profiles/safari-26-ios/answers.json',
+            'profiles/safari-26-ios/challenge-page-answers.json', 'target/release/challenge',
+        ])
+        active = self.directory / 'active'
+        (active / 'target/release').mkdir(parents=True)
+        cache = active / 'target/release/cache'
+        cache.write_text('keep')
+        result = self.activate()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(cache.read_text(), 'keep')
+        for path in staging.rglob('*'):
+            if path.is_file():
+                self.assertEqual((active / path.relative_to(staging)).read_bytes(), path.read_bytes())
+        self.assertTrue(os.access(active / 'target/release/challenge', os.X_OK))
+
+    def test_incompatible_binary_does_not_replace_active_runtime(self):
+        staging = self.stage_runtime()
+        (staging / 'target/release/challenge').write_text('#!/bin/sh\necho "GLIBC not found" >&2\nexit 1\n')
+        active = self.directory / 'active/target/release/challenge'
+        active.parent.mkdir(parents=True)
+        active.write_text('previous binary')
+        result = self.activate()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('GLIBC not found', result.stderr)
+        self.assertIn('Build on a compatible OS/CPU', result.stderr)
+        self.assertEqual(active.read_text(), 'previous binary')
+        self.assertFalse((self.directory / 'active/profiles').exists())
+
+    def test_incomplete_upload_does_not_install_runtime(self):
+        staging = self.stage_runtime()
+        (staging / 'profiles/safari-26-ios/challenge-page-answers.json').unlink()
+        result = self.activate()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('Missing cfsolve runtime file', result.stderr)
+        self.assertFalse((self.directory / 'active').exists())
 
     def test_install_pins_revision_and_reuses_checkout(self):
         for _ in range(2):
@@ -177,8 +265,9 @@ elif name == 'cargo':
         source = self.directory / 'source'
         remote = self.directory / 'remote'
         for directory, marker in ((source, 'local-only'), (remote, 'server-build')):
-            (directory / '.cfsolve').mkdir(parents=True)
-            (directory / '.cfsolve' / marker).write_text(marker)
+            for name in ('.cfsolve', '.cfsolve-upload'):
+                (directory / name).mkdir(parents=True)
+                (directory / name / marker).write_text(marker)
         (source / 'application').write_text('updated')
         (remote / 'stale').write_text('remove')
         subprocess.run([
@@ -186,6 +275,7 @@ elif name == 'cargo':
             f'{source}/', f'{remote}/',
         ], check=True, capture_output=True)
         self.assertEqual((remote / 'application').read_text(), 'updated')
-        self.assertTrue((remote / '.cfsolve/server-build').exists())
-        self.assertFalse((remote / '.cfsolve/local-only').exists())
+        for name in ('.cfsolve', '.cfsolve-upload'):
+            self.assertTrue((remote / name / 'server-build').exists())
+            self.assertFalse((remote / name / 'local-only').exists())
         self.assertFalse((remote / 'stale').exists())

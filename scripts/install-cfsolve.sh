@@ -27,12 +27,7 @@ fi
 # Use the same compiler for bindgen's include discovery, even after changing cwd.
 export CLANG_PATH="$clang_path"
 
-if [[ $(uname -s) == Linux && ! -s /etc/timezone && ! -L /etc/localtime ]]; then
-    printf 'cfsolve requires /etc/timezone or an /etc/localtime symlink to zoneinfo; see README.md.\n' >&2
-    exit 1
-fi
-
-# rustup installs into the deployment user's account; no shell profile changes.
+# rustup installs into the local user's account; no shell profile changes.
 export PATH="${CARGO_HOME:-$HOME/.cargo}/bin:$PATH"
 if ! command -v rustup >/dev/null 2>&1; then
     installer=$(mktemp)

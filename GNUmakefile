@@ -11,8 +11,10 @@
 ci:: lint quality test
 	@true
 
+CFSOLVE_SOURCE_DIR ?= .cfsolve
+
 cfsolve::
-	bash scripts/install-cfsolve.sh
+	bash scripts/install-cfsolve.sh "$(CFSOLVE_SOURCE_DIR)"
 
 clean::
 	rm -f .coverage .dev.sqlite3 db.sqlite3
@@ -26,15 +28,23 @@ endif
 ifndef DEPLOY_USER
 	$(error $$DEPLOY_USER is not defined in GNUmakefile.local)
 endif
+	bash scripts/install-cfsolve.sh "$(CFSOLVE_SOURCE_DIR)"
 	rsync \
 		-Favz \
 		--delete-after \
 		--exclude-from=.gitignore \
 		./ \
 		${DEPLOY_DEST}
+	rsync -avzR -- \
+		"$(CFSOLVE_SOURCE_DIR)/./target/release/challenge" \
+		"$(CFSOLVE_SOURCE_DIR)/./profiles/safari-26-ios.json" \
+		"$(CFSOLVE_SOURCE_DIR)/./profiles/safari-26-ios/answers.json" \
+		"$(CFSOLVE_SOURCE_DIR)/./profiles/safari-26-ios/challenge-page-answers.json" \
+		"$(CFSOLVE_SOURCE_DIR)/./LICENSE" \
+		${DEPLOY_DEST}.cfsolve-upload/
+	ssh ${DEPLOY_USER}@${DEPLOY_HOST} 'bash -lc "cd ~/feedgen && bash scripts/activate-cfsolve.sh"'
 	rsync -aL --checksum --chmod=600 --ignore-missing-args .env ${DEPLOY_DEST}
 	ssh ${DEPLOY_USER}@${DEPLOY_HOST} 'bash -lc "cd ~/feedgen && uv sync --frozen"'
-	ssh ${DEPLOY_USER}@${DEPLOY_HOST} 'bash -lc "cd ~/feedgen && bash scripts/install-cfsolve.sh"'
 	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "install -D -m 0644 ~/feedgen/feedgen.service ~/.config/systemd/user/feedgen.service && systemctl --user daemon-reload && systemctl --user reenable feedgen.service"
 	ssh ${DEPLOY_USER}@${DEPLOY_HOST} "systemctl --user restart feedgen.service && sleep 3 && systemctl --user is-active feedgen.service"
 

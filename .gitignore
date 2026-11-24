@@ -1,6 +1,7 @@
 *.retry
 .claude
 .cfsolve/
+.cfsolve-upload/
 .coverage
 .dev.sqlite3
 .env

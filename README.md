@@ -19,19 +19,18 @@ zero matches returns an empty Atom feed with HTTP 200.
 [cfsolve](https://github.com/chris124567/cfsolve) when Cloudflare returns a
 challenge. Failed requests return HTTP 503 with `Cache-Control: no-store`.
 
-`make deploy` installs cfsolve on the server before restarting Feedgen. It checks
-out the revision pinned in `scripts/install-cfsolve.sh` under `~/feedgen/.cfsolve/`,
-installs rustup for the deployment user if needed, and builds the `challenge`
-binary with the upstream Rust toolchain and locked Cargo dependencies. The
-checkout includes the browser profiles and their answer files. Later deployments
-reuse the checkout and build cache; `.cfsolve/` is excluded from Git and rsync.
+`make deploy` builds cfsolve locally before uploading anything to the server.
+It checks out the revision pinned in `scripts/install-cfsolve.sh` under the local
+`.cfsolve/` directory, installs rustup for the local user if needed, and builds
+the `challenge` binary with the upstream Rust toolchain and locked Cargo
+dependencies. Later deployments reuse this checkout and build cache. Set
+`CFSOLVE_SOURCE_DIR` in `GNUmakefile.local` to use a checkout outside the project.
 
-The server needs Git, curl, CMake, a C/C++ compiler, clang, libclang, CA
-certificates, and time zone data. On Debian/Ubuntu, install these system
-prerequisites once:
+The local build machine needs Git, curl, CMake, a C/C++ compiler, clang, libclang,
+and CA certificates. On Debian/Ubuntu, install these build prerequisites once:
 
 ```sh
-sudo apt-get install build-essential ca-certificates clang cmake curl git libclang-dev tzdata
+sudo apt-get install build-essential ca-certificates clang cmake curl git libclang-dev
 ```
 
 Bindgen uses the `clang` executable to discover system header directories.
@@ -42,12 +41,29 @@ build, then exports its absolute path as `CLANG_PATH` for bindgen. For a custom
 LLVM installation, set `CLANG_PATH` to its clang executable and ensure that
 `LIBCLANG_PATH`, if set, selects a matching libclang installation.
 
-For local development, run `make cfsolve` to perform the same installation in
-the project's `.cfsolve/` directory. Rust and crate downloads require network
-access; the first build can take several minutes. A failed installation stops
-deployment before the service restart.
+For local development, run `make cfsolve` to perform the same local build.
+Rust and crate downloads require network access; the first build can take
+several minutes. A failed build stops deployment before any upload.
 
-On Linux, cfsolve also needs the host's IANA time zone for its date probes.
+Only the binary, Safari profile, its two answer files, and the upstream license
+are uploaded to `~/feedgen/.cfsolve-upload/`. `scripts/activate-cfsolve.sh` checks
+the uploaded binary with `--help` before copying these files into `.cfsolve/`.
+Both directories are excluded from the general application rsync, so source and
+build caches are not uploaded or deleted. Existing `.env` paths remain valid.
+
+Build on the same OS and CPU architecture as the server. For Linux, use glibc
+and libstdc++ versions no newer than those on the server; this is a native build,
+not a cross-compilation setup. The remote `--help` check catches incompatible
+binaries or missing shared libraries before replacing the existing solver,
+uploading `.env`, or restarting Feedgen. The server does not need Rust, CMake,
+clang, or libclang. It still needs runtime libraries, CA certificates, and time
+zone data. On Debian/Ubuntu:
+
+```sh
+sudo apt-get install ca-certificates libc6 libgcc-s1 libstdc++6 tzdata
+```
+
+On Linux, the machine running cfsolve needs its IANA time zone for date probes.
 Install time zone data and configure `/etc/timezone`, or make `/etc/localtime`
 a symlink to the appropriate file under `/usr/share/zoneinfo/`. Setting `TZ`
 alone does not supply the zone name to cfsolve.
@@ -139,8 +155,9 @@ For `GNUmakefile.local`, you can set something like this:
 
 Then you can use `make deploy` to update the service.  Scripts in `GNUmakefile` will call `rsync` to update code via SSH, run `uv sync` on the remote host, install `feedgen.service` into `~/.config/systemd/user/`, and then reload and restart the `uwsgi` service via userland systemd.
 
-The deployment also runs `scripts/install-cfsolve.sh` on the server after
-`uv sync` and before installing or restarting the systemd service.
+The deployment first runs `scripts/install-cfsolve.sh` locally, uploads the
+runtime files, and runs `scripts/activate-cfsolve.sh` on the server before
+`uv sync` and the systemd restart. No cfsolve compilation runs on the server.
 
 `feedgen.service` is a systemd user unit, therefore remember to use `systemctl --user` on the remote host.  Two things have to be set up once by hand before the first deploy:
 
