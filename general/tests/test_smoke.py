@@ -1,13 +1,15 @@
 import os
 import re
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import call, patch
 from urllib.parse import parse_qs, quote, urlsplit
 
 import lxml.etree
 import lxml.html
 import requests_mock
 from django.test import Client, TestCase
+from django.utils.http import http_date
+from requests.exceptions import Timeout
 
 from general import services
 
@@ -167,17 +169,58 @@ class SmokeTestCase(TestCase):
         self.assertFalse(api.called)
 
     @requests_mock.mock()
+    def test_job104_retries_search_page_and_api(self, m):
+        with self.mock_104_session(), patch('general.views.job104.time', return_value=1000):
+            for route in ('104', '104company'):
+                page = m.get('https://www.104.com.tw/jobs/search/', [
+                    {'exc': Timeout}, {'text': '<html></html>'},
+                ])
+                api = m.get('https://www.104.com.tw/jobs/search/api/jobs', [
+                    {'status_code': 503},
+                    {'status_code': 429, 'headers': {'Retry-After': http_date(1004)}},
+                    {'json': {'data': []}},
+                ])
+                with self.subTest(route=route), patch('general.views.job104.sleep') as sleep:
+                    res = self.client.get(f'/{route}/devops')
+                    self.assertEqual(res.status_code, 200)
+                    self.assertEqual(page.call_count, 2)
+                    self.assertEqual(api.call_count, 3)
+                    self.assertEqual(sleep.call_args_list, [call(1), call(1), call(4)])
+                    for request in api.request_history:
+                        self.assertEqual(request.headers['Referer'], page.last_request.url)
+        self.assert_service_proxy(m, '104')
+
+    @requests_mock.mock()
+    def test_job104_search_page_retry_limit(self, m):
+        api = m.get('https://www.104.com.tw/jobs/search/api/jobs', json={'data': []})
+        with self.mock_104_session():
+            for headers, delays in (({}, [call(1), call(2)]), ({'Retry-After': '60'}, [])):
+                page = m.get('https://www.104.com.tw/jobs/search/', status_code=503, headers=headers)
+                with (
+                    self.subTest(headers=headers),
+                    patch('general.views.job104.sleep') as sleep,
+                    self.assertLogs('general.views.job104'),
+                ):
+                    res = self.client.get('/104/devops')
+                    self.assertEqual(res.status_code, 502)
+                    self.assertEqual(res['Cache-Control'], 'no-store')
+                    self.assertEqual(page.call_count, len(delays) + 1)
+                    self.assertEqual(sleep.call_args_list, delays)
+        self.assertFalse(api.called)
+
+    @requests_mock.mock()
     def test_job104_upstream_error(self, m):
         m.get('https://www.104.com.tw/jobs/search/', text='<html></html>')
         url = 'https://www.104.com.tw/jobs/search/api/jobs'
         with self.mock_104_session():
             for response in ({'status_code': 403}, {'text': '<html></html>'}, {'json': {'data': {}}}):
-                m.get(url, **response)
+                api = m.get(url, **response)
                 for route in ('104', '104company'):
                     with self.subTest(response=response, route=route), self.assertLogs('general.views.job104'):
                         res = self.client.get(f'/{route}/devops')
                         self.assertEqual(res.status_code, 502)
                         self.assertEqual(res['Cache-Control'], 'no-store')
+                self.assertEqual(api.call_count, 2)
             self.assert_service_proxy(m, '104')
 
     @requests_mock.mock()

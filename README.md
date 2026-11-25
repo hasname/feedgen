@@ -10,8 +10,12 @@ You need to set up `.env` first.  The sample environment file is in `.env.sample
 
 `/104/` and `/104company/` search the public 104 website anonymously.
 Both feeds use `FEEDGEN_104_PROXY` when set and otherwise inherit `FEEDGEN_HTTP_PROXY`.
-If 104 rejects a request, the feed returns HTTP 502. A successful search with
-zero matches returns an empty Atom feed with HTTP 200.
+The search page and API GET requests each retry up to twice on network errors
+or HTTP 408, 429, 500, 502, 503, and 504. Retries wait 1 and 2 seconds, or longer
+if `Retry-After` requests it. If the wait would exceed 5 seconds, the feed
+returns HTTP 502 immediately. Other upstream errors and invalid search responses
+also return HTTP 502. A successful search with zero matches returns an empty
+Atom feed with HTTP 200.
 
 ### Dcard feeds and cfsolve
 
